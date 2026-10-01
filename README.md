@@ -1,5 +1,7 @@
 # Chromatic hue tensors
 
+[Documentation website](https://chromatic-hue.netlify.app) · [User guide](https://chromatic-hue.netlify.app/docs/USER_GUIDE.html) · [Architecture explorer](https://chromatic-hue.netlify.app/docs/architecture/index.html) · [Download source](https://chromatic-hue.netlify.app/downloads/chromatic-oss.zip)
+
 This repository provides a Rust tensor whose elements are actual four-byte RGBD color tokens. Python, C, Rust and a standalone CLI can encode colors, compute exact hue operations, change shapes and save bounded, checksummed files. It is useful for researchers and developers studying discrete color arithmetic and inspectable tensor storage.
 
 R, G and B identify a saturated color on a 1,530-color wheel. D divides each color step into 256 positions. The resulting 391,680 phase positions form the established finite ring `Z/391680Z`. Addition composes phases, multiplication works modulo 391,680, and matrix contraction uses those operations. The Rust operators do not decode a floating tensor or call PyTorch or NumPy.

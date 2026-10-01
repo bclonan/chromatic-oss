@@ -41,3 +41,7 @@ The source contains analytic scalar, periodic-field, and seeded synthetic retrie
 The dashboard CSS and JavaScript are project source. Its tensor colors and cube displays come from numeric inputs. Project plots, architecture data, and the explorer come from project code. Historical research evidence retains dataset names, sample counts, seeds, measured storage, execution precision, and original hashes. Sanitized records are historical observations and do not establish current-source verification.
 
 Vector quantization, straight-through gradients, and Fourier transforms are established techniques. [THEORY.md](THEORY.md) links the research references used by the implementation. The project does not claim ownership of those underlying methods or a novel accuracy advantage from color labels.
+
+## Documentation build dependency
+
+Python-Markdown 3.10.2 converts the selected Markdown documents to HTML. It is a build dependency under the BSD-3-Clause license and is not bundled in the website or source ZIP. Its distribution retains its upstream license and metadata.

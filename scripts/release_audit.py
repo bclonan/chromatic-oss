@@ -13,7 +13,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_DIRS = {"chromatensor", "dashboard", "experiments", "native", "scripts", "tests", "requirements", ".github"}
 SOURCE_EXTENSIONS = {".py", ".rs", ".toml", ".lock", ".h", ".c", ".html", ".js", ".css", ".txt", ".yml", ".yaml"}
-ROOT_FILES = {".gitattributes", ".gitignore", ".gitleaks.toml", "pyproject.toml", "LICENSE", "COPYRIGHT", "THIRD_PARTY_NOTICES.md", "CONTRIBUTING.md", "SECURITY.md", "RELEASE_CHECKLIST.md", "AGENTS.md", "ARCHITECTURE.md", "README.md", "BENCHMARKS.md", "EXPERIMENTS.md", "EXPERIMENT_MATRIX.md", "LIMITATIONS.md", "RESEARCH_LOG.md", "RESULTS.md", "THEORY.md", "TODO.md"}
+ROOT_FILES = {"netlify.toml", ".gitattributes", ".gitignore", ".gitleaks.toml", "pyproject.toml", "LICENSE", "COPYRIGHT", "THIRD_PARTY_NOTICES.md", "CONTRIBUTING.md", "SECURITY.md", "RELEASE_CHECKLIST.md", "AGENTS.md", "ARCHITECTURE.md", "README.md", "BENCHMARKS.md", "EXPERIMENTS.md", "EXPERIMENT_MATRIX.md", "LIMITATIONS.md", "RESEARCH_LOG.md", "RESULTS.md", "THEORY.md", "TODO.md"}
 SKIP_PARTS = {"target", "__pycache__", "node_modules", ".git", ".pytest-work", ".pytest_cache", "build", "dist", "_native"}
 MANIFEST = "docs/release/manifest.json"
 

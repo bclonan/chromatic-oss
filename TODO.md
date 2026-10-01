@@ -1,6 +1,6 @@
 # Public release status
 
-The local source release is ready to publish within the tested scope. [The checklist](RELEASE_CHECKLIST.md) and [audit](docs/RELEASE_AUDIT.md) record the completed gates; the handoff provides final commit/archive identities and scan receipts. No publication occurred. Full research-matrix/canonical replay, Linux C consumer and broader platforms remain unexecuted research work, with no current pass claim.
+The local source release is ready to publish within the tested scope. [The checklist](RELEASE_CHECKLIST.md) and [audit](docs/RELEASE_AUDIT.md) record the completed gates; the handoff provides final commit/archive identities and scan receipts. Static documentation publication is tracked in [the hosting guide](docs/HOSTING.md). Full research-matrix/canonical replay, Linux C consumer and broader platforms remain unexecuted research work, with no current pass claim.
 
 ## Historical native checklist
 

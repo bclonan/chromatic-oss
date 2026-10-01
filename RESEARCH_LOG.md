@@ -238,3 +238,13 @@ Seven exact documented consumers passed, including Windows C and Rust and an iso
 The final independent review corrected the timing-column labels to total elapsed time for three calls. It also removed tool-call wait durations from static evidence because they are not command execution times. Test outcomes and numerical measurements remain unchanged.
 
 The final independent content review passed. The reviewed staging copy passed privacy and Gitleaks scans, including the manifest itself. New cube pixel evidence shows colored cubies, axes and projected slices after camera movement. The source remains frozen. Final root history and archive identities are recorded outside the archive to avoid self-referential hashes. Publication was not authorized or executed.
+
+## Documentation publication, 2026-10-01
+
+Built a manifest-gated static website with 47 rendered Markdown documents, the existing architecture explorer, reviewed release files and a source ZIP. The builder verifies SHA-256 identities and runs the privacy scan before copying files. It checks generated local links, including architecture assets. Corrected hosted architecture document and raw-source links to their published locations.
+
+The release-selection, privacy-scanner and architecture suites passed all 30 tests. Architecture validation passed for 26 components, 40 reviewed relationships and 140 inventoried files. The source documentation check passed 202 local links. Browser checks on the Netlify draft confirmed the landing page, user guide and architecture search. These checks do not certify numerical changes, and no numerical implementation changed.
+
+The first CLI draft upload returned Unprocessable Entity without a detailed cause. A fresh CLI retry succeeded at deploy 6abe7c56e9f6bb7d9d6aafbc. A read through the connector returned 404 for the earlier deployment identifier, and an optional CLI metadata query failed because Windows stripped JSON argument quotes. Neither result is evidence of a successful deploy. The later successful CLI receipt and browser checks establish draft hosting.
+
+See [hosting instructions](docs/HOSTING.md) for the production URL and reproducible build and deployment commands. The private GitHub repository retains its visibility and original history. Only its README links, description and homepage are updated for this publication. No new numerical, compression or speed claims accompany the website.

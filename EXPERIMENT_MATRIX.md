@@ -110,3 +110,7 @@ The candidate native proof uses 1,000,000 seeded phase tokens, seed7331, three t
 Timings describe this local run during release verification. They are not optimized hardware claims. Native operators were slower for every measured operation. Both stored representations use the same payload budget. The domain has 391,680 symbols, so four bytes do not imply 32 effective information bits.
 
 The final legacy smoke produced 17 model records, 92 precision rows using 4,096 values per distribution and 4 operator rows. The cube run used seed7, two epochs, 3 models, 8 exact geometry cases and 40 erasure measurements. These synthetic tests are named separately from actual MNIST, CIFAR and Tiny Shakespeare experiments. The full canonical datasets and historical trained checkpoints were not rerun. Historical numbers above remain unchanged.
+
+## Static documentation checks, 2026-10-01
+
+The documentation build renders 47 Markdown documents from the public release selection. Thirty release-selection, privacy-scanner and architecture tests passed. The architecture check validated 26 components, 40 relationships and 140 inventoried files. All 202 source-document links resolved locally. The hosted draft loaded the user guide and architecture explorer; searching RGBD token reduced the map to one component. These are documentation and hosting checks, not new numerical experiment results.

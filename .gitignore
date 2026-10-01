@@ -64,3 +64,6 @@ __pycache__/
 *.log
 /artifacts/security/private/
 
+
+# Netlify local account linkage
+/.netlify/

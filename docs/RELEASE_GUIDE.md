@@ -1,6 +1,6 @@
 # Build and release
 
-Nothing has been pushed or published. The supported local product is a native CPU library and CLI, plus the legacy numerical research package and loopback dashboard. It needs no hosted infrastructure, database migration, model provider or payment sandbox.
+The reviewed documentation and source ZIP are published through the [static documentation site](HOSTING.md). Original repository history is excluded. The supported local product is a native CPU library and CLI, plus the legacy numerical research package and loopback dashboard. It needs no hosted infrastructure, database migration, model provider or payment sandbox.
 
 ## Build packages
 

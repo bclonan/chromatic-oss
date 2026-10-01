@@ -4380,6 +4380,11 @@
       "imports": []
     },
     {
+      "path": "requirements/docs.txt",
+      "sha256": "c30202fbc2f2eb1da451b8bae46b6867c07915844cec203a243991d14b8d4efc",
+      "imports": []
+    },
+    {
       "path": "requirements/linux311-cpu.lock",
       "sha256": "354b5961c426ef7f16b3e6d13b3ff0de7d20541912542e5d2219535c83f90bc6",
       "imports": []
@@ -4464,6 +4469,68 @@
         {
           "module": "sys",
           "line": 14
+        }
+      ]
+    },
+    {
+      "path": "scripts/build_docs_site.py",
+      "sha256": "cfb7f9e93b1436b6498e2f65dbd6d03b23043405d0621a0445a75df7cbfddfbb",
+      "imports": [
+        {
+          "module": "__future__",
+          "line": 2
+        },
+        {
+          "module": "hashlib",
+          "line": 4
+        },
+        {
+          "module": "html",
+          "line": 5
+        },
+        {
+          "module": "html.parser",
+          "line": 6
+        },
+        {
+          "module": "json",
+          "line": 7
+        },
+        {
+          "module": "pathlib",
+          "line": 8
+        },
+        {
+          "module": "posixpath",
+          "line": 9
+        },
+        {
+          "module": "re",
+          "line": 10
+        },
+        {
+          "module": "shutil",
+          "line": 11
+        },
+        {
+          "module": "tempfile",
+          "line": 12
+        },
+        {
+          "module": "urllib.parse",
+          "line": 13
+        },
+        {
+          "module": "markdown",
+          "line": 15
+        },
+        {
+          "module": "release_audit",
+          "line": 17
+        },
+        {
+          "module": "scan_release",
+          "line": 18
         }
       ]
     },
@@ -4665,7 +4732,7 @@
     },
     {
       "path": "scripts/release_audit.py",
-      "sha256": "fd6c56ebe01bca5800909d824b3c5767677cfc05ed677d2bf5fd8be121bb2d00",
+      "sha256": "d5b06fb987fd5a76ee6fcbc262eb2b7b6fb496352e89698711db92625620062f",
       "imports": [
         {
           "module": "__future__",
@@ -6894,7 +6961,7 @@
       ]
     }
   ],
-  "source_identity": "658b840fbf1e5eb58fae94c24ac495d073da0328f8160ab3a29859c2a589722e",
+  "source_identity": "3ffaa2efab4b46d7d984f103dc5af81bd57f68eeaddc735173b753c728572764",
   "evidence_note": "Source links resolve to generated snapshots of actual local files. Hash and symbol checks detect drift. Tests listed here identify relevant verification code, not a claim that those tests passed in this run. Semantic edges are reviewed assertions, separate from lexical import discovery. Absent integrations describe this reviewed source, not future plans.",
   "semantic_review": {
     "method": "Manually curated source behavior and ownership contracts, with exact source anchors. Validation protects the reviewed registry from stale or altered graph data; it does not automatically prove program behavior.",

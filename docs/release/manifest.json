@@ -25,8 +25,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 1202,
-      "sha256": "4657069d598ba8860660e3069d7aadf882c662bcc14f193ebd8772bde3f1b0d8",
+      "bytes": 1246,
+      "sha256": "ac287ae2b9434cef237e4bb3c0dea46d47cbc9b2ae4b4404e98bf8fd2c51374f",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -667,14 +667,14 @@
     },
     {
       "path": "docs/architecture/graph.js",
-      "bytes": 180677,
-      "sha256": "d5deab3b42446cb8230306e45c7ceaf1e5901787e9c45203f34814b94943331e",
+      "bytes": 182030,
+      "sha256": "8267d7940c2acbc044011871b402c4bd08d67e7a6537f76010f41b0e11f576dc",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
       "path": "docs/architecture/graph.json",
-      "bytes": 180644,
-      "sha256": "58917acad2100d623c27f61583bf7b5251a44937aaf620c90d9997cc6cf94743",
+      "bytes": 181997,
+      "sha256": "22d012cbd3002e1a9962a3e55cd63ef197c34eb94e29a5da3c7a780d6cf96ae0",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1242,6 +1242,12 @@
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
+      "path": "docs/HOSTING.md",
+      "bytes": 2133,
+      "sha256": "7b3e82adf5fd9dae5e5f4543589c6dea4eab5cd87eb39e4b8b15ed5a64b7dd18",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
       "path": "docs/LICENSING.md",
       "bytes": 1923,
       "sha256": "0af4f9160d99ef7f47db642d80030a32283437c136c242ccdbba7c8c16f3693c",
@@ -1291,8 +1297,8 @@
     },
     {
       "path": "docs/RELEASE_GUIDE.md",
-      "bytes": 2890,
-      "sha256": "a0fa474e8329aeedaed598fc637fb023f95dc743d8398e594eef2e2bd6b36e51",
+      "bytes": 3002,
+      "sha256": "0998e8f762e52b01b63a1d0fb01f63269d11c8cf5df0589e812dce3d9f7422b5",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1338,6 +1344,12 @@
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
+      "path": "docs/site/site.css",
+      "bytes": 3627,
+      "sha256": "7385c66a3994b1d6320d44d9072c4a10aa26bb5fbb5b883d5db5c0c8d05be63d",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
       "path": "docs/TESTING.md",
       "bytes": 4219,
       "sha256": "17be967a4a9aceb3f25079d662e7c1177d2e722b255149a5d18f6945bebf3cc0",
@@ -1351,8 +1363,8 @@
     },
     {
       "path": "EXPERIMENT_MATRIX.md",
-      "bytes": 14353,
-      "sha256": "fdba5acb2cd71be0b17e39130ecdc5a5f3d17165eda7f541d8c58b71b729e8e3",
+      "bytes": 14907,
+      "sha256": "602391b52f3deb83f35d394b892faffba03ba18491b174f80137226e5be7f40d",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1608,6 +1620,12 @@
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
+      "path": "netlify.toml",
+      "bytes": 305,
+      "sha256": "0a72c10eb98c7cbea1d4b1d3fd728340d7b765e55a9bc279ec260bfee1ef6d62",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
       "path": "pyproject.toml",
       "bytes": 788,
       "sha256": "91eb7b747f849031fc2cd4515a73040364f1a9ac20d38c420cbcccadee2abc6c",
@@ -1615,14 +1633,20 @@
     },
     {
       "path": "README.md",
-      "bytes": 5947,
-      "sha256": "9bee31bb4d8191a77633dada369d8b101368af57f867dd41a3d07f48aff27636",
+      "bytes": 6254,
+      "sha256": "c1d396d311958a0d632ea63ee2f8feba2c01021c8eac237d37fa4c0955ee3be3",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
       "path": "RELEASE_CHECKLIST.md",
       "bytes": 8934,
       "sha256": "62e211fe415cec500a8e562ece40c229fe80867f4164401a4d6db2789417baec",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "requirements/docs.txt",
+      "bytes": 17,
+      "sha256": "c30202fbc2f2eb1da451b8bae46b6867c07915844cec203a243991d14b8d4efc",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1687,8 +1711,8 @@
     },
     {
       "path": "RESEARCH_LOG.md",
-      "bytes": 52376,
-      "sha256": "ef6a7b02068bbdb038a841117f76fff2e78da414f4e0e6089b920dc1ccd2f62c",
+      "bytes": 54042,
+      "sha256": "ea132ea8cbe5192be731acf158020080bb059d8c16069818468f812255c219cf",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1764,6 +1788,12 @@
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
+      "path": "scripts/build_docs_site.py",
+      "bytes": 10033,
+      "sha256": "cfb7f9e93b1436b6498e2f65dbd6d03b23043405d0621a0445a75df7cbfddfbb",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
       "path": "scripts/build_native_hue.py",
       "bytes": 10923,
       "sha256": "354fd81cdef0aa748b7b3eea4adc8b630c3f0c939468c7f67b27ffe510ca9102",
@@ -1789,8 +1819,8 @@
     },
     {
       "path": "scripts/release_audit.py",
-      "bytes": 7666,
-      "sha256": "fd6c56ebe01bca5800909d824b3c5767677cfc05ed677d2bf5fd8be121bb2d00",
+      "bytes": 7682,
+      "sha256": "d5b06fb987fd5a76ee6fcbc262eb2b7b6fb496352e89698711db92625620062f",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -2095,16 +2125,16 @@
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 5248,
-      "sha256": "25b9de97ee63eebcf9a161273b5f9ee40c80ce0d47c08fbe4c9d567d143106d7",
+      "bytes": 5522,
+      "sha256": "e8d9fac9771fa1eb8917d8dd16ee5dcd329a48cacc65089051c30a1ba205dde3",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
       "path": "TODO.md",
-      "bytes": 6001,
-      "sha256": "9b088da0fe43f9cbf36ef73cc39349707e951c1b4275182d21bb6d485358ec69",
+      "bytes": 6061,
+      "sha256": "54611f72845734ea99310b01a77f0c63bda050b0fee2131f52a6a750cf40d209",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     }
   ],
-  "total_bytes": 271942002
+  "total_bytes": 271963856
 }
