@@ -4474,7 +4474,7 @@ window.CHROMATIC_ARCHITECTURE = {
     },
     {
       "path": "scripts/build_docs_site.py",
-      "sha256": "0f59aa8b8d3605eb1edcd3a31c24dd74af398a5d8807f954a54255418a91932f",
+      "sha256": "826d169fa12f3076095ac35283fc0096f75a0cf8567190ad91ef24dcd96e69d8",
       "imports": [
         {
           "module": "__future__",
@@ -4644,7 +4644,7 @@ window.CHROMATIC_ARCHITECTURE = {
     },
     {
       "path": "scripts/build_social_card.py",
-      "sha256": "e3abe6be14d48d6ce63d08d7a38887a0a715a0ab6ab507fb7f8087b121b9dff9",
+      "sha256": "7b2762de2ad89bd49f9c4974a7945c39c0e0d0fd8bb382818a207736b92b496f",
       "imports": [
         {
           "module": "pathlib",
@@ -4759,7 +4759,7 @@ window.CHROMATIC_ARCHITECTURE = {
     },
     {
       "path": "scripts/release_audit.py",
-      "sha256": "d5b06fb987fd5a76ee6fcbc262eb2b7b6fb496352e89698711db92625620062f",
+      "sha256": "4c449b86f8e24d191bb35fb27f15b59f7e8d144f85c4187c6677e3bae9bb3489",
       "imports": [
         {
           "module": "__future__",
@@ -6653,7 +6653,7 @@ window.CHROMATIC_ARCHITECTURE = {
     },
     {
       "path": "tests/test_public_release_manifest.py",
-      "sha256": "b35e498d29d0faa641975d195970363f8ad293b82d9526ec51d6ad45cf34a4e0",
+      "sha256": "09fb7fd27045b7c17c265a56b0487c9be222c81c706d36303c92a60c5dc7abca",
       "imports": [
         {
           "module": "json",
@@ -6988,7 +6988,7 @@ window.CHROMATIC_ARCHITECTURE = {
       ]
     }
   ],
-  "source_identity": "0efda1d137faf6ec27e70d703edfe539c4e0c5a8c9bda4b342c9b28ffe79d32e",
+  "source_identity": "05dcaf06434a64041176ff32ebfb0fda1cf9a5bdcce77974b52e72f6f8e8a2ec",
   "evidence_note": "Source links resolve to generated snapshots of actual local files. Hash and symbol checks detect drift. Tests listed here identify relevant verification code, not a claim that those tests passed in this run. Semantic edges are reviewed assertions, separate from lexical import discovery. Absent integrations describe this reviewed source, not future plans.",
   "semantic_review": {
     "method": "Manually curated source behavior and ownership contracts, with exact source anchors. Validation protects the reviewed registry from stale or altered graph data; it does not automatically prove program behavior.",

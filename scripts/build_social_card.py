@@ -27,7 +27,7 @@ def main():
     draw.text((56, 164), "What if weights", font=font(65, True), fill=ink)
     draw.text((56, 239), "looked like color?", font=font(65, True), fill=ink)
     draw.text((60, 346), "Color tokens. Exact hue arithmetic.", font=font(25), fill=muted)
-    draw.text((60, 384), "Neural network ideas, tested in the open.", font=font(25), fill=muted)
+    draw.text((60, 384), "RGB LEDs, some grit, and a build with my son.", font=font(25), fill=muted)
     # A finite wheel beside a numeric-to-color network sketch.
     center = (959, 221)
     for index in range(120):

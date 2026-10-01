@@ -54,3 +54,11 @@ The native work repaired a Windows library/executable PDB name collision, constr
 - [ ] Establish optimized hardware, throughput, memory or energy benefits against equal-storage controls.
 
 These items are unverified research directions. The finite hue ring is established mathematics. Ring multiplication is not physical color mixing, and hue operations do not preserve arbitrary real-number algorithms. The native token uses four physical bytes, so no compression benefit is claimed.
+
+## Hardware story and public media
+
+- [x] Add the maintainer's story and an authorized LED assembly clip, with the camera enclosure described as planned.
+- [x] Verify full video decoding, preserved AAC audio and removal of identifying metadata.
+- [x] Check exact-path video release selection. All 31 release-selection, privacy-scanner and architecture tests passed.
+- [ ] Add a reviewed transcript or captions. Local transcription was not reliable enough to publish.
+- [ ] Build the camera enclosure and measure readback errors under controlled lighting.

@@ -40,3 +40,11 @@ The main page includes a plain JavaScript and SVG network illustration, a native
 Run `node scripts/check_home_animation.js` to check all 391,680 phase round trips, boundary bytes, invalid inputs and reference network outputs. The renderer reads `docs/site/home.html`, `home.css` and `home.js`. It honors reduced motion and provides pause and step controls. Mobile visitors can scroll the network diagram horizontally.
 
 Rendered documents and architecture pages include canonical URLs, Open Graph tags and X large-image card tags. The site publishes a sitemap, robots file, favicon and a 1200 by 630 PNG share card. To regenerate the card, install Pillow 12.3.0 and run `python scripts/build_social_card.py` with Arial or DejaVu Sans available locally. The website ships the PNG, not Pillow or font binaries. Social platforms may cache older previews; their rendered cards were not verified during this deployment.
+
+## About and hardware video
+
+The homepage includes Brad's account of building with the resources he has, a video of the LED assembly with his son and a collapsed longer explanation. The camera enclosure is a planned experiment to control ambient light and test color readback. The clip does not establish physical neural computation or a GPU replacement.
+
+The native HTML video player has controls, inline playback and a poster frame. It does not autoplay and requests no video preload. The 88.77-second portrait clip uses H.264 video and the original AAC audio. The MP4 is 19,675,056 bytes with its playback index at the start for streaming. Metadata includes video URLs, dimensions and a VideoObject record. The share image URL has a version parameter for this update.
+
+The release selector permits this video by its exact path, `docs/site/media/hardware-build.mp4`. It does not select other MP4 files. The poster is a reviewed documentation image. The site builder copies these manifest-verified assets to `/assets/media/` and checks poster links along with other local links. The original recording and local transcription files are excluded. A local transcription attempt produced unreliable speech text, so the page has no captions track. The written description covers the visible assembly and the planned enclosure; it is not a transcript.

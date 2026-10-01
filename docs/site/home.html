@@ -15,7 +15,7 @@
   </figure>
 </section>
 
-<div class="page-index"><span>Follow the experiment</span><a href="#visual-lab">01 / Weights</a><a href="#native-lab">02 / Color arithmetic</a><a href="#research">03 / Research</a><a href="#resources">04 / Library &amp; docs</a></div>
+<div class="page-index"><span>Follow the experiment</span><a href="#visual-lab">01 / Weights</a><a href="#native-lab">02 / Color arithmetic</a><a href="#research">03 / Research</a><a href="#resources">04 / Library &amp; docs</a><a href="#about">05 / About me</a></div>
 
 <section id="visual-lab" class="chapter" aria-labelledby="weights-title">
   <div class="chapter-heading"><p class="eyebrow">01 / The idea</p><h2 id="weights-title">Same network. A different way to see it.</h2><p>A conventional network multiplies inputs by weights, adds the results and applies an activation. Switch views to imagine those weights as color. The values and output stay the same.</p></div>
@@ -68,4 +68,20 @@ with HueEncoder.encode_phases([[1, 2], [3, 4]]) as a:
   <p class="small">The ZIP includes LICENSE, COPYRIGHT and third-party notices. The website is static; it does not run the Python dashboard. The GitHub repository currently requires access. The reviewed source ZIP is public.</p>
 </section>
 
-<section class="author-block" aria-labelledby="author-title"><div><p class="eyebrow">Built by Brad Clonan</p><h2 id="author-title">Still experimenting.</h2><p>I'm curious about what this representation can do, where it breaks, and whether it offers anything beyond a different way to look at the same numbers. The negative results belong here too.</p></div><div class="social-links"><a href="https://www.linkedin.com/in/bclonan/">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/bclonan">GitHub <span aria-hidden="true">↗</span></a><a href="mailto:clonanxyz@gmail.com">clonanxyz@gmail.com <span aria-hidden="true">↗</span></a></div></section>
+<section id="about" class="about-block" aria-labelledby="author-title">
+  <div class="about-copy"><p class="eyebrow">05 / About me / Brad Clonan</p><h2 id="author-title">Where there's a will,<br>there's a way.</h2>
+    <p>I don't have the funds for expensive GPUs right now. So I'm getting creative with what I do have. A ton of RGB LEDs, some grit, and amateur soldering skills.</p>
+    <p>That's how I started building systems. Figure out what you can do with what you have. It's also how I've helped companies solve architectural problems without assuming a bigger budget is the answer.</p>
+    <p>Now my son and I are building the next experiment. The plan is to put the LEDs in a box with mounted cameras, control the lighting, and test how reliably we can encode and read back color.</p>
+    <details class="about-story"><summary>Why I'm building this</summary>
+      <p>I want to compete in the AI race, and I don't want limited funds to be what stops me. I also want to help lower that barrier for other people. So I'm experimenting.</p>
+      <p>I've been working with color as a way to represent neural weights and inspect how information moves through a network, from encoding to decoding. The bigger question is whether color and light can physically perform useful computation beyond displaying a result calculated digitally.</p>
+      <p>In my head, I'm trying to "paint the full picture" of a neural network and put that representation to work.</p>
+      <p>So far, I've built a Rust library that stores RGBD tokens and performs exact hue arithmetic, alongside this visual walkthrough. The animation shows the idea. The docs and architecture explorer show what's actually implemented.</p>
+      <p>The hardware and software are works in progress. An enclosure may reduce ambient-light interference; it won't eliminate every source of noise. Physical neural computation, a speed or learning advantage, and a replacement for expensive GPUs are still unproven.</p>
+      <p>I'm sharing the experiment as I build it. I want to find out where it works, where it falls apart, and whether there's something useful here that others can build on.</p>
+    </details>
+    <div class="about-socials"><a href="https://www.linkedin.com/in/bclonan/">LinkedIn ↗</a><a href="https://github.com/bclonan">GitHub ↗</a><a href="mailto:clonanxyz@gmail.com">clonanxyz@gmail.com</a></div>
+  </div>
+  <figure class="build-video"><video id="hardware-video" width="720" height="1280" controls playsinline preload="none" loading="lazy" poster="/assets/media/hardware-build-poster.png" aria-label="My son and I building the next hardware experiment" aria-describedby="build-caption"><source src="/assets/media/hardware-build.mp4" type="video/mp4"><p><a href="/assets/media/hardware-build.mp4">Watch or download the build video</a>.</p></video><figcaption id="build-caption"><strong>Building with what we've got.</strong> My son and I working on the next step. The camera enclosure is planned. This clip documents the build, not a working physical neural network.</figcaption><a class="video-download" href="/assets/media/hardware-build.mp4">Open the video ↗</a></figure>
+</section>

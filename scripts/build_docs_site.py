@@ -25,7 +25,7 @@ NAV = [("Start", "/README.html"), ("User guide", "/docs/USER_GUIDE.html"),
 
 
 def metadata(title, url, description=None):
-    description = description or "Explore an experimental RGBD tensor library, exact modular hue arithmetic, neural-network research, source code and evidence."
+    description = description or "Brad Clonan's experiments with color tensors, neural weights and RGB LED hardware. Read the guides, source code and measured evidence."
     title = html.escape(title + " | Chromatic", quote=True)
     description = html.escape(description, quote=True)
     canonical = html.escape(BASE + url, quote=True)
@@ -42,22 +42,35 @@ def metadata(title, url, description=None):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{description}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{BASE}/assets/chromatic-social.png">
-<meta property="og:image:secure_url" content="{BASE}/assets/chromatic-social.png">
+<meta property="og:image" content="{BASE}/assets/chromatic-social.png?v=hardware-build">
+<meta property="og:image:secure_url" content="{BASE}/assets/chromatic-social.png?v=hardware-build">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="What if weights looked like color? Chromatic, an experimental project by Brad Clonan. Numeric weights and color tokens linked through a network diagram.">
+<meta property="og:image:alt" content="What if weights looked like color? Brad Clonan's experimental color tensors and RGB LED hardware, built with what he has.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{description}">
-<meta name="twitter:image" content="{BASE}/assets/chromatic-social.png">
+<meta name="twitter:image" content="{BASE}/assets/chromatic-social.png?v=hardware-build">
 <meta name="twitter:image:alt" content="Chromatic experimental color tensors and a numeric-to-color network diagram.">'''
 
 
 def page(title, content, url="/", home=False):
     links = "".join(f'<a href="{url}">{label}</a>' for label, url in NAV)
-    head = metadata(title, url, "What if neural weights looked like color? Explore Brad Clonan's experimental color tensors, interactive visual explanation, native library and research evidence." if home else None)
+    head = metadata(title, url, "RGB LEDs, some grit and a build with my son. Explore Brad Clonan's experiments with color, neural weights and light, with a native library and research evidence." if home else None)
+    if home:
+        head += f'''<meta property="og:video" content="{BASE}/assets/media/hardware-build.mp4">
+<meta property="og:video:secure_url" content="{BASE}/assets/media/hardware-build.mp4">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="720">
+<meta property="og:video:height" content="1280">'''
+        video_data = {"@context": "https://schema.org", "@type": "VideoObject",
+                      "name": "Building the next experiment with my son",
+                      "description": "Brad Clonan and his son assemble experimental RGB LED hardware. A camera enclosure is planned to control ambient light and test reliable color readback. Physical neural computation is unproven.",
+                      "thumbnailUrl": BASE + "/assets/media/hardware-build-poster.png",
+                      "contentUrl": BASE + "/assets/media/hardware-build.mp4",
+                      "uploadDate": "2026-10-01", "duration": "PT1M28.767S"}
+        head += '<script type="application/ld+json">' + json.dumps(video_data).replace("<", "\\u003c") + '</script>'
     extra = '<link rel="stylesheet" href="/assets/home.css"><script type="module" src="/assets/home.js"></script>' if home else ''
     header_right = '<nav class="header-links" aria-label="Main"><a href="/catalog.html">Documentation</a><a href="/docs/architecture/index.html">Explorer ↗</a><a href="https://github.com/bclonan/chromatic">GitHub ↗</a></nav>' if home else '<span class="edition">Documentation / 0.1.0 native</span>'
     sidebar = '' if home else f'<nav aria-label="Documentation">{links}<hr><a href="/downloads/chromatic-oss.zip">Download source ZIP</a><a href="/source/">Browse release files</a></nav>'
@@ -157,6 +170,11 @@ def main():
         if "docs/site/" + name not in selected:
             raise ValueError("Website asset is not in the release manifest: " + name)
         shutil.copyfile(ROOT / "docs/site" / name, OUT / "assets" / name)
+    for name in sorted(selected):
+        if name.startswith("docs/site/media/") and Path(name).suffix in {".mp4", ".png", ".vtt"}:
+            destination = OUT / "assets/media" / Path(name).name
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(ROOT / name, destination)
     urls = ["/", "/catalog.html", "/docs/architecture/index.html"] + ["/" + url for _, url, _ in documents]
     sitemap = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join("<url><loc>" + html.escape(BASE + url) + "</loc></url>" for url in urls) + "</urlset>"
     (OUT / "sitemap.xml").write_text(sitemap, encoding="utf-8")
@@ -184,7 +202,7 @@ def check_links():
     class Links(HTMLParser):
         def handle_starttag(self, tag, attrs):
             for key, value in attrs:
-                if key not in {"href", "src"} or not value:
+                if key not in {"href", "src", "poster"} or not value:
                     continue
                 url = urlsplit(value)
                 if url.scheme or url.netloc or not url.path:

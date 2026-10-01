@@ -51,3 +51,12 @@ def test_native_notices_and_c_consumers_are_selected(tmp_path):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text("reviewed source or attribution")
     assert len(select_files(tmp_path)) == 3
+
+
+def test_only_named_site_media_is_selected(tmp_path):
+    for name in ("docs/site/media/hardware-build.mp4", "docs/site/media/hardware-build-poster.png", "docs/site/media/hardware-build-captions.vtt", "docs/site/media/private-video.mp4", "docs/site/media/contact-sheet.png", "docs/site/media/raw-probe.json", "docs/other-video.mp4"):
+        path = tmp_path / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(b"media")
+    assert {p.relative_to(tmp_path).as_posix() for p in select_files(tmp_path)} == {
+        "docs/site/media/hardware-build.mp4", "docs/site/media/hardware-build-poster.png", "docs/site/media/hardware-build-captions.vtt"}

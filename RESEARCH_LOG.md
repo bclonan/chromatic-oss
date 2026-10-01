@@ -258,3 +258,13 @@ The JavaScript checker passed 391,680 phase round trips, ten byte boundary vecto
 Browser checks confirmed equal outputs between numeric/color views, changed outputs after changing the first input, pause/step controls and 391,679 plus 1 wrapping to phase zero with RGBD [255, 0, 0, 0]. The 390-pixel layout kept the page within its viewport and allowed horizontal diagram scrolling. No browser warnings or errors appeared in the inspected preview. An old browser tab timed out during reconnect; a fresh preview tab restored verification. Fixed a text-encoding error introduced during a Python edit and removed a duplicate token swatch before publication.
 
 The social image is a drawn diagram. Metadata includes image dimensions, descriptive alt text and absolute canonical/image URLs. These checks do not prove that LinkedIn or X has refreshed its cached preview. Social posts are drafts only.
+
+## About section and hardware clip, 2026-10-01
+
+Added the maintainer's account of building with limited resources and an authorized video of LED assembly with his son. The camera enclosure remains planned. The copy describes ambient-light control and color readback as tests, without claiming noise-free operation, physical neural computation or a GPU replacement. This content change adds no numerical result.
+
+Prepared a 720 by 1280 H.264 MP4 with its playback index at the start and a poster at seven seconds. Full decoding passed. The original AAC packet hash matches the published video, and identifying source metadata was removed. The video is 19,675,056 bytes with SHA-256 `9841725394d7f8932829099c6a65a4df51cf934bfe774c57fd2401f0684af4b6`. The exact video path is allowed by the release selector; other MP4 files remain excluded.
+
+Local transcription encountered a PyAV API mismatch. Decoding audio with ffmpeg repaired that path, but the resulting speech snippets had low confidence. No captions were published from that output. No media was uploaded for transcription. The webpage provides a written visual description and preserves the original audio.
+
+All 31 release-selection, privacy-scanner and architecture tests passed. The new selection test checks that only the named video and optional caption path can enter the release. Build, privacy and hosted playback checks remain release steps described in the hosting guide.

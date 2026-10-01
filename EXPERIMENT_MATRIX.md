@@ -118,3 +118,7 @@ The documentation build renders 47 Markdown documents from the public release se
 ## Browser illustration checks, 2026-10-01
 
 The homepage is a JavaScript teaching example. It does not train a model or execute the native library. Its hue mapping passed all 391,680 phase round trips and ten literal byte boundary checks. Three fixed network reference cases passed. Browser controls preserved outputs between numeric/color display modes and showed the exact zero-phase wrap. The Python suite passed 823 tests with 19 CUDA skips. These checks establish the illustration's behavior; they add no learning or performance finding.
+
+## Hardware assembly footage, 2026-10-01
+
+The homepage video documents LED hardware assembly. Its publication does not establish a physical neural network, noise-free computation, learning or performance. The planned camera enclosure and controlled color readback have no measured results yet. Full video decoding and original AAC preservation passed. All 31 release-selection, privacy-scanner and architecture tests passed after adding the media allowlist. These are media and release checks only.

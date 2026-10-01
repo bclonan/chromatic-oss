@@ -16,6 +16,7 @@ SOURCE_EXTENSIONS = {".py", ".rs", ".toml", ".lock", ".h", ".c", ".html", ".js",
 ROOT_FILES = {"netlify.toml", ".gitattributes", ".gitignore", ".gitleaks.toml", "pyproject.toml", "LICENSE", "COPYRIGHT", "THIRD_PARTY_NOTICES.md", "CONTRIBUTING.md", "SECURITY.md", "RELEASE_CHECKLIST.md", "AGENTS.md", "ARCHITECTURE.md", "README.md", "BENCHMARKS.md", "EXPERIMENTS.md", "EXPERIMENT_MATRIX.md", "LIMITATIONS.md", "RESEARCH_LOG.md", "RESULTS.md", "THEORY.md", "TODO.md"}
 SKIP_PARTS = {"target", "__pycache__", "node_modules", ".git", ".pytest-work", ".pytest_cache", "build", "dist", "_native"}
 MANIFEST = "docs/release/manifest.json"
+APPROVED_SITE_MEDIA = {"docs/site/media/hardware-build.mp4", "docs/site/media/hardware-build-poster.png", "docs/site/media/hardware-build-captions.vtt"}
 
 
 def digest(path):
@@ -38,6 +39,8 @@ def select_files(root=ROOT):
             relative = path.relative_to(root)
             if not path.is_file() or any(part in SKIP_PARTS for part in relative.parts):
                 continue
+            if relative.as_posix().startswith("docs/site/media/"):
+                continue  # Media enters the release only through the exact-path allowlist.
             suffixes = SOURCE_EXTENSIONS | {".md", ".json", ".svg", ".png"} if directory == "docs" else SOURCE_EXTENSIONS | {".md"}
             notice = directory == "native" and "rust-notices" in relative.parts
             if path.suffix not in suffixes and path.name != ".gitignore" and not notice:
@@ -51,6 +54,12 @@ def select_files(root=ROOT):
     # not reusable private binaries or downloaded dataset snapshots.
     for pattern in ("results/*.json", "artifacts/native/package-checks/*.json", "artifacts/native-hue/**/*.json", "artifacts/native-hue/**/*.huetensor", "artifacts/native-hue/**/*.u32"):
         selected.extend(path for path in root.glob(pattern) if path.is_file())
+    for name in APPROVED_SITE_MEDIA:
+        path = root / name
+        if path.is_symlink():
+            raise ValueError("Symlink needs manual review: " + name)
+        if path.is_file():
+            selected.append(path)
     return sorted(set(selected))
 
 

@@ -668,13 +668,13 @@
     {
       "path": "docs/architecture/graph.js",
       "bytes": 182647,
-      "sha256": "e3c166c9bc185600411dc95cfb5e8637396f76df09ea23466da368b923c40ecc",
+      "sha256": "8b9ef71db61732b564dc71ccf7034644022c5bc42106e4e75c0b38dfe27c81d7",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
       "path": "docs/architecture/graph.json",
       "bytes": 182614,
-      "sha256": "cb57d697761398da095db8fa55175ae6412e4567f35e8cc649ce38d8a5c219fa",
+      "sha256": "78f89d956eb6c264bcad908eac3b72f4b4e3164d999a0891ab7a775d67aaeb4a",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1243,8 +1243,8 @@
     },
     {
       "path": "docs/HOSTING.md",
-      "bytes": 3390,
-      "sha256": "23c6a2a0fcc4cb20a18bbbfa25bbcea68ec788a8acdce42605ad9c4856b46715",
+      "bytes": 4739,
+      "sha256": "c0b45228125ea0c4e814293290838d1a091a1298361906661de6917e0586d8f5",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1345,8 +1345,8 @@
     },
     {
       "path": "docs/site/chromatic-social.png",
-      "bytes": 50287,
-      "sha256": "249aaa1ff4ff80ce63cd450a32f2da9c0ff5b097c38c110a19e8b24ad37dd85b",
+      "bytes": 52280,
+      "sha256": "1033c7035a073d47adf0ac2163125234b5b43fbc875826805c5e0821080dc7c5",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1357,20 +1357,32 @@
     },
     {
       "path": "docs/site/home.css",
-      "bytes": 10891,
-      "sha256": "d937740984ca2b36f84da2439cf9b5dc1c3f0d0c7acd53adb171d3049c727f6f",
+      "bytes": 12136,
+      "sha256": "5144607ddae7e91f4fa3265e19ee63935b708de81305a4e9acde0e25b558d577",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
       "path": "docs/site/home.html",
-      "bytes": 11149,
-      "sha256": "fddbc23969745e1770e98c78cb81a23088fd21470494ed7f104b58d3089e4802",
+      "bytes": 13683,
+      "sha256": "93d292cbc657819e9fa32d5fb7122d2944c66855c45dbe2b16327c9ab8938579",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
       "path": "docs/site/home.js",
       "bytes": 16722,
       "sha256": "3c56d7cdf7124a2547517727bc064010c40d6e3135450e92c4656bf909ca31f8",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/site/media/hardware-build-poster.png",
+      "bytes": 675946,
+      "sha256": "61aa3886700b663e3324b89084c14ffca23865de1477c6986397abdde4d09be9",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/site/media/hardware-build.mp4",
+      "bytes": 19675056,
+      "sha256": "9841725394d7f8932829099c6a65a4df51cf934bfe774c57fd2401f0684af4b6",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1393,8 +1405,8 @@
     },
     {
       "path": "EXPERIMENT_MATRIX.md",
-      "bytes": 15335,
-      "sha256": "8480fcc10ab58d9a60a8fd2fb33d1c6a0252e7dc7343a017fbd2990248e3e091",
+      "bytes": 15835,
+      "sha256": "67cb65f17762022076fa0f5f79245fe50996e7a1643c5c6329d3d776be703007",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1741,8 +1753,8 @@
     },
     {
       "path": "RESEARCH_LOG.md",
-      "bytes": 55388,
-      "sha256": "622489d8e57aeb14b2834f1ff81afe8e7edf81ef189dc14d4efa5ccfdce8edbe",
+      "bytes": 56827,
+      "sha256": "d7f70782d956585c440939e8511fb8aa2395f9882896286e88d44016b0593fcc",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1819,8 +1831,8 @@
     },
     {
       "path": "scripts/build_docs_site.py",
-      "bytes": 11716,
-      "sha256": "0f59aa8b8d3605eb1edcd3a31c24dd74af398a5d8807f954a54255418a91932f",
+      "bytes": 13168,
+      "sha256": "826d169fa12f3076095ac35283fc0096f75a0cf8567190ad91ef24dcd96e69d8",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1837,8 +1849,8 @@
     },
     {
       "path": "scripts/build_social_card.py",
-      "bytes": 2845,
-      "sha256": "e3abe6be14d48d6ce63d08d7a38887a0a715a0ab6ab507fb7f8087b121b9dff9",
+      "bytes": 2849,
+      "sha256": "7b2762de2ad89bd49f9c4974a7945c39c0e0d0fd8bb382818a207736b92b496f",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1861,8 +1873,8 @@
     },
     {
       "path": "scripts/release_audit.py",
-      "bytes": 7682,
-      "sha256": "d5b06fb987fd5a76ee6fcbc262eb2b7b6fb496352e89698711db92625620062f",
+      "bytes": 8218,
+      "sha256": "4c449b86f8e24d191bb35fb27f15b59f7e8d144f85c4187c6677e3bae9bb3489",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -2101,8 +2113,8 @@
     },
     {
       "path": "tests/test_public_release_manifest.py",
-      "bytes": 2507,
-      "sha256": "b35e498d29d0faa641975d195970363f8ad293b82d9526ec51d6ad45cf34a4e0",
+      "bytes": 3187,
+      "sha256": "09fb7fd27045b7c17c265a56b0487c9be222c81c706d36303c92a60c5dc7abca",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -2173,10 +2185,10 @@
     },
     {
       "path": "TODO.md",
-      "bytes": 6285,
-      "sha256": "e1e9376dba3046b90b7282670f99f1ece461095e993f9f940858da7314fa8b71",
+      "bytes": 6841,
+      "sha256": "d29c07e84ee376e179689803b37b2578628aef222ba54d28ee9a92b5a2e4d113",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     }
   ],
-  "total_bytes": 272065547
+  "total_bytes": 292428837
 }
