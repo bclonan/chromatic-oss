@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-01T00:23:14.449588+00:00",
+  "source_revision": "cce9742ef9b15d85e29fccecfc8401240b7aaed5",
+  "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.14.0+cu126",
+  "cuda_available": true,
+  "device": "cpu",
+  "threads": 1,
+  "source_sha256": {
+    "chromatensor/__init__.py": "4b9319b3c4ee53ecddcbad98654028a70a5159da40c5ff9f3b7a500ca2863621",
+    "chromatensor/autograd/__init__.py": "29dbb3efe94820aa9b6d171c32fe220eb779f633c7c700309c7420a5e9f6f6ea",
+    "chromatensor/autograd/quantization.py": "a6db79f3679f71a69484b36843ebc69e728d73d846359f80685d88af1481f952",
+    "chromatensor/codecs/__init__.py": "645cf586fa3fd15deb43131d49dc44932caef323080766b90c5405ca14e60f6b",
+    "chromatensor/codecs/base.py": "51cf4214dcb731871ff218ff72d312569068ce13b4a0d70f0e2952651d68657b",
+    "chromatensor/codecs/hierarchical.py": "5dc03519b79633848660a9f07c04c33cd341ab84dd685cd261deeb456954e8af",
+    "chromatensor/codecs/hsv.py": "5ce2eb66a2e80970f46602808b000a30d0cb4203611659029a5079792d97423d",
+    "chromatensor/codecs/learned.py": "66fedb82341acb2e98b64dcb4756b8a7a93ace643fde3f53761bc0f6b30617d6",
+    "chromatensor/codecs/neural_rgb.py": "a0ace1d6406e32cf2b3cac948e1697a95d70904ef8996aded760bcd4d3a64976",
+    "chromatensor/codecs/rgb.py": "c64d2c2ab75ef68b2b7a2e200f0d09619fd718607c707d2ae24f8f7021b834bd",
+    "chromatensor/codecs/rgbd.py": "0de8229189a88d4ef2806cf295a8f3bc1f11efe308f4aa1b166e944f9b273617",
+    "chromatensor/cube.py": "40ec9382b01b3bbf3c3227dcf680545f113913cd53cb94bff18dc5ceb67e1c6d",
+    "chromatensor/decoders.py": "70afdc08e3dd966dd023d1612574047b032399e0c1ec34feaeb5ecbfd6a0e2df",
+    "chromatensor/holographic.py": "c0c438cb792f0c49f2e7f98cd572eddf4246b36c19168248cda957921f67c814",
+    "chromatensor/nn/__init__.py": "d0037299d4799f5434fe1c315e93fc43bed88c14b69f5d5ee52943c04bc162e6",
+    "chromatensor/nn/attention.py": "1384f870058192eb4b321bce66698dfce5b2383cf911a5417439af3954f8dd1f",
+    "chromatensor/nn/layers.py": "38f2f50847fa4f0be7fb13be7cc81c062c8ee52699cb6b6819c0f7665b91c192",
+    "chromatensor/nn/report.py": "ecbae9ecb6003653ee427de0a87697e051c6bb24586a453db90bc19feb340731",
+    "chromatensor/operators/__init__.py": "a72042a18d3b62e5224a7cd034b26ac317d5299d791717bde9d8e0b49abed740",
+    "chromatensor/operators/core.py": "725729c3f66b1f90fdd5b5b4d4a01376dcd8b0b7b582933e5dfe92a8e6722e86",
+    "chromatensor/serialization/__init__.py": "0052c5e4c372360c4fab24b9885a6fb1f5fb344d972e886acbe40c19c6764e2c",
+    "chromatensor/serialization/format.py": "159986e005f59f5691da62c01cbfc938ad7d81dce625d6871006d171b74d6ef7",
+    "chromatensor/tensor.py": "5413e3ff7f677b4e52025de484ad56dd00ea0e4007ea463c829a8085c7d3aa99",
+    "chromatensor/tokenizer/__init__.py": "88616a7d5a819eb2525ca71511e2c5d1553ad617173292bf1c66d5488f7c870b",
+    "chromatensor/visualization/__init__.py": "fd1b9dbc0ae4007762a7bf237ede380fc6e2a8693dc65704b45dade8322d18a7",
+    "chromatensor/visualization/plots.py": "6ec35b91cf7769bff87e86743f8e985f40b3d097153a57420392389abcd6a3ff",
+    "dashboard/__init__.py": "e795b4116ee4f719fdc3731d6de0bc49c19ae03bac6558916ac8a79407f724a9",
+    "dashboard/app.js": "2923e5f8065b13f14051c7f9cb08a755658b1ba3d3d8be54b2a1f67525b5806e",
+    "dashboard/cube.js": "22dae4dcecbf2e72e4c9140596950b8436910797a82c4646b279f21ea3804355",
+    "dashboard/cube_api.py": "30a6099e2f2726c498f300d213e0ad55c8ed8f2bf68b49597cfe247fbe58f472",
+    "dashboard/server.py": "71e40ab2a79a40169e3aa66a786c1e62b92d647c0b5eafcfcbe191d73eaf8b5c",
+    "experiments/__init__.py": "75a49e4b275144336821845efcd63262c51331b2572e05551fa8cb23bf0de8c6",
+    "experiments/ablations.py": "8af0ad62ac5a1488e582d2fabc68698bf7316ca04c131a411d8ed065fdb2d65d",
+    "experiments/attention.py": "a7c60720798fe13ce3369f39fc67e9f5bbaa253cb3b6c7c42add5a92a0721d39",
+    "experiments/common.py": "a7aadf065cdf73c026afa04ea002ac1080441da473bf36b6dd4b1784c27edf9c",
+    "experiments/cube.py": "d7393d0d4f64687b5d8d1b8930dab87f49de59bad21f7898c99c8932b8115709",
+    "experiments/datasets.py": "3c396df19dd2a7df2b9a6dbd53c7a489b6273957979b914536871b5c8aec316d",
+    "experiments/decoder.py": "dbcbc77e86a02b05f7486aad78369a5d3ed2c54df714915c5d9e9d7a41576bfa",
+    "experiments/instrumentation.py": "7b0f859324fc8d57ba82850aa0264132a8dd3b3acf8b6af0ca752a2c918d90e2",
+    "experiments/models.py": "6b8ac1333d55c5fdf49ae30475a1fcb12bea417b34c7a38a8af1d63015d0384b",
+    "experiments/precision.py": "85c7b5b2144237fcd979ce307c15b0669441c3e1e8ee833ee200055d9de1ad08",
+    "experiments/reporting.py": "0b4a0ac3f82a149dc3258b8c000b8530115b3ce4982bb650163b42e6d71027ec",
+    "experiments/training.py": "8733b0bd189977dad5d872384741b7b2c2d69481908b6e959a24be62815638e7",
+    "pyproject.toml": "a2b4b90da9fda8d743f2d24a253795b4492e0801d61de05424fef5e0015a5010",
+    "scripts/dashboard.py": "c1d4168a02b00adc5ac3ea049a11927418cbbee7b8e41b3d60bb321e3c3c3ed1",
+    "scripts/finalize_report.py": "0c633a75ada7d695462627d34b84713118461398057be888c10ecf2ca1c0444e",
+    "scripts/run_benchmarks.py": "d61f2e5cdb086a81ed934a00fbd8cb5e519234864143c39f6988383b6d4d0b01",
+    "scripts/run_cube_experiments.py": "510c3e17cef34c3053dd67b61b87b486aa2a81c0cd1caa9c7da0e9c58ea880a6",
+    "scripts/train.py": "2307323725a6dad464250e8990a3d30f4616aa97bb1d31a564cabc7af98369e7",
+    "scripts/verify.py": "700a057abfaab258d7c9dbf44415a94af9810fbf9f1f7fe0a7fecdcb1dd66123",
+    "tests/conftest.py": "e1269c105af016b549e578bb980aad34e10b33424053ec32492707b70d8492b5",
+    "tests/test_ablations.py": "df32e8d1e261e92f5e45f92bb55fdea8410c48a3e3e16933f5cb817bbecffb10",
+    "tests/test_attention_experiment.py": "079f2dbb139a2a470bd85e906e2c8480ccd6f71d14ddf08fadbbf98347f18074",
+    "tests/test_codecs.py": "c76fcd9fde6eb3b99399706bf8151bde3b49e9fcb436fe97b5dfcbf43f449173",
+    "tests/test_cube.py": "ce8fab01552dfb70388f171bc326334387df6ff6e3f886ec4ed4fcbc8bf17826",
+    "tests/test_cube_api.py": "2a1827ad175871cd8e2e4b287513b6a1a3203c6255fadf98f87e58286dcbd184",
+    "tests/test_cube_experiments.py": "dd9a00b4566dff906789ad4fed7abfecedddc5ae9f6060f7dedf984273a96a28",
+    "tests/test_dashboard.py": "be28d08124d67719d3f0fa0604391a8b94d788351b4689dba5d9d56d673bf784",
+    "tests/test_decoder.py": "6583ae9cec5bcb61cd6c1300dba42c11e7c4e8052736be08e2a78792188fa172",
+    "tests/test_holographic.py": "b448ab2e0f04b18855b976f80bdf3fc382deb4747faa541c6de17b74f20a917f",
+    "tests/test_instrumentation.py": "acd4232b4c6db004494e8471b0aabe86d626fa731a7f3342cfbc572a83347bb3",
+    "tests/test_nn.py": "ed73e44835260fb436aaf1bb43368b37dffe1c61334adbfb76e1dfefdd07bfd0",
+    "tests/test_operators.py": "b8b93069a634d468abe2a6a5e4ef55ef1ba66a32c30e10e60d93811bb7b0ff28",
+    "tests/test_result_io.py": "58e4a2b9d42b9b338729aeea75e7d029825252d654166549c838a891e3868bee",
+    "tests/test_serialization.py": "8312bb534f9241cf87faea391b628a673f8743fb5dabecd2ce81f3f267499a21",
+    "tests/test_tensor.py": "54398244472f39239a1a25f60a7be820d5a7d95cf85bca064f0116678e740dd6",
+    "tests/test_training.py": "58fb1264f12cc6e1a2557c811c2d3010129c8f3d444b6c0a76fa78af698a64e1"
+  },
+  "reproduction_script_sha256": "5c1b396688ff80dea044be16c9807e62067740b484ada230c4ab354c561ae77f",
+  "findings": {
+    "causal": {
+      "reproduced": true,
+      "seed": 7,
+      "prefix_logits_max_delta": {
+        "fp32": 0.0,
+        "int8": 0.029961705207824707,
+        "chroma8": 0.029961705207824707,
+        "fixed24": 5.736947059631348e-07,
+        "rgb24": 5.736947059631348e-07
+      },
+      "attention_seed": 19,
+      "attention_prefix_max_delta": 0.22101426124572754
+    },
+    "slicing": {
+      "reproduced": true,
+      "expected": [
+        [
+          0.0,
+          3.0
+        ]
+      ],
+      "actual": [
+        [
+          0.0,
+          1.0,
+          2.0
+        ]
+      ]
+    },
+    "parameter_tie": {
+      "reproduced": true,
+      "original_tied": true,
+      "converted_tied": false,
+      "restored_tied": false,
+      "parameter_counts": [
+        1,
+        2,
+        2
+      ]
+    },
+    "attention_bypass": {
+      "reproduced": true,
+      "quantizer_calls": 0,
+      "bits": 1,
+      "outputs_exact": true
+    },
+    "config_precision": {
+      "reproduced": true,
+      "max_delta": 9.934440770020814e-09,
+      "original_dtype": "torch.float64",
+      "restored_dtype": "torch.float32"
+    },
+    "scalar_domain": {
+      "reproduced": true,
+      "centroid_unique_values": [
+        0.0
+      ],
+      "decoded_unique_values": [
+        0.0
+      ],
+      "max_error": 2e-50
+    },
+    "binary_hierarchy": {
+      "reproduced": true,
+      "decoded_by_level_count": {
+        "1": [
+          -1.0,
+          -1.0,
+          1.0
+        ],
+        "2": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "3": [
+          -1.0,
+          -1.0,
+          1.0
+        ],
+        "4": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "32": [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "grid_container": {
+      "reproduced": true,
+      "expected_code": 200,
+      "error": "Code values must lie in [0, 255]"
+    },
+    "logarithmic_domain": {
+      "reproduced": true,
+      "bounds": [
+        1e+20,
+        1.0000000000000002e+20
+      ],
+      "distinct_input_endpoints": true,
+      "normalized": [
+        "nan",
+        "nan"
+      ],
+      "codes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "full_mnist": {
+      "reproduced": true,
+      "provenance": "cached official torchvision MNIST, download=False",
+      "seed": 7,
+      "rows": [
+        {
+          "split": "train",
+          "official_count": 60000,
+          "requested_count": 60000,
+          "selected_count": 58862
+        },
+        {
+          "split": "test",
+          "official_count": 10000,
+          "requested_count": 10000,
+          "selected_count": 9786
+        }
+      ]
+    },
+    "package": {
+      "reproduced": true,
+      "wheels": {
+        "committed": {
+          "sha256": "6d87c386dda91b8c98aa2f5cb2fddb9e79280f09e808c03d520a675f5b70519c",
+          "missing_files": [
+            "chromatensor/cube.py",
+            "chromatensor/holographic.py",
+            "experiments/cube.py",
+            "dashboard/cube_api.py",
+            "dashboard/cube.js",
+            "dashboard/cube.css"
+          ],
+          "exports_cube": false
+        },
+        "rebuilt": {
+          "sha256": "67fabaefb10fb6c91e434214159ce8be8c1a0a74cbde29e77ddba37d4283c7fd",
+          "missing_files": [],
+          "exports_cube": true
+        }
+      }
+    },
+    "host": {
+      "reproduced": true,
+      "foreign_host_get_status": 200,
+      "foreign_origin_post_status": 200,
+      "encoded_codes": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          255,
+          255,
+          255
+        ]
+      ],
+      "scope": "server-side header test; no browser exploitation test"
+    },
+    "cube_artifacts": {
+      "reproduced": true,
+      "same_path": true,
+      "checkpoint_hashes": [
+        "0abbda57a99af42553e610b662db5f6ba7c922a37239085778df61752c1d3506",
+        "dac6dde146e8bfe0e32ed44f5c47d5cb907a35bc6479353f8bfe0432ab53bcb1"
+      ],
+      "validation_mse": [
+        0.018244193945020606,
+        0.02210375674088328
+      ],
+      "checkpoint_bytes": [
+        178501,
+        178402
+      ],
+      "scope": "temporary directory; original cube records and checkpoints untouched"
+    },
+    "acceptance": {
+      "reproduced": true,
+      "provided_tests": 302,
+      "provided_skipped": 302,
+      "exit_code": 0,
+      "reported_complete": true,
+      "scope": "only XML input replaced in memory; canonical results and acceptance file untouched"
+    }
+  },
+  "public_sanitization": {
+    "historical_only": true,
+    "original_file_sha256": "2d5812ceec052b6091dd033584d75db62e329585322aa4aa71edfc60bd88481f",
+    "changes": "Machine paths redacted; numbers, seeds, sample counts and execution precision preserved. Missing companion data and old source hashes cannot certify this release."
+  }
+}

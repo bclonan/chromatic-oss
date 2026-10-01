@@ -1,0 +1,112 @@
+{
+  "scanner": "release byte scan1.0 and exact notice/source comparisons",
+  "date": "2026-10-01",
+  "scope": "all current candidate Python wheels",
+  "packages": [
+    {
+      "file": "artifacts/packages/chromatensor-0.2.0-py3-none-any.whl",
+      "bytes": 176667,
+      "sha256": "b19451f22245e4765a2a26905b58ee4fd05920d36a24894ba14fcf3d956b43f7",
+      "privacy_status": "PASS",
+      "findings": [],
+      "limits": [],
+      "notice_checks": [
+        {
+          "file": "chromatensor-0.2.0.dist-info/licenses/LICENSE",
+          "matches_project": true
+        }
+      ],
+      "license_metadata_status": "PASS",
+      "license_issues": [],
+      "source_correspondence_status": "PASS",
+      "changed_source_files": [],
+      "copyright_included": true,
+      "members": 57
+    },
+    {
+      "file": "artifacts/packages/native-hue/chromatic_hue-0.1.0-py3-none-win_amd64.whl",
+      "bytes": 638786,
+      "sha256": "a04a7faab15ddf65984dd1adb9aa8bff09e7aea242a27287a0270c894130c60b",
+      "privacy_status": "PASS",
+      "findings": [],
+      "limits": [],
+      "notice_checks": [
+        {
+          "file": "chromatic_hue-0.1.0.dist-info/licenses/LICENSE",
+          "matches_project": true
+        },
+        {
+          "file": "chromatic_hue-0.1.0.dist-info/licenses/rust/COPYRIGHT.html",
+          "matches_source": true
+        },
+        {
+          "file": "chromatic_hue-0.1.0.dist-info/licenses/rust/README.md",
+          "matches_source": true
+        },
+        {
+          "file": "chromatic_hue-0.1.0.dist-info/licenses/rust/licenses/Apache-2.0.txt",
+          "matches_source": true
+        },
+        {
+          "file": "chromatic_hue-0.1.0.dist-info/licenses/rust/licenses/BSD-2-Clause.txt",
+          "matches_source": true
+        },
+        {
+          "file": "chromatic_hue-0.1.0.dist-info/licenses/rust/licenses/CC-BY-SA-4.0.txt",
+          "matches_source": true
+        },
+        {
+          "file": "chromatic_hue-0.1.0.dist-info/licenses/rust/licenses/GCC-exception-3.1.txt",
+          "matches_source": true
+        },
+        {
+          "file": "chromatic_hue-0.1.0.dist-info/licenses/rust/licenses/GPL-2.0-only.txt",
+          "matches_source": true
+        },
+        {
+          "file": "chromatic_hue-0.1.0.dist-info/licenses/rust/licenses/GPL-3.0-or-later.txt",
+          "matches_source": true
+        },
+        {
+          "file": "chromatic_hue-0.1.0.dist-info/licenses/rust/licenses/ISC.txt",
+          "matches_source": true
+        },
+        {
+          "file": "chromatic_hue-0.1.0.dist-info/licenses/rust/licenses/LLVM-exception.txt",
+          "matches_source": true
+        },
+        {
+          "file": "chromatic_hue-0.1.0.dist-info/licenses/rust/licenses/MIT.txt",
+          "matches_source": true
+        },
+        {
+          "file": "chromatic_hue-0.1.0.dist-info/licenses/rust/licenses/NCSA.txt",
+          "matches_source": true
+        },
+        {
+          "file": "chromatic_hue-0.1.0.dist-info/licenses/rust/licenses/OFL-1.1.txt",
+          "matches_source": true
+        },
+        {
+          "file": "chromatic_hue-0.1.0.dist-info/licenses/rust/licenses/Unicode-3.0.txt",
+          "matches_source": true
+        },
+        {
+          "file": "chromatic_hue-0.1.0.dist-info/licenses/rust/manifest.json",
+          "matches_source": true
+        }
+      ],
+      "license_metadata_status": "PASS",
+      "license_issues": [],
+      "source_correspondence_status": "PASS",
+      "changed_source_files": [],
+      "copyright_included": true,
+      "members": 30
+    }
+  ],
+  "limitations": [
+    "This inspection does not execute native binaries or check for malware.",
+    "Exact byte comparison covers wheel files present in the current source tree and copied license notices.",
+    "The Rust copyright inventory is broader than components linked into these binaries."
+  ]
+}

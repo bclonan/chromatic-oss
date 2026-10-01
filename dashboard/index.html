@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Overview | ChromaTensor</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/cube.css">
+  <script src="/cube.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a href="#content" class="skip-link">Skip to content</a>
+  <aside class="sidebar">
+    <a class="brand" href="#overview"><span class="brand-mark" aria-hidden="true"></span><span>ChromaTensor<small>Research workbench</small></span></a>
+    <p class="nav-label">Workspace</p>
+    <nav aria-label="Research views" id="navigation"></nav>
+    <div class="sidebar-bottom"><div class="local-tag"><span class="status-dot" aria-hidden="true"></span>Local reference implementation</div><p>Chromatic symbols.<br>Measured behavior.</p><span class="version">Python / PyTorch · v0.2.0</span></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><span class="breadcrumb">Research / <span id="breadcrumb">Overview</span></span><div class="header-actions"><span id="connection" class="connection">Connecting</span><button type="button" id="refresh" class="button small">Refresh results</button><button type="button" id="export" class="button small primary">Export run</button></div></header>
+    <main id="content" tabindex="-1">
+      <div class="page-heading"><div><p class="eyebrow" id="eyebrow">ChromaTensor laboratory</p><h1 id="page-title" tabindex="-1">Overview</h1><p class="page-description" id="page-description"></p></div><div class="run-meta" id="run-meta"></div></div>
+      <div id="notice" class="notice" hidden></div>
+      <div id="view"></div>
+      <footer>ChromaTensor uses bits and numerical computation. Color is the tensor encoding and inspection interface.</footer>
+    </main>
+  </div>
+  <div id="announcer" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

@@ -1,0 +1,5727 @@
+{
+  "schema_version": 1,
+  "run_id": "cube-20261001T041453929534Z-da641de6ef15",
+  "status": "complete",
+  "created_at": "2026-10-01T04:15:09.967468+00:00",
+  "environment": {
+    "python": "3.14.6",
+    "torch": "2.14.0+cu126",
+    "numpy": "2.5.2",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cuda_available": true,
+    "cuda_version": "12.6",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "threads": 4,
+    "revision": "e60d4206144488fdb10b625f51a52499733039ec",
+    "git": {
+      "available": true,
+      "commit": "e60d4206144488fdb10b625f51a52499733039ec",
+      "dirty": true,
+      "status": [
+        "M ARCHITECTURE.md",
+        " M EXPERIMENT_MATRIX.md",
+        " M LIMITATIONS.md",
+        " M README.md",
+        " M RESEARCH_LOG.md",
+        " M RESULTS.md",
+        " M TODO.md",
+        " M artifacts/dashboard/cube-verification.json",
+        " M artifacts/packages/chromatensor-0.2.0-py3-none-any.whl",
+        " M artifacts/review/diff-check-warnings.txt",
+        " M artifacts/review/final-source-sha256.txt",
+        " M artifacts/verification-tests.xml",
+        " M artifacts/verification/linux311-installed.json",
+        " M artifacts/verification/linux311-tests.xml",
+        " M artifacts/verification/linux312-installed.json",
+        " M artifacts/verification/linux312-tests.xml",
+        " M artifacts/verification/linux313-installed.json",
+        " M artifacts/verification/linux313-tests.xml",
+        " M artifacts/verification/linux314-installed.json",
+        " M artifacts/verification/linux314-tests.xml",
+        " M artifacts/verification/minimum-installed.json",
+        " M artifacts/verification/minimum-tests.xml",
+        " M artifacts/verification/python311-installed.json",
+        " M artifacts/verification/python311-tests.xml",
+        " M artifacts/verification/python312-installed.json",
+        " M artifacts/verification/python312-tests.xml",
+        " M artifacts/verification/python313-installed.json",
+        " M artifacts/verification/python313-tests.xml",
+        " M artifacts/verification/python314-installed.json",
+        " M artifacts/verification/python314-tests.xml",
+        " M chromatensor/__init__.py",
+        " M chromatensor/autograd/quantization.py",
+        " M chromatensor/codecs/__init__.py",
+        " M chromatensor/nn/report.py",
+        " M chromatensor/tensor.py",
+        " M chromatensor/tokenizer/__init__.py",
+        " M dashboard/app.js",
+        " M dashboard/server.py",
+        " M docs/API.md",
+        " M docs/CUBE_RESULTS.md",
+        " M docs/DASHBOARD.md",
+        " M docs/FILE_FORMATS.md",
+        " M docs/MEASUREMENT.md",
+        " M docs/REPAIR_REPORT.md",
+        " M docs/RESEARCH_REVIEW.md",
+        " M docs/REVIEW_CHECKLIST.md",
+        " M docs/SETUP.md",
+        " M experiments/provenance.py",
+        " M experiments/verification.py",
+        " M results/acceptance.json",
+        " M results/cube.json",
+        " M results/dependency-verification.json",
+        " M results/latest.json",
+        " M results/release-research.json",
+        " M results/repair-regressions.json",
+        " M results/test-verification.json",
+        " M results/train_scalar_chroma8.json",
+        " M results/train_scalar_chroma8.md",
+        " M scripts/verify.py",
+        " M scripts/verify_release_install.py",
+        " M tests/test_acceptance.py",
+        " M tests/test_dashboard.py",
+        "?? artifacts/dashboard/cube-current.jpg",
+        "?? artifacts/dashboard/cube-observations.json",
+        "?? artifacts/release-research/artifacts-20261001T024731587512Z-339379996031/mnist-int8-s41-probe.npz",
+        "?? artifacts/release-research/artifacts-20261001T024731587512Z-339379996031/mnist-int8-s41.ctcheckpoint",
+        "?? artifacts/release-research/artifacts-20261001T030842299904Z-6b37d33e42b9/",
+        "?? artifacts/release-research/artifacts-20261001T040845234096Z-1c011d799e29/",
+        "?? artifacts/review/before-final-durable-source/",
+        "?? artifacts/review/before-rgbd-token-repair/",
+        "?? artifacts/review/before-rgbd-utf8-repair/",
+        "?? artifacts/review/final-acceptance-output.json",
+        "?? artifacts/review/matrix-failure/before-git-context-repair-tests.xml",
+        "?? artifacts/review/matrix-failure/before-git-portability-freeze-tests.xml",
+        "?? artifacts/review/matrix-failure/before-user-commit-tests.xml",
+        "?? artifacts/review/repair-report-whitespace.txt",
+        "?? artifacts/review/rgbd-cube.txt",
+        "?? artifacts/review/rgbd-focused-tests.txt",
+        "?? artifacts/review/rgbd-host-tests.txt",
+        "?? artifacts/review/rgbd-pilot.txt",
+        "?? artifacts/review/rgbd-release-matrix.txt",
+        "?? artifacts/review/rgbd-repair-regressions.txt",
+        "?? artifacts/review/rgbd-sustained.txt",
+        "?? artifacts/review/rgbd-token-proof.txt",
+        "?? artifacts/review/rgbd-train-wrapper.txt",
+        "?? artifacts/review/rgbd-web-guidance.md",
+        "?? artifacts/review/setup-doc-whitespace.txt",
+        "?? artifacts/rgbd-tokens/",
+        "?? docs/RGBD_TOKENS.md",
+        "?? results/history/acceptance-before-final-browser-envelope.json",
+        "?? results/history/before-git-context-repair/",
+        "?? results/history/before-rgbd-token-repair/",
+        "?? results/history/before-rgbd-utf8-repair/",
+        "?? results/history/before-user-commit-e60d420/",
+        "?? results/release-verification.json",
+        "?? results/rgbd-token-verification.json",
+        "?? scripts/verify_rgbd_tokens.py",
+        "?? tests/test_rgbd_nn.py",
+        "?? tests/test_rgbd_tokens.py"
+      ]
+    },
+    "dependencies": {
+      "python": "3.14.6",
+      "torch": "2.14.0+cu126",
+      "torchvision": "0.29.0+cu126",
+      "numpy": "2.5.2",
+      "matplotlib": "3.11.2",
+      "psutil": "7.2.2",
+      "pytest": "8.4.2"
+    },
+    "timestamp": "2026-10-01T04:15:10.097064+00:00"
+  },
+  "config": {
+    "seeds": [
+      7,
+      23
+    ],
+    "epochs": 24,
+    "dimensions": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "size": 3,
+    "training_shape": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "training_device": "cpu"
+  },
+  "provenance": {
+    "schema_version": 1,
+    "captured_at": "2026-10-01T04:14:53.929898+00:00",
+    "source": {
+      "files": {
+        ".github/workflows/ci.yml": "ec05ebe634502ee23e48e7b3cc66cce3d3e098fabf6a311c50408d4ee0c4ce0d",
+        "AGENTS.md": "c56f62c3e55b66a963eb95a9d342ccf5857bac3744f636dcea70dbbaafcab9f6",
+        "chromatensor/__init__.py": "e87a544bc449941ad7734da281171b259c607c43ca4ee631df4e7a7dcbf3ba88",
+        "chromatensor/autograd/__init__.py": "29dbb3efe94820aa9b6d171c32fe220eb779f633c7c700309c7420a5e9f6f6ea",
+        "chromatensor/autograd/quantization.py": "9524cd0af99950a2852a84cadbd29b8d374a089dce01f793cf903da9e72fe393",
+        "chromatensor/codecs/__init__.py": "fc436cb22a165f6dfa2cc25efc6c6348d304eea468545edf3ee31e355797080e",
+        "chromatensor/codecs/base.py": "51cf4214dcb731871ff218ff72d312569068ce13b4a0d70f0e2952651d68657b",
+        "chromatensor/codecs/hierarchical.py": "cef4692aecbc208564489bc165cc9b0c9ef1440257f735734326e792ecc1cec3",
+        "chromatensor/codecs/hsv.py": "5ce2eb66a2e80970f46602808b000a30d0cb4203611659029a5079792d97423d",
+        "chromatensor/codecs/learned.py": "1bcb2fdbfccc1f0423a7c4624476793875903c2d008fa696de1aa613e37a7281",
+        "chromatensor/codecs/neural_rgb.py": "156c782f66096f8960c863b8d743146f00cf05d219b419fcef7291762947b0da",
+        "chromatensor/codecs/rgb.py": "aa8ec8ed36333fe5f212441e9a288c8f1cc6254425c6de5278625ef89d3b9906",
+        "chromatensor/codecs/rgbd.py": "0de8229189a88d4ef2806cf295a8f3bc1f11efe308f4aa1b166e944f9b273617",
+        "chromatensor/cube.py": "743086b6121e60630681e4958a65f9bd2195e71ef04520ef43ad8fc2dbd24451",
+        "chromatensor/decoders.py": "70afdc08e3dd966dd023d1612574047b032399e0c1ec34feaeb5ecbfd6a0e2df",
+        "chromatensor/holographic.py": "379630fa90845a4a1ad12282edbd7fbad90403ee6f12cc70f25231530e4ff997",
+        "chromatensor/nn/__init__.py": "d0037299d4799f5434fe1c315e93fc43bed88c14b69f5d5ee52943c04bc162e6",
+        "chromatensor/nn/attention.py": "1384f870058192eb4b321bce66698dfce5b2383cf911a5417439af3954f8dd1f",
+        "chromatensor/nn/layers.py": "2570772713de51c263c5ffd653d61e0f535dcb3b1b9ffc8501ae6e7e9ccde194",
+        "chromatensor/nn/report.py": "ca387c1d8048a3d08637740bfc2ef778f9fd243b08bede4d905cbcaff6e486ac",
+        "chromatensor/operators/__init__.py": "a72042a18d3b62e5224a7cd034b26ac317d5299d791717bde9d8e0b49abed740",
+        "chromatensor/operators/core.py": "5db3a66e45c15f764845c71d92053f1d60f0d6bd7c6632b0d3fcabf6d47c35a7",
+        "chromatensor/serialization/__init__.py": "0052c5e4c372360c4fab24b9885a6fb1f5fb344d972e886acbe40c19c6764e2c",
+        "chromatensor/serialization/format.py": "6b2694152b7a2d1face0eb6db891ac6effea9a0d06287657b63be97e9936e8b1",
+        "chromatensor/tensor.py": "9cf59d8f5db06a928555f0e7bb248ce2cc1f0704d1615ecca8fe70c23fc5c54b",
+        "chromatensor/tokenizer/__init__.py": "a3b4a1b7203fc8d4c52fe9a1b03c3d9eee3dcc78d7d82891f447f9fc98273e72",
+        "chromatensor/visualization/__init__.py": "fd1b9dbc0ae4007762a7bf237ede380fc6e2a8693dc65704b45dade8322d18a7",
+        "chromatensor/visualization/plots.py": "6ec35b91cf7769bff87e86743f8e985f40b3d097153a57420392389abcd6a3ff",
+        "dashboard/__init__.py": "e795b4116ee4f719fdc3731d6de0bc49c19ae03bac6558916ac8a79407f724a9",
+        "dashboard/app.js": "59096088da2640564034b45108d19cd70477c3affa02954b30a03773fd7bb9a7",
+        "dashboard/cube.css": "5653d9c8a21e26321d6100b67f42429bbe97b4cab35b82151e76c3128b4d5ff5",
+        "dashboard/cube.js": "22dae4dcecbf2e72e4c9140596950b8436910797a82c4646b279f21ea3804355",
+        "dashboard/cube_api.py": "30a6099e2f2726c498f300d213e0ad55c8ed8f2bf68b49597cfe247fbe58f472",
+        "dashboard/index.html": "6f8ac1d22a78af2d9b64e795a96b5e4ad1e4d7edf67cd7e41871ba997abd0c0b",
+        "dashboard/server.py": "c9ee7664b55deb67b03c6ed051ff3f8eeeca4576befce7cdd103ee871ccf2f2d",
+        "dashboard/style.css": "80850bbe4417bcf3e6eea8b0417cf58f7da920671e7ff7e45fc29036f15e7bf3",
+        "experiments/__init__.py": "75a49e4b275144336821845efcd63262c51331b2572e05551fa8cb23bf0de8c6",
+        "experiments/ablations.py": "8af0ad62ac5a1488e582d2fabc68698bf7316ca04c131a411d8ed065fdb2d65d",
+        "experiments/attention.py": "479c5d16983848dc5ac8da78737533ced8f07751c87dc53156b4930dd3cee0a1",
+        "experiments/checkpoint_probe.py": "9e0028ecf023ac6b0835a8cb3ebdd0835b0450971f14230f433b3fc53a777863",
+        "experiments/common.py": "6842cdc94effcf926ef8f8d46f409ee91b05a507a8c671555de6f1b18a8b63ad",
+        "experiments/cube.py": "745371c258c9fd10e50d753aea457e9d5305950d2e7fa7befb9583e7725860fe",
+        "experiments/datasets.py": "d79df91b2ebad6bb51c02d0f96d69d2f0e674bfbecb8027441306910eb37e9f2",
+        "experiments/decoder.py": "152913a4d0e58412b95c7a6f0c1c6dca5a76fefc3c1f033beb6ff18cdd3c2515",
+        "experiments/instrumentation.py": "7b0f859324fc8d57ba82850aa0264132a8dd3b3acf8b6af0ca752a2c918d90e2",
+        "experiments/models.py": "6b8ac1333d55c5fdf49ae30475a1fcb12bea417b34c7a38a8af1d63015d0384b",
+        "experiments/precision.py": "97d5b673789297f808cce59fe80541e6d766f5ccb46497bf687c2047d01c0b48",
+        "experiments/provenance.py": "58e4b57b7ad58042ff28b518f6a5eaf75d53cd1acbb65bdc8b2acd88d739ae71",
+        "experiments/reporting.py": "0b4a0ac3f82a149dc3258b8c000b8530115b3ce4982bb650163b42e6d71027ec",
+        "experiments/training.py": "818c0bbb28e607b2b4eb7846b362c9061fcbe06d79c7fa3ab70f560a7e906f28",
+        "experiments/verification.py": "26f4ea1c0e2e6751a440485a1aa411c65292b05196e61fa1f8f6b2b886677484",
+        "pyproject.toml": "e3429218e7f51d18620e16c5d5694a366e0c8b215aa046a95b36814abfc3b07d",
+        "requirements/linux311-cpu.lock": "af7b6d78dd9771688ce19e926360b2dc61cb20949170cc98eb0deab0240d573e",
+        "requirements/linux312-cpu.lock": "75315cbd92fe8338d8ece4c1a8291b94941f60b97d88b54ae734299c523744c0",
+        "requirements/linux313-cpu.lock": "75315cbd92fe8338d8ece4c1a8291b94941f60b97d88b54ae734299c523744c0",
+        "requirements/linux314-cpu.lock": "75315cbd92fe8338d8ece4c1a8291b94941f60b97d88b54ae734299c523744c0",
+        "requirements/minimum-cpu.lock": "feb158fc00ff1e54b70fcb2cb4f228a75ed22636aec20acc6dab54b95a8e844a",
+        "requirements/minimum.txt": "776bd9fb96cbcb72c05dca4e67ad9835f3c2d33fe674dffe33b4910e27cb6394",
+        "requirements/python311-cpu.lock": "f4d169524ba857a37f41c3f0a56dc890332e9bbb6c9f16eb6fc55152cfb7dc8b",
+        "requirements/python312-cpu.lock": "8415e0dfb371882cfe839f10bc9207fe7cbf9dde836bd64d75f96c3e09e73ee5",
+        "requirements/python313-cpu.lock": "8415e0dfb371882cfe839f10bc9207fe7cbf9dde836bd64d75f96c3e09e73ee5",
+        "requirements/python314-cpu.lock": "8415e0dfb371882cfe839f10bc9207fe7cbf9dde836bd64d75f96c3e09e73ee5",
+        "scripts/build_release_evidence.py": "7b826a089293538db0d3cc37ca5283d1a899ad2d4f7eafb717361a94d4d69934",
+        "scripts/dashboard.py": "c1d4168a02b00adc5ac3ea049a11927418cbbee7b8e41b3d60bb321e3c3c3ed1",
+        "scripts/finalize_report.py": "7ab674d5d85b43fd322799234cbf3730384c5fe6ad5f35866e7fe96f07ef9d5a",
+        "scripts/review_reproductions.py": "9f945a5abdc667727acad1edd800157cd1968030863fd9006c567cf5336a550b",
+        "scripts/run_benchmarks.py": "3c666add71610352bebffe13b09689f3977901b443db13959b0c4e3478fbd236",
+        "scripts/run_cube_experiments.py": "d65dccf54be8aaf4a2af3dc2ae73068454edc9dc9bfa428dfcfdc49fdd90ec37",
+        "scripts/run_release_research.py": "15cdfce4ff02543fff12df1c931982a142c57cfd9f48935a0231fc6f1f779a5b",
+        "scripts/run_verification_tests.py": "26f29bc35585c2077711c33a6f8a972eeb6302866de99e17dae4054f8acf607d",
+        "scripts/train.py": "2307323725a6dad464250e8990a3d30f4616aa97bb1d31a564cabc7af98369e7",
+        "scripts/verify.py": "e2b8ce948cd9b89b9d4fb8689f3f56fa9d621f760004540690dcfaaef2568a82",
+        "scripts/verify_dependencies.py": "0b3e73083a358428836fd7f2b5db132629ad34b3f657b08416f83e34df94d255",
+        "scripts/verify_release_install.py": "abd56076b1a5ffd73c2cf6268f60b6759a501fbcc27c55060cc8529cdd758fab",
+        "scripts/verify_rgbd_tokens.py": "cfe9d167c16561c266b8af993b57334e12bea219e554e63cb0fe54381a566a69",
+        "tests/conftest.py": "e1269c105af016b549e578bb980aad34e10b33424053ec32492707b70d8492b5",
+        "tests/test_ablations.py": "df32e8d1e261e92f5e45f92bb55fdea8410c48a3e3e16933f5cb817bbecffb10",
+        "tests/test_acceptance.py": "e8c76cdc15fd4047fc2903f218e16ce1904e8fac4834282266b7312f71648d12",
+        "tests/test_attention_experiment.py": "8ffc19b593100388d8c8fa531f8fba8b781a2c7a2374f2da0d09b5bb79734b8f",
+        "tests/test_checkpoint_probe.py": "c0e5a2f0bc4e644e8f88fba8653f62c21a289b0864cecac90d7a6f0311784182",
+        "tests/test_codecs.py": "5b244cce5daf69e9a41e1b3f80a50cef45bef60ecba16482ff3c6a5b4b78c772",
+        "tests/test_cube.py": "ce56c5f43379a3ddcb0c5d84938ab26bdec665021fe2aac1a494d6dbc7b15320",
+        "tests/test_cube_api.py": "2a1827ad175871cd8e2e4b287513b6a1a3203c6255fadf98f87e58286dcbd184",
+        "tests/test_cube_experiments.py": "39309ef4d9342d1fa9aa43de1cd31bb15af8de3ab42e92c55de99286f42b11bb",
+        "tests/test_dashboard.py": "76608e25cb244b7c5f935859d5a7cf8752729bffa9962a3a6c22deb8572bf966",
+        "tests/test_datasets.py": "aeb1c8fbe0a16a4f348bcbb28923e0bce3b958b42b953c57c70ca5eceeaa1331",
+        "tests/test_decoder.py": "c1e8a7b19cde5ee2b7da8f1d288c578f47198e4ce7e5c2adef432f1375cf1a92",
+        "tests/test_file_limits.py": "bf1ded7fb665bbabf7f8782f3770babeb2e3553ed8fa1a6a8b1826d36acbe1d5",
+        "tests/test_holographic.py": "b448ab2e0f04b18855b976f80bdf3fc382deb4747faa541c6de17b74f20a917f",
+        "tests/test_instrumentation.py": "acd4232b4c6db004494e8471b0aabe86d626fa731a7f3342cfbc572a83347bb3",
+        "tests/test_nn.py": "d3908175692e1e973cd7c113fa151a3a1bb701e8c322383e511748994dae770c",
+        "tests/test_operators.py": "990203f49d2e13bca02dd7f4455aa28e68baafe39aa63ab374b869246f7e45c3",
+        "tests/test_release_matrix.py": "54edcc832000ccda014dbfe0ab0a349cfef165a6a127a4a6aeeac41fa1a4a014",
+        "tests/test_release_research.py": "afa406fab27e92708eb1f5912a3e06ef942d3f27ef7b0ab540d190770c71108f",
+        "tests/test_result_io.py": "58e4a2b9d42b9b338729aeea75e7d029825252d654166549c838a891e3868bee",
+        "tests/test_rgbd_nn.py": "a09d41ece470bed998f29acdf50931f91224b63401166d7746a81997211c0aa1",
+        "tests/test_rgbd_tokens.py": "c219392c56391983f02da4ccb0e0e1053d8cd244af61af790b3d9183dee6b94f",
+        "tests/test_serialization.py": "1a33cf704b47831070438c3d7d99ad5c268ccab3039ca73b43ed2a46cdc4ccd7",
+        "tests/test_tensor.py": "1f20a6bfc449516b950d6732618ef65e00fc9224c1cd7f78a0312bb717fe92b3",
+        "tests/test_training.py": "e159375ee9c0605212a1ab5043ed8497607ab8176ce81f588017ac426777c50b"
+      },
+      "sha256": "69eb8feebdc26d4e72bd1160ed7e5cf695d5035a65f62edebc1a061061ba1fba"
+    },
+    "git": {
+      "available": true,
+      "commit": "e60d4206144488fdb10b625f51a52499733039ec",
+      "dirty": true,
+      "status": [
+        "M ARCHITECTURE.md",
+        " M EXPERIMENT_MATRIX.md",
+        " M LIMITATIONS.md",
+        " M README.md",
+        " M RESEARCH_LOG.md",
+        " M RESULTS.md",
+        " M TODO.md",
+        " M artifacts/dashboard/cube-verification.json",
+        " M artifacts/packages/chromatensor-0.2.0-py3-none-any.whl",
+        " M artifacts/review/diff-check-warnings.txt",
+        " M artifacts/review/final-source-sha256.txt",
+        " M artifacts/verification-tests.xml",
+        " M artifacts/verification/linux311-installed.json",
+        " M artifacts/verification/linux311-tests.xml",
+        " M artifacts/verification/linux312-installed.json",
+        " M artifacts/verification/linux312-tests.xml",
+        " M artifacts/verification/linux313-installed.json",
+        " M artifacts/verification/linux313-tests.xml",
+        " M artifacts/verification/linux314-installed.json",
+        " M artifacts/verification/linux314-tests.xml",
+        " M artifacts/verification/minimum-installed.json",
+        " M artifacts/verification/minimum-tests.xml",
+        " M artifacts/verification/python311-installed.json",
+        " M artifacts/verification/python311-tests.xml",
+        " M artifacts/verification/python312-installed.json",
+        " M artifacts/verification/python312-tests.xml",
+        " M artifacts/verification/python313-installed.json",
+        " M artifacts/verification/python313-tests.xml",
+        " M artifacts/verification/python314-installed.json",
+        " M artifacts/verification/python314-tests.xml",
+        " M chromatensor/__init__.py",
+        " M chromatensor/autograd/quantization.py",
+        " M chromatensor/codecs/__init__.py",
+        " M chromatensor/nn/report.py",
+        " M chromatensor/tensor.py",
+        " M chromatensor/tokenizer/__init__.py",
+        " M dashboard/app.js",
+        " M dashboard/server.py",
+        " M docs/API.md",
+        " M docs/CUBE_RESULTS.md",
+        " M docs/DASHBOARD.md",
+        " M docs/FILE_FORMATS.md",
+        " M docs/MEASUREMENT.md",
+        " M docs/REPAIR_REPORT.md",
+        " M docs/RESEARCH_REVIEW.md",
+        " M docs/REVIEW_CHECKLIST.md",
+        " M docs/SETUP.md",
+        " M experiments/provenance.py",
+        " M experiments/verification.py",
+        " M results/acceptance.json",
+        " M results/cube.json",
+        " M results/dependency-verification.json",
+        " M results/latest.json",
+        " M results/release-research.json",
+        " M results/repair-regressions.json",
+        " M results/test-verification.json",
+        " M results/train_scalar_chroma8.json",
+        " M results/train_scalar_chroma8.md",
+        " M scripts/verify.py",
+        " M scripts/verify_release_install.py",
+        " M tests/test_acceptance.py",
+        " M tests/test_dashboard.py",
+        "?? artifacts/dashboard/cube-current.jpg",
+        "?? artifacts/dashboard/cube-observations.json",
+        "?? artifacts/release-research/artifacts-20261001T024731587512Z-339379996031/mnist-int8-s41-probe.npz",
+        "?? artifacts/release-research/artifacts-20261001T024731587512Z-339379996031/mnist-int8-s41.ctcheckpoint",
+        "?? artifacts/release-research/artifacts-20261001T030842299904Z-6b37d33e42b9/",
+        "?? artifacts/release-research/artifacts-20261001T040845234096Z-1c011d799e29/",
+        "?? artifacts/review/before-final-durable-source/",
+        "?? artifacts/review/before-rgbd-token-repair/",
+        "?? artifacts/review/before-rgbd-utf8-repair/",
+        "?? artifacts/review/final-acceptance-output.json",
+        "?? artifacts/review/matrix-failure/before-git-context-repair-tests.xml",
+        "?? artifacts/review/matrix-failure/before-git-portability-freeze-tests.xml",
+        "?? artifacts/review/matrix-failure/before-user-commit-tests.xml",
+        "?? artifacts/review/repair-report-whitespace.txt",
+        "?? artifacts/review/rgbd-cube.txt",
+        "?? artifacts/review/rgbd-focused-tests.txt",
+        "?? artifacts/review/rgbd-host-tests.txt",
+        "?? artifacts/review/rgbd-pilot.txt",
+        "?? artifacts/review/rgbd-release-matrix.txt",
+        "?? artifacts/review/rgbd-repair-regressions.txt",
+        "?? artifacts/review/rgbd-sustained.txt",
+        "?? artifacts/review/rgbd-token-proof.txt",
+        "?? artifacts/review/rgbd-train-wrapper.txt",
+        "?? artifacts/review/rgbd-web-guidance.md",
+        "?? artifacts/review/setup-doc-whitespace.txt",
+        "?? artifacts/rgbd-tokens/",
+        "?? docs/RGBD_TOKENS.md",
+        "?? results/history/acceptance-before-final-browser-envelope.json",
+        "?? results/history/before-git-context-repair/",
+        "?? results/history/before-rgbd-token-repair/",
+        "?? results/history/before-rgbd-utf8-repair/",
+        "?? results/history/before-user-commit-e60d420/",
+        "?? results/release-verification.json",
+        "?? results/rgbd-token-verification.json",
+        "?? scripts/verify_rgbd_tokens.py",
+        "?? tests/test_rgbd_nn.py",
+        "?? tests/test_rgbd_tokens.py"
+      ]
+    },
+    "dependencies": {
+      "python": "3.14.6",
+      "torch": "2.14.0+cu126",
+      "torchvision": "0.29.0+cu126",
+      "numpy": "2.5.2",
+      "matplotlib": "3.11.2",
+      "psutil": "7.2.2",
+      "pytest": "8.4.2"
+    },
+    "config_sha256": "81cc1cd1917ab07730af815740e4bf84596dbfd070e3734aa0c36b9b8c61c746",
+    "artifacts": [
+      {
+        "path": "artifacts/checkpoints/cube/cube-20261001T041453929534Z-da641de6ef15/CUBE_RESULTS.md",
+        "sha256": "cc7c531e0db2e5792d379c21249347884fbb58a840b7c06d67c74b1e3a0acb21",
+        "bytes": 2931
+      },
+      {
+        "path": "artifacts/checkpoints/cube/cube-20261001T041453929534Z-da641de6ef15/cube-training.png",
+        "sha256": "4b75121959955032f802c069cad5b19c48c94f15d82d8cab7faf51f16c2f4b85",
+        "bytes": 104253
+      },
+      {
+        "path": "artifacts/checkpoints/cube/cube-20261001T041453929534Z-da641de6ef15/model-direct_rgb24-s23-20261001T041503176898Z-60a607c0dd96/cube_direct_rgb24_s23.ctcheckpoint",
+        "sha256": "5de2ad9d33e94431ca8e18dae8dc7e8f71c49697d25b13c48e2beb92b86daaee",
+        "bytes": 179245
+      },
+      {
+        "path": "artifacts/checkpoints/cube/cube-20261001T041453929534Z-da641de6ef15/model-direct_rgb24-s7-20261001T041454298975Z-0b4219b6364a/cube_direct_rgb24_s7.ctcheckpoint",
+        "sha256": "e1276c2d756dcff0f0a45e5ac801f90ded63770090456aa11104c0d6a4e0f923",
+        "bytes": 179317
+      },
+      {
+        "path": "artifacts/checkpoints/cube/cube-20261001T041453929534Z-da641de6ef15/model-holographic24-s23-20261001T041505434460Z-2b6c7ae48c27/cube_holographic24_s23.ctcheckpoint",
+        "sha256": "456d5426353587421faaa4810058a8c710ae7ad2d18fe4de4697b12e7aa6807e",
+        "bytes": 179422
+      },
+      {
+        "path": "artifacts/checkpoints/cube/cube-20261001T041453929534Z-da641de6ef15/model-holographic24-s7-20261001T041458517405Z-151c8fa8243a/cube_holographic24_s7.ctcheckpoint",
+        "sha256": "2a34e503efc2ddc6132d45bf1b7a99fb31379b23f3e832763fedc72b5b62f953",
+        "bytes": 179442
+      },
+      {
+        "path": "artifacts/checkpoints/cube/cube-20261001T041453929534Z-da641de6ef15/model-numeric_polar24-s23-20261001T041507667162Z-464a396443b1/cube_numeric_polar24_s23.ctcheckpoint",
+        "sha256": "c5ee2e69136c9f78b85f59738fffbc6ae0929ee08f798f8ebe44cff8e246c9a0",
+        "bytes": 179422
+      },
+      {
+        "path": "artifacts/checkpoints/cube/cube-20261001T041453929534Z-da641de6ef15/model-numeric_polar24-s7-20261001T041500997531Z-370702a2bdfe/cube_numeric_polar24_s7.ctcheckpoint",
+        "sha256": "046f56a988520da1e055b280858e15c0034171b79a47f557c4665654124735a4",
+        "bytes": 179442
+      }
+    ]
+  },
+  "geometry": [
+    {
+      "dimensions": 3,
+      "signal": "smooth",
+      "seed": 7,
+      "cells": 27,
+      "four_turns_exact": true,
+      "inverse_exact": true,
+      "identity_preserved": true,
+      "integer_payload_bytes": 81,
+      "identity_metadata_bytes": 216
+    },
+    {
+      "dimensions": 3,
+      "signal": "noise",
+      "seed": 7,
+      "cells": 27,
+      "four_turns_exact": true,
+      "inverse_exact": true,
+      "identity_preserved": true,
+      "integer_payload_bytes": 81,
+      "identity_metadata_bytes": 216
+    },
+    {
+      "dimensions": 3,
+      "signal": "smooth",
+      "seed": 23,
+      "cells": 27,
+      "four_turns_exact": true,
+      "inverse_exact": true,
+      "identity_preserved": true,
+      "integer_payload_bytes": 81,
+      "identity_metadata_bytes": 216
+    },
+    {
+      "dimensions": 3,
+      "signal": "noise",
+      "seed": 23,
+      "cells": 27,
+      "four_turns_exact": true,
+      "inverse_exact": true,
+      "identity_preserved": true,
+      "integer_payload_bytes": 81,
+      "identity_metadata_bytes": 216
+    },
+    {
+      "dimensions": 4,
+      "signal": "smooth",
+      "seed": 7,
+      "cells": 81,
+      "four_turns_exact": true,
+      "inverse_exact": true,
+      "identity_preserved": true,
+      "integer_payload_bytes": 243,
+      "identity_metadata_bytes": 648
+    },
+    {
+      "dimensions": 4,
+      "signal": "noise",
+      "seed": 7,
+      "cells": 81,
+      "four_turns_exact": true,
+      "inverse_exact": true,
+      "identity_preserved": true,
+      "integer_payload_bytes": 243,
+      "identity_metadata_bytes": 648
+    },
+    {
+      "dimensions": 4,
+      "signal": "smooth",
+      "seed": 23,
+      "cells": 81,
+      "four_turns_exact": true,
+      "inverse_exact": true,
+      "identity_preserved": true,
+      "integer_payload_bytes": 243,
+      "identity_metadata_bytes": 648
+    },
+    {
+      "dimensions": 4,
+      "signal": "noise",
+      "seed": 23,
+      "cells": 81,
+      "four_turns_exact": true,
+      "inverse_exact": true,
+      "identity_preserved": true,
+      "integer_payload_bytes": 243,
+      "identity_metadata_bytes": 648
+    },
+    {
+      "dimensions": 5,
+      "signal": "smooth",
+      "seed": 7,
+      "cells": 243,
+      "four_turns_exact": true,
+      "inverse_exact": true,
+      "identity_preserved": true,
+      "integer_payload_bytes": 729,
+      "identity_metadata_bytes": 1944
+    },
+    {
+      "dimensions": 5,
+      "signal": "noise",
+      "seed": 7,
+      "cells": 243,
+      "four_turns_exact": true,
+      "inverse_exact": true,
+      "identity_preserved": true,
+      "integer_payload_bytes": 729,
+      "identity_metadata_bytes": 1944
+    },
+    {
+      "dimensions": 5,
+      "signal": "smooth",
+      "seed": 23,
+      "cells": 243,
+      "four_turns_exact": true,
+      "inverse_exact": true,
+      "identity_preserved": true,
+      "integer_payload_bytes": 729,
+      "identity_metadata_bytes": 1944
+    },
+    {
+      "dimensions": 5,
+      "signal": "noise",
+      "seed": 23,
+      "cells": 243,
+      "four_turns_exact": true,
+      "inverse_exact": true,
+      "identity_preserved": true,
+      "integer_payload_bytes": 729,
+      "identity_metadata_bytes": 1944
+    },
+    {
+      "dimensions": 6,
+      "signal": "smooth",
+      "seed": 7,
+      "cells": 729,
+      "four_turns_exact": true,
+      "inverse_exact": true,
+      "identity_preserved": true,
+      "integer_payload_bytes": 2187,
+      "identity_metadata_bytes": 5832
+    },
+    {
+      "dimensions": 6,
+      "signal": "noise",
+      "seed": 7,
+      "cells": 729,
+      "four_turns_exact": true,
+      "inverse_exact": true,
+      "identity_preserved": true,
+      "integer_payload_bytes": 2187,
+      "identity_metadata_bytes": 5832
+    },
+    {
+      "dimensions": 6,
+      "signal": "smooth",
+      "seed": 23,
+      "cells": 729,
+      "four_turns_exact": true,
+      "inverse_exact": true,
+      "identity_preserved": true,
+      "integer_payload_bytes": 2187,
+      "identity_metadata_bytes": 5832
+    },
+    {
+      "dimensions": 6,
+      "signal": "noise",
+      "seed": 23,
+      "cells": 729,
+      "four_turns_exact": true,
+      "inverse_exact": true,
+      "identity_preserved": true,
+      "integer_payload_bytes": 2187,
+      "identity_metadata_bytes": 5832
+    }
+  ],
+  "reconstruction": [
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 1.0,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.0012505988886706092,
+        "mse": 2.181564460536248e-06,
+        "max_error": 0.0026117838674178384,
+        "relative_mae": 0.019221796053748495
+      },
+      "direct_rgb24_erasure": {
+        "mae": 3.183743468037358e-08,
+        "mse": 1.3696926823189466e-15,
+        "max_error": 5.960464477539063e-08,
+        "relative_mae": 4.3265345730649114e-07
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.140766651990513,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 0.7407407164573669,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.05429166179473456,
+        "mse": 0.003417418295433655,
+        "max_error": 0.08231260376175156,
+        "relative_mae": 0.7855714151126343
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.044451588954500576,
+        "mse": 0.009503760844944432,
+        "max_error": 0.26762792468070984,
+        "relative_mae": 0.25925957691587714
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.227133355413874,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 0.48148149251937866,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.1130770795117966,
+        "mse": 0.016665913408605088,
+        "max_error": 0.24001561802886795,
+        "relative_mae": 1.5138511003990347
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.07659371688755022,
+        "mse": 0.016074656438620067,
+        "max_error": 0.2730681002140045,
+        "relative_mae": 0.5185186437766072
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.11776667088270187,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 0.25925925374031067,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.11478297546345403,
+        "mse": 0.018468625040865244,
+        "max_error": 0.20665664314181018,
+        "relative_mae": 1.0651646017856282
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.11383478710841802,
+        "mse": 0.024179193394484585,
+        "max_error": 0.29686519503593445,
+        "relative_mae": 0.7407408087639112
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.12290000449866056,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 0.0,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.16435754680316206,
+        "mse": 0.03664974682042832,
+        "max_error": 0.33107709884643555,
+        "relative_mae": 1.0
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.16435754680316206,
+        "mse": 0.03664974682042832,
+        "max_error": 0.33107709884643555,
+        "relative_mae": 1.0
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.11333334259688854,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 1.0,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.0024880251103999267,
+        "mse": 9.461198773359913e-06,
+        "max_error": 0.008883211410250058,
+        "relative_mae": 0.010433859938758443
+      },
+      "direct_rgb24_erasure": {
+        "mae": 2.166187321698224e-08,
+        "mse": 9.0308419179e-16,
+        "max_error": 5.587935447692871e-08,
+        "relative_mae": 1.7029223916899744e-07
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.21073334695150456,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 0.7407407164573669,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.20163153101691603,
+        "mse": 0.05152390606278914,
+        "max_error": 0.464622022878971,
+        "relative_mae": 0.756351875294427
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.14730563111327313,
+        "mse": 0.09645857850995904,
+        "max_error": 0.8538961410522461,
+        "relative_mae": 0.25925941567211197
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.25936666255195934,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 0.48148149251937866,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.3207443877093781,
+        "mse": 0.1558004667240431,
+        "max_error": 0.955327481298692,
+        "relative_mae": 1.008520432749683
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.288467179156012,
+        "mse": 0.19240185015152012,
+        "max_error": 0.939839243888855,
+        "relative_mae": 0.5185186505839877
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.1802666811272502,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 0.25925925374031067,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.38366099982154034,
+        "mse": 0.19604985393159394,
+        "max_error": 0.8249856214031439,
+        "relative_mae": 1.0569330234114767
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.3466043005938883,
+        "mse": 0.22097893763577675,
+        "max_error": 0.939839243888855,
+        "relative_mae": 0.7407407820676292
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.17893333764125904,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 0.0,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.43973471058739555,
+        "mse": 0.26122017661310004,
+        "max_error": 0.939839243888855,
+        "relative_mae": 1.0
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.43973471058739555,
+        "mse": 0.26122017661310004,
+        "max_error": 0.939839243888855,
+        "relative_mae": 1.0
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.18309999722987413,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 1.0,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.0007142215295082305,
+        "mse": 7.47869512063539e-07,
+        "max_error": 0.0017949474935646803,
+        "relative_mae": 0.011373894967607365
+      },
+      "direct_rgb24_erasure": {
+        "mae": 2.8905493241769297e-08,
+        "mse": 1.278169956706763e-15,
+        "max_error": 5.960464477539063e-08,
+        "relative_mae": 5.292960741096429e-07
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.6560000280539194,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 0.7407407164573669,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.0517092578117425,
+        "mse": 0.0035648179260868496,
+        "max_error": 0.11665418160843063,
+        "relative_mae": 0.8416013717951041
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.034073374337620206,
+        "mse": 0.006318274222050766,
+        "max_error": 0.2799483835697174,
+        "relative_mae": 0.25925963612113323
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.13893334350238243,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 0.48148149251937866,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.07079902082206281,
+        "mse": 0.0074046561775302465,
+        "max_error": 0.19069435548874755,
+        "relative_mae": 0.8499724373134036
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.08627072901085571,
+        "mse": 0.019621210319114617,
+        "max_error": 0.36000141501426697,
+        "relative_mae": 0.5185188371829005
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.13736666490634283,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 0.25925925374031067,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.09581729966088458,
+        "mse": 0.013454702927522908,
+        "max_error": 0.25239203720463554,
+        "relative_mae": 0.7790679206851655
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.10551473563881936,
+        "mse": 0.022182528026555952,
+        "max_error": 0.36000141501426697,
+        "relative_mae": 0.740740828985765
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.1421999962379535,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 0.0,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.13857925610823763,
+        "mse": 0.02793452313194836,
+        "max_error": 0.36000141501426697,
+        "relative_mae": 1.0
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.13857925610823763,
+        "mse": 0.02793452313194836,
+        "max_error": 0.36000141501426697,
+        "relative_mae": 1.0
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.11699999837825696,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 1.0,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.0033786921671134784,
+        "mse": 1.729614845907332e-05,
+        "max_error": 0.009287306071305235,
+        "relative_mae": 0.01402416781373161
+      },
+      "direct_rgb24_erasure": {
+        "mae": 2.1523899502224392e-08,
+        "mse": 8.881784197001252e-16,
+        "max_error": 5.21540641784668e-08,
+        "relative_mae": 1.4421040452996594e-07
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.10843334409097831,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 0.7407407164573669,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.17120090860279186,
+        "mse": 0.04234378124663518,
+        "max_error": 0.4304280162240318,
+        "relative_mae": 0.5485120112800344
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.14154092332831136,
+        "mse": 0.09675051173501335,
+        "max_error": 0.9153964519500732,
+        "relative_mae": 0.2592593741896183
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.12126665872832139,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 0.48148149251937866,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.29393834249559025,
+        "mse": 0.12210290428540571,
+        "max_error": 0.7451324635959106,
+        "relative_mae": 1.0026482361045737
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.23624190660538497,
+        "mse": 0.13913679405025578,
+        "max_error": 0.9153964519500732,
+        "relative_mae": 0.5185186033088601
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.10730000212788582,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 0.25925925374031067,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.3911724036057073,
+        "mse": 0.18925664054823035,
+        "max_error": 0.7855540655396622,
+        "relative_mae": 1.272260251597245
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.32539348193892725,
+        "mse": 0.19453792236760314,
+        "max_error": 0.9574559926986694,
+        "relative_mae": 0.7407407793814125
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.1172333334883054,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 3,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 0.0,
+      "field_values": 27,
+      "holographic": {
+        "mae": 0.4644350431583546,
+        "mse": 0.29111747897880336,
+        "max_error": 0.9574559926986694,
+        "relative_mae": 1.0
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.4644350431583546,
+        "mse": 0.29111747897880336,
+        "max_error": 0.9574559926986694,
+        "relative_mae": 1.0
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 81,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.15066664976378283,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 1.0,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.0010205121216464328,
+        "mse": 1.488512020918684e-06,
+        "max_error": 0.00245424938560887,
+        "relative_mae": 0.01974485122261782
+      },
+      "direct_rgb24_erasure": {
+        "mae": 3.0722147152747634e-08,
+        "mse": 1.2125074606901593e-15,
+        "max_error": 5.960464477539063e-08,
+        "relative_mae": 7.39225612667373e-07
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.1941666705533862,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 0.7530864477157593,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.040708043353084915,
+        "mse": 0.0019215493951986356,
+        "max_error": 0.06244324301758078,
+        "relative_mae": 0.8477758110296151
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.029904057306272012,
+        "mse": 0.0072282048880521815,
+        "max_error": 0.48766863346099854,
+        "relative_mae": 0.24691412891982886
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.16116665210574865,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 0.4938271641731262,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.06518172350752502,
+        "mse": 0.006446065402353719,
+        "max_error": 0.20952520311078748,
+        "relative_mae": 0.689470030881647
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.061223884762759195,
+        "mse": 0.01393784915101208,
+        "max_error": 0.48766863346099854,
+        "relative_mae": 0.5061731540861402
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.18350000027567148,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 0.2469135820865631,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.06579965596047495,
+        "mse": 0.007049329009889914,
+        "max_error": 0.24388525826493157,
+        "relative_mae": 0.4966472719734962
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.09377723907545944,
+        "mse": 0.020370021645498847,
+        "max_error": 0.48766863346099854,
+        "relative_mae": 0.7530865640552544
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.18003334601720175,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 0.0,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.13166294107788507,
+        "mse": 0.028194313758464425,
+        "max_error": 0.48766863346099854,
+        "relative_mae": 1.0
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.13166294107788507,
+        "mse": 0.028194313758464425,
+        "max_error": 0.48766863346099854,
+        "relative_mae": 1.0
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.34003332257270813,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 1.0,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.0026174711650799863,
+        "mse": 1.201892375941362e-05,
+        "max_error": 0.008829372630587362,
+        "relative_mae": 0.06070952669880113
+      },
+      "direct_rgb24_erasure": {
+        "mae": 2.3465592092202033e-08,
+        "mse": 9.989117688984614e-16,
+        "max_error": 5.948822945356369e-08,
+        "relative_mae": 6.106621346695913e-07
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.2084333294381698,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 0.7530864477157593,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.1151843507472656,
+        "mse": 0.019777327426149585,
+        "max_error": 0.4857089992194021,
+        "relative_mae": 1.6257490498425236
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.10179858159038158,
+        "mse": 0.06406010594748614,
+        "max_error": 0.987240195274353,
+        "relative_mae": 0.2469141350506326
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.3744666852677862,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 0.4938271641731262,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.20947374001353877,
+        "mse": 0.06872193340620363,
+        "max_error": 0.5767779357676018,
+        "relative_mae": 1.5867045873607803
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.2239049326421486,
+        "mse": 0.14000782428610006,
+        "max_error": 0.987240195274353,
+        "relative_mae": 0.5061729824597884
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.3026999766007066,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 0.2469135820865631,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.3362231298591452,
+        "mse": 0.15238592816378013,
+        "max_error": 0.8341515635439267,
+        "relative_mae": 2.1270669968590417
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.34287855549956914,
+        "mse": 0.21568968676235897,
+        "max_error": 0.987240195274353,
+        "relative_mae": 0.7530865213739125
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.2882333549981316,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 0.0,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.4428096847769655,
+        "mse": 0.2725312927306204,
+        "max_error": 0.987240195274353,
+        "relative_mae": 1.0
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.4428096847769655,
+        "mse": 0.2725312927306204,
+        "max_error": 0.987240195274353,
+        "relative_mae": 1.0
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.29359998491903144,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 1.0,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.0009807434107373014,
+        "mse": 1.3907369894192077e-06,
+        "max_error": 0.0026763681056626576,
+        "relative_mae": 0.026066742962530188
+      },
+      "direct_rgb24_erasure": {
+        "mae": 2.8505944359449693e-08,
+        "mse": 1.1567078581401725e-15,
+        "max_error": 5.960464477539063e-08,
+        "relative_mae": 6.259609404259155e-07
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.3301333636045456,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 0.7530864477157593,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.03355832993363278,
+        "mse": 0.0013345176968891195,
+        "max_error": 0.05208152998017723,
+        "relative_mae": 0.6198663720077252
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.027921897353443467,
+        "mse": 0.004394308317370149,
+        "max_error": 0.25657397508621216,
+        "relative_mae": 0.24691390414798176
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.2845333268245061,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 0.4938271641731262,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.04963222474027879,
+        "mse": 0.003674335574798638,
+        "max_error": 0.1229432862532997,
+        "relative_mae": 0.8509015784027694
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.06227496201402427,
+        "mse": 0.01107786368877627,
+        "max_error": 0.35907965898513794,
+        "relative_mae": 0.5061730521396741
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.14976668171584606,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 0.2469135820865631,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.10440776113154594,
+        "mse": 0.016568571873289303,
+        "max_error": 0.32499569643354276,
+        "relative_mae": 1.0445292201496161
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.09047865671577093,
+        "mse": 0.01694210584692668,
+        "max_error": 0.41721415519714355,
+        "relative_mae": 0.7530865100971276
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.12096665644397338,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 0.0,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.12545185634452435,
+        "mse": 0.024010467470617962,
+        "max_error": 0.41721415519714355,
+        "relative_mae": 1.0
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.12545185634452435,
+        "mse": 0.024010467470617962,
+        "max_error": 0.41721415519714355,
+        "relative_mae": 1.0
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.12599998929848275,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 1.0,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.0030554712895192212,
+        "mse": 1.3387625393365604e-05,
+        "max_error": 0.009444644467402563,
+        "relative_mae": 0.01590143744314702
+      },
+      "direct_rgb24_erasure": {
+        "mae": 2.1753855693487474e-08,
+        "mse": 8.965736246702846e-16,
+        "max_error": 5.587935447692871e-08,
+        "relative_mae": 1.7678021012343985e-07
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.10586665788044532,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 0.7530864477157593,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.15483656483134034,
+        "mse": 0.036909160683514054,
+        "max_error": 0.5219118198333788,
+        "relative_mae": 0.4807936046256827
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.10813523778392944,
+        "mse": 0.062231875770149075,
+        "max_error": 0.9153964519500732,
+        "relative_mae": 0.24691370800914608
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.2919333443666498,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 0.4938271641731262,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.2805242255318357,
+        "mse": 0.11133509331859741,
+        "max_error": 0.7516117283561208,
+        "relative_mae": 0.8321052875677108
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.2209512920199353,
+        "mse": 0.1288530005548426,
+        "max_error": 0.9574559926986694,
+        "relative_mae": 0.5061729125647157
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.17429996902743974,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 0.2469135820865631,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.35841113475624187,
+        "mse": 0.17550578771791295,
+        "max_error": 0.8984507587473228,
+        "relative_mae": 0.973136490333547
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.3275779441550926,
+        "mse": 0.19380492021796406,
+        "max_error": 0.9574559926986694,
+        "relative_mae": 0.7530864464527597
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.18700002692639828,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 4,
+      "shape": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 0.0,
+      "field_values": 81,
+      "holographic": {
+        "mae": 0.45023796440642555,
+        "mse": 0.26936045243008006,
+        "max_error": 0.9574559926986694,
+        "relative_mae": 1.0
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.45023796440642555,
+        "mse": 0.26936045243008006,
+        "max_error": 0.9574559926986694,
+        "relative_mae": 1.0
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 243,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.14223332982510328,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 1.0,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.0005936289233229429,
+        "mse": 5.519186103488546e-07,
+        "max_error": 0.001691106817770599,
+        "relative_mae": 0.11319495336979656
+      },
+      "direct_rgb24_erasure": {
+        "mae": 3.090513898385497e-08,
+        "mse": 1.2696849920059349e-15,
+        "max_error": 5.960464477539063e-08,
+        "relative_mae": 2.9435353483344626e-06
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.1610999849314491,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 0.748971164226532,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.019012371977979226,
+        "mse": 0.000419371615918359,
+        "max_error": 0.02975221233304995,
+        "relative_mae": 2.074928954654166
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.021704473319053702,
+        "mse": 0.0027168280314307115,
+        "max_error": 0.28020623326301575,
+        "relative_mae": 0.25103157371581136
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.1501999795436859,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 0.49794238805770874,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.03998372757450217,
+        "mse": 0.0023946205115319944,
+        "max_error": 0.11395995448845152,
+        "relative_mae": 2.929358761970009
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.04562102697364849,
+        "mse": 0.006279815359910591,
+        "max_error": 0.28020623326301575,
+        "relative_mae": 0.5020592972526001
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.18206669483333826,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 0.25102880597114563,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.06679890569373334,
+        "mse": 0.006878022708543671,
+        "max_error": 0.23603450783404312,
+        "relative_mae": 4.776526967418589
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.07255749287269507,
+        "mse": 0.010788975729534162,
+        "max_error": 0.31618329882621765,
+        "relative_mae": 0.7489714077924441
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.21776669503500065,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 0.0,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.10119205302342177,
+        "mse": 0.01571574975402941,
+        "max_error": 0.372791051864624,
+        "relative_mae": 1.0
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.10119205302342177,
+        "mse": 0.01571574975402941,
+        "max_error": 0.372791051864624,
+        "relative_mae": 1.0
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.16393333983918032,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 1.0,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.0032179049896777444,
+        "mse": 1.600537839940966e-05,
+        "max_error": 0.014793927816795505,
+        "relative_mae": 0.030498870711430984
+      },
+      "direct_rgb24_erasure": {
+        "mae": 2.1722715792587265e-08,
+        "mse": 9.211168051761917e-16,
+        "max_error": 5.948822945356369e-08,
+        "relative_mae": 3.50762154978837e-07
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.2188333310186863,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 0.748971164226532,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.16303796671469334,
+        "mse": 0.04108425516061734,
+        "max_error": 0.6386412729132454,
+        "relative_mae": 1.0231998400828244
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.1130169792931504,
+        "mse": 0.06938333404600752,
+        "max_error": 0.9607328176498413,
+        "relative_mae": 0.2510290890668174
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.1540333420659105,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 0.49794238805770874,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.2944326347883829,
+        "mse": 0.1248662824330744,
+        "max_error": 1.0464967562169918,
+        "relative_mae": 1.5896616603806852
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.22731119204540604,
+        "mse": 0.14213186888996518,
+        "max_error": 0.9805030822753906,
+        "relative_mae": 0.5020578298226559
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.14663332452376684,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 0.25102880597114563,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.39298590459937516,
+        "mse": 0.21018488016197953,
+        "max_error": 1.1026658326716297,
+        "relative_mae": 1.18385171812676
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.3475794050791742,
+        "mse": 0.22235309872366246,
+        "max_error": 0.9990451335906982,
+        "relative_mae": 0.7489713536585262
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.1407333572084705,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 0.0,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.4668332024366277,
+        "mse": 0.2973060152282573,
+        "max_error": 0.9990451335906982,
+        "relative_mae": 1.0
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.4668332024366277,
+        "mse": 0.2973060152282573,
+        "max_error": 0.9990451335906982,
+        "relative_mae": 1.0
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.14500001755853495,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 1.0,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.0006571651766570019,
+        "mse": 6.476577172862676e-07,
+        "max_error": 0.0019421058297144078,
+        "relative_mae": 0.019236209290650553
+      },
+      "direct_rgb24_erasure": {
+        "mae": 2.999970145186279e-08,
+        "mse": 1.2243547118366646e-15,
+        "max_error": 5.960464477539063e-08,
+        "relative_mae": 7.320848399046872e-07
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.17603335436433554,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 0.748971164226532,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.032585239726980714,
+        "mse": 0.0015274933068001053,
+        "max_error": 0.08651416126637052,
+        "relative_mae": 0.7536577364858159
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.026120821978904522,
+        "mse": 0.004506720233244189,
+        "max_error": 0.3519607186317444,
+        "relative_mae": 0.2510293606996254
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.14246666493515173,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 0.49794238805770874,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.08693231230618881,
+        "mse": 0.011362257946186725,
+        "max_error": 0.25119151377331067,
+        "relative_mae": 1.2184854732223134
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.052152248505702235,
+        "mse": 0.008541244873907066,
+        "max_error": 0.3519607186317444,
+        "relative_mae": 0.5020579357218035
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.14583335723727942,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 0.25102880597114563,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.08889292668599233,
+        "mse": 0.011885051158853126,
+        "max_error": 0.26512691301550084,
+        "relative_mae": 1.2200128484959842
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.08024085983116594,
+        "mse": 0.013391048463776312,
+        "max_error": 0.3519607186317444,
+        "relative_mae": 0.7489713150558077
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.1430000023295482,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 0.0,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.10939477841224168,
+        "mse": 0.018042553926256963,
+        "max_error": 0.3519607186317444,
+        "relative_mae": 1.0
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.10939477841224168,
+        "mse": 0.018042553926256963,
+        "max_error": 0.3519607186317444,
+        "relative_mae": 1.0
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.14196666112790504,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 1.0,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.0032253831701437195,
+        "mse": 1.5982792184547975e-05,
+        "max_error": 0.013539754147788019,
+        "relative_mae": 0.016682117284547854
+      },
+      "direct_rgb24_erasure": {
+        "mae": 2.0548501990950155e-08,
+        "mse": 8.656921558775225e-16,
+        "max_error": 5.9138983488082886e-08,
+        "relative_mae": 2.3931099755999514e-07
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.14416667787979046,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 0.748971164226532,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.20393572453044212,
+        "mse": 0.06260221410405843,
+        "max_error": 0.6256007664290443,
+        "relative_mae": 0.9687973285499419
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.11070017362350729,
+        "mse": 0.070255694792953,
+        "max_error": 0.9779176712036133,
+        "relative_mae": 0.2510289801269292
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.14653336256742477,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 0.49794238805770874,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.2940335371112165,
+        "mse": 0.1233817283775564,
+        "max_error": 0.9314281566847226,
+        "relative_mae": 1.0811719029474507
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.23240152533154612,
+        "mse": 0.14630311527556628,
+        "max_error": 0.9913007020950317,
+        "relative_mae": 0.5020577486514276
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.1562999871869882,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 0.25102880597114563,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.3814779071687945,
+        "mse": 0.19703431848016484,
+        "max_error": 0.9998695824882317,
+        "relative_mae": 1.1439964126393587
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.3484360834913244,
+        "mse": 0.21789451463578444,
+        "max_error": 0.9913007020950317,
+        "relative_mae": 0.7489712452619917
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.14423334505409002,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 5,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 0.0,
+      "field_values": 243,
+      "holographic": {
+        "mae": 0.47015624919545995,
+        "mse": 0.2950143112324882,
+        "max_error": 0.993498682975769,
+        "relative_mae": 1.0
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.47015624919545995,
+        "mse": 0.2950143112324882,
+        "max_error": 0.993498682975769,
+        "relative_mae": 1.0
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 729,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.1550333108752966,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 1.0,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.0006199416301250372,
+        "mse": 5.99670629866401e-07,
+        "max_error": 0.0018036790197277774,
+        "relative_mae": 0.06062681759755212
+      },
+      "direct_rgb24_erasure": {
+        "mae": 3.003303461982159e-08,
+        "mse": 1.208910159696528e-15,
+        "max_error": 5.960464477539063e-08,
+        "relative_mae": 3.213576361772194e-06
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.19749999046325684,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 0.7503429651260376,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.03553797976200161,
+        "mse": 0.0017203919371172488,
+        "max_error": 0.08110089732567369,
+        "relative_mae": 2.7808107306149554
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.02419743303985985,
+        "mse": 0.003456633012598057,
+        "max_error": 0.3170837163925171,
+        "relative_mae": 0.2496579535818593
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.2064666866014401,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 0.4993141293525696,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.037470611886483526,
+        "mse": 0.00206246918815673,
+        "max_error": 0.11363995860899462,
+        "relative_mae": 1.2882729321497743
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.04774413099148061,
+        "mse": 0.006645059414139471,
+        "max_error": 0.3170837163925171,
+        "relative_mae": 0.5006865517584025
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.18786666138718525,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 0.2496570646762848,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.08566543078060472,
+        "mse": 0.011136537897151275,
+        "max_error": 0.3254211319468252,
+        "relative_mae": 1.8712583705663937
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.06779033523470225,
+        "mse": 0.009131124076483935,
+        "max_error": 0.3170837163925171,
+        "relative_mae": 0.7503432990895539
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.19556668121367693,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 7,
+      "coverage": 0.0,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.0883672462150521,
+        "mse": 0.011625059090380504,
+        "max_error": 0.3170837163925171,
+        "relative_mae": 1.0
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.0883672462150521,
+        "mse": 0.011625059090380504,
+        "max_error": 0.3170837163925171,
+        "relative_mae": 1.0
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.20130001939833164,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 1.0,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.003362402758517336,
+        "mse": 1.815989804136664e-05,
+        "max_error": 0.016494281005486333,
+        "relative_mae": 0.07361682633963325
+      },
+      "direct_rgb24_erasure": {
+        "mae": 1.9546415987686446e-08,
+        "mse": 8.322637232079367e-16,
+        "max_error": 5.959009286016226e-08,
+        "relative_mae": 6.892968617724404e-07
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.3798666487758358,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 0.7503429651260376,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.16395225031050842,
+        "mse": 0.0421185413457203,
+        "max_error": 0.6418288570896228,
+        "relative_mae": 1.2026696410942401
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.1247238996369815,
+        "mse": 0.08160211120573341,
+        "max_error": 0.9991748332977295,
+        "relative_mae": 0.2496577069462703
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.17646669099728265,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 0.4993141293525696,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.2809190679578015,
+        "mse": 0.10980460565558658,
+        "max_error": 0.8657792810876335,
+        "relative_mae": 2.119619498901249
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.25287851485656815,
+        "mse": 0.16618926402304723,
+        "max_error": 0.9991748332977295,
+        "relative_mae": 0.5006864036906444
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.25150001359482604,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 0.2496570646762848,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.38995003843178433,
+        "mse": 0.20909483832015152,
+        "max_error": 1.0216625378146595,
+        "relative_mae": 1.6763655491067373
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.37380027971121854,
+        "mse": 0.24783470444069203,
+        "max_error": 0.9991748332977295,
+        "relative_mae": 0.7503429955730996
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.36703333413849276,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 7,
+      "coverage": 0.0,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.5015944482858289,
+        "mse": 0.3330417239544976,
+        "max_error": 0.9991748332977295,
+        "relative_mae": 1.0
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.5015944482858289,
+        "mse": 0.3330417239544976,
+        "max_error": 0.9991748332977295,
+        "relative_mae": 1.0
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.261233343432347,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 1.0,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.000602809594974803,
+        "mse": 5.186839725791213e-07,
+        "max_error": 0.001886611258876944,
+        "relative_mae": 0.09701640737162778
+      },
+      "direct_rgb24_erasure": {
+        "mae": 2.9601484997995166e-08,
+        "mse": 1.1899736030600769e-15,
+        "max_error": 5.960464477539063e-08,
+        "relative_mae": 5.193404200739448e-06
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.1789666712284088,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 0.7503429651260376,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.04036771965230628,
+        "mse": 0.0022975989055118917,
+        "max_error": 0.10045430254746501,
+        "relative_mae": 9.102467291440123
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.025159217324434255,
+        "mse": 0.0037595226416239722,
+        "max_error": 0.32209283113479614,
+        "relative_mae": 0.24966195821676432
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.1609333169957002,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 0.4993141293525696,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.06839439061835084,
+        "mse": 0.006727945700406568,
+        "max_error": 0.19840531345396684,
+        "relative_mae": 4.227668809886626
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.049267787317420736,
+        "mse": 0.007382268526950717,
+        "max_error": 0.32336941361427307,
+        "relative_mae": 0.5006899410884879
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.14623336028307676,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 0.2496570646762848,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.07270218415549236,
+        "mse": 0.007792267398908375,
+        "max_error": 0.2440911938275454,
+        "relative_mae": 2.9480644478138704
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.07386607574485818,
+        "mse": 0.010913689751944988,
+        "max_error": 0.32336941361427307,
+        "relative_mae": 0.7503461995030068
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.1436666352674365,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "smooth",
+      "seed": 23,
+      "coverage": 0.0,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.09869407585222094,
+        "mse": 0.014566174806634802,
+        "max_error": 0.32336941361427307,
+        "relative_mae": 1.0
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.09869407585222094,
+        "mse": 0.014566174806634802,
+        "max_error": 0.32336941361427307,
+        "relative_mae": 1.0
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.17446667576829591,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 1.0,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.003133922718047733,
+        "mse": 1.6108233962792674e-05,
+        "max_error": 0.015328181311082822,
+        "relative_mae": 0.019088058253929743
+      },
+      "direct_rgb24_erasure": {
+        "mae": 1.952455817263149e-08,
+        "mse": 8.171860809873128e-16,
+        "max_error": 5.9371814131736755e-08,
+        "relative_mae": 2.8794388909875477e-07
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.17633331784357628,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 0.7503429651260376,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.18224645494205488,
+        "mse": 0.050767711768191365,
+        "max_error": 0.6908150268143796,
+        "relative_mae": 0.8481397646808412
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.12037826174249251,
+        "mse": 0.07936049506465365,
+        "max_error": 0.9913007020950317,
+        "relative_mae": 0.24965728964157327
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.1722999926035603,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 0.4993141293525696,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.30222813096378504,
+        "mse": 0.13300342259676198,
+        "max_error": 1.2083202146544134,
+        "relative_mae": 1.2513841026464891
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.24668853088832665,
+        "mse": 0.16309301710461155,
+        "max_error": 0.9913007020950317,
+        "relative_mae": 0.5006859672711638
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.2037999996294578,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 0.2496570646762848,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.39824232672761706,
+        "mse": 0.22087929945357487,
+        "max_error": 1.3662926469931902,
+        "relative_mae": 1.2200535009359808
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.37632339760221656,
+        "mse": 0.24959157733784154,
+        "max_error": 0.9913007020950317,
+        "relative_mae": 0.7503429723401761
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.23869999373952547,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    },
+    {
+      "dimensions": 6,
+      "shape": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "signal": "noise",
+      "seed": 23,
+      "coverage": 0.0,
+      "field_values": 729,
+      "holographic": {
+        "mae": 0.501385652152272,
+        "mse": 0.3317047228395048,
+        "max_error": 0.993498682975769,
+        "relative_mae": 1.0
+      },
+      "direct_rgb24_erasure": {
+        "mae": 0.501385652152272,
+        "mse": 0.3317047228395048,
+        "max_error": 0.993498682975769,
+        "relative_mae": 1.0
+      },
+      "equal_bit_numeric_polar_delta": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "max_error": 0.0,
+        "relative_mae": 0.0
+      },
+      "payload_bytes": 2187,
+      "amplitude_scale_metadata_bytes": 8,
+      "decode_ms": 0.19283332706739506,
+      "execution": "complex128 FFT/iFFT; uint8 field storage; same 24-bit phase/amplitude control",
+      "erasure_scope": "identical retained-index masks in two different bases; no exact arbitrary-fragment recovery"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "cube-direct_rgb24-s7",
+      "task": "cube_reconstruction",
+      "representation": "direct_rgb24",
+      "seed": 7,
+      "device": "cpu",
+      "metrics": {
+        "initial_validation_loss": 0.027798214927315712,
+        "validation_loss": 0.003293439649464138,
+        "training_loss": 0.0009403424628544599,
+        "mae": 0.04512737852904746,
+        "max_error": 0.27212049067020416,
+        "out_of_distribution_noise_mse": 0.3249345123767853,
+        "noise_zero_predictor_mse": 0.3343253433704376,
+        "training_seconds": 2.139014899963513,
+        "training_throughput": 11489.401032418808,
+        "inference_throughput": 42390.8435765383,
+        "inference_batch_ms": 6.03904000017792,
+        "bits_per_field_value": 24,
+        "field_payload_bytes": 243,
+        "amplitude_scale_metadata_bytes": 0,
+        "mask_bits_per_field_value": 1,
+        "mask_runtime_bytes_per_value": 1,
+        "neural_input_bytes_per_sample": 648,
+        "validation_input_buffer_bytes": 165888,
+        "retained_fraction": 0.4938271641731262,
+        "live_parameter_bytes": 191300,
+        "checkpoint_bytes": 179317,
+        "peak_memory_bytes": 758161408,
+        "rss_increase_bytes": 93929472,
+        "peak_cuda_allocated_bytes": null,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "checkpoint_predictions_exact": true
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 0.027798214927315712
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.022960747708566487,
+          "val_loss": 0.022066114470362663
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.019713107380084693,
+          "val_loss": 0.018214557319879532
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.012571846425998956,
+          "val_loss": 0.009819678030908108
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.006091352814109996,
+          "val_loss": 0.005070130340754986
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.003456787162576802,
+          "val_loss": 0.0035790419206023216
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.0026357942988397554,
+          "val_loss": 0.003218260360881686
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.0022992244630586356,
+          "val_loss": 0.0030393549241125584
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.0021279251741361804,
+          "val_loss": 0.003083840711042285
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.0020227344939485192,
+          "val_loss": 0.003055001376196742
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.0019343795866006985,
+          "val_loss": 0.0031141818035393953
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.0018262540324940346,
+          "val_loss": 0.003029400948435068
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.001732978067593649,
+          "val_loss": 0.003016388276591897
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.0015979347517713904,
+          "val_loss": 0.002997632836923003
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.0015418572511407547,
+          "val_loss": 0.0030378808733075857
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.0014329987752716988,
+          "val_loss": 0.0031475042924284935
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.001418195890437346,
+          "val_loss": 0.0031161014921963215
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.0013313052913872525,
+          "val_loss": 0.003161229193210602
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.0012232238514116034,
+          "val_loss": 0.003139089560136199
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.0011523992943693884,
+          "val_loss": 0.003061584196984768
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.0011178584718436468,
+          "val_loss": 0.003342812182381749
+        },
+        {
+          "epoch": 21,
+          "train_loss": 0.0010994622061843984,
+          "val_loss": 0.0031672045588493347
+        },
+        {
+          "epoch": 22,
+          "train_loss": 0.0009945184756361414,
+          "val_loss": 0.00312638096511364
+        },
+        {
+          "epoch": 23,
+          "train_loss": 0.0009888974018394947,
+          "val_loss": 0.0032824729569256306
+        },
+        {
+          "epoch": 24,
+          "train_loss": 0.0009403424628544599,
+          "val_loss": 0.0032934395130723715
+        }
+      ],
+      "dataset": {
+        "shape": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "train_samples": 1024,
+        "validation_samples": 256,
+        "sha256": "ddc9327842aca8113c02dcdb28aee5afec47b9de76ba4611107f51fd92d1f237",
+        "mask_sha256": "7f39efc8eae8ff8ed98c9712692da553e80201e3607eca354ca1fc00502c38b9",
+        "initial_parameter_sha256": "52133a57fbdd718d677407c8ff1b7fe51d47f81508df9d477709fc703bdd2879",
+        "source": "independent random phase/amplitude low-rank periodic tensors",
+        "training_scope": "24-epoch fixed chromatic input transform with chroma8 weight/activation MLP; all matrix products/optimizer FP32",
+        "timing_scope": "optimization batches only; input encoding, validation, checkpoint serialization, and initial/final evaluation excluded",
+        "memory_scope": "process peak includes optimization and per-epoch validation",
+        "generalization_scope": "held-out samples from the same structured generator; cannot reconstruct arbitrary erased data",
+        "negative_control": "256 independently seeded uniform random tensors, with the same retained-coordinate masks as structured validation"
+      },
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 47825,
+        "master_parameter_bytes": 191300,
+        "quantizers": [
+          {
+            "module": "model.layers.0.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 8646912,
+            "last_payload_bytes": 62208,
+            "last_retained_inspection_bytes": 82960,
+            "last_ideal_packed_code_bytes": 20736,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.0.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 5349888,
+            "last_payload_bytes": 124416,
+            "last_retained_inspection_bytes": 169984,
+            "last_ideal_packed_code_bytes": 41472,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 6832128,
+            "last_payload_bytes": 49152,
+            "last_retained_inspection_bytes": 65552,
+            "last_ideal_packed_code_bytes": 16384,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 4227072,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 4323456,
+            "last_payload_bytes": 31104,
+            "last_retained_inspection_bytes": 41488,
+            "last_ideal_packed_code_bytes": 10368,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 4227072,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          }
+        ],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [
+          {
+            "module": "model.layers.0",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.2",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.4",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          }
+        ],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ]
+      },
+      "artifact_path": "artifacts/checkpoints/cube/cube-20261001T041453929534Z-da641de6ef15/model-direct_rgb24-s7-20261001T041454298975Z-0b4219b6364a/cube_direct_rgb24_s7.ctcheckpoint",
+      "model_config": {
+        "inputs": 162,
+        "hidden": 128,
+        "outputs": 81,
+        "bits": 8,
+        "representation": "chroma8"
+      },
+      "validation_prediction_sha256": "69384147c472fe1878acccc6336e3f0024761fb5db0583da61ffa94c64e6aa13"
+    },
+    {
+      "id": "cube-holographic24-s7",
+      "task": "cube_reconstruction",
+      "representation": "holographic24",
+      "seed": 7,
+      "device": "cpu",
+      "metrics": {
+        "initial_validation_loss": 0.027785249054431915,
+        "validation_loss": 0.011936398295624935,
+        "training_loss": 0.002053491218248382,
+        "mae": 0.08682539583345,
+        "max_error": 0.43435536324977875,
+        "out_of_distribution_noise_mse": 0.3145691454410553,
+        "noise_zero_predictor_mse": 0.3343253433704376,
+        "training_seconds": 2.165285400347784,
+        "training_throughput": 11350.004944407166,
+        "inference_throughput": 51440.32932391513,
+        "inference_batch_ms": 4.976639989763498,
+        "bits_per_field_value": 24,
+        "field_payload_bytes": 243,
+        "amplitude_scale_metadata_bytes": 8,
+        "mask_bits_per_field_value": 1,
+        "mask_runtime_bytes_per_value": 1,
+        "neural_input_bytes_per_sample": 648,
+        "validation_input_buffer_bytes": 165888,
+        "retained_fraction": 0.4938271641731262,
+        "live_parameter_bytes": 191300,
+        "checkpoint_bytes": 179442,
+        "peak_memory_bytes": 778719232,
+        "rss_increase_bytes": 32768,
+        "peak_cuda_allocated_bytes": null,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "checkpoint_predictions_exact": true
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 0.027785249054431915
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.022959987283684313,
+          "val_loss": 0.022073956206440926
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.019806726719252765,
+          "val_loss": 0.018822256475687027
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.014261375297792256,
+          "val_loss": 0.013127803802490234
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.009700582653749734,
+          "val_loss": 0.010506211780011654
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.007838639809051529,
+          "val_loss": 0.010177533142268658
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.006987933971686289,
+          "val_loss": 0.009849329479038715
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.006591004523215815,
+          "val_loss": 0.009779761545360088
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.006204227218404412,
+          "val_loss": 0.009847610257565975
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.005793643125798553,
+          "val_loss": 0.009732554666697979
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.005557218741159886,
+          "val_loss": 0.010020747780799866
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.005090362305054441,
+          "val_loss": 0.010099705308675766
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.004852660640608519,
+          "val_loss": 0.009962311945855618
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.0044817311863880605,
+          "val_loss": 0.01033727079629898
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.004102241990040056,
+          "val_loss": 0.010072031989693642
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.003844985185423866,
+          "val_loss": 0.010653922334313393
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.0037571492575807497,
+          "val_loss": 0.010613205842673779
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.0034862401080317795,
+          "val_loss": 0.010682819411158562
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.003155358921503648,
+          "val_loss": 0.01074474398046732
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.0029811429703840986,
+          "val_loss": 0.01105992030352354
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.002752620173851028,
+          "val_loss": 0.011329764500260353
+        },
+        {
+          "epoch": 21,
+          "train_loss": 0.002531665551941842,
+          "val_loss": 0.011391802690923214
+        },
+        {
+          "epoch": 22,
+          "train_loss": 0.002326042391359806,
+          "val_loss": 0.01164274662733078
+        },
+        {
+          "epoch": 23,
+          "train_loss": 0.0021726802515331656,
+          "val_loss": 0.011511212214827538
+        },
+        {
+          "epoch": 24,
+          "train_loss": 0.002053491218248382,
+          "val_loss": 0.011936399154365063
+        }
+      ],
+      "dataset": {
+        "shape": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "train_samples": 1024,
+        "validation_samples": 256,
+        "sha256": "ddc9327842aca8113c02dcdb28aee5afec47b9de76ba4611107f51fd92d1f237",
+        "mask_sha256": "7f39efc8eae8ff8ed98c9712692da553e80201e3607eca354ca1fc00502c38b9",
+        "initial_parameter_sha256": "52133a57fbdd718d677407c8ff1b7fe51d47f81508df9d477709fc703bdd2879",
+        "source": "independent random phase/amplitude low-rank periodic tensors",
+        "training_scope": "24-epoch fixed chromatic input transform with chroma8 weight/activation MLP; all matrix products/optimizer FP32",
+        "timing_scope": "optimization batches only; input encoding, validation, checkpoint serialization, and initial/final evaluation excluded",
+        "memory_scope": "process peak includes optimization and per-epoch validation",
+        "generalization_scope": "held-out samples from the same structured generator; cannot reconstruct arbitrary erased data",
+        "negative_control": "256 independently seeded uniform random tensors, with the same retained-coordinate masks as structured validation"
+      },
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 47825,
+        "master_parameter_bytes": 191300,
+        "quantizers": [
+          {
+            "module": "model.layers.0.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 8646912,
+            "last_payload_bytes": 62208,
+            "last_retained_inspection_bytes": 82960,
+            "last_ideal_packed_code_bytes": 20736,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.0.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 5349888,
+            "last_payload_bytes": 124416,
+            "last_retained_inspection_bytes": 169984,
+            "last_ideal_packed_code_bytes": 41472,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 6832128,
+            "last_payload_bytes": 49152,
+            "last_retained_inspection_bytes": 65552,
+            "last_ideal_packed_code_bytes": 16384,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 4227072,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 4323456,
+            "last_payload_bytes": 31104,
+            "last_retained_inspection_bytes": 41488,
+            "last_ideal_packed_code_bytes": 10368,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 4227072,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          }
+        ],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [
+          {
+            "module": "model.layers.0",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.2",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.4",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          }
+        ],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ]
+      },
+      "artifact_path": "artifacts/checkpoints/cube/cube-20261001T041453929534Z-da641de6ef15/model-holographic24-s7-20261001T041458517405Z-151c8fa8243a/cube_holographic24_s7.ctcheckpoint",
+      "model_config": {
+        "inputs": 162,
+        "hidden": 128,
+        "outputs": 81,
+        "bits": 8,
+        "representation": "chroma8"
+      },
+      "validation_prediction_sha256": "7b52da36aeb769b0b3d4d5715b5c40acbc350230cb4672f934a8d3e8c6ba0232"
+    },
+    {
+      "id": "cube-numeric_polar24-s7",
+      "task": "cube_reconstruction",
+      "representation": "numeric_polar24",
+      "seed": 7,
+      "device": "cpu",
+      "metrics": {
+        "initial_validation_loss": 0.027785249054431915,
+        "validation_loss": 0.011936398295624935,
+        "training_loss": 0.002053491218248382,
+        "mae": 0.08682539583345,
+        "max_error": 0.43435536324977875,
+        "out_of_distribution_noise_mse": 0.3145691454410553,
+        "noise_zero_predictor_mse": 0.3343253433704376,
+        "training_seconds": 1.9023306996095926,
+        "training_throughput": 12918.889447057565,
+        "inference_throughput": 40387.97701157557,
+        "inference_batch_ms": 6.3385199988260865,
+        "bits_per_field_value": 24,
+        "field_payload_bytes": 243,
+        "amplitude_scale_metadata_bytes": 8,
+        "mask_bits_per_field_value": 1,
+        "mask_runtime_bytes_per_value": 1,
+        "neural_input_bytes_per_sample": 648,
+        "validation_input_buffer_bytes": 165888,
+        "retained_fraction": 0.4938271641731262,
+        "live_parameter_bytes": 191300,
+        "checkpoint_bytes": 179442,
+        "peak_memory_bytes": 783069184,
+        "rss_increase_bytes": 32768,
+        "peak_cuda_allocated_bytes": null,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "checkpoint_predictions_exact": true
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 0.027785249054431915
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.022959987283684313,
+          "val_loss": 0.022073956206440926
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.019806726719252765,
+          "val_loss": 0.018822256475687027
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.014261375297792256,
+          "val_loss": 0.013127803802490234
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.009700582653749734,
+          "val_loss": 0.010506211780011654
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.007838639809051529,
+          "val_loss": 0.010177533142268658
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.006987933971686289,
+          "val_loss": 0.009849329479038715
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.006591004523215815,
+          "val_loss": 0.009779761545360088
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.006204227218404412,
+          "val_loss": 0.009847610257565975
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.005793643125798553,
+          "val_loss": 0.009732554666697979
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.005557218741159886,
+          "val_loss": 0.010020747780799866
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.005090362305054441,
+          "val_loss": 0.010099705308675766
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.004852660640608519,
+          "val_loss": 0.009962311945855618
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.0044817311863880605,
+          "val_loss": 0.01033727079629898
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.004102241990040056,
+          "val_loss": 0.010072031989693642
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.003844985185423866,
+          "val_loss": 0.010653922334313393
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.0037571492575807497,
+          "val_loss": 0.010613205842673779
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.0034862401080317795,
+          "val_loss": 0.010682819411158562
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.003155358921503648,
+          "val_loss": 0.01074474398046732
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.0029811429703840986,
+          "val_loss": 0.01105992030352354
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.002752620173851028,
+          "val_loss": 0.011329764500260353
+        },
+        {
+          "epoch": 21,
+          "train_loss": 0.002531665551941842,
+          "val_loss": 0.011391802690923214
+        },
+        {
+          "epoch": 22,
+          "train_loss": 0.002326042391359806,
+          "val_loss": 0.01164274662733078
+        },
+        {
+          "epoch": 23,
+          "train_loss": 0.0021726802515331656,
+          "val_loss": 0.011511212214827538
+        },
+        {
+          "epoch": 24,
+          "train_loss": 0.002053491218248382,
+          "val_loss": 0.011936399154365063
+        }
+      ],
+      "dataset": {
+        "shape": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "train_samples": 1024,
+        "validation_samples": 256,
+        "sha256": "ddc9327842aca8113c02dcdb28aee5afec47b9de76ba4611107f51fd92d1f237",
+        "mask_sha256": "7f39efc8eae8ff8ed98c9712692da553e80201e3607eca354ca1fc00502c38b9",
+        "initial_parameter_sha256": "52133a57fbdd718d677407c8ff1b7fe51d47f81508df9d477709fc703bdd2879",
+        "source": "independent random phase/amplitude low-rank periodic tensors",
+        "training_scope": "24-epoch fixed chromatic input transform with chroma8 weight/activation MLP; all matrix products/optimizer FP32",
+        "timing_scope": "optimization batches only; input encoding, validation, checkpoint serialization, and initial/final evaluation excluded",
+        "memory_scope": "process peak includes optimization and per-epoch validation",
+        "generalization_scope": "held-out samples from the same structured generator; cannot reconstruct arbitrary erased data",
+        "negative_control": "256 independently seeded uniform random tensors, with the same retained-coordinate masks as structured validation"
+      },
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 47825,
+        "master_parameter_bytes": 191300,
+        "quantizers": [
+          {
+            "module": "model.layers.0.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 8646912,
+            "last_payload_bytes": 62208,
+            "last_retained_inspection_bytes": 82960,
+            "last_ideal_packed_code_bytes": 20736,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.0.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 5349888,
+            "last_payload_bytes": 124416,
+            "last_retained_inspection_bytes": 169984,
+            "last_ideal_packed_code_bytes": 41472,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 6832128,
+            "last_payload_bytes": 49152,
+            "last_retained_inspection_bytes": 65552,
+            "last_ideal_packed_code_bytes": 16384,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 4227072,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 4323456,
+            "last_payload_bytes": 31104,
+            "last_retained_inspection_bytes": 41488,
+            "last_ideal_packed_code_bytes": 10368,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 4227072,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          }
+        ],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [
+          {
+            "module": "model.layers.0",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.2",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.4",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          }
+        ],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ]
+      },
+      "artifact_path": "artifacts/checkpoints/cube/cube-20261001T041453929534Z-da641de6ef15/model-numeric_polar24-s7-20261001T041500997531Z-370702a2bdfe/cube_numeric_polar24_s7.ctcheckpoint",
+      "model_config": {
+        "inputs": 162,
+        "hidden": 128,
+        "outputs": 81,
+        "bits": 8,
+        "representation": "chroma8"
+      },
+      "validation_prediction_sha256": "7b52da36aeb769b0b3d4d5715b5c40acbc350230cb4672f934a8d3e8c6ba0232"
+    },
+    {
+      "id": "cube-direct_rgb24-s23",
+      "task": "cube_reconstruction",
+      "representation": "direct_rgb24",
+      "seed": 23,
+      "device": "cpu",
+      "metrics": {
+        "initial_validation_loss": 0.02630525454878807,
+        "validation_loss": 0.003099028121123837,
+        "training_loss": 0.0009408656187588349,
+        "mae": 0.04421551052043054,
+        "max_error": 0.23958934098482132,
+        "out_of_distribution_noise_mse": 0.32750850915908813,
+        "noise_zero_predictor_mse": 0.3350435495376587,
+        "training_seconds": 1.9793224998284131,
+        "training_throughput": 12416.369743753474,
+        "inference_throughput": 41533.35975836914,
+        "inference_batch_ms": 6.163719994947314,
+        "bits_per_field_value": 24,
+        "field_payload_bytes": 243,
+        "amplitude_scale_metadata_bytes": 0,
+        "mask_bits_per_field_value": 1,
+        "mask_runtime_bytes_per_value": 1,
+        "neural_input_bytes_per_sample": 648,
+        "validation_input_buffer_bytes": 165888,
+        "retained_fraction": 0.4938271641731262,
+        "live_parameter_bytes": 191300,
+        "checkpoint_bytes": 179245,
+        "peak_memory_bytes": 783077376,
+        "rss_increase_bytes": 36864,
+        "peak_cuda_allocated_bytes": null,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "checkpoint_predictions_exact": true
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 0.02630525454878807
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.023004658985882998,
+          "val_loss": 0.021537620574235916
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.02024193259421736,
+          "val_loss": 0.01811167411506176
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.012914909573737532,
+          "val_loss": 0.009543724358081818
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.005814316507894546,
+          "val_loss": 0.004508245270699263
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.0031136348407017067,
+          "val_loss": 0.0034577306360006332
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.002549126889789477,
+          "val_loss": 0.003170480253174901
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.002336735647986643,
+          "val_loss": 0.0030097037088125944
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.002119107077305671,
+          "val_loss": 0.003090903628617525
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.002045798937615473,
+          "val_loss": 0.003100419184193015
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.0019030196490348317,
+          "val_loss": 0.002866129158064723
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.001826102910854388,
+          "val_loss": 0.002971484325826168
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.0016691119963070378,
+          "val_loss": 0.0029187670443207026
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.0015857642647461034,
+          "val_loss": 0.003098808228969574
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.0015833252618904226,
+          "val_loss": 0.0029463605023920536
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.0014546475795214064,
+          "val_loss": 0.002999942284077406
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.0013822199980495498,
+          "val_loss": 0.0029408899135887623
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.0013029653855483048,
+          "val_loss": 0.003085726173594594
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.0012415590899763629,
+          "val_loss": 0.0030050284694880247
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.001180453040433349,
+          "val_loss": 0.0030498725827783346
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.0010966374575218651,
+          "val_loss": 0.003006573999300599
+        },
+        {
+          "epoch": 21,
+          "train_loss": 0.001030455776344752,
+          "val_loss": 0.0030188406817615032
+        },
+        {
+          "epoch": 22,
+          "train_loss": 0.0010299125060555525,
+          "val_loss": 0.003067087149247527
+        },
+        {
+          "epoch": 23,
+          "train_loss": 0.0009393996006110683,
+          "val_loss": 0.0031143997330218554
+        },
+        {
+          "epoch": 24,
+          "train_loss": 0.0009408656187588349,
+          "val_loss": 0.0030990280210971832
+        }
+      ],
+      "dataset": {
+        "shape": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "train_samples": 1024,
+        "validation_samples": 256,
+        "sha256": "f4c55b2dad12172f4315488d728fe931db8d655de54faaadb4355f0cf45c9430",
+        "mask_sha256": "b468fc38308feb165469bd2eacf631e18cdfc27d39a04201d523946afe2274b2",
+        "initial_parameter_sha256": "d0548423ff2ce768d3dd3068aad26bf896ea1130e9b090646eac83f0ff63c4b1",
+        "source": "independent random phase/amplitude low-rank periodic tensors",
+        "training_scope": "24-epoch fixed chromatic input transform with chroma8 weight/activation MLP; all matrix products/optimizer FP32",
+        "timing_scope": "optimization batches only; input encoding, validation, checkpoint serialization, and initial/final evaluation excluded",
+        "memory_scope": "process peak includes optimization and per-epoch validation",
+        "generalization_scope": "held-out samples from the same structured generator; cannot reconstruct arbitrary erased data",
+        "negative_control": "256 independently seeded uniform random tensors, with the same retained-coordinate masks as structured validation"
+      },
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 47825,
+        "master_parameter_bytes": 191300,
+        "quantizers": [
+          {
+            "module": "model.layers.0.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 8646912,
+            "last_payload_bytes": 62208,
+            "last_retained_inspection_bytes": 82960,
+            "last_ideal_packed_code_bytes": 20736,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.0.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 5349888,
+            "last_payload_bytes": 124416,
+            "last_retained_inspection_bytes": 169984,
+            "last_ideal_packed_code_bytes": 41472,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 6832128,
+            "last_payload_bytes": 49152,
+            "last_retained_inspection_bytes": 65552,
+            "last_ideal_packed_code_bytes": 16384,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 4227072,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 4323456,
+            "last_payload_bytes": 31104,
+            "last_retained_inspection_bytes": 41488,
+            "last_ideal_packed_code_bytes": 10368,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 4227072,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          }
+        ],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [
+          {
+            "module": "model.layers.0",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.2",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.4",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          }
+        ],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ]
+      },
+      "artifact_path": "artifacts/checkpoints/cube/cube-20261001T041453929534Z-da641de6ef15/model-direct_rgb24-s23-20261001T041503176898Z-60a607c0dd96/cube_direct_rgb24_s23.ctcheckpoint",
+      "model_config": {
+        "inputs": 162,
+        "hidden": 128,
+        "outputs": 81,
+        "bits": 8,
+        "representation": "chroma8"
+      },
+      "validation_prediction_sha256": "b9ddcc38b327fd8160f457f98cc089706c4fb6028ac57d0d9985d0251b63e2ca"
+    },
+    {
+      "id": "cube-holographic24-s23",
+      "task": "cube_reconstruction",
+      "representation": "holographic24",
+      "seed": 23,
+      "device": "cpu",
+      "metrics": {
+        "initial_validation_loss": 0.02629217319190502,
+        "validation_loss": 0.01083891093372652,
+        "training_loss": 0.0020492491239565425,
+        "mae": 0.08282132204076256,
+        "max_error": 0.42898398637771606,
+        "out_of_distribution_noise_mse": 0.3132845461368561,
+        "noise_zero_predictor_mse": 0.3350435495376587,
+        "training_seconds": 1.9359577995492145,
+        "training_throughput": 12694.49158743155,
+        "inference_throughput": 43661.4194180916,
+        "inference_batch_ms": 5.863299989141524,
+        "bits_per_field_value": 24,
+        "field_payload_bytes": 243,
+        "amplitude_scale_metadata_bytes": 8,
+        "mask_bits_per_field_value": 1,
+        "mask_runtime_bytes_per_value": 1,
+        "neural_input_bytes_per_sample": 648,
+        "validation_input_buffer_bytes": 165888,
+        "retained_fraction": 0.4938271641731262,
+        "live_parameter_bytes": 191300,
+        "checkpoint_bytes": 179422,
+        "peak_memory_bytes": 783847424,
+        "rss_increase_bytes": 32768,
+        "peak_cuda_allocated_bytes": null,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "checkpoint_predictions_exact": true
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 0.02629217319190502
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.022987106232903898,
+          "val_loss": 0.021476222202181816
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.02029063180088997,
+          "val_loss": 0.018257465213537216
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.014390861324500293,
+          "val_loss": 0.0130589185282588
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.009752150799613446,
+          "val_loss": 0.00967735331505537
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.007931823056424037,
+          "val_loss": 0.009333592839539051
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.007385522534605116,
+          "val_loss": 0.008889084681868553
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.0068755431566387415,
+          "val_loss": 0.009457939304411411
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.006441703764721751,
+          "val_loss": 0.009189615026116371
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.006088491820264608,
+          "val_loss": 0.009098229929804802
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.0055986356164794415,
+          "val_loss": 0.009005139581859112
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.0052348008612170815,
+          "val_loss": 0.00914245005697012
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.004965349013218656,
+          "val_loss": 0.009227028116583824
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.00462893964140676,
+          "val_loss": 0.00915637519210577
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.0042679860489442945,
+          "val_loss": 0.00953830499202013
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.003941280592698604,
+          "val_loss": 0.009608632884919643
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.0037308946630218998,
+          "val_loss": 0.009967759251594543
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.0034695723588811234,
+          "val_loss": 0.010040751658380032
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.0031214757764246315,
+          "val_loss": 0.010012326762080193
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.003018849005457014,
+          "val_loss": 0.010266407392919064
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.0027965445769950747,
+          "val_loss": 0.010054800659418106
+        },
+        {
+          "epoch": 21,
+          "train_loss": 0.0025632702599978074,
+          "val_loss": 0.010226181708276272
+        },
+        {
+          "epoch": 22,
+          "train_loss": 0.0023565620940644294,
+          "val_loss": 0.010466220788657665
+        },
+        {
+          "epoch": 23,
+          "train_loss": 0.002258255670312792,
+          "val_loss": 0.010707688517868519
+        },
+        {
+          "epoch": 24,
+          "train_loss": 0.0020492491239565425,
+          "val_loss": 0.010838910937309265
+        }
+      ],
+      "dataset": {
+        "shape": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "train_samples": 1024,
+        "validation_samples": 256,
+        "sha256": "f4c55b2dad12172f4315488d728fe931db8d655de54faaadb4355f0cf45c9430",
+        "mask_sha256": "b468fc38308feb165469bd2eacf631e18cdfc27d39a04201d523946afe2274b2",
+        "initial_parameter_sha256": "d0548423ff2ce768d3dd3068aad26bf896ea1130e9b090646eac83f0ff63c4b1",
+        "source": "independent random phase/amplitude low-rank periodic tensors",
+        "training_scope": "24-epoch fixed chromatic input transform with chroma8 weight/activation MLP; all matrix products/optimizer FP32",
+        "timing_scope": "optimization batches only; input encoding, validation, checkpoint serialization, and initial/final evaluation excluded",
+        "memory_scope": "process peak includes optimization and per-epoch validation",
+        "generalization_scope": "held-out samples from the same structured generator; cannot reconstruct arbitrary erased data",
+        "negative_control": "256 independently seeded uniform random tensors, with the same retained-coordinate masks as structured validation"
+      },
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 47825,
+        "master_parameter_bytes": 191300,
+        "quantizers": [
+          {
+            "module": "model.layers.0.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 8646912,
+            "last_payload_bytes": 62208,
+            "last_retained_inspection_bytes": 82960,
+            "last_ideal_packed_code_bytes": 20736,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.0.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 5349888,
+            "last_payload_bytes": 124416,
+            "last_retained_inspection_bytes": 169984,
+            "last_ideal_packed_code_bytes": 41472,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 6832128,
+            "last_payload_bytes": 49152,
+            "last_retained_inspection_bytes": 65552,
+            "last_ideal_packed_code_bytes": 16384,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 4227072,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 4323456,
+            "last_payload_bytes": 31104,
+            "last_retained_inspection_bytes": 41488,
+            "last_ideal_packed_code_bytes": 10368,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 4227072,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          }
+        ],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [
+          {
+            "module": "model.layers.0",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.2",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.4",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          }
+        ],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ]
+      },
+      "artifact_path": "artifacts/checkpoints/cube/cube-20261001T041453929534Z-da641de6ef15/model-holographic24-s23-20261001T041505434460Z-2b6c7ae48c27/cube_holographic24_s23.ctcheckpoint",
+      "model_config": {
+        "inputs": 162,
+        "hidden": 128,
+        "outputs": 81,
+        "bits": 8,
+        "representation": "chroma8"
+      },
+      "validation_prediction_sha256": "218f5f8e69291a4dc6fc08635b889bf75718f262a5f7adb588cefaa38ea13d88"
+    },
+    {
+      "id": "cube-numeric_polar24-s23",
+      "task": "cube_reconstruction",
+      "representation": "numeric_polar24",
+      "seed": 23,
+      "device": "cpu",
+      "metrics": {
+        "initial_validation_loss": 0.02629217319190502,
+        "validation_loss": 0.01083891093372652,
+        "training_loss": 0.0020492491239565425,
+        "mae": 0.08282132204076256,
+        "max_error": 0.42898398637771606,
+        "out_of_distribution_noise_mse": 0.3132845461368561,
+        "noise_zero_predictor_mse": 0.3350435495376587,
+        "training_seconds": 2.0065516006434336,
+        "training_throughput": 12247.878396010003,
+        "inference_throughput": 41952.495251023945,
+        "inference_batch_ms": 6.102140014991164,
+        "bits_per_field_value": 24,
+        "field_payload_bytes": 243,
+        "amplitude_scale_metadata_bytes": 8,
+        "mask_bits_per_field_value": 1,
+        "mask_runtime_bytes_per_value": 1,
+        "neural_input_bytes_per_sample": 648,
+        "validation_input_buffer_bytes": 165888,
+        "retained_fraction": 0.4938271641731262,
+        "live_parameter_bytes": 191300,
+        "checkpoint_bytes": 179422,
+        "peak_memory_bytes": 785920000,
+        "rss_increase_bytes": 45056,
+        "peak_cuda_allocated_bytes": null,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "checkpoint_predictions_exact": true
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 0.02629217319190502
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.022987106232903898,
+          "val_loss": 0.021476222202181816
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.02029063180088997,
+          "val_loss": 0.018257465213537216
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.014390861324500293,
+          "val_loss": 0.0130589185282588
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.009752150799613446,
+          "val_loss": 0.00967735331505537
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.007931823056424037,
+          "val_loss": 0.009333592839539051
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.007385522534605116,
+          "val_loss": 0.008889084681868553
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.0068755431566387415,
+          "val_loss": 0.009457939304411411
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.006441703764721751,
+          "val_loss": 0.009189615026116371
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.006088491820264608,
+          "val_loss": 0.009098229929804802
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.0055986356164794415,
+          "val_loss": 0.009005139581859112
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.0052348008612170815,
+          "val_loss": 0.00914245005697012
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.004965349013218656,
+          "val_loss": 0.009227028116583824
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.00462893964140676,
+          "val_loss": 0.00915637519210577
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.0042679860489442945,
+          "val_loss": 0.00953830499202013
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.003941280592698604,
+          "val_loss": 0.009608632884919643
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.0037308946630218998,
+          "val_loss": 0.009967759251594543
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.0034695723588811234,
+          "val_loss": 0.010040751658380032
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.0031214757764246315,
+          "val_loss": 0.010012326762080193
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.003018849005457014,
+          "val_loss": 0.010266407392919064
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.0027965445769950747,
+          "val_loss": 0.010054800659418106
+        },
+        {
+          "epoch": 21,
+          "train_loss": 0.0025632702599978074,
+          "val_loss": 0.010226181708276272
+        },
+        {
+          "epoch": 22,
+          "train_loss": 0.0023565620940644294,
+          "val_loss": 0.010466220788657665
+        },
+        {
+          "epoch": 23,
+          "train_loss": 0.002258255670312792,
+          "val_loss": 0.010707688517868519
+        },
+        {
+          "epoch": 24,
+          "train_loss": 0.0020492491239565425,
+          "val_loss": 0.010838910937309265
+        }
+      ],
+      "dataset": {
+        "shape": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "train_samples": 1024,
+        "validation_samples": 256,
+        "sha256": "f4c55b2dad12172f4315488d728fe931db8d655de54faaadb4355f0cf45c9430",
+        "mask_sha256": "b468fc38308feb165469bd2eacf631e18cdfc27d39a04201d523946afe2274b2",
+        "initial_parameter_sha256": "d0548423ff2ce768d3dd3068aad26bf896ea1130e9b090646eac83f0ff63c4b1",
+        "source": "independent random phase/amplitude low-rank periodic tensors",
+        "training_scope": "24-epoch fixed chromatic input transform with chroma8 weight/activation MLP; all matrix products/optimizer FP32",
+        "timing_scope": "optimization batches only; input encoding, validation, checkpoint serialization, and initial/final evaluation excluded",
+        "memory_scope": "process peak includes optimization and per-epoch validation",
+        "generalization_scope": "held-out samples from the same structured generator; cannot reconstruct arbitrary erased data",
+        "negative_control": "256 independently seeded uniform random tensors, with the same retained-coordinate masks as structured validation"
+      },
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 47825,
+        "master_parameter_bytes": 191300,
+        "quantizers": [
+          {
+            "module": "model.layers.0.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 8646912,
+            "last_payload_bytes": 62208,
+            "last_retained_inspection_bytes": 82960,
+            "last_ideal_packed_code_bytes": 20736,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.0.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 5349888,
+            "last_payload_bytes": 124416,
+            "last_retained_inspection_bytes": 169984,
+            "last_ideal_packed_code_bytes": 41472,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 6832128,
+            "last_payload_bytes": 49152,
+            "last_retained_inspection_bytes": 65552,
+            "last_ideal_packed_code_bytes": 16384,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 4227072,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 4323456,
+            "last_payload_bytes": 31104,
+            "last_retained_inspection_bytes": 41488,
+            "last_ideal_packed_code_bytes": 10368,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 417,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 4227072,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          }
+        ],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [
+          {
+            "module": "model.layers.0",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.2",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.4",
+            "class": "ChromaLinear",
+            "forward_calls": 417,
+            "kernel_dtype": "torch.float32"
+          }
+        ],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ]
+      },
+      "artifact_path": "artifacts/checkpoints/cube/cube-20261001T041453929534Z-da641de6ef15/model-numeric_polar24-s23-20261001T041507667162Z-464a396443b1/cube_numeric_polar24_s23.ctcheckpoint",
+      "model_config": {
+        "inputs": 162,
+        "hidden": 128,
+        "outputs": 81,
+        "bits": 8,
+        "representation": "chroma8"
+      },
+      "validation_prediction_sha256": "218f5f8e69291a4dc6fc08635b889bf75718f262a5f7adb588cefaa38ea13d88"
+    }
+  ],
+  "comparisons": [
+    {
+      "seed": 7,
+      "identical_dataset": true,
+      "identical_mask": true,
+      "identical_initial_parameters": true,
+      "polar_controls_identical_curves": true,
+      "polar_controls_validation_delta": 0.0
+    },
+    {
+      "seed": 23,
+      "identical_dataset": true,
+      "identical_mask": true,
+      "identical_initial_parameters": true,
+      "polar_controls_identical_curves": true,
+      "polar_controls_validation_delta": 0.0
+    }
+  ],
+  "conclusions": [
+    "The cube supports integer-only layer rotations in three through six dimensions, with exact four-turn and inverse restoration of cell codes and identities.",
+    "The distributed field stores a phase8/magnitude16 full complex FFT. It uses floating point transforms and carries Hermitian redundancy. It is an implemented spectral representation, not a literal optical hologram.",
+    "Every numeric polar control uses exactly the same 24-bit quantization as its chromatic field. Their inputs, training curves, and reconstruction outputs are identical. Color naming supplies no reconstruction advantage.",
+    "At approximately 50% retained coordinates, mean held-out periodic-field MSE was 0.003196234 for direct RGB and 0.01138765 for the distributed field. These masks erase coordinates in different bases.",
+    "Partial field erasure loses information. The trained reconstruction models evaluate held-out low-rank periodic fields from the same generator and a separate random-noise negative control. Their results do not establish recovery of arbitrary data from fragments."
+  ],
+  "report_path": "artifacts/checkpoints/cube/cube-20261001T041453929534Z-da641de6ef15/CUBE_RESULTS.md",
+  "figure_path": "artifacts/checkpoints/cube/cube-20261001T041453929534Z-da641de6ef15/cube-training.png",
+  "public_sanitization": {
+    "historical_only": true,
+    "original_file_sha256": "f3f20ccdbd503c2e9769955dec392f2ec756d012460baee3c0ef190ece387c85",
+    "changes": "Machine paths redacted; numbers, seeds, sample counts and execution precision preserved. Missing companion data and old source hashes cannot certify this release."
+  }
+}

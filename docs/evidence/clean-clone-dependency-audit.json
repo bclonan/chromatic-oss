@@ -1,0 +1,209 @@
+{
+  "tool": "pip-audit",
+  "version": "2.10.1",
+  "service": "OSV",
+  "date": "2026-10-01",
+  "scope": "32 installed distributions in the independent clean-clone Python 3.12 environment, including its build tools",
+  "requirements_file": "requirements/python312-cpu.lock",
+  "requirements_sha256": "6d08237ffcfeedc2908dc42f9a99fa0e79f042fe01e4692984ff38c6f99b1a88",
+  "status": "PASS",
+  "packages": [
+    {
+      "name": "chromatensor",
+      "version": "0.2.0",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "chromatic-hue",
+      "version": "0.1.0",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "contourpy",
+      "version": "1.4.0",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "cycler",
+      "version": "0.12.1",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "filelock",
+      "version": "3.32.3",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "fonttools",
+      "version": "4.66.1",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.7.0",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.0",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "jinja2",
+      "version": "3.1.6",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.5.1",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "markupsafe",
+      "version": "3.0.3",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.11.2",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "networkx",
+      "version": "3.6.1",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.2",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "pip",
+      "version": "26.2.1",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "pluggy",
+      "version": "1.6.0",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "pygments",
+      "version": "2.21.0",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.3",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "pytest",
+      "version": "9.1.1",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "setuptools",
+      "version": "83.0.0",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "torch",
+      "version": "2.14.1+cpu",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "torchvision",
+      "version": "0.29.1+cpu",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "queried": true,
+      "advisories": []
+    },
+    {
+      "name": "wheel",
+      "version": "0.48.0",
+      "queried": true,
+      "advisories": []
+    }
+  ],
+  "normalization": "None. OSV queried the exact installed CPU local versions.",
+  "limitations": [
+    "No known advisory does not guarantee absence of undisclosed vulnerabilities.",
+    "This audit does not inspect native operating system libraries, the Rust toolchain, or deployment infrastructure."
+  ]
+}

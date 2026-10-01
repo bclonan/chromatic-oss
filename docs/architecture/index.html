@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <title>ChromaTensor architecture explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="graph.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#text-map">Skip diagram to text map</a>
+  <header class="masthead">
+    <div><p class="eyebrow">ChromaTensor / source atlas</p><h1>Follow the bytes.</h1><p class="intro">Native RGBD arithmetic, explicit legacy research and the boundaries between them.</p></div>
+    <div class="identity"><span class="badge">Offline source explorer</span><p id="source-identity"></p><a href="../../ARCHITECTURE.md">Architecture document</a></div>
+  </header>
+  <main>
+    <nav class="view-tabs" aria-label="Architecture views">
+      <button type="button" data-view="overview" aria-pressed="true">Overview</button>
+      <button type="button" data-view="data" aria-pressed="false">Data and ownership</button>
+      <button type="button" data-view="journeys" aria-pressed="false">User journeys</button>
+      <button type="button" data-view="boundaries" aria-pressed="false">Trust boundaries</button>
+      <button type="button" data-view="failures" aria-pressed="false">Failure paths</button>
+    </nav>
+    <section class="view-context" aria-labelledby="view-title"><div><h2 id="view-title"></h2><p id="view-description"></p></div><button type="button" id="integration-toggle" aria-expanded="false" aria-controls="integrations">Integrations and absences</button></section>
+    <section id="integrations" class="integration-panel" aria-labelledby="integration-heading" hidden><h2 id="integration-heading">External dependencies and absent services</h2><p>These findings describe the reviewed local code. No remote service is contacted by this explorer.</p><div id="integration-list"></div></section>
+    <section class="workspace" aria-label="Interactive architecture">
+      <aside class="filters" aria-labelledby="filters-heading">
+        <h2 id="filters-heading">Find a component</h2>
+        <label for="search">Search names, behavior and paths</label><input type="search" id="search" placeholder="Try ctypes, checksum or FFT">
+        <label for="subsystem">Subsystem</label><select id="subsystem"><option value="all">All subsystems</option></select>
+        <label for="flow">Flow</label><select id="flow"><option value="all">All flows</option></select>
+        <label for="edge-type">Relationship type</label><select id="edge-type"><option value="all">All relationship types</option><option value="call">Calls</option><option value="data">Supplies data</option><option value="ownership">Owns output</option><option value="read">Reads local files</option><option value="write">Writes local files</option><option value="http">HTTP request or response</option><option value="contract">Declares contract</option></select>
+        <fieldset><legend>Visible layers</legend><div id="layers"></div></fieldset>
+        <label class="check"><input type="checkbox" id="external-only"> External touchpoints only</label>
+        <button id="reset" type="button">Reset explorer</button>
+        <p class="hint">Choose a subsystem card to drill down. Use the component list below for the same selection without the diagram.</p>
+      </aside>
+      <section class="map-panel" aria-labelledby="map-heading">
+        <div class="map-toolbar"><h2 id="map-heading">System map</h2><div class="zoom-tools" aria-label="Diagram navigation"><button type="button" id="zoom-out" aria-label="Zoom out">−</button><output id="zoom-level" aria-label="Zoom level">100%</output><button type="button" id="zoom-in" aria-label="Zoom in">+</button><button type="button" id="fit">Fit map</button></div></div>
+        <div class="map-frame"><svg id="map" viewBox="0 0 1200 650" tabindex="0" role="group" aria-label="Architecture diagram. Arrow keys pan. Plus and minus zoom. Home fits the map. Enter on a node selects it." xmlns="http://www.w3.org/2000/svg"></svg><p id="empty-map" hidden>No components match these filters. Change a filter or reset the explorer.</p></div>
+        <div class="map-footer"><p id="map-status" role="status" aria-live="polite"></p><p>Drag empty space to pan. Wheel to zoom. Arrows pan, + and − zoom, Home fits.</p></div>
+        <div class="legend"><span><i class="key-line"></i>Arrow points toward the data or call recipient</span><span><i class="key-boundary"></i>Dashed line crosses a trust boundary</span><span>Implemented = source implementation</span><span>Experimental = numerical research</span><span>Absent = no reviewed runtime integration</span></div>
+      </section>
+      <aside class="details" id="details" aria-labelledby="details-title"></aside>
+    </section>
+    <section id="text-map" class="text-map" tabindex="-1" aria-labelledby="text-map-heading">
+      <div class="section-heading"><div><p class="eyebrow">Same graph, readable as text</p><h2 id="text-map-heading">Components and relationships</h2></div><span id="text-count"></span></div>
+      <div id="component-list" class="component-list" aria-label="Select a component"></div>
+      <div class="table-scroll"><table><caption id="relationship-caption">Reviewed directional relationships in the current view</caption><thead><tr><th scope="col">Source</th><th scope="col">Recipient</th><th scope="col">Relationship</th><th scope="col">Boundary</th><th scope="col">Source evidence</th></tr></thead><tbody id="relationship-list"></tbody></table></div>
+      <div id="failure-list"></div>
+    </section>
+    <details class="evidence"><summary>How to check this map and its source links</summary><p id="evidence-note"></p><p id="status-note"></p><p>Regenerate with <code>python scripts/architecture.py</code>. Check drift and graph validity with <code>python scripts/architecture.py --check</code>. Run the graph tests with <code>python -m pytest tests/test_architecture.py</code>.</p><p>Source snapshots open at the exact referenced line and show the file hash. The snapshot also links to the repository file. Regeneration is required after source changes. Import inventory is lexical discovery. The typed arrows are separately reviewed semantic relationships.</p><a href="graph.json">Structured graph and import inventory JSON</a><div id="inventory-summary"></div></details>
+  </main>
+  <footer><p>This map explains source behavior. It does not certify screen-reader access, release acceptance or numerical performance.</p></footer>
+  <noscript><p>JavaScript is required for diagram controls. Read <a href="../../ARCHITECTURE.md">ARCHITECTURE.md</a> or <a href="graph.json">the structured graph</a> for the source-backed text description.</p></noscript>
+</body>
+</html>

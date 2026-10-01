@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "python": "3.12.13",
+  "isolated": true,
+  "dependencies": [],
+  "module": "<environment>/Lib/site-packages/chromatic_hue/__init__.py",
+  "module_sha256": "9781800dbbce9893283390ee3b409027f95d48a5fcef01e48864ea5cb3126c97",
+  "native": {
+    "path": "<environment>/Lib/site-packages/chromatic_hue/_native/windows-x86_64/hue_tensor.dll",
+    "sha256": "f1b5c6e0fab205829498c4b6cd725bd614d785baf7197fcecb8997b9f2f19808",
+    "bytes": 246272,
+    "abi_version": 1,
+    "phase_modulus": 391680,
+    "runtime": "Rust integer color-token operators"
+  },
+  "checks": {
+    "isolated_package": true,
+    "no_tensor_runtime": true,
+    "native_color_encode_decode": true,
+    "actual_D_refinement": true,
+    "native_matmul": true,
+    "native_shapes": true,
+    "native_file_roundtrip": true
+  },
+  "tokens": [
+    255,
+    0,
+    0,
+    0,
+    255,
+    255,
+    0,
+    0,
+    0,
+    255,
+    0,
+    0,
+    255,
+    0,
+    1,
+    255
+  ],
+  "matmul_phases": [
+    195840,
+    261120,
+    130557,
+    261116
+  ],
+  "payload_bytes": 16,
+  "file_bytes": 88
+}

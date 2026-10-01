@@ -1,0 +1,23 @@
+{
+  "verified": true,
+  "verified_at": "2026-09-30T22:37:16.237814+00:00",
+  "source_revision": "b9d4c322e0c87310d3e72619364d8edcc586a542",
+  "method": "clean local git clone plus new venv with system-site-packages; editable source installation",
+  "dependency_scope": "host-installed dependencies reused; no new CUDA driver or empty-machine verification",
+  "tests": 133,
+  "cpu_smoke_model_records": 14,
+  "cpu_smoke_precision_rows": 92,
+  "commands": [
+    "git clone --local --no-hardlinks --branch codex/chromatensor-system . .setup-verification/source",
+    "python -m venv --system-site-packages .setup-venv",
+    "python -m pip install -e .[test]",
+    "python -m pytest -q",
+    "python scripts/run_benchmarks.py --profile smoke --device cpu --seeds 7 --tasks scalar periodic precision operators attention --representations fp32 int8 chroma8 rgb24 fixed24 --output results/fresh_smoke.json",
+    "python scripts/train.py --representation chroma --profile smoke"
+  ],
+  "public_sanitization": {
+    "historical_only": true,
+    "original_file_sha256": "0ddc638b0ad738aa226242a054a54d0395163ad0412ba5fc1048dcccdfe58995",
+    "changes": "Machine paths redacted; numbers, seeds, sample counts and execution precision preserved. Missing companion data and old source hashes cannot certify this release."
+  }
+}

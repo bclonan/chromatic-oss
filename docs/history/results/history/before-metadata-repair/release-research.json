@@ -1,0 +1,5060 @@
+{
+  "schema_version": 2,
+  "run_id": "release-research-20261001T020220115349Z-b26618f9ea6c",
+  "created_at": "2026-10-01T02:02:20.115384+00:00",
+  "config": {
+    "profile": "release_research",
+    "device": "cuda",
+    "smoke": false,
+    "seeds": [
+      7,
+      23,
+      41,
+      59
+    ],
+    "representations": [
+      "fp32",
+      "int8",
+      "chroma8"
+    ],
+    "epochs": 20,
+    "scalar_epochs": 20,
+    "train_images": 48000,
+    "development_images": 12000,
+    "final_test_images": 10000,
+    "large_tensor_values": 10000000,
+    "selection_policy": "fixed final epoch; development losses recorded without early stopping or tuning"
+  },
+  "environment": {
+    "python": "3.14.6",
+    "torch": "2.14.0+cu126",
+    "numpy": "2.5.2",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cuda_available": true,
+    "cuda_version": "12.6",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "threads": 4,
+    "revision": "cce9742ef9b15d85e29fccecfc8401240b7aaed5",
+    "git": {
+      "available": true,
+      "commit": "cce9742ef9b15d85e29fccecfc8401240b7aaed5",
+      "dirty": true,
+      "status": [
+        "M .gitignore",
+        " M ARCHITECTURE.md",
+        " M BENCHMARKS.md",
+        " M EXPERIMENT_MATRIX.md",
+        " M LIMITATIONS.md",
+        " M README.md",
+        " M RESEARCH_LOG.md",
+        " M RESULTS.md",
+        " M THEORY.md",
+        " M TODO.md",
+        " D artifacts/packages/chromatensor-0.1.0-py3-none-any.whl",
+        " M artifacts/verification-tests.xml",
+        " M chromatensor/autograd/quantization.py",
+        " M chromatensor/codecs/hierarchical.py",
+        " M chromatensor/codecs/learned.py",
+        " M chromatensor/codecs/neural_rgb.py",
+        " M chromatensor/codecs/rgb.py",
+        " M chromatensor/cube.py",
+        " M chromatensor/holographic.py",
+        " M chromatensor/nn/layers.py",
+        " M chromatensor/nn/report.py",
+        " M chromatensor/operators/core.py",
+        " M chromatensor/serialization/format.py",
+        " M chromatensor/tensor.py",
+        " M dashboard/server.py",
+        " M docs/API.md",
+        " M docs/CUBE.md",
+        " M docs/CUBE_RESULTS.md",
+        " M docs/DASHBOARD.md",
+        " M docs/HOLOGRAPHIC.md",
+        " M docs/MEASUREMENT.md",
+        " M docs/RESEARCH_REVIEW.md",
+        " M docs/SETUP.md",
+        " M experiments/attention.py",
+        " M experiments/common.py",
+        " M experiments/cube.py",
+        " M experiments/datasets.py",
+        " M experiments/decoder.py",
+        " M experiments/precision.py",
+        " M experiments/training.py",
+        " M pyproject.toml",
+        " M results/cube.json",
+        " M results/latest.json",
+        " M scripts/finalize_report.py",
+        " M scripts/run_benchmarks.py",
+        " M scripts/run_cube_experiments.py",
+        " M scripts/verify.py",
+        " M tests/test_attention_experiment.py",
+        " M tests/test_codecs.py",
+        " M tests/test_cube.py",
+        " M tests/test_cube_experiments.py",
+        " M tests/test_dashboard.py",
+        " M tests/test_decoder.py",
+        " M tests/test_nn.py",
+        " M tests/test_operators.py",
+        " M tests/test_serialization.py",
+        " M tests/test_tensor.py",
+        " M tests/test_training.py",
+        "?? .github/",
+        "?? artifacts/current-interim-tests.xml",
+        "?? artifacts/figures/review-data-smoke/",
+        "?? artifacts/figures/review-smoke/",
+        "?? artifacts/figures/train_scalar_fp32/",
+        "?? artifacts/integration-interim-tests.xml",
+        "?? artifacts/minimum-interim-tests.xml",
+        "?? artifacts/packages/chromatensor-0.2.0-py3-none-any.whl",
+        "?? artifacts/release-research/",
+        "?? artifacts/review-smoke/",
+        "?? artifacts/review/",
+        "?? artifacts/verification/",
+        "?? docs/CODE_REVIEW.md",
+        "?? docs/FILE_FORMATS.md",
+        "?? docs/REVIEW_CHECKLIST.md",
+        "?? experiments/checkpoint_probe.py",
+        "?? experiments/provenance.py",
+        "?? experiments/verification.py",
+        "?? requirements/",
+        "?? results/history/",
+        "?? results/release-research.json",
+        "?? results/repair-regressions.json",
+        "?? results/review-data-smoke.json",
+        "?? results/review-data-smoke.md",
+        "?? results/review-findings.json",
+        "?? results/review-smoke.json",
+        "?? results/review-smoke.md",
+        "?? results/review-summary.json",
+        "?? results/test-verification.json",
+        "?? results/train_scalar_fp32.json",
+        "?? results/train_scalar_fp32.md",
+        "?? scripts/build_release_evidence.py",
+        "?? scripts/review_reproductions.py",
+        "?? scripts/run_release_research.py",
+        "?? scripts/run_verification_tests.py",
+        "?? scripts/verify_dependencies.py",
+        "?? scripts/verify_release_install.py",
+        "?? tests/test_acceptance.py",
+        "?? tests/test_checkpoint_probe.py",
+        "?? tests/test_datasets.py",
+        "?? tests/test_file_limits.py",
+        "?? tests/test_release_matrix.py",
+        "?? tests/test_release_research.py"
+      ]
+    },
+    "dependencies": {
+      "python": "3.14.6",
+      "torch": "2.14.0+cu126",
+      "torchvision": "0.29.0+cu126",
+      "numpy": "2.5.2",
+      "matplotlib": "3.11.2",
+      "psutil": "7.2.2",
+      "pytest": "8.4.2"
+    },
+    "timestamp": "2026-10-01T02:02:20.239582+00:00"
+  },
+  "status": "complete",
+  "experiments": [
+    {
+      "id": "release-research-20261001T020220115349Z-b26618f9ea6c-mnist-fp32-s7",
+      "task": "mnist",
+      "representation": "fp32",
+      "seed": 7,
+      "metrics": {
+        "validation_loss": 0.11824135108788808,
+        "accuracy": 0.97625,
+        "bits_per_value": 32,
+        "bytes_model": 473560,
+        "parameter_count": 118282,
+        "live_parameter_bytes": 473128,
+        "diagnostic_code_payload_bytes": 473128,
+        "codec_metadata_bytes": 432,
+        "checkpoint_bytes": 442818,
+        "torch_checkpoint_bytes": 475925,
+        "encoding_error": 0.0,
+        "reconstruction_error": 0.0,
+        "encode_overhead_ms": 17.203149967826903,
+        "decode_overhead_ms": 2.7639000909402966,
+        "storage_scope": "diagnostic per-tensor quantized payload plus codec metadata; checkpoint is lossless RGBD FP32",
+        "peak_memory_bytes": 1512706048,
+        "rss_increase_bytes": 268546048,
+        "peak_cuda_allocated_bytes": 260944896,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "training_loss": 0.006115794672475507,
+        "initial_validation_loss": 2.3002019011179606,
+        "training_seconds": 7.3826744998805225,
+        "inference_batch_ms": 0.10029999539256096,
+        "training_throughput": 130034.1766409363,
+        "inference_throughput": 2552343.088332654,
+        "epochs": 20,
+        "learning_rate": 0.002
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 2.3002019011179606,
+          "metric": 0.10791666666666666
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.4450434321562449,
+          "val_loss": 0.22093614904085795,
+          "metric": 0.93425
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.17242369258403778,
+          "val_loss": 0.14991662955284119,
+          "metric": 0.9550833333333333
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.12024158386389415,
+          "val_loss": 0.11662749316294987,
+          "metric": 0.9653333333333334
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.08915673291683197,
+          "val_loss": 0.10338503998517991,
+          "metric": 0.9666666666666667
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.06982253991564115,
+          "val_loss": 0.09172974995772044,
+          "metric": 0.97075
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.05480439845720927,
+          "val_loss": 0.0929510081410408,
+          "metric": 0.9728333333333333
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.04505671379963557,
+          "val_loss": 0.09241670809189478,
+          "metric": 0.9731666666666666
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.0350272537296017,
+          "val_loss": 0.0935371426641941,
+          "metric": 0.97275
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.02936112731695175,
+          "val_loss": 0.08859032648801804,
+          "metric": 0.97575
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.02267375046511491,
+          "val_loss": 0.09281328352292378,
+          "metric": 0.9748333333333333
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.018750431898981332,
+          "val_loss": 0.09658877740303676,
+          "metric": 0.9739166666666667
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.017589272918179633,
+          "val_loss": 0.09140029352903366,
+          "metric": 0.9759166666666667
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.014895401823644837,
+          "val_loss": 0.09844031810760498,
+          "metric": 0.9755
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.012054854120127858,
+          "val_loss": 0.10231955591837565,
+          "metric": 0.9764166666666667
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.013986694200585285,
+          "val_loss": 0.12636919331550597,
+          "metric": 0.9711666666666666
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.01399968277849257,
+          "val_loss": 0.11550239020586014,
+          "metric": 0.9744166666666667
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.011185601201529304,
+          "val_loss": 0.11966733660300573,
+          "metric": 0.97275
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.0081761711469541,
+          "val_loss": 0.11488733228047689,
+          "metric": 0.97525
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.009241212920285761,
+          "val_loss": 0.1080336032907168,
+          "metric": 0.9770833333333333
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.006115794672475507,
+          "val_loss": 0.11824135108788808,
+          "metric": 0.97625
+        }
+      ],
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 118282,
+        "master_parameter_bytes": 473128,
+        "quantizers": [],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ],
+        "mixed_precision": null,
+        "optimizer_and_master_parameters": "FP32 Adam",
+        "quantization_baseline": null
+      },
+      "dataset": {
+        "source": "torchvision.datasets.MNIST",
+        "namespace": "official_train",
+        "source_url": "https://docs.pytorch.org/vision/stable/generated/torchvision.datasets.MNIST.html",
+        "source_examples": 60000,
+        "source_sha256": "d18cfd466eb143ac1097fde604dba9eec4116885869d04cc648b510949f9e88c",
+        "partition": "disjoint training and development subsets of the official training split",
+        "train_examples": 48000,
+        "validation_examples": 12000,
+        "selection_seed": 7,
+        "sha256": "fd8d9ecfe6b9b9d888d563f97266dd04369ea5d89040c6fb57b6b44b7455fd9d",
+        "preprocessing": "pixels / 255, flattened; no augmentation",
+        "index_artifact": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-s7-partition.npz",
+        "index_sha256": "e760dad8c723717825aab9eb2d2ad651466e05a6008f0092d9d271901f43d1dc"
+      },
+      "artifact_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-fp32-s7.ctcheckpoint",
+      "device": "cuda",
+      "model_config": {
+        "schema_version": 1,
+        "task": "mnist",
+        "representation": "fp32",
+        "seed": 7,
+        "dimensions": [
+          784,
+          10
+        ]
+      },
+      "checkpoint_probe": {
+        "schema_version": 1,
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-fp32-s7-probe.npz",
+        "sha256": "bb518b6d80778db832cebed08c35ce45d322b253a2961aebe0618b0a675ea090",
+        "checkpoint_sha256": "c39f63dba4502248ec512b370505ccf2d7f7a2f9798e6439a77645b184818fd0",
+        "checkpoint_bytes": 442818,
+        "probe_bytes": 10111,
+        "input_sha256": "1e396099839158519f569657bcb74401158bb53c18af0ae9c66207b9f17042a3",
+        "prediction_sha256": "2c74eb964a7a7ab39e18bdc4cc7ee316d03c9973b643c724d0556c8a0bdd3ae1",
+        "device": "cpu",
+        "examples": 32,
+        "input_shape": [
+          32,
+          784
+        ],
+        "input_dtype": "torch.float32",
+        "prediction_shape": [
+          32,
+          10
+        ],
+        "precision": {
+          "parameter_dtypes": [
+            "torch.float32"
+          ],
+          "autocast_dtype": null,
+          "output_dtype": "torch.float32",
+          "stored_prediction_dtype": "torch.float32"
+        },
+        "dataset_sha256": "fd8d9ecfe6b9b9d888d563f97266dd04369ea5d89040c6fb57b6b44b7455fd9d",
+        "threads": 4,
+        "source": "first real held-out inputs from the recorded dataset",
+        "predictions_exact": true,
+        "scope": "CPU checkpoint replay only; original task accuracy, precision and timings are unchanged"
+      },
+      "final_test_metrics": {
+        "loss": 0.11882131643295288,
+        "accuracy": 0.9751,
+        "examples": 10000,
+        "dataset_sha256": "2f5bf57b01d680e3513af2576892349179120bbd4d08b4d747127609787ed6ed",
+        "prediction_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-fp32-s7-final-test.npz",
+        "prediction_sha256": "9450a5e5f3f44aa27b55c8606516bc72377820be652a431b18fa3d16095ec680",
+        "checkpoint_sha256": "c39f63dba4502248ec512b370505ccf2d7f7a2f9798e6439a77645b184818fd0",
+        "evaluated_at": "2026-10-01T02:08:22.338307+00:00",
+        "device": "cuda",
+        "stored_logit_dtype": "torch.float32",
+        "evaluation_only": true
+      }
+    },
+    {
+      "id": "release-research-20261001T020220115349Z-b26618f9ea6c-mnist-int8-s7",
+      "task": "mnist",
+      "representation": "int8",
+      "seed": 7,
+      "metrics": {
+        "validation_loss": 0.12032031697034835,
+        "accuracy": 0.9768333333333333,
+        "bits_per_value": 8,
+        "bytes_model": 118977,
+        "parameter_count": 118282,
+        "live_parameter_bytes": 473128,
+        "diagnostic_code_payload_bytes": 118282,
+        "codec_metadata_bytes": 695,
+        "checkpoint_bytes": 442733,
+        "torch_checkpoint_bytes": 476309,
+        "encoding_error": 0.0014557852397607933,
+        "reconstruction_error": 0.0014557852397607933,
+        "encode_overhead_ms": 2.015399979427457,
+        "decode_overhead_ms": 1.0977000347338617,
+        "storage_scope": "diagnostic per-tensor quantized payload plus codec metadata; checkpoint is lossless RGBD FP32",
+        "peak_memory_bytes": 1530957824,
+        "rss_increase_bytes": 45056,
+        "peak_cuda_allocated_bytes": 264167936,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "training_loss": 0.008104297136111806,
+        "initial_validation_loss": 2.3002232602437336,
+        "training_seconds": 24.43082259967923,
+        "inference_batch_ms": 3.765770001336932,
+        "training_throughput": 39294.624488518224,
+        "inference_throughput": 67980.7847821599,
+        "epochs": 20,
+        "learning_rate": 0.002
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 2.3002232602437336,
+          "metric": 0.10825
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.4453817166487376,
+          "val_loss": 0.21811403568585713,
+          "metric": 0.9346666666666666
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.1709910126129786,
+          "val_loss": 0.15152463297049204,
+          "metric": 0.9545
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.11993178548415502,
+          "val_loss": 0.11445372503995896,
+          "metric": 0.9658333333333333
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.08832576356331508,
+          "val_loss": 0.10366193832953771,
+          "metric": 0.9679166666666666
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.06828399377067884,
+          "val_loss": 0.09713518796364466,
+          "metric": 0.9705833333333334
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.05428244334459305,
+          "val_loss": 0.09225528866052628,
+          "metric": 0.971
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.043511294121543566,
+          "val_loss": 0.09105385837952296,
+          "metric": 0.9726666666666667
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.03296992603937785,
+          "val_loss": 0.10002681009968122,
+          "metric": 0.9715833333333334
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.029607033697267374,
+          "val_loss": 0.08768793821334839,
+          "metric": 0.9746666666666667
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.02104164257645607,
+          "val_loss": 0.09299699801206589,
+          "metric": 0.9758333333333333
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.018555779660741487,
+          "val_loss": 0.10044060528278351,
+          "metric": 0.9723333333333334
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.015129480589181185,
+          "val_loss": 0.09654708425203959,
+          "metric": 0.9746666666666667
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.015364965875943501,
+          "val_loss": 0.11827403279145558,
+          "metric": 0.9716666666666667
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.014907466158270835,
+          "val_loss": 0.11803445974985759,
+          "metric": 0.9725833333333334
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.010330927817771831,
+          "val_loss": 0.09943545852104822,
+          "metric": 0.9766666666666667
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.012992407736678918,
+          "val_loss": 0.10588009643554687,
+          "metric": 0.97725
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.010713782467258473,
+          "val_loss": 0.11743474378188451,
+          "metric": 0.9750833333333333
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.009834622712805868,
+          "val_loss": 0.11437541661659877,
+          "metric": 0.9754166666666667
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.009806315747089685,
+          "val_loss": 0.11669861549139023,
+          "metric": 0.974
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.008104297136111806,
+          "val_loss": 0.12032031697034835,
+          "metric": 0.9768333333333333
+        }
+      ],
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 118282,
+        "master_parameter_bytes": 473128,
+        "quantizers": [
+          {
+            "module": "model.layers.0.weight_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 477575168,
+            "last_payload_bytes": 100352,
+            "last_retained_inspection_bytes": 100368,
+            "last_ideal_packed_code_bytes": 100352,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.0.activation_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 952616448,
+            "last_payload_bytes": 200704,
+            "last_retained_inspection_bytes": 204800,
+            "last_ideal_packed_code_bytes": 200704,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.2.weight_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 77971456,
+            "last_payload_bytes": 16384,
+            "last_retained_inspection_bytes": 16400,
+            "last_ideal_packed_code_bytes": 16384,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.2.activation_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 155529216,
+            "last_payload_bytes": 32768,
+            "last_retained_inspection_bytes": 36864,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.4.weight_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 6091520,
+            "last_payload_bytes": 1280,
+            "last_retained_inspection_bytes": 1296,
+            "last_ideal_packed_code_bytes": 1280,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.4.activation_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 155529216,
+            "last_payload_bytes": 32768,
+            "last_retained_inspection_bytes": 36864,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "integer indices"
+          }
+        ],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [
+          {
+            "module": "model.layers.0",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.2",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.4",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          }
+        ],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ],
+        "mixed_precision": null,
+        "optimizer_and_master_parameters": "FP32 Adam",
+        "quantization_baseline": "INT8/INT4 are quantization-aware floating point training; separate integer inference record below"
+      },
+      "dataset": {
+        "source": "torchvision.datasets.MNIST",
+        "namespace": "official_train",
+        "source_url": "https://docs.pytorch.org/vision/stable/generated/torchvision.datasets.MNIST.html",
+        "source_examples": 60000,
+        "source_sha256": "d18cfd466eb143ac1097fde604dba9eec4116885869d04cc648b510949f9e88c",
+        "partition": "disjoint training and development subsets of the official training split",
+        "train_examples": 48000,
+        "validation_examples": 12000,
+        "selection_seed": 7,
+        "sha256": "fd8d9ecfe6b9b9d888d563f97266dd04369ea5d89040c6fb57b6b44b7455fd9d",
+        "preprocessing": "pixels / 255, flattened; no augmentation",
+        "index_artifact": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-s7-partition.npz",
+        "index_sha256": "e760dad8c723717825aab9eb2d2ad651466e05a6008f0092d9d271901f43d1dc"
+      },
+      "artifact_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-int8-s7.ctcheckpoint",
+      "device": "cuda",
+      "model_config": {
+        "schema_version": 1,
+        "task": "mnist",
+        "representation": "int8",
+        "seed": 7,
+        "dimensions": [
+          784,
+          10
+        ]
+      },
+      "checkpoint_probe": {
+        "schema_version": 1,
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-int8-s7-probe.npz",
+        "sha256": "21051f7e41c35855a4b2a531836cbf2775d22f1f7fa19fbff7e681f164a60557",
+        "checkpoint_sha256": "25ca5e24797e603f75509c5999a4b5099472a618dbc8280c7443b856a078484b",
+        "checkpoint_bytes": 442733,
+        "probe_bytes": 10109,
+        "input_sha256": "1e396099839158519f569657bcb74401158bb53c18af0ae9c66207b9f17042a3",
+        "prediction_sha256": "4961bd7189c7d9b0086bfab698cd196445bf68b368c2c5119eea07298a48b44e",
+        "device": "cpu",
+        "examples": 32,
+        "input_shape": [
+          32,
+          784
+        ],
+        "input_dtype": "torch.float32",
+        "prediction_shape": [
+          32,
+          10
+        ],
+        "precision": {
+          "parameter_dtypes": [
+            "torch.float32"
+          ],
+          "autocast_dtype": null,
+          "output_dtype": "torch.float32",
+          "stored_prediction_dtype": "torch.float32"
+        },
+        "dataset_sha256": "fd8d9ecfe6b9b9d888d563f97266dd04369ea5d89040c6fb57b6b44b7455fd9d",
+        "threads": 4,
+        "source": "first real held-out inputs from the recorded dataset",
+        "predictions_exact": true,
+        "scope": "CPU checkpoint replay only; original task accuracy, precision and timings are unchanged"
+      },
+      "final_test_metrics": {
+        "loss": 0.12148834718465805,
+        "accuracy": 0.9755,
+        "examples": 10000,
+        "dataset_sha256": "2f5bf57b01d680e3513af2576892349179120bbd4d08b4d747127609787ed6ed",
+        "prediction_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-int8-s7-final-test.npz",
+        "prediction_sha256": "27399caa0991dc51f36baf21b20e642e1e3def83b3b6c1c4048f2978dacbef9b",
+        "checkpoint_sha256": "25ca5e24797e603f75509c5999a4b5099472a618dbc8280c7443b856a078484b",
+        "evaluated_at": "2026-10-01T02:08:23.091067+00:00",
+        "device": "cuda",
+        "stored_logit_dtype": "torch.float32",
+        "evaluation_only": true
+      }
+    },
+    {
+      "id": "release-research-20261001T020220115349Z-b26618f9ea6c-mnist-chroma8-s7",
+      "task": "mnist",
+      "representation": "chroma8",
+      "seed": 7,
+      "metrics": {
+        "validation_loss": 0.12032031697034835,
+        "accuracy": 0.9768333333333333,
+        "bits_per_value": 8,
+        "bytes_model": 118977,
+        "parameter_count": 118282,
+        "live_parameter_bytes": 473128,
+        "diagnostic_code_payload_bytes": 118282,
+        "codec_metadata_bytes": 695,
+        "checkpoint_bytes": 442733,
+        "torch_checkpoint_bytes": 476309,
+        "encoding_error": 0.0014557852397607933,
+        "reconstruction_error": 0.0014557852397607933,
+        "encode_overhead_ms": 2.1189000690355897,
+        "decode_overhead_ms": 1.3589499285444617,
+        "storage_scope": "diagnostic per-tensor quantized payload plus codec metadata; checkpoint is lossless RGBD FP32",
+        "peak_memory_bytes": 1531125760,
+        "rss_increase_bytes": 28672,
+        "peak_cuda_allocated_bytes": 273555968,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "training_loss": 0.008104297136111806,
+        "initial_validation_loss": 2.3002232602437336,
+        "training_seconds": 36.61766500049271,
+        "inference_batch_ms": 6.183480005711317,
+        "training_throughput": 26216.854624320877,
+        "inference_throughput": 41400.63520275765,
+        "epochs": 20,
+        "learning_rate": 0.002
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 2.3002232602437336,
+          "metric": 0.10825
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.4453817166487376,
+          "val_loss": 0.21811403568585713,
+          "metric": 0.9346666666666666
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.1709910126129786,
+          "val_loss": 0.15152463297049204,
+          "metric": 0.9545
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.11993178548415502,
+          "val_loss": 0.11445372503995896,
+          "metric": 0.9658333333333333
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.08832576356331508,
+          "val_loss": 0.10366193832953771,
+          "metric": 0.9679166666666666
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.06828399377067884,
+          "val_loss": 0.09713518796364466,
+          "metric": 0.9705833333333334
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.05428244334459305,
+          "val_loss": 0.09225528866052628,
+          "metric": 0.971
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.043511294121543566,
+          "val_loss": 0.09105385837952296,
+          "metric": 0.9726666666666667
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.03296992603937785,
+          "val_loss": 0.10002681009968122,
+          "metric": 0.9715833333333334
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.029607033697267374,
+          "val_loss": 0.08768793821334839,
+          "metric": 0.9746666666666667
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.02104164257645607,
+          "val_loss": 0.09299699801206589,
+          "metric": 0.9758333333333333
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.018555779660741487,
+          "val_loss": 0.10044060528278351,
+          "metric": 0.9723333333333334
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.015129480589181185,
+          "val_loss": 0.09654708425203959,
+          "metric": 0.9746666666666667
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.015364965875943501,
+          "val_loss": 0.11827403279145558,
+          "metric": 0.9716666666666667
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.014907466158270835,
+          "val_loss": 0.11803445974985759,
+          "metric": 0.9725833333333334
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.010330927817771831,
+          "val_loss": 0.09943545852104822,
+          "metric": 0.9766666666666667
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.012992407736678918,
+          "val_loss": 0.10588009643554687,
+          "metric": 0.97725
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.010713782467258473,
+          "val_loss": 0.11743474378188451,
+          "metric": 0.9750833333333333
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.009834622712805868,
+          "val_loss": 0.11437541661659877,
+          "metric": 0.9754166666666667
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.009806315747089685,
+          "val_loss": 0.11669861549139023,
+          "metric": 0.974
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.008104297136111806,
+          "val_loss": 0.12032031697034835,
+          "metric": 0.9768333333333333
+        }
+      ],
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 118282,
+        "master_parameter_bytes": 473128,
+        "quantizers": [
+          {
+            "module": "model.layers.0.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 477575168,
+            "last_payload_bytes": 301056,
+            "last_retained_inspection_bytes": 401424,
+            "last_ideal_packed_code_bytes": 100352,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.0.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 952616448,
+            "last_payload_bytes": 602112,
+            "last_retained_inspection_bytes": 806912,
+            "last_ideal_packed_code_bytes": 200704,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 77971456,
+            "last_payload_bytes": 49152,
+            "last_retained_inspection_bytes": 65552,
+            "last_ideal_packed_code_bytes": 16384,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 155529216,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 6091520,
+            "last_payload_bytes": 3840,
+            "last_retained_inspection_bytes": 5136,
+            "last_ideal_packed_code_bytes": 1280,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 155529216,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          }
+        ],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [
+          {
+            "module": "model.layers.0",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.2",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.4",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          }
+        ],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ],
+        "mixed_precision": null,
+        "optimizer_and_master_parameters": "FP32 Adam",
+        "quantization_baseline": null
+      },
+      "dataset": {
+        "source": "torchvision.datasets.MNIST",
+        "namespace": "official_train",
+        "source_url": "https://docs.pytorch.org/vision/stable/generated/torchvision.datasets.MNIST.html",
+        "source_examples": 60000,
+        "source_sha256": "d18cfd466eb143ac1097fde604dba9eec4116885869d04cc648b510949f9e88c",
+        "partition": "disjoint training and development subsets of the official training split",
+        "train_examples": 48000,
+        "validation_examples": 12000,
+        "selection_seed": 7,
+        "sha256": "fd8d9ecfe6b9b9d888d563f97266dd04369ea5d89040c6fb57b6b44b7455fd9d",
+        "preprocessing": "pixels / 255, flattened; no augmentation",
+        "index_artifact": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-s7-partition.npz",
+        "index_sha256": "e760dad8c723717825aab9eb2d2ad651466e05a6008f0092d9d271901f43d1dc"
+      },
+      "artifact_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-chroma8-s7.ctcheckpoint",
+      "device": "cuda",
+      "model_config": {
+        "schema_version": 1,
+        "task": "mnist",
+        "representation": "chroma8",
+        "seed": 7,
+        "dimensions": [
+          784,
+          10
+        ]
+      },
+      "checkpoint_probe": {
+        "schema_version": 1,
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-chroma8-s7-probe.npz",
+        "sha256": "21051f7e41c35855a4b2a531836cbf2775d22f1f7fa19fbff7e681f164a60557",
+        "checkpoint_sha256": "34824512a3fc895babc0892bafb12b6fb7f89b992bd49e3e291cbb8f75fab769",
+        "checkpoint_bytes": 442733,
+        "probe_bytes": 10109,
+        "input_sha256": "1e396099839158519f569657bcb74401158bb53c18af0ae9c66207b9f17042a3",
+        "prediction_sha256": "4961bd7189c7d9b0086bfab698cd196445bf68b368c2c5119eea07298a48b44e",
+        "device": "cpu",
+        "examples": 32,
+        "input_shape": [
+          32,
+          784
+        ],
+        "input_dtype": "torch.float32",
+        "prediction_shape": [
+          32,
+          10
+        ],
+        "precision": {
+          "parameter_dtypes": [
+            "torch.float32"
+          ],
+          "autocast_dtype": null,
+          "output_dtype": "torch.float32",
+          "stored_prediction_dtype": "torch.float32"
+        },
+        "dataset_sha256": "fd8d9ecfe6b9b9d888d563f97266dd04369ea5d89040c6fb57b6b44b7455fd9d",
+        "threads": 4,
+        "source": "first real held-out inputs from the recorded dataset",
+        "predictions_exact": true,
+        "scope": "CPU checkpoint replay only; original task accuracy, precision and timings are unchanged"
+      },
+      "final_test_metrics": {
+        "loss": 0.12148834718465805,
+        "accuracy": 0.9755,
+        "examples": 10000,
+        "dataset_sha256": "2f5bf57b01d680e3513af2576892349179120bbd4d08b4d747127609787ed6ed",
+        "prediction_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-chroma8-s7-final-test.npz",
+        "prediction_sha256": "27399caa0991dc51f36baf21b20e642e1e3def83b3b6c1c4048f2978dacbef9b",
+        "checkpoint_sha256": "34824512a3fc895babc0892bafb12b6fb7f89b992bd49e3e291cbb8f75fab769",
+        "evaluated_at": "2026-10-01T02:08:24.448584+00:00",
+        "device": "cuda",
+        "stored_logit_dtype": "torch.float32",
+        "evaluation_only": true
+      }
+    },
+    {
+      "id": "release-research-20261001T020220115349Z-b26618f9ea6c-mnist-fp32-s23",
+      "task": "mnist",
+      "representation": "fp32",
+      "seed": 23,
+      "metrics": {
+        "validation_loss": 0.12376800731817882,
+        "accuracy": 0.97675,
+        "bits_per_value": 32,
+        "bytes_model": 473560,
+        "parameter_count": 118282,
+        "live_parameter_bytes": 473128,
+        "diagnostic_code_payload_bytes": 473128,
+        "codec_metadata_bytes": 432,
+        "checkpoint_bytes": 442684,
+        "torch_checkpoint_bytes": 475925,
+        "encoding_error": 0.0,
+        "reconstruction_error": 0.0,
+        "encode_overhead_ms": 11.46244996925816,
+        "decode_overhead_ms": 7.243799977004528,
+        "storage_scope": "diagnostic per-tensor quantized payload plus codec metadata; checkpoint is lossless RGBD FP32",
+        "peak_memory_bytes": 1685159936,
+        "rss_increase_bytes": 32768,
+        "peak_cuda_allocated_bytes": 260944896,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "training_loss": 0.006584299800296624,
+        "initial_validation_loss": 2.3092321694691975,
+        "training_seconds": 10.570958599913865,
+        "inference_batch_ms": 0.12372999917715789,
+        "training_throughput": 90814.84814516465,
+        "inference_throughput": 2069021.2697201797,
+        "epochs": 20,
+        "learning_rate": 0.002
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 2.3092321694691975,
+          "metric": 0.10316666666666667
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.4367838286558787,
+          "val_loss": 0.21988265426953635,
+          "metric": 0.9343333333333333
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.16439684557914733,
+          "val_loss": 0.13952595816055935,
+          "metric": 0.9574166666666667
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.11193271390597026,
+          "val_loss": 0.10257823115587235,
+          "metric": 0.96875
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.08034025973081589,
+          "val_loss": 0.10008562622467677,
+          "metric": 0.9679166666666666
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.062464350163936616,
+          "val_loss": 0.09453912081321081,
+          "metric": 0.9723333333333334
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.049083620297412076,
+          "val_loss": 0.08726721215248108,
+          "metric": 0.9735833333333334
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.04290783429145813,
+          "val_loss": 0.08689082570870717,
+          "metric": 0.97375
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.03191972360014916,
+          "val_loss": 0.09103900094827017,
+          "metric": 0.9743333333333334
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.027650881290435792,
+          "val_loss": 0.0831321293314298,
+          "metric": 0.9764166666666667
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.02011327229688565,
+          "val_loss": 0.09981177534659703,
+          "metric": 0.9744166666666667
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.0162322206646204,
+          "val_loss": 0.09836866176128388,
+          "metric": 0.9736666666666667
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.01445083941395084,
+          "val_loss": 0.10166475687424342,
+          "metric": 0.9769166666666667
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.014920558905849854,
+          "val_loss": 0.12698848623037337,
+          "metric": 0.9705
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.013846716789528727,
+          "val_loss": 0.09377842571338017,
+          "metric": 0.9780833333333333
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.009665156004950404,
+          "val_loss": 0.10967787923415502,
+          "metric": 0.9763333333333334
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.012934104807674885,
+          "val_loss": 0.12208470020691553,
+          "metric": 0.97425
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.006271387308680763,
+          "val_loss": 0.11184082094828288,
+          "metric": 0.9771666666666666
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.01707267485683163,
+          "val_loss": 0.1657340167760849,
+          "metric": 0.9654166666666667
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.014942184407263994,
+          "val_loss": 0.13709716014067333,
+          "metric": 0.9740833333333333
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.006584299800296624,
+          "val_loss": 0.12376800731817882,
+          "metric": 0.97675
+        }
+      ],
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 118282,
+        "master_parameter_bytes": 473128,
+        "quantizers": [],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ],
+        "mixed_precision": null,
+        "optimizer_and_master_parameters": "FP32 Adam",
+        "quantization_baseline": null
+      },
+      "dataset": {
+        "source": "torchvision.datasets.MNIST",
+        "namespace": "official_train",
+        "source_url": "https://docs.pytorch.org/vision/stable/generated/torchvision.datasets.MNIST.html",
+        "source_examples": 60000,
+        "source_sha256": "d18cfd466eb143ac1097fde604dba9eec4116885869d04cc648b510949f9e88c",
+        "partition": "disjoint training and development subsets of the official training split",
+        "train_examples": 48000,
+        "validation_examples": 12000,
+        "selection_seed": 23,
+        "sha256": "d24b550dcca2c32583913f6d64061045522e6311cfc853c800dd94a5578bc093",
+        "preprocessing": "pixels / 255, flattened; no augmentation",
+        "index_artifact": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-s23-partition.npz",
+        "index_sha256": "03437326c2e184019072ea5e06e59374f0b8751b713c1fbe5ffb3fc1cc319a75"
+      },
+      "artifact_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-fp32-s23.ctcheckpoint",
+      "device": "cuda",
+      "model_config": {
+        "schema_version": 1,
+        "task": "mnist",
+        "representation": "fp32",
+        "seed": 23,
+        "dimensions": [
+          784,
+          10
+        ]
+      },
+      "checkpoint_probe": {
+        "schema_version": 1,
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-fp32-s23-probe.npz",
+        "sha256": "8a2094956d0b19af37903a4aa88f45e5aaa8645a4a9a8259d5ee1f25fa313139",
+        "checkpoint_sha256": "9441152dfad44219a138a022a8028acf723a34e78da901b9a5e8129215dc193e",
+        "checkpoint_bytes": 442684,
+        "probe_bytes": 10101,
+        "input_sha256": "9c2eb5baa4688c2ff2cd841a04b5364622483964bebb2ea4a6c40a7fe341bb6e",
+        "prediction_sha256": "ddc85bf8f5f7ffe2eb424079ed82d413a1a9717d9e11daa2a8d09e2c7de02b22",
+        "device": "cpu",
+        "examples": 32,
+        "input_shape": [
+          32,
+          784
+        ],
+        "input_dtype": "torch.float32",
+        "prediction_shape": [
+          32,
+          10
+        ],
+        "precision": {
+          "parameter_dtypes": [
+            "torch.float32"
+          ],
+          "autocast_dtype": null,
+          "output_dtype": "torch.float32",
+          "stored_prediction_dtype": "torch.float32"
+        },
+        "dataset_sha256": "d24b550dcca2c32583913f6d64061045522e6311cfc853c800dd94a5578bc093",
+        "threads": 4,
+        "source": "first real held-out inputs from the recorded dataset",
+        "predictions_exact": true,
+        "scope": "CPU checkpoint replay only; original task accuracy, precision and timings are unchanged"
+      },
+      "final_test_metrics": {
+        "loss": 0.11451040525436401,
+        "accuracy": 0.9758,
+        "examples": 10000,
+        "dataset_sha256": "2f5bf57b01d680e3513af2576892349179120bbd4d08b4d747127609787ed6ed",
+        "prediction_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-fp32-s23-final-test.npz",
+        "prediction_sha256": "2bbf3aa774b6b6d4cbd5895032c9b225838e46405d447c75688248d42def16dd",
+        "checkpoint_sha256": "9441152dfad44219a138a022a8028acf723a34e78da901b9a5e8129215dc193e",
+        "evaluated_at": "2026-10-01T02:08:24.571815+00:00",
+        "device": "cuda",
+        "stored_logit_dtype": "torch.float32",
+        "evaluation_only": true
+      }
+    },
+    {
+      "id": "release-research-20261001T020220115349Z-b26618f9ea6c-mnist-int8-s23",
+      "task": "mnist",
+      "representation": "int8",
+      "seed": 23,
+      "metrics": {
+        "validation_loss": 0.11708424611886342,
+        "accuracy": 0.9769166666666667,
+        "bits_per_value": 8,
+        "bytes_model": 118973,
+        "parameter_count": 118282,
+        "live_parameter_bytes": 473128,
+        "diagnostic_code_payload_bytes": 118282,
+        "codec_metadata_bytes": 691,
+        "checkpoint_bytes": 442899,
+        "torch_checkpoint_bytes": 476309,
+        "encoding_error": 0.0015017889761051045,
+        "reconstruction_error": 0.0015017889761051045,
+        "encode_overhead_ms": 2.8984499513171613,
+        "decode_overhead_ms": 1.7315000295639038,
+        "storage_scope": "diagnostic per-tensor quantized payload plus codec metadata; checkpoint is lossless RGBD FP32",
+        "peak_memory_bytes": 1531691008,
+        "rss_increase_bytes": 28672,
+        "peak_cuda_allocated_bytes": 264167936,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "training_loss": 0.013431746544937293,
+        "initial_validation_loss": 2.309174800872803,
+        "training_seconds": 27.866554499720223,
+        "inference_batch_ms": 3.8681400008499622,
+        "training_throughput": 34449.89943086212,
+        "inference_throughput": 66181.6790353369,
+        "epochs": 20,
+        "learning_rate": 0.002
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 2.309174800872803,
+          "metric": 0.10291666666666667
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.4342648443778356,
+          "val_loss": 0.21818461473782857,
+          "metric": 0.9343333333333333
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.16512078249454498,
+          "val_loss": 0.14025241913398107,
+          "metric": 0.9579166666666666
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.11362559055288633,
+          "val_loss": 0.10465617481867473,
+          "metric": 0.96675
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.0829875902136167,
+          "val_loss": 0.09891448467969895,
+          "metric": 0.9694166666666667
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.06466029731432597,
+          "val_loss": 0.09543392352263133,
+          "metric": 0.9728333333333333
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.04995701862374941,
+          "val_loss": 0.08358535160621007,
+          "metric": 0.9758333333333333
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.0399785680125157,
+          "val_loss": 0.08588220232725144,
+          "metric": 0.9763333333333334
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.03131819032132625,
+          "val_loss": 0.08756128702561061,
+          "metric": 0.9754166666666667
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.02800062019377947,
+          "val_loss": 0.08745596897602081,
+          "metric": 0.9764166666666667
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.020959556366006535,
+          "val_loss": 0.09858231494824092,
+          "metric": 0.9745
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.015506350362673402,
+          "val_loss": 0.11026238667964935,
+          "metric": 0.9715
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.01681755731254816,
+          "val_loss": 0.09321420327822368,
+          "metric": 0.9795
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.012469320265576244,
+          "val_loss": 0.10727287391821544,
+          "metric": 0.9738333333333333
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.013563875102127592,
+          "val_loss": 0.10414505658547084,
+          "metric": 0.9750833333333333
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.01019376653432846,
+          "val_loss": 0.0982059915860494,
+          "metric": 0.9801666666666666
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.011364091326172153,
+          "val_loss": 0.10731222214301427,
+          "metric": 0.97775
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.006636473539906243,
+          "val_loss": 0.10811465221643447,
+          "metric": 0.9781666666666666
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.004275998572663715,
+          "val_loss": 0.12756752077738445,
+          "metric": 0.9740833333333333
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.011576540460654846,
+          "val_loss": 0.13248672286669413,
+          "metric": 0.9736666666666667
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.013431746544937293,
+          "val_loss": 0.11708424611886342,
+          "metric": 0.9769166666666667
+        }
+      ],
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 118282,
+        "master_parameter_bytes": 473128,
+        "quantizers": [
+          {
+            "module": "model.layers.0.weight_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 477575168,
+            "last_payload_bytes": 100352,
+            "last_retained_inspection_bytes": 100368,
+            "last_ideal_packed_code_bytes": 100352,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.0.activation_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 952616448,
+            "last_payload_bytes": 200704,
+            "last_retained_inspection_bytes": 204800,
+            "last_ideal_packed_code_bytes": 200704,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.2.weight_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 77971456,
+            "last_payload_bytes": 16384,
+            "last_retained_inspection_bytes": 16400,
+            "last_ideal_packed_code_bytes": 16384,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.2.activation_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 155529216,
+            "last_payload_bytes": 32768,
+            "last_retained_inspection_bytes": 36864,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.4.weight_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 6091520,
+            "last_payload_bytes": 1280,
+            "last_retained_inspection_bytes": 1296,
+            "last_ideal_packed_code_bytes": 1280,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.4.activation_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 155529216,
+            "last_payload_bytes": 32768,
+            "last_retained_inspection_bytes": 36864,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "integer indices"
+          }
+        ],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [
+          {
+            "module": "model.layers.0",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.2",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.4",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          }
+        ],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ],
+        "mixed_precision": null,
+        "optimizer_and_master_parameters": "FP32 Adam",
+        "quantization_baseline": "INT8/INT4 are quantization-aware floating point training; separate integer inference record below"
+      },
+      "dataset": {
+        "source": "torchvision.datasets.MNIST",
+        "namespace": "official_train",
+        "source_url": "https://docs.pytorch.org/vision/stable/generated/torchvision.datasets.MNIST.html",
+        "source_examples": 60000,
+        "source_sha256": "d18cfd466eb143ac1097fde604dba9eec4116885869d04cc648b510949f9e88c",
+        "partition": "disjoint training and development subsets of the official training split",
+        "train_examples": 48000,
+        "validation_examples": 12000,
+        "selection_seed": 23,
+        "sha256": "d24b550dcca2c32583913f6d64061045522e6311cfc853c800dd94a5578bc093",
+        "preprocessing": "pixels / 255, flattened; no augmentation",
+        "index_artifact": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-s23-partition.npz",
+        "index_sha256": "03437326c2e184019072ea5e06e59374f0b8751b713c1fbe5ffb3fc1cc319a75"
+      },
+      "artifact_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-int8-s23.ctcheckpoint",
+      "device": "cuda",
+      "model_config": {
+        "schema_version": 1,
+        "task": "mnist",
+        "representation": "int8",
+        "seed": 23,
+        "dimensions": [
+          784,
+          10
+        ]
+      },
+      "checkpoint_probe": {
+        "schema_version": 1,
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-int8-s23-probe.npz",
+        "sha256": "33a6ba0c75ff8100fa0ef0fdcdf922e54c90fca5a790afb1def3c0c2a5f7b256",
+        "checkpoint_sha256": "a163fc738640380394dcfdfb7b8d6a0a34b4241a6cdaff38a24f042f9e1aa6e1",
+        "checkpoint_bytes": 442899,
+        "probe_bytes": 10102,
+        "input_sha256": "9c2eb5baa4688c2ff2cd841a04b5364622483964bebb2ea4a6c40a7fe341bb6e",
+        "prediction_sha256": "935250c0cd39e758629bd916d8c4025861e6832b4a08f45561971f651bc4d261",
+        "device": "cpu",
+        "examples": 32,
+        "input_shape": [
+          32,
+          784
+        ],
+        "input_dtype": "torch.float32",
+        "prediction_shape": [
+          32,
+          10
+        ],
+        "precision": {
+          "parameter_dtypes": [
+            "torch.float32"
+          ],
+          "autocast_dtype": null,
+          "output_dtype": "torch.float32",
+          "stored_prediction_dtype": "torch.float32"
+        },
+        "dataset_sha256": "d24b550dcca2c32583913f6d64061045522e6311cfc853c800dd94a5578bc093",
+        "threads": 4,
+        "source": "first real held-out inputs from the recorded dataset",
+        "predictions_exact": true,
+        "scope": "CPU checkpoint replay only; original task accuracy, precision and timings are unchanged"
+      },
+      "final_test_metrics": {
+        "loss": 0.11816511874198914,
+        "accuracy": 0.9748,
+        "examples": 10000,
+        "dataset_sha256": "2f5bf57b01d680e3513af2576892349179120bbd4d08b4d747127609787ed6ed",
+        "prediction_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-int8-s23-final-test.npz",
+        "prediction_sha256": "f4592e63bdf79b97f27c19361f5755bd89b03bf758664c8893fc31afa2edd40a",
+        "checkpoint_sha256": "a163fc738640380394dcfdfb7b8d6a0a34b4241a6cdaff38a24f042f9e1aa6e1",
+        "evaluated_at": "2026-10-01T02:08:25.611726+00:00",
+        "device": "cuda",
+        "stored_logit_dtype": "torch.float32",
+        "evaluation_only": true
+      }
+    },
+    {
+      "id": "release-research-20261001T020220115349Z-b26618f9ea6c-mnist-chroma8-s23",
+      "task": "mnist",
+      "representation": "chroma8",
+      "seed": 23,
+      "metrics": {
+        "validation_loss": 0.11708424611886342,
+        "accuracy": 0.9769166666666667,
+        "bits_per_value": 8,
+        "bytes_model": 118973,
+        "parameter_count": 118282,
+        "live_parameter_bytes": 473128,
+        "diagnostic_code_payload_bytes": 118282,
+        "codec_metadata_bytes": 691,
+        "checkpoint_bytes": 442899,
+        "torch_checkpoint_bytes": 476309,
+        "encoding_error": 0.0015017889761051045,
+        "reconstruction_error": 0.0015017889761051045,
+        "encode_overhead_ms": 4.4080999796278775,
+        "decode_overhead_ms": 2.807350014336407,
+        "storage_scope": "diagnostic per-tensor quantized payload plus codec metadata; checkpoint is lossless RGBD FP32",
+        "peak_memory_bytes": 1533706240,
+        "rss_increase_bytes": 28672,
+        "peak_cuda_allocated_bytes": 273555968,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "training_loss": 0.013431746544937293,
+        "initial_validation_loss": 2.309174800872803,
+        "training_seconds": 35.82314910017885,
+        "inference_batch_ms": 9.413810004480183,
+        "training_throughput": 26798.314054283044,
+        "inference_throughput": 27194.090371291273,
+        "epochs": 20,
+        "learning_rate": 0.002
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 2.309174800872803,
+          "metric": 0.10291666666666667
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.4342648443778356,
+          "val_loss": 0.21818461473782857,
+          "metric": 0.9343333333333333
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.16512078249454498,
+          "val_loss": 0.14025241913398107,
+          "metric": 0.9579166666666666
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.11362559055288633,
+          "val_loss": 0.10465617481867473,
+          "metric": 0.96675
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.0829875902136167,
+          "val_loss": 0.09891448467969895,
+          "metric": 0.9694166666666667
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.06466029731432597,
+          "val_loss": 0.09543392352263133,
+          "metric": 0.9728333333333333
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.04995701862374941,
+          "val_loss": 0.08358535160621007,
+          "metric": 0.9758333333333333
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.0399785680125157,
+          "val_loss": 0.08588220232725144,
+          "metric": 0.9763333333333334
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.03131819032132625,
+          "val_loss": 0.08756128702561061,
+          "metric": 0.9754166666666667
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.02800062019377947,
+          "val_loss": 0.08745596897602081,
+          "metric": 0.9764166666666667
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.020959556366006535,
+          "val_loss": 0.09858231494824092,
+          "metric": 0.9745
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.015506350362673402,
+          "val_loss": 0.11026238667964935,
+          "metric": 0.9715
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.01681755731254816,
+          "val_loss": 0.09321420327822368,
+          "metric": 0.9795
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.012469320265576244,
+          "val_loss": 0.10727287391821544,
+          "metric": 0.9738333333333333
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.013563875102127592,
+          "val_loss": 0.10414505658547084,
+          "metric": 0.9750833333333333
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.01019376653432846,
+          "val_loss": 0.0982059915860494,
+          "metric": 0.9801666666666666
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.011364091326172153,
+          "val_loss": 0.10731222214301427,
+          "metric": 0.97775
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.006636473539906243,
+          "val_loss": 0.10811465221643447,
+          "metric": 0.9781666666666666
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.004275998572663715,
+          "val_loss": 0.12756752077738445,
+          "metric": 0.9740833333333333
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.011576540460654846,
+          "val_loss": 0.13248672286669413,
+          "metric": 0.9736666666666667
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.013431746544937293,
+          "val_loss": 0.11708424611886342,
+          "metric": 0.9769166666666667
+        }
+      ],
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 118282,
+        "master_parameter_bytes": 473128,
+        "quantizers": [
+          {
+            "module": "model.layers.0.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 477575168,
+            "last_payload_bytes": 301056,
+            "last_retained_inspection_bytes": 401424,
+            "last_ideal_packed_code_bytes": 100352,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.0.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 952616448,
+            "last_payload_bytes": 602112,
+            "last_retained_inspection_bytes": 806912,
+            "last_ideal_packed_code_bytes": 200704,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 77971456,
+            "last_payload_bytes": 49152,
+            "last_retained_inspection_bytes": 65552,
+            "last_ideal_packed_code_bytes": 16384,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 155529216,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 6091520,
+            "last_payload_bytes": 3840,
+            "last_retained_inspection_bytes": 5136,
+            "last_ideal_packed_code_bytes": 1280,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 155529216,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          }
+        ],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [
+          {
+            "module": "model.layers.0",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.2",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.4",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          }
+        ],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ],
+        "mixed_precision": null,
+        "optimizer_and_master_parameters": "FP32 Adam",
+        "quantization_baseline": null
+      },
+      "dataset": {
+        "source": "torchvision.datasets.MNIST",
+        "namespace": "official_train",
+        "source_url": "https://docs.pytorch.org/vision/stable/generated/torchvision.datasets.MNIST.html",
+        "source_examples": 60000,
+        "source_sha256": "d18cfd466eb143ac1097fde604dba9eec4116885869d04cc648b510949f9e88c",
+        "partition": "disjoint training and development subsets of the official training split",
+        "train_examples": 48000,
+        "validation_examples": 12000,
+        "selection_seed": 23,
+        "sha256": "d24b550dcca2c32583913f6d64061045522e6311cfc853c800dd94a5578bc093",
+        "preprocessing": "pixels / 255, flattened; no augmentation",
+        "index_artifact": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-s23-partition.npz",
+        "index_sha256": "03437326c2e184019072ea5e06e59374f0b8751b713c1fbe5ffb3fc1cc319a75"
+      },
+      "artifact_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-chroma8-s23.ctcheckpoint",
+      "device": "cuda",
+      "model_config": {
+        "schema_version": 1,
+        "task": "mnist",
+        "representation": "chroma8",
+        "seed": 23,
+        "dimensions": [
+          784,
+          10
+        ]
+      },
+      "checkpoint_probe": {
+        "schema_version": 1,
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-chroma8-s23-probe.npz",
+        "sha256": "33a6ba0c75ff8100fa0ef0fdcdf922e54c90fca5a790afb1def3c0c2a5f7b256",
+        "checkpoint_sha256": "7b5641a738c81c886f2db6ec3bb5facee80212186036bb94834ed17970c4792d",
+        "checkpoint_bytes": 442899,
+        "probe_bytes": 10102,
+        "input_sha256": "9c2eb5baa4688c2ff2cd841a04b5364622483964bebb2ea4a6c40a7fe341bb6e",
+        "prediction_sha256": "935250c0cd39e758629bd916d8c4025861e6832b4a08f45561971f651bc4d261",
+        "device": "cpu",
+        "examples": 32,
+        "input_shape": [
+          32,
+          784
+        ],
+        "input_dtype": "torch.float32",
+        "prediction_shape": [
+          32,
+          10
+        ],
+        "precision": {
+          "parameter_dtypes": [
+            "torch.float32"
+          ],
+          "autocast_dtype": null,
+          "output_dtype": "torch.float32",
+          "stored_prediction_dtype": "torch.float32"
+        },
+        "dataset_sha256": "d24b550dcca2c32583913f6d64061045522e6311cfc853c800dd94a5578bc093",
+        "threads": 4,
+        "source": "first real held-out inputs from the recorded dataset",
+        "predictions_exact": true,
+        "scope": "CPU checkpoint replay only; original task accuracy, precision and timings are unchanged"
+      },
+      "final_test_metrics": {
+        "loss": 0.11816511874198914,
+        "accuracy": 0.9748,
+        "examples": 10000,
+        "dataset_sha256": "2f5bf57b01d680e3513af2576892349179120bbd4d08b4d747127609787ed6ed",
+        "prediction_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-chroma8-s23-final-test.npz",
+        "prediction_sha256": "f4592e63bdf79b97f27c19361f5755bd89b03bf758664c8893fc31afa2edd40a",
+        "checkpoint_sha256": "7b5641a738c81c886f2db6ec3bb5facee80212186036bb94834ed17970c4792d",
+        "evaluated_at": "2026-10-01T02:08:27.076480+00:00",
+        "device": "cuda",
+        "stored_logit_dtype": "torch.float32",
+        "evaluation_only": true
+      }
+    },
+    {
+      "id": "release-research-20261001T020220115349Z-b26618f9ea6c-mnist-fp32-s41",
+      "task": "mnist",
+      "representation": "fp32",
+      "seed": 41,
+      "metrics": {
+        "validation_loss": 0.15408985475699108,
+        "accuracy": 0.9735,
+        "bits_per_value": 32,
+        "bytes_model": 473560,
+        "parameter_count": 118282,
+        "live_parameter_bytes": 473128,
+        "diagnostic_code_payload_bytes": 473128,
+        "codec_metadata_bytes": 432,
+        "checkpoint_bytes": 443037,
+        "torch_checkpoint_bytes": 475925,
+        "encoding_error": 0.0,
+        "reconstruction_error": 0.0,
+        "encode_overhead_ms": 4.930249939206988,
+        "decode_overhead_ms": 2.280050015542656,
+        "storage_scope": "diagnostic per-tensor quantized payload plus codec metadata; checkpoint is lossless RGBD FP32",
+        "peak_memory_bytes": 1685204992,
+        "rss_increase_bytes": 28672,
+        "peak_cuda_allocated_bytes": 260944896,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "training_loss": 0.012610970364883543,
+        "initial_validation_loss": 2.3081122506459555,
+        "training_seconds": 7.2242131998064,
+        "inference_batch_ms": 0.09327000007033348,
+        "training_throughput": 132886.44360962755,
+        "inference_throughput": 2744719.6291085486,
+        "epochs": 20,
+        "learning_rate": 0.002
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 2.3081122506459555,
+          "metric": 0.0845
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.43708030970891315,
+          "val_loss": 0.19906569135189056,
+          "metric": 0.9464166666666667
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.16227992049853007,
+          "val_loss": 0.14188568876187008,
+          "metric": 0.96075
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.11109155565500259,
+          "val_loss": 0.12126130618651708,
+          "metric": 0.9658333333333333
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.08301287436485291,
+          "val_loss": 0.10499622348944346,
+          "metric": 0.9704166666666667
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.06167471714814504,
+          "val_loss": 0.10388381467262904,
+          "metric": 0.9715
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.049053409561514855,
+          "val_loss": 0.10156141847372055,
+          "metric": 0.9715
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.03869854477296273,
+          "val_loss": 0.11447639012336731,
+          "metric": 0.97
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.03201736916601658,
+          "val_loss": 0.0928616305589676,
+          "metric": 0.9769166666666667
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.024165676027536394,
+          "val_loss": 0.09570331972837448,
+          "metric": 0.9755833333333334
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.020080406465878088,
+          "val_loss": 0.1074521935582161,
+          "metric": 0.9750833333333333
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.019349107400824628,
+          "val_loss": 0.11547588791449864,
+          "metric": 0.9738333333333333
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.016375758701314528,
+          "val_loss": 0.11356745473543803,
+          "metric": 0.9760833333333333
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.016718941396102308,
+          "val_loss": 0.12223569299777348,
+          "metric": 0.9741666666666666
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.01007578062855949,
+          "val_loss": 0.1190596692363421,
+          "metric": 0.976
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.010439163201488555,
+          "val_loss": 0.12107462757825851,
+          "metric": 0.97625
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.0052339719627052545,
+          "val_loss": 0.12849081120888392,
+          "metric": 0.9765
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.005154711939704915,
+          "val_loss": 0.12613704872131348,
+          "metric": 0.9774166666666667
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.00952151484383891,
+          "val_loss": 0.14463950749238333,
+          "metric": 0.9749166666666667
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.01760023859826227,
+          "val_loss": 0.14061300017436346,
+          "metric": 0.9741666666666666
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.012610970364883543,
+          "val_loss": 0.15408985475699108,
+          "metric": 0.9735
+        }
+      ],
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 118282,
+        "master_parameter_bytes": 473128,
+        "quantizers": [],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ],
+        "mixed_precision": null,
+        "optimizer_and_master_parameters": "FP32 Adam",
+        "quantization_baseline": null
+      },
+      "dataset": {
+        "source": "torchvision.datasets.MNIST",
+        "namespace": "official_train",
+        "source_url": "https://docs.pytorch.org/vision/stable/generated/torchvision.datasets.MNIST.html",
+        "source_examples": 60000,
+        "source_sha256": "d18cfd466eb143ac1097fde604dba9eec4116885869d04cc648b510949f9e88c",
+        "partition": "disjoint training and development subsets of the official training split",
+        "train_examples": 48000,
+        "validation_examples": 12000,
+        "selection_seed": 41,
+        "sha256": "f88f803caa4fa944cd53af21c85a6ab57fa31e3f69bd85adf676b80dcb7b7f25",
+        "preprocessing": "pixels / 255, flattened; no augmentation",
+        "index_artifact": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-s41-partition.npz",
+        "index_sha256": "772f5e94350fb51e7254e423cca447c76897672505122185caf1e2cfb74a73e8"
+      },
+      "artifact_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-fp32-s41.ctcheckpoint",
+      "device": "cuda",
+      "model_config": {
+        "schema_version": 1,
+        "task": "mnist",
+        "representation": "fp32",
+        "seed": 41,
+        "dimensions": [
+          784,
+          10
+        ]
+      },
+      "checkpoint_probe": {
+        "schema_version": 1,
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-fp32-s41-probe.npz",
+        "sha256": "cd6a2f09f2488fcdfecc917aee0aaebacb41483cac9af67173db4a71c67bf86f",
+        "checkpoint_sha256": "694dc218ca19429cff9ddac94e39a7ed4f244224d21f1b98c69ea22a632199f4",
+        "checkpoint_bytes": 443037,
+        "probe_bytes": 10561,
+        "input_sha256": "42cd6378b86ee5545cf3bb4bcd074651b13ce64f8b7ce6167940d220ee98f275",
+        "prediction_sha256": "1c84416d4ad69de408637a26387c195447295cdf45aab866488fbbf97fb19871",
+        "device": "cpu",
+        "examples": 32,
+        "input_shape": [
+          32,
+          784
+        ],
+        "input_dtype": "torch.float32",
+        "prediction_shape": [
+          32,
+          10
+        ],
+        "precision": {
+          "parameter_dtypes": [
+            "torch.float32"
+          ],
+          "autocast_dtype": null,
+          "output_dtype": "torch.float32",
+          "stored_prediction_dtype": "torch.float32"
+        },
+        "dataset_sha256": "f88f803caa4fa944cd53af21c85a6ab57fa31e3f69bd85adf676b80dcb7b7f25",
+        "threads": 4,
+        "source": "first real held-out inputs from the recorded dataset",
+        "predictions_exact": true,
+        "scope": "CPU checkpoint replay only; original task accuracy, precision and timings are unchanged"
+      },
+      "final_test_metrics": {
+        "loss": 0.1381162823997438,
+        "accuracy": 0.9729,
+        "examples": 10000,
+        "dataset_sha256": "2f5bf57b01d680e3513af2576892349179120bbd4d08b4d747127609787ed6ed",
+        "prediction_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-fp32-s41-final-test.npz",
+        "prediction_sha256": "da220d8f7793813cfe886fdddb496fea82c916cfc6f1362bb6398baa7ae75d7c",
+        "checkpoint_sha256": "694dc218ca19429cff9ddac94e39a7ed4f244224d21f1b98c69ea22a632199f4",
+        "evaluated_at": "2026-10-01T02:08:27.209039+00:00",
+        "device": "cuda",
+        "stored_logit_dtype": "torch.float32",
+        "evaluation_only": true
+      }
+    },
+    {
+      "id": "release-research-20261001T020220115349Z-b26618f9ea6c-mnist-int8-s41",
+      "task": "mnist",
+      "representation": "int8",
+      "seed": 41,
+      "metrics": {
+        "validation_loss": 0.14461450852950414,
+        "accuracy": 0.97575,
+        "bits_per_value": 8,
+        "bytes_model": 118976,
+        "parameter_count": 118282,
+        "live_parameter_bytes": 473128,
+        "diagnostic_code_payload_bytes": 118282,
+        "codec_metadata_bytes": 694,
+        "checkpoint_bytes": 442847,
+        "torch_checkpoint_bytes": 476309,
+        "encoding_error": 0.0014822065772567127,
+        "reconstruction_error": 0.0014822065772567127,
+        "encode_overhead_ms": 2.0666001364588737,
+        "decode_overhead_ms": 1.1357500334270298,
+        "storage_scope": "diagnostic per-tensor quantized payload plus codec metadata; checkpoint is lossless RGBD FP32",
+        "peak_memory_bytes": 1531711488,
+        "rss_increase_bytes": 28672,
+        "peak_cuda_allocated_bytes": 264167936,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "training_loss": 0.011179488669304799,
+        "initial_validation_loss": 2.3081194038391115,
+        "training_seconds": 24.865411199862137,
+        "inference_batch_ms": 3.5193199990317225,
+        "training_throughput": 38607.847354051504,
+        "inference_throughput": 72741.32504871218,
+        "epochs": 20,
+        "learning_rate": 0.002
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 2.3081194038391115,
+          "metric": 0.08433333333333333
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.43714024802049,
+          "val_loss": 0.19882916951179505,
+          "metric": 0.9468333333333333
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.159970809896787,
+          "val_loss": 0.14090191787481307,
+          "metric": 0.9613333333333334
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.10918188542127609,
+          "val_loss": 0.11876141623655954,
+          "metric": 0.9666666666666667
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.08177540265520414,
+          "val_loss": 0.10184873759746552,
+          "metric": 0.9709166666666667
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.06130840592583021,
+          "val_loss": 0.10168903152147929,
+          "metric": 0.97
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.04873995021979014,
+          "val_loss": 0.10009712479511897,
+          "metric": 0.972
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.03900870854159196,
+          "val_loss": 0.11384834402799607,
+          "metric": 0.9710833333333333
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.031867502972483634,
+          "val_loss": 0.09585243914524715,
+          "metric": 0.9759166666666667
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.024123845723768075,
+          "val_loss": 0.09730981157223384,
+          "metric": 0.9749166666666667
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.020103151044497888,
+          "val_loss": 0.10772473180294037,
+          "metric": 0.97475
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.018257414447764554,
+          "val_loss": 0.10356906074285507,
+          "metric": 0.9765833333333334
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.015835183064142864,
+          "val_loss": 0.1051393068432808,
+          "metric": 0.9764166666666667
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.01795151192943255,
+          "val_loss": 0.12463987545172374,
+          "metric": 0.9721666666666666
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.013952989267806212,
+          "val_loss": 0.12238281244039535,
+          "metric": 0.9759166666666667
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.01569293087099989,
+          "val_loss": 0.12149446767568588,
+          "metric": 0.9765833333333334
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.011342432803784807,
+          "val_loss": 0.12472055121262868,
+          "metric": 0.9766666666666667
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.006136222472259154,
+          "val_loss": 0.12284890506664913,
+          "metric": 0.9790833333333333
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.005163257866865024,
+          "val_loss": 0.12233696925640106,
+          "metric": 0.9783333333333334
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.005227639874909073,
+          "val_loss": 0.13104570380846658,
+          "metric": 0.9765833333333334
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.011179488669304799,
+          "val_loss": 0.14461450852950414,
+          "metric": 0.97575
+        }
+      ],
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 118282,
+        "master_parameter_bytes": 473128,
+        "quantizers": [
+          {
+            "module": "model.layers.0.weight_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 477575168,
+            "last_payload_bytes": 100352,
+            "last_retained_inspection_bytes": 100368,
+            "last_ideal_packed_code_bytes": 100352,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.0.activation_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 952616448,
+            "last_payload_bytes": 200704,
+            "last_retained_inspection_bytes": 204800,
+            "last_ideal_packed_code_bytes": 200704,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.2.weight_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 77971456,
+            "last_payload_bytes": 16384,
+            "last_retained_inspection_bytes": 16400,
+            "last_ideal_packed_code_bytes": 16384,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.2.activation_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 155529216,
+            "last_payload_bytes": 32768,
+            "last_retained_inspection_bytes": 36864,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.4.weight_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 6091520,
+            "last_payload_bytes": 1280,
+            "last_retained_inspection_bytes": 1296,
+            "last_ideal_packed_code_bytes": 1280,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.4.activation_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 155529216,
+            "last_payload_bytes": 32768,
+            "last_retained_inspection_bytes": 36864,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "integer indices"
+          }
+        ],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [
+          {
+            "module": "model.layers.0",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.2",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.4",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          }
+        ],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ],
+        "mixed_precision": null,
+        "optimizer_and_master_parameters": "FP32 Adam",
+        "quantization_baseline": "INT8/INT4 are quantization-aware floating point training; separate integer inference record below"
+      },
+      "dataset": {
+        "source": "torchvision.datasets.MNIST",
+        "namespace": "official_train",
+        "source_url": "https://docs.pytorch.org/vision/stable/generated/torchvision.datasets.MNIST.html",
+        "source_examples": 60000,
+        "source_sha256": "d18cfd466eb143ac1097fde604dba9eec4116885869d04cc648b510949f9e88c",
+        "partition": "disjoint training and development subsets of the official training split",
+        "train_examples": 48000,
+        "validation_examples": 12000,
+        "selection_seed": 41,
+        "sha256": "f88f803caa4fa944cd53af21c85a6ab57fa31e3f69bd85adf676b80dcb7b7f25",
+        "preprocessing": "pixels / 255, flattened; no augmentation",
+        "index_artifact": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-s41-partition.npz",
+        "index_sha256": "772f5e94350fb51e7254e423cca447c76897672505122185caf1e2cfb74a73e8"
+      },
+      "artifact_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-int8-s41.ctcheckpoint",
+      "device": "cuda",
+      "model_config": {
+        "schema_version": 1,
+        "task": "mnist",
+        "representation": "int8",
+        "seed": 41,
+        "dimensions": [
+          784,
+          10
+        ]
+      },
+      "checkpoint_probe": {
+        "schema_version": 1,
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-int8-s41-probe.npz",
+        "sha256": "a055b7c0eff8cad1a2cb28d7c3ef02d3ba6b06bc7a94ddc2a1ad4b238cf66efb",
+        "checkpoint_sha256": "dcee8f4bb552f249c9c97705783055061fca65a86e67f793ac423231b4eda532",
+        "checkpoint_bytes": 442847,
+        "probe_bytes": 10562,
+        "input_sha256": "42cd6378b86ee5545cf3bb4bcd074651b13ce64f8b7ce6167940d220ee98f275",
+        "prediction_sha256": "c88ee8134b15be2e55ce04fb19e3ee3327ce2c14fd462637a9fb7f863c4ba25d",
+        "device": "cpu",
+        "examples": 32,
+        "input_shape": [
+          32,
+          784
+        ],
+        "input_dtype": "torch.float32",
+        "prediction_shape": [
+          32,
+          10
+        ],
+        "precision": {
+          "parameter_dtypes": [
+            "torch.float32"
+          ],
+          "autocast_dtype": null,
+          "output_dtype": "torch.float32",
+          "stored_prediction_dtype": "torch.float32"
+        },
+        "dataset_sha256": "f88f803caa4fa944cd53af21c85a6ab57fa31e3f69bd85adf676b80dcb7b7f25",
+        "threads": 4,
+        "source": "first real held-out inputs from the recorded dataset",
+        "predictions_exact": true,
+        "scope": "CPU checkpoint replay only; original task accuracy, precision and timings are unchanged"
+      },
+      "final_test_metrics": {
+        "loss": 0.12839189972877502,
+        "accuracy": 0.9752,
+        "examples": 10000,
+        "dataset_sha256": "2f5bf57b01d680e3513af2576892349179120bbd4d08b4d747127609787ed6ed",
+        "prediction_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-int8-s41-final-test.npz",
+        "prediction_sha256": "0648bf9c7bad4b4914395408bc876046dea2c1b1a60bd2b9f69f713c0aad56d3",
+        "checkpoint_sha256": "dcee8f4bb552f249c9c97705783055061fca65a86e67f793ac423231b4eda532",
+        "evaluated_at": "2026-10-01T02:08:28.080229+00:00",
+        "device": "cuda",
+        "stored_logit_dtype": "torch.float32",
+        "evaluation_only": true
+      }
+    },
+    {
+      "id": "release-research-20261001T020220115349Z-b26618f9ea6c-mnist-chroma8-s41",
+      "task": "mnist",
+      "representation": "chroma8",
+      "seed": 41,
+      "metrics": {
+        "validation_loss": 0.14461450852950414,
+        "accuracy": 0.97575,
+        "bits_per_value": 8,
+        "bytes_model": 118976,
+        "parameter_count": 118282,
+        "live_parameter_bytes": 473128,
+        "diagnostic_code_payload_bytes": 118282,
+        "codec_metadata_bytes": 694,
+        "checkpoint_bytes": 442847,
+        "torch_checkpoint_bytes": 476309,
+        "encoding_error": 0.0014822065772567127,
+        "reconstruction_error": 0.0014822065772567127,
+        "encode_overhead_ms": 3.2969999010674655,
+        "decode_overhead_ms": 1.2506999773904681,
+        "storage_scope": "diagnostic per-tensor quantized payload plus codec metadata; checkpoint is lossless RGBD FP32",
+        "peak_memory_bytes": 1533743104,
+        "rss_increase_bytes": 28672,
+        "peak_cuda_allocated_bytes": 273555968,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "training_loss": 0.011179488669304799,
+        "initial_validation_loss": 2.3081194038391115,
+        "training_seconds": 38.450113000231795,
+        "inference_batch_ms": 5.839599994942546,
+        "training_throughput": 24967.416870639954,
+        "inference_throughput": 43838.61912146582,
+        "epochs": 20,
+        "learning_rate": 0.002
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 2.3081194038391115,
+          "metric": 0.08433333333333333
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.43714024802049,
+          "val_loss": 0.19882916951179505,
+          "metric": 0.9468333333333333
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.159970809896787,
+          "val_loss": 0.14090191787481307,
+          "metric": 0.9613333333333334
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.10918188542127609,
+          "val_loss": 0.11876141623655954,
+          "metric": 0.9666666666666667
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.08177540265520414,
+          "val_loss": 0.10184873759746552,
+          "metric": 0.9709166666666667
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.06130840592583021,
+          "val_loss": 0.10168903152147929,
+          "metric": 0.97
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.04873995021979014,
+          "val_loss": 0.10009712479511897,
+          "metric": 0.972
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.03900870854159196,
+          "val_loss": 0.11384834402799607,
+          "metric": 0.9710833333333333
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.031867502972483634,
+          "val_loss": 0.09585243914524715,
+          "metric": 0.9759166666666667
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.024123845723768075,
+          "val_loss": 0.09730981157223384,
+          "metric": 0.9749166666666667
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.020103151044497888,
+          "val_loss": 0.10772473180294037,
+          "metric": 0.97475
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.018257414447764554,
+          "val_loss": 0.10356906074285507,
+          "metric": 0.9765833333333334
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.015835183064142864,
+          "val_loss": 0.1051393068432808,
+          "metric": 0.9764166666666667
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.01795151192943255,
+          "val_loss": 0.12463987545172374,
+          "metric": 0.9721666666666666
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.013952989267806212,
+          "val_loss": 0.12238281244039535,
+          "metric": 0.9759166666666667
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.01569293087099989,
+          "val_loss": 0.12149446767568588,
+          "metric": 0.9765833333333334
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.011342432803784807,
+          "val_loss": 0.12472055121262868,
+          "metric": 0.9766666666666667
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.006136222472259154,
+          "val_loss": 0.12284890506664913,
+          "metric": 0.9790833333333333
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.005163257866865024,
+          "val_loss": 0.12233696925640106,
+          "metric": 0.9783333333333334
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.005227639874909073,
+          "val_loss": 0.13104570380846658,
+          "metric": 0.9765833333333334
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.011179488669304799,
+          "val_loss": 0.14461450852950414,
+          "metric": 0.97575
+        }
+      ],
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 118282,
+        "master_parameter_bytes": 473128,
+        "quantizers": [
+          {
+            "module": "model.layers.0.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 477575168,
+            "last_payload_bytes": 301056,
+            "last_retained_inspection_bytes": 401424,
+            "last_ideal_packed_code_bytes": 100352,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.0.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 952616448,
+            "last_payload_bytes": 602112,
+            "last_retained_inspection_bytes": 806912,
+            "last_ideal_packed_code_bytes": 200704,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 77971456,
+            "last_payload_bytes": 49152,
+            "last_retained_inspection_bytes": 65552,
+            "last_ideal_packed_code_bytes": 16384,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 155529216,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 6091520,
+            "last_payload_bytes": 3840,
+            "last_retained_inspection_bytes": 5136,
+            "last_ideal_packed_code_bytes": 1280,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 155529216,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          }
+        ],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [
+          {
+            "module": "model.layers.0",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.2",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.4",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          }
+        ],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ],
+        "mixed_precision": null,
+        "optimizer_and_master_parameters": "FP32 Adam",
+        "quantization_baseline": null
+      },
+      "dataset": {
+        "source": "torchvision.datasets.MNIST",
+        "namespace": "official_train",
+        "source_url": "https://docs.pytorch.org/vision/stable/generated/torchvision.datasets.MNIST.html",
+        "source_examples": 60000,
+        "source_sha256": "d18cfd466eb143ac1097fde604dba9eec4116885869d04cc648b510949f9e88c",
+        "partition": "disjoint training and development subsets of the official training split",
+        "train_examples": 48000,
+        "validation_examples": 12000,
+        "selection_seed": 41,
+        "sha256": "f88f803caa4fa944cd53af21c85a6ab57fa31e3f69bd85adf676b80dcb7b7f25",
+        "preprocessing": "pixels / 255, flattened; no augmentation",
+        "index_artifact": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-s41-partition.npz",
+        "index_sha256": "772f5e94350fb51e7254e423cca447c76897672505122185caf1e2cfb74a73e8"
+      },
+      "artifact_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-chroma8-s41.ctcheckpoint",
+      "device": "cuda",
+      "model_config": {
+        "schema_version": 1,
+        "task": "mnist",
+        "representation": "chroma8",
+        "seed": 41,
+        "dimensions": [
+          784,
+          10
+        ]
+      },
+      "checkpoint_probe": {
+        "schema_version": 1,
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-chroma8-s41-probe.npz",
+        "sha256": "a055b7c0eff8cad1a2cb28d7c3ef02d3ba6b06bc7a94ddc2a1ad4b238cf66efb",
+        "checkpoint_sha256": "acc46786464582695d25001b436a6e9b32414f37d4dbc73e5b10591214ea394d",
+        "checkpoint_bytes": 442847,
+        "probe_bytes": 10562,
+        "input_sha256": "42cd6378b86ee5545cf3bb4bcd074651b13ce64f8b7ce6167940d220ee98f275",
+        "prediction_sha256": "c88ee8134b15be2e55ce04fb19e3ee3327ce2c14fd462637a9fb7f863c4ba25d",
+        "device": "cpu",
+        "examples": 32,
+        "input_shape": [
+          32,
+          784
+        ],
+        "input_dtype": "torch.float32",
+        "prediction_shape": [
+          32,
+          10
+        ],
+        "precision": {
+          "parameter_dtypes": [
+            "torch.float32"
+          ],
+          "autocast_dtype": null,
+          "output_dtype": "torch.float32",
+          "stored_prediction_dtype": "torch.float32"
+        },
+        "dataset_sha256": "f88f803caa4fa944cd53af21c85a6ab57fa31e3f69bd85adf676b80dcb7b7f25",
+        "threads": 4,
+        "source": "first real held-out inputs from the recorded dataset",
+        "predictions_exact": true,
+        "scope": "CPU checkpoint replay only; original task accuracy, precision and timings are unchanged"
+      },
+      "final_test_metrics": {
+        "loss": 0.12839189972877502,
+        "accuracy": 0.9752,
+        "examples": 10000,
+        "dataset_sha256": "2f5bf57b01d680e3513af2576892349179120bbd4d08b4d747127609787ed6ed",
+        "prediction_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-chroma8-s41-final-test.npz",
+        "prediction_sha256": "0648bf9c7bad4b4914395408bc876046dea2c1b1a60bd2b9f69f713c0aad56d3",
+        "checkpoint_sha256": "acc46786464582695d25001b436a6e9b32414f37d4dbc73e5b10591214ea394d",
+        "evaluated_at": "2026-10-01T02:08:29.390135+00:00",
+        "device": "cuda",
+        "stored_logit_dtype": "torch.float32",
+        "evaluation_only": true
+      }
+    },
+    {
+      "id": "release-research-20261001T020220115349Z-b26618f9ea6c-mnist-fp32-s59",
+      "task": "mnist",
+      "representation": "fp32",
+      "seed": 59,
+      "metrics": {
+        "validation_loss": 0.1440945292711258,
+        "accuracy": 0.9725833333333334,
+        "bits_per_value": 32,
+        "bytes_model": 473560,
+        "parameter_count": 118282,
+        "live_parameter_bytes": 473128,
+        "diagnostic_code_payload_bytes": 473128,
+        "codec_metadata_bytes": 432,
+        "checkpoint_bytes": 443113,
+        "torch_checkpoint_bytes": 475925,
+        "encoding_error": 0.0,
+        "reconstruction_error": 0.0,
+        "encode_overhead_ms": 4.7556000063195825,
+        "decode_overhead_ms": 2.204849966801703,
+        "storage_scope": "diagnostic per-tensor quantized payload plus codec metadata; checkpoint is lossless RGBD FP32",
+        "peak_memory_bytes": 1685331968,
+        "rss_increase_bytes": 40960,
+        "peak_cuda_allocated_bytes": 260944896,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "training_loss": 0.006491972941400794,
+        "initial_validation_loss": 2.3116056842803956,
+        "training_seconds": 8.046119499951601,
+        "inference_batch_ms": 0.09293999755755067,
+        "training_throughput": 119312.17278164643,
+        "inference_throughput": 2754465.3187824613,
+        "epochs": 20,
+        "learning_rate": 0.002
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 2.3116056842803956,
+          "metric": 0.07658333333333334
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.4280954379240672,
+          "val_loss": 0.19714834507306417,
+          "metric": 0.9431666666666667
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.16612625602881115,
+          "val_loss": 0.1502394497394562,
+          "metric": 0.9545
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.11338057017326356,
+          "val_loss": 0.12699254779020946,
+          "metric": 0.9638333333333333
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.08366395548979441,
+          "val_loss": 0.10841358643770217,
+          "metric": 0.9678333333333333
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.06655547854304314,
+          "val_loss": 0.10549395058552424,
+          "metric": 0.969
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.051681473473707835,
+          "val_loss": 0.10197107674678167,
+          "metric": 0.9706666666666667
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.04173219770689805,
+          "val_loss": 0.10104867722590764,
+          "metric": 0.9706666666666667
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.03423589306821426,
+          "val_loss": 0.10662031185626984,
+          "metric": 0.9720833333333333
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.02905112976829211,
+          "val_loss": 0.10061797338724136,
+          "metric": 0.97375
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.02390247277667125,
+          "val_loss": 0.12063058525323868,
+          "metric": 0.9693333333333334
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.02048724099000295,
+          "val_loss": 0.11776414344708125,
+          "metric": 0.97025
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.016648060505588848,
+          "val_loss": 0.11103747220834097,
+          "metric": 0.9736666666666667
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.016260509175558886,
+          "val_loss": 0.108714156071345,
+          "metric": 0.97375
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.01076262882227699,
+          "val_loss": 0.13341919736067454,
+          "metric": 0.9706666666666667
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.01169124683489402,
+          "val_loss": 0.13039272983868916,
+          "metric": 0.9721666666666666
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.014177912894636392,
+          "val_loss": 0.15251921411355338,
+          "metric": 0.9666666666666667
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.015232749244819085,
+          "val_loss": 0.15651826777060826,
+          "metric": 0.96925
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.0084646240004804,
+          "val_loss": 0.13198747883240383,
+          "metric": 0.9739166666666667
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.00950687170214951,
+          "val_loss": 0.13729605011145274,
+          "metric": 0.9745
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.006491972941400794,
+          "val_loss": 0.1440945292711258,
+          "metric": 0.9725833333333334
+        }
+      ],
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 118282,
+        "master_parameter_bytes": 473128,
+        "quantizers": [],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ],
+        "mixed_precision": null,
+        "optimizer_and_master_parameters": "FP32 Adam",
+        "quantization_baseline": null
+      },
+      "dataset": {
+        "source": "torchvision.datasets.MNIST",
+        "namespace": "official_train",
+        "source_url": "https://docs.pytorch.org/vision/stable/generated/torchvision.datasets.MNIST.html",
+        "source_examples": 60000,
+        "source_sha256": "d18cfd466eb143ac1097fde604dba9eec4116885869d04cc648b510949f9e88c",
+        "partition": "disjoint training and development subsets of the official training split",
+        "train_examples": 48000,
+        "validation_examples": 12000,
+        "selection_seed": 59,
+        "sha256": "c19e968852ec535fa5ef6eda10adf1a0bc406248bd9352c46b71b67e071a596c",
+        "preprocessing": "pixels / 255, flattened; no augmentation",
+        "index_artifact": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-s59-partition.npz",
+        "index_sha256": "a89625ca9f257da67584a747db5d9b1683bf40ae003d675e942244e69962b2d1"
+      },
+      "artifact_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-fp32-s59.ctcheckpoint",
+      "device": "cuda",
+      "model_config": {
+        "schema_version": 1,
+        "task": "mnist",
+        "representation": "fp32",
+        "seed": 59,
+        "dimensions": [
+          784,
+          10
+        ]
+      },
+      "checkpoint_probe": {
+        "schema_version": 1,
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-fp32-s59-probe.npz",
+        "sha256": "4ab048ef7a474447723b51fe011a11a5568af7c4f558cb46c83d929bf7f84ad5",
+        "checkpoint_sha256": "26eb929553e030ae1567198d065a29ec273184b6658e55f9bf7018514d6799aa",
+        "checkpoint_bytes": 443113,
+        "probe_bytes": 10559,
+        "input_sha256": "28e1c1f027b3ac820390f25ebc8abfa1694a5a525bce407d12da1e914a68eab6",
+        "prediction_sha256": "e7b49211108f9891d100d58b856a43afbd3bc106e13324149d08bf90e02d4680",
+        "device": "cpu",
+        "examples": 32,
+        "input_shape": [
+          32,
+          784
+        ],
+        "input_dtype": "torch.float32",
+        "prediction_shape": [
+          32,
+          10
+        ],
+        "precision": {
+          "parameter_dtypes": [
+            "torch.float32"
+          ],
+          "autocast_dtype": null,
+          "output_dtype": "torch.float32",
+          "stored_prediction_dtype": "torch.float32"
+        },
+        "dataset_sha256": "c19e968852ec535fa5ef6eda10adf1a0bc406248bd9352c46b71b67e071a596c",
+        "threads": 4,
+        "source": "first real held-out inputs from the recorded dataset",
+        "predictions_exact": true,
+        "scope": "CPU checkpoint replay only; original task accuracy, precision and timings are unchanged"
+      },
+      "final_test_metrics": {
+        "loss": 0.11512904748916626,
+        "accuracy": 0.9769,
+        "examples": 10000,
+        "dataset_sha256": "2f5bf57b01d680e3513af2576892349179120bbd4d08b4d747127609787ed6ed",
+        "prediction_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-fp32-s59-final-test.npz",
+        "prediction_sha256": "54f0f0634854440456b3e04e9deb7fc93ebddd38f14f19602bfffe4f9acf179d",
+        "checkpoint_sha256": "26eb929553e030ae1567198d065a29ec273184b6658e55f9bf7018514d6799aa",
+        "evaluated_at": "2026-10-01T02:08:29.504940+00:00",
+        "device": "cuda",
+        "stored_logit_dtype": "torch.float32",
+        "evaluation_only": true
+      }
+    },
+    {
+      "id": "release-research-20261001T020220115349Z-b26618f9ea6c-mnist-int8-s59",
+      "task": "mnist",
+      "representation": "int8",
+      "seed": 59,
+      "metrics": {
+        "validation_loss": 0.13552577030658722,
+        "accuracy": 0.9740833333333333,
+        "bits_per_value": 8,
+        "bytes_model": 118974,
+        "parameter_count": 118282,
+        "live_parameter_bytes": 473128,
+        "diagnostic_code_payload_bytes": 118282,
+        "codec_metadata_bytes": 692,
+        "checkpoint_bytes": 442900,
+        "torch_checkpoint_bytes": 476309,
+        "encoding_error": 0.0015899804665393048,
+        "reconstruction_error": 0.0015899804665393048,
+        "encode_overhead_ms": 2.064350002910942,
+        "decode_overhead_ms": 1.0939500061795115,
+        "storage_scope": "diagnostic per-tensor quantized payload plus codec metadata; checkpoint is lossless RGBD FP32",
+        "peak_memory_bytes": 1531969536,
+        "rss_increase_bytes": 28672,
+        "peak_cuda_allocated_bytes": 264167936,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "training_loss": 0.005230248406607037,
+        "initial_validation_loss": 2.3116119448343913,
+        "training_seconds": 31.81748750025872,
+        "inference_batch_ms": 4.045089997816831,
+        "training_throughput": 30172.086969223885,
+        "inference_throughput": 63286.60181557527,
+        "epochs": 20,
+        "learning_rate": 0.002
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 2.3116119448343913,
+          "metric": 0.07575
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.42730938919385275,
+          "val_loss": 0.19698686762650808,
+          "metric": 0.9436666666666667
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.165922145485878,
+          "val_loss": 0.14994088693459828,
+          "metric": 0.9546666666666667
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.11381469279527665,
+          "val_loss": 0.1239776556889216,
+          "metric": 0.964
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.08382068833708763,
+          "val_loss": 0.11087767626841863,
+          "metric": 0.9666666666666667
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.06728609126806259,
+          "val_loss": 0.10690056081612904,
+          "metric": 0.9688333333333333
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.051740097681681314,
+          "val_loss": 0.09983711349964142,
+          "metric": 0.97125
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.04225497222940127,
+          "val_loss": 0.10132997071743012,
+          "metric": 0.9710833333333333
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.035261052173872785,
+          "val_loss": 0.09839042131106059,
+          "metric": 0.9740833333333333
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.028972401862343154,
+          "val_loss": 0.10687200206518173,
+          "metric": 0.9729166666666667
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.023813180677592756,
+          "val_loss": 0.10666855265696844,
+          "metric": 0.9729166666666667
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.020131050679832698,
+          "val_loss": 0.11783569697539012,
+          "metric": 0.9710833333333333
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.017960497979074716,
+          "val_loss": 0.098597092628479,
+          "metric": 0.975
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.015844565343111752,
+          "val_loss": 0.11598619401454925,
+          "metric": 0.9750833333333333
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.013755482933484019,
+          "val_loss": 0.1131684320171674,
+          "metric": 0.9745833333333334
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.010691851248343785,
+          "val_loss": 0.11539388644695282,
+          "metric": 0.97425
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.010278438210797807,
+          "val_loss": 0.1395704606374105,
+          "metric": 0.97125
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.01598233376691739,
+          "val_loss": 0.13688858461380005,
+          "metric": 0.9725833333333334
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.009241801323679586,
+          "val_loss": 0.1289241848985354,
+          "metric": 0.9745833333333334
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.007458269980425636,
+          "val_loss": 0.139246102531751,
+          "metric": 0.9738333333333333
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.005230248406607037,
+          "val_loss": 0.13552577030658722,
+          "metric": 0.9740833333333333
+        }
+      ],
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 118282,
+        "master_parameter_bytes": 473128,
+        "quantizers": [
+          {
+            "module": "model.layers.0.weight_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 477575168,
+            "last_payload_bytes": 100352,
+            "last_retained_inspection_bytes": 100368,
+            "last_ideal_packed_code_bytes": 100352,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.0.activation_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 952616448,
+            "last_payload_bytes": 200704,
+            "last_retained_inspection_bytes": 204800,
+            "last_ideal_packed_code_bytes": 200704,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.2.weight_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 77971456,
+            "last_payload_bytes": 16384,
+            "last_retained_inspection_bytes": 16400,
+            "last_ideal_packed_code_bytes": 16384,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.2.activation_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 155529216,
+            "last_payload_bytes": 32768,
+            "last_retained_inspection_bytes": 36864,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.4.weight_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 6091520,
+            "last_payload_bytes": 1280,
+            "last_retained_inspection_bytes": 1296,
+            "last_ideal_packed_code_bytes": 1280,
+            "payload_format": "integer indices"
+          },
+          {
+            "module": "model.layers.4.activation_quantizer",
+            "representation": "int8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 155529216,
+            "last_payload_bytes": 32768,
+            "last_retained_inspection_bytes": 36864,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "integer indices"
+          }
+        ],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [
+          {
+            "module": "model.layers.0",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.2",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.4",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          }
+        ],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ],
+        "mixed_precision": null,
+        "optimizer_and_master_parameters": "FP32 Adam",
+        "quantization_baseline": "INT8/INT4 are quantization-aware floating point training; separate integer inference record below"
+      },
+      "dataset": {
+        "source": "torchvision.datasets.MNIST",
+        "namespace": "official_train",
+        "source_url": "https://docs.pytorch.org/vision/stable/generated/torchvision.datasets.MNIST.html",
+        "source_examples": 60000,
+        "source_sha256": "d18cfd466eb143ac1097fde604dba9eec4116885869d04cc648b510949f9e88c",
+        "partition": "disjoint training and development subsets of the official training split",
+        "train_examples": 48000,
+        "validation_examples": 12000,
+        "selection_seed": 59,
+        "sha256": "c19e968852ec535fa5ef6eda10adf1a0bc406248bd9352c46b71b67e071a596c",
+        "preprocessing": "pixels / 255, flattened; no augmentation",
+        "index_artifact": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-s59-partition.npz",
+        "index_sha256": "a89625ca9f257da67584a747db5d9b1683bf40ae003d675e942244e69962b2d1"
+      },
+      "artifact_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-int8-s59.ctcheckpoint",
+      "device": "cuda",
+      "model_config": {
+        "schema_version": 1,
+        "task": "mnist",
+        "representation": "int8",
+        "seed": 59,
+        "dimensions": [
+          784,
+          10
+        ]
+      },
+      "checkpoint_probe": {
+        "schema_version": 1,
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-int8-s59-probe.npz",
+        "sha256": "eb842805cf129f4b213f77fc75b0c6b1f025a3ad41c133b89801149b41a3d6f0",
+        "checkpoint_sha256": "60c07554acacc0a9f4fc9460f17fdaf53f3d24f00d7a906c44cce8de08b43325",
+        "checkpoint_bytes": 442900,
+        "probe_bytes": 10565,
+        "input_sha256": "28e1c1f027b3ac820390f25ebc8abfa1694a5a525bce407d12da1e914a68eab6",
+        "prediction_sha256": "04cc1207bb6092d2397d85818fa47b6edf1849a5e9428e797186ae0029cf82b9",
+        "device": "cpu",
+        "examples": 32,
+        "input_shape": [
+          32,
+          784
+        ],
+        "input_dtype": "torch.float32",
+        "prediction_shape": [
+          32,
+          10
+        ],
+        "precision": {
+          "parameter_dtypes": [
+            "torch.float32"
+          ],
+          "autocast_dtype": null,
+          "output_dtype": "torch.float32",
+          "stored_prediction_dtype": "torch.float32"
+        },
+        "dataset_sha256": "c19e968852ec535fa5ef6eda10adf1a0bc406248bd9352c46b71b67e071a596c",
+        "threads": 4,
+        "source": "first real held-out inputs from the recorded dataset",
+        "predictions_exact": true,
+        "scope": "CPU checkpoint replay only; original task accuracy, precision and timings are unchanged"
+      },
+      "final_test_metrics": {
+        "loss": 0.10688588070869445,
+        "accuracy": 0.9788,
+        "examples": 10000,
+        "dataset_sha256": "2f5bf57b01d680e3513af2576892349179120bbd4d08b4d747127609787ed6ed",
+        "prediction_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-int8-s59-final-test.npz",
+        "prediction_sha256": "8398424ce7b5deda8388a4457c73e7a1c87d738dfb88757dfb007c70946e6a0e",
+        "checkpoint_sha256": "60c07554acacc0a9f4fc9460f17fdaf53f3d24f00d7a906c44cce8de08b43325",
+        "evaluated_at": "2026-10-01T02:08:30.227457+00:00",
+        "device": "cuda",
+        "stored_logit_dtype": "torch.float32",
+        "evaluation_only": true
+      }
+    },
+    {
+      "id": "release-research-20261001T020220115349Z-b26618f9ea6c-mnist-chroma8-s59",
+      "task": "mnist",
+      "representation": "chroma8",
+      "seed": 59,
+      "metrics": {
+        "validation_loss": 0.13552577030658722,
+        "accuracy": 0.9740833333333333,
+        "bits_per_value": 8,
+        "bytes_model": 118974,
+        "parameter_count": 118282,
+        "live_parameter_bytes": 473128,
+        "diagnostic_code_payload_bytes": 118282,
+        "codec_metadata_bytes": 692,
+        "checkpoint_bytes": 442900,
+        "torch_checkpoint_bytes": 476309,
+        "encoding_error": 0.0015899804665393048,
+        "reconstruction_error": 0.0015899804665393048,
+        "encode_overhead_ms": 6.712849892210215,
+        "decode_overhead_ms": 3.8271499215625226,
+        "storage_scope": "diagnostic per-tensor quantized payload plus codec metadata; checkpoint is lossless RGBD FP32",
+        "peak_memory_bytes": 1534066688,
+        "rss_increase_bytes": 28672,
+        "peak_cuda_allocated_bytes": 273555968,
+        "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available",
+        "training_loss": 0.005230248406607037,
+        "initial_validation_loss": 2.3116119448343913,
+        "training_seconds": 43.21888699987903,
+        "inference_batch_ms": 8.83513999870047,
+        "training_throughput": 22212.510933071622,
+        "inference_throughput": 28975.205830089184,
+        "epochs": 20,
+        "learning_rate": 0.002
+      },
+      "curves": [
+        {
+          "epoch": 0,
+          "train_loss": null,
+          "val_loss": 2.3116119448343913,
+          "metric": 0.07575
+        },
+        {
+          "epoch": 1,
+          "train_loss": 0.42730938919385275,
+          "val_loss": 0.19698686762650808,
+          "metric": 0.9436666666666667
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.165922145485878,
+          "val_loss": 0.14994088693459828,
+          "metric": 0.9546666666666667
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.11381469279527665,
+          "val_loss": 0.1239776556889216,
+          "metric": 0.964
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.08382068833708763,
+          "val_loss": 0.11087767626841863,
+          "metric": 0.9666666666666667
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.06728609126806259,
+          "val_loss": 0.10690056081612904,
+          "metric": 0.9688333333333333
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.051740097681681314,
+          "val_loss": 0.09983711349964142,
+          "metric": 0.97125
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.04225497222940127,
+          "val_loss": 0.10132997071743012,
+          "metric": 0.9710833333333333
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.035261052173872785,
+          "val_loss": 0.09839042131106059,
+          "metric": 0.9740833333333333
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.028972401862343154,
+          "val_loss": 0.10687200206518173,
+          "metric": 0.9729166666666667
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.023813180677592756,
+          "val_loss": 0.10666855265696844,
+          "metric": 0.9729166666666667
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.020131050679832698,
+          "val_loss": 0.11783569697539012,
+          "metric": 0.9710833333333333
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.017960497979074716,
+          "val_loss": 0.098597092628479,
+          "metric": 0.975
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.015844565343111752,
+          "val_loss": 0.11598619401454925,
+          "metric": 0.9750833333333333
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.013755482933484019,
+          "val_loss": 0.1131684320171674,
+          "metric": 0.9745833333333334
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.010691851248343785,
+          "val_loss": 0.11539388644695282,
+          "metric": 0.97425
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.010278438210797807,
+          "val_loss": 0.1395704606374105,
+          "metric": 0.97125
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.01598233376691739,
+          "val_loss": 0.13688858461380005,
+          "metric": 0.9725833333333334
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.009241801323679586,
+          "val_loss": 0.1289241848985354,
+          "metric": 0.9745833333333334
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.007458269980425636,
+          "val_loss": 0.139246102531751,
+          "metric": 0.9738333333333333
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.005230248406607037,
+          "val_loss": 0.13552577030658722,
+          "metric": 0.9740833333333333
+        }
+      ],
+      "execution": {
+        "training_method": "fake quantization with identity straight-through gradients",
+        "fully_chromatic": false,
+        "floating_point_execution": true,
+        "parameter_dtypes": [
+          "torch.float32"
+        ],
+        "parameter_count": 118282,
+        "master_parameter_bytes": 473128,
+        "quantizers": [
+          {
+            "module": "model.layers.0.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 477575168,
+            "last_payload_bytes": 301056,
+            "last_retained_inspection_bytes": 401424,
+            "last_ideal_packed_code_bytes": 100352,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.0.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 952616448,
+            "last_payload_bytes": 602112,
+            "last_retained_inspection_bytes": 806912,
+            "last_ideal_packed_code_bytes": 200704,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 77971456,
+            "last_payload_bytes": 49152,
+            "last_retained_inspection_bytes": 65552,
+            "last_ideal_packed_code_bytes": 16384,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.2.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 155529216,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.weight_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": null,
+            "range_method": "global min/max",
+            "last_range_axes": [
+              0,
+              1
+            ],
+            "last_range_metadata_bytes": 16,
+            "last_range_shape": [],
+            "last_constant_ranges": 0,
+            "encoded_values": 6091520,
+            "last_payload_bytes": 3840,
+            "last_retained_inspection_bytes": 5136,
+            "last_ideal_packed_code_bytes": 1280,
+            "payload_format": "RGB uint8 triples"
+          },
+          {
+            "module": "model.layers.4.activation_quantizer",
+            "representation": "chroma8",
+            "bits": 8,
+            "enabled": true,
+            "forward_calls": 4759,
+            "configured_range_axis": -1,
+            "range_method": "axis min/max",
+            "last_range_axes": [
+              1
+            ],
+            "last_range_metadata_bytes": 4096,
+            "last_range_shape": [
+              256,
+              1
+            ],
+            "last_constant_ranges": 0,
+            "encoded_values": 155529216,
+            "last_payload_bytes": 98304,
+            "last_retained_inspection_bytes": 135168,
+            "last_ideal_packed_code_bytes": 32768,
+            "payload_format": "RGB uint8 triples"
+          }
+        ],
+        "codebooks": [],
+        "attention": [],
+        "executed_modules": [
+          {
+            "module": "model.layers.0",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.2",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          },
+          {
+            "module": "model.layers.4",
+            "class": "ChromaLinear",
+            "forward_calls": 4759,
+            "kernel_dtype": "torch.float32"
+          }
+        ],
+        "limitations": [
+          "Dense, embedding, normalization, nonlinearities, softmax, and gradient kernels use floating point.",
+          "Master parameters and optimizer states stay floating point; estimated code bytes are not measured training-memory savings.",
+          "Chromatic uniform palettes relabel the same scalar levels as equal-bit uniform integer quantization.",
+          "Straight-through gradients approximate discrete assignment, rounding, and clipping."
+        ],
+        "mixed_precision": null,
+        "optimizer_and_master_parameters": "FP32 Adam",
+        "quantization_baseline": null
+      },
+      "dataset": {
+        "source": "torchvision.datasets.MNIST",
+        "namespace": "official_train",
+        "source_url": "https://docs.pytorch.org/vision/stable/generated/torchvision.datasets.MNIST.html",
+        "source_examples": 60000,
+        "source_sha256": "d18cfd466eb143ac1097fde604dba9eec4116885869d04cc648b510949f9e88c",
+        "partition": "disjoint training and development subsets of the official training split",
+        "train_examples": 48000,
+        "validation_examples": 12000,
+        "selection_seed": 59,
+        "sha256": "c19e968852ec535fa5ef6eda10adf1a0bc406248bd9352c46b71b67e071a596c",
+        "preprocessing": "pixels / 255, flattened; no augmentation",
+        "index_artifact": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-s59-partition.npz",
+        "index_sha256": "a89625ca9f257da67584a747db5d9b1683bf40ae003d675e942244e69962b2d1"
+      },
+      "artifact_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-chroma8-s59.ctcheckpoint",
+      "device": "cuda",
+      "model_config": {
+        "schema_version": 1,
+        "task": "mnist",
+        "representation": "chroma8",
+        "seed": 59,
+        "dimensions": [
+          784,
+          10
+        ]
+      },
+      "checkpoint_probe": {
+        "schema_version": 1,
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-chroma8-s59-probe.npz",
+        "sha256": "eb842805cf129f4b213f77fc75b0c6b1f025a3ad41c133b89801149b41a3d6f0",
+        "checkpoint_sha256": "3e4737e9286330d8ade0384d72dad3671299781ddcface87f362d8dcdea97bb2",
+        "checkpoint_bytes": 442900,
+        "probe_bytes": 10565,
+        "input_sha256": "28e1c1f027b3ac820390f25ebc8abfa1694a5a525bce407d12da1e914a68eab6",
+        "prediction_sha256": "04cc1207bb6092d2397d85818fa47b6edf1849a5e9428e797186ae0029cf82b9",
+        "device": "cpu",
+        "examples": 32,
+        "input_shape": [
+          32,
+          784
+        ],
+        "input_dtype": "torch.float32",
+        "prediction_shape": [
+          32,
+          10
+        ],
+        "precision": {
+          "parameter_dtypes": [
+            "torch.float32"
+          ],
+          "autocast_dtype": null,
+          "output_dtype": "torch.float32",
+          "stored_prediction_dtype": "torch.float32"
+        },
+        "dataset_sha256": "c19e968852ec535fa5ef6eda10adf1a0bc406248bd9352c46b71b67e071a596c",
+        "threads": 4,
+        "source": "first real held-out inputs from the recorded dataset",
+        "predictions_exact": true,
+        "scope": "CPU checkpoint replay only; original task accuracy, precision and timings are unchanged"
+      },
+      "final_test_metrics": {
+        "loss": 0.10688588070869445,
+        "accuracy": 0.9788,
+        "examples": 10000,
+        "dataset_sha256": "2f5bf57b01d680e3513af2576892349179120bbd4d08b4d747127609787ed6ed",
+        "prediction_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-chroma8-s59-final-test.npz",
+        "prediction_sha256": "8398424ce7b5deda8388a4457c73e7a1c87d738dfb88757dfb007c70946e6a0e",
+        "checkpoint_sha256": "3e4737e9286330d8ade0384d72dad3671299781ddcface87f362d8dcdea97bb2",
+        "evaluated_at": "2026-10-01T02:08:31.492582+00:00",
+        "device": "cuda",
+        "stored_logit_dtype": "torch.float32",
+        "evaluation_only": true
+      }
+    }
+  ],
+  "provenance": {
+    "schema_version": 1,
+    "captured_at": "2026-10-01T02:02:20.239591+00:00",
+    "source": {
+      "files": {
+        ".github/workflows/ci.yml": "ec05ebe634502ee23e48e7b3cc66cce3d3e098fabf6a311c50408d4ee0c4ce0d",
+        "AGENTS.md": "c56f62c3e55b66a963eb95a9d342ccf5857bac3744f636dcea70dbbaafcab9f6",
+        "chromatensor/__init__.py": "4b9319b3c4ee53ecddcbad98654028a70a5159da40c5ff9f3b7a500ca2863621",
+        "chromatensor/autograd/__init__.py": "29dbb3efe94820aa9b6d171c32fe220eb779f633c7c700309c7420a5e9f6f6ea",
+        "chromatensor/autograd/quantization.py": "6663194290f70b062f7ab2d89a8ecf69aa511c7d44338dae4eb383abbbbd5847",
+        "chromatensor/codecs/__init__.py": "645cf586fa3fd15deb43131d49dc44932caef323080766b90c5405ca14e60f6b",
+        "chromatensor/codecs/base.py": "51cf4214dcb731871ff218ff72d312569068ce13b4a0d70f0e2952651d68657b",
+        "chromatensor/codecs/hierarchical.py": "cef4692aecbc208564489bc165cc9b0c9ef1440257f735734326e792ecc1cec3",
+        "chromatensor/codecs/hsv.py": "5ce2eb66a2e80970f46602808b000a30d0cb4203611659029a5079792d97423d",
+        "chromatensor/codecs/learned.py": "1bcb2fdbfccc1f0423a7c4624476793875903c2d008fa696de1aa613e37a7281",
+        "chromatensor/codecs/neural_rgb.py": "156c782f66096f8960c863b8d743146f00cf05d219b419fcef7291762947b0da",
+        "chromatensor/codecs/rgb.py": "aa8ec8ed36333fe5f212441e9a288c8f1cc6254425c6de5278625ef89d3b9906",
+        "chromatensor/codecs/rgbd.py": "0de8229189a88d4ef2806cf295a8f3bc1f11efe308f4aa1b166e944f9b273617",
+        "chromatensor/cube.py": "743086b6121e60630681e4958a65f9bd2195e71ef04520ef43ad8fc2dbd24451",
+        "chromatensor/decoders.py": "70afdc08e3dd966dd023d1612574047b032399e0c1ec34feaeb5ecbfd6a0e2df",
+        "chromatensor/holographic.py": "379630fa90845a4a1ad12282edbd7fbad90403ee6f12cc70f25231530e4ff997",
+        "chromatensor/nn/__init__.py": "d0037299d4799f5434fe1c315e93fc43bed88c14b69f5d5ee52943c04bc162e6",
+        "chromatensor/nn/attention.py": "1384f870058192eb4b321bce66698dfce5b2383cf911a5417439af3954f8dd1f",
+        "chromatensor/nn/layers.py": "2570772713de51c263c5ffd653d61e0f535dcb3b1b9ffc8501ae6e7e9ccde194",
+        "chromatensor/nn/report.py": "c8b233fa005f77aaaca2817588a98faaf3c568bccdd676b4ccd6ccd781f454fa",
+        "chromatensor/operators/__init__.py": "a72042a18d3b62e5224a7cd034b26ac317d5299d791717bde9d8e0b49abed740",
+        "chromatensor/operators/core.py": "5db3a66e45c15f764845c71d92053f1d60f0d6bd7c6632b0d3fcabf6d47c35a7",
+        "chromatensor/serialization/__init__.py": "0052c5e4c372360c4fab24b9885a6fb1f5fb344d972e886acbe40c19c6764e2c",
+        "chromatensor/serialization/format.py": "6b2694152b7a2d1face0eb6db891ac6effea9a0d06287657b63be97e9936e8b1",
+        "chromatensor/tensor.py": "a7a76bb3b027bfd2a929fa3702485d78e38ec0025b0ad240e5353bff4f88d368",
+        "chromatensor/tokenizer/__init__.py": "88616a7d5a819eb2525ca71511e2c5d1553ad617173292bf1c66d5488f7c870b",
+        "chromatensor/visualization/__init__.py": "fd1b9dbc0ae4007762a7bf237ede380fc6e2a8693dc65704b45dade8322d18a7",
+        "chromatensor/visualization/plots.py": "6ec35b91cf7769bff87e86743f8e985f40b3d097153a57420392389abcd6a3ff",
+        "dashboard/__init__.py": "e795b4116ee4f719fdc3731d6de0bc49c19ae03bac6558916ac8a79407f724a9",
+        "dashboard/app.js": "2923e5f8065b13f14051c7f9cb08a755658b1ba3d3d8be54b2a1f67525b5806e",
+        "dashboard/cube.css": "5653d9c8a21e26321d6100b67f42429bbe97b4cab35b82151e76c3128b4d5ff5",
+        "dashboard/cube.js": "22dae4dcecbf2e72e4c9140596950b8436910797a82c4646b279f21ea3804355",
+        "dashboard/cube_api.py": "30a6099e2f2726c498f300d213e0ad55c8ed8f2bf68b49597cfe247fbe58f472",
+        "dashboard/index.html": "7df401e6ac8c8779ff92c98751c52afa797abb61a9b0f1352e519ab3b805e590",
+        "dashboard/server.py": "535c692308dcb411ddbe2dde637d8930daeb2480b3f6b1e82e9616dcfa4e8d65",
+        "dashboard/style.css": "80850bbe4417bcf3e6eea8b0417cf58f7da920671e7ff7e45fc29036f15e7bf3",
+        "experiments/__init__.py": "75a49e4b275144336821845efcd63262c51331b2572e05551fa8cb23bf0de8c6",
+        "experiments/ablations.py": "8af0ad62ac5a1488e582d2fabc68698bf7316ca04c131a411d8ed065fdb2d65d",
+        "experiments/attention.py": "479c5d16983848dc5ac8da78737533ced8f07751c87dc53156b4930dd3cee0a1",
+        "experiments/checkpoint_probe.py": "9e0028ecf023ac6b0835a8cb3ebdd0835b0450971f14230f433b3fc53a777863",
+        "experiments/common.py": "6842cdc94effcf926ef8f8d46f409ee91b05a507a8c671555de6f1b18a8b63ad",
+        "experiments/cube.py": "745371c258c9fd10e50d753aea457e9d5305950d2e7fa7befb9583e7725860fe",
+        "experiments/datasets.py": "d79df91b2ebad6bb51c02d0f96d69d2f0e674bfbecb8027441306910eb37e9f2",
+        "experiments/decoder.py": "152913a4d0e58412b95c7a6f0c1c6dca5a76fefc3c1f033beb6ff18cdd3c2515",
+        "experiments/instrumentation.py": "7b0f859324fc8d57ba82850aa0264132a8dd3b3acf8b6af0ca752a2c918d90e2",
+        "experiments/models.py": "6b8ac1333d55c5fdf49ae30475a1fcb12bea417b34c7a38a8af1d63015d0384b",
+        "experiments/precision.py": "97d5b673789297f808cce59fe80541e6d766f5ccb46497bf687c2047d01c0b48",
+        "experiments/provenance.py": "1624f60fe9894f769fc21f0eaa0e4a34c36b88bf125f1edb008b8147a52d0275",
+        "experiments/reporting.py": "0b4a0ac3f82a149dc3258b8c000b8530115b3ce4982bb650163b42e6d71027ec",
+        "experiments/training.py": "818c0bbb28e607b2b4eb7846b362c9061fcbe06d79c7fa3ab70f560a7e906f28",
+        "experiments/verification.py": "43dc5c6ab69e2362b6cf7bea545ba923ac752461171f1f8f92ba69178aba1e82",
+        "pyproject.toml": "e3429218e7f51d18620e16c5d5694a366e0c8b215aa046a95b36814abfc3b07d",
+        "requirements/linux311-cpu.lock": "af7b6d78dd9771688ce19e926360b2dc61cb20949170cc98eb0deab0240d573e",
+        "requirements/linux312-cpu.lock": "75315cbd92fe8338d8ece4c1a8291b94941f60b97d88b54ae734299c523744c0",
+        "requirements/linux313-cpu.lock": "75315cbd92fe8338d8ece4c1a8291b94941f60b97d88b54ae734299c523744c0",
+        "requirements/linux314-cpu.lock": "75315cbd92fe8338d8ece4c1a8291b94941f60b97d88b54ae734299c523744c0",
+        "requirements/minimum-cpu.lock": "feb158fc00ff1e54b70fcb2cb4f228a75ed22636aec20acc6dab54b95a8e844a",
+        "requirements/minimum.txt": "776bd9fb96cbcb72c05dca4e67ad9835f3c2d33fe674dffe33b4910e27cb6394",
+        "requirements/python311-cpu.lock": "f4d169524ba857a37f41c3f0a56dc890332e9bbb6c9f16eb6fc55152cfb7dc8b",
+        "requirements/python312-cpu.lock": "8415e0dfb371882cfe839f10bc9207fe7cbf9dde836bd64d75f96c3e09e73ee5",
+        "requirements/python313-cpu.lock": "8415e0dfb371882cfe839f10bc9207fe7cbf9dde836bd64d75f96c3e09e73ee5",
+        "requirements/python314-cpu.lock": "8415e0dfb371882cfe839f10bc9207fe7cbf9dde836bd64d75f96c3e09e73ee5",
+        "scripts/build_release_evidence.py": "7b826a089293538db0d3cc37ca5283d1a899ad2d4f7eafb717361a94d4d69934",
+        "scripts/dashboard.py": "c1d4168a02b00adc5ac3ea049a11927418cbbee7b8e41b3d60bb321e3c3c3ed1",
+        "scripts/finalize_report.py": "7ab674d5d85b43fd322799234cbf3730384c5fe6ad5f35866e7fe96f07ef9d5a",
+        "scripts/review_reproductions.py": "9f945a5abdc667727acad1edd800157cd1968030863fd9006c567cf5336a550b",
+        "scripts/run_benchmarks.py": "3c666add71610352bebffe13b09689f3977901b443db13959b0c4e3478fbd236",
+        "scripts/run_cube_experiments.py": "d65dccf54be8aaf4a2af3dc2ae73068454edc9dc9bfa428dfcfdc49fdd90ec37",
+        "scripts/run_release_research.py": "15cdfce4ff02543fff12df1c931982a142c57cfd9f48935a0231fc6f1f779a5b",
+        "scripts/run_verification_tests.py": "26f29bc35585c2077711c33a6f8a972eeb6302866de99e17dae4054f8acf607d",
+        "scripts/train.py": "2307323725a6dad464250e8990a3d30f4616aa97bb1d31a564cabc7af98369e7",
+        "scripts/verify.py": "31ba257dc8e237a53178cb04f003a4baf0012fabbe6f8a5f277bfbeb7092ecfa",
+        "scripts/verify_dependencies.py": "0b3e73083a358428836fd7f2b5db132629ad34b3f657b08416f83e34df94d255",
+        "scripts/verify_release_install.py": "678be4f8af5da89241a3c70647b0146d5b13109cbab8229928672046cbc1bfc4",
+        "tests/conftest.py": "e1269c105af016b549e578bb980aad34e10b33424053ec32492707b70d8492b5",
+        "tests/test_ablations.py": "df32e8d1e261e92f5e45f92bb55fdea8410c48a3e3e16933f5cb817bbecffb10",
+        "tests/test_acceptance.py": "d5ff859e09902321140167e5c4ae042d000c6a94bece4693b28c7cd2d7e18094",
+        "tests/test_attention_experiment.py": "8ffc19b593100388d8c8fa531f8fba8b781a2c7a2374f2da0d09b5bb79734b8f",
+        "tests/test_checkpoint_probe.py": "c0e5a2f0bc4e644e8f88fba8653f62c21a289b0864cecac90d7a6f0311784182",
+        "tests/test_codecs.py": "5b244cce5daf69e9a41e1b3f80a50cef45bef60ecba16482ff3c6a5b4b78c772",
+        "tests/test_cube.py": "ce56c5f43379a3ddcb0c5d84938ab26bdec665021fe2aac1a494d6dbc7b15320",
+        "tests/test_cube_api.py": "2a1827ad175871cd8e2e4b287513b6a1a3203c6255fadf98f87e58286dcbd184",
+        "tests/test_cube_experiments.py": "39309ef4d9342d1fa9aa43de1cd31bb15af8de3ab42e92c55de99286f42b11bb",
+        "tests/test_dashboard.py": "7ecea178c04eabbfbb9b5aa4aebaf0a1c379ec03cd3e048a45f471d0dd48b52b",
+        "tests/test_datasets.py": "aeb1c8fbe0a16a4f348bcbb28923e0bce3b958b42b953c57c70ca5eceeaa1331",
+        "tests/test_decoder.py": "c1e8a7b19cde5ee2b7da8f1d288c578f47198e4ce7e5c2adef432f1375cf1a92",
+        "tests/test_file_limits.py": "bf1ded7fb665bbabf7f8782f3770babeb2e3553ed8fa1a6a8b1826d36acbe1d5",
+        "tests/test_holographic.py": "b448ab2e0f04b18855b976f80bdf3fc382deb4747faa541c6de17b74f20a917f",
+        "tests/test_instrumentation.py": "acd4232b4c6db004494e8471b0aabe86d626fa731a7f3342cfbc572a83347bb3",
+        "tests/test_nn.py": "d3908175692e1e973cd7c113fa151a3a1bb701e8c322383e511748994dae770c",
+        "tests/test_operators.py": "990203f49d2e13bca02dd7f4455aa28e68baafe39aa63ab374b869246f7e45c3",
+        "tests/test_release_matrix.py": "54edcc832000ccda014dbfe0ab0a349cfef165a6a127a4a6aeeac41fa1a4a014",
+        "tests/test_release_research.py": "afa406fab27e92708eb1f5912a3e06ef942d3f27ef7b0ab540d190770c71108f",
+        "tests/test_result_io.py": "58e4a2b9d42b9b338729aeea75e7d029825252d654166549c838a891e3868bee",
+        "tests/test_serialization.py": "1a33cf704b47831070438c3d7d99ad5c268ccab3039ca73b43ed2a46cdc4ccd7",
+        "tests/test_tensor.py": "1f20a6bfc449516b950d6732618ef65e00fc9224c1cd7f78a0312bb717fe92b3",
+        "tests/test_training.py": "e159375ee9c0605212a1ab5043ed8497607ab8176ce81f588017ac426777c50b"
+      },
+      "sha256": "748b7a7043075f486fab7138e91d77562da589c2afd752ee760467ac0715d9a5"
+    },
+    "git": {
+      "available": true,
+      "commit": "cce9742ef9b15d85e29fccecfc8401240b7aaed5",
+      "dirty": true,
+      "status": [
+        "M .gitignore",
+        " M ARCHITECTURE.md",
+        " M BENCHMARKS.md",
+        " M EXPERIMENT_MATRIX.md",
+        " M LIMITATIONS.md",
+        " M README.md",
+        " M RESEARCH_LOG.md",
+        " M RESULTS.md",
+        " M THEORY.md",
+        " M TODO.md",
+        " D artifacts/packages/chromatensor-0.1.0-py3-none-any.whl",
+        " M artifacts/verification-tests.xml",
+        " M chromatensor/autograd/quantization.py",
+        " M chromatensor/codecs/hierarchical.py",
+        " M chromatensor/codecs/learned.py",
+        " M chromatensor/codecs/neural_rgb.py",
+        " M chromatensor/codecs/rgb.py",
+        " M chromatensor/cube.py",
+        " M chromatensor/holographic.py",
+        " M chromatensor/nn/layers.py",
+        " M chromatensor/nn/report.py",
+        " M chromatensor/operators/core.py",
+        " M chromatensor/serialization/format.py",
+        " M chromatensor/tensor.py",
+        " M dashboard/server.py",
+        " M docs/API.md",
+        " M docs/CUBE.md",
+        " M docs/CUBE_RESULTS.md",
+        " M docs/DASHBOARD.md",
+        " M docs/HOLOGRAPHIC.md",
+        " M docs/MEASUREMENT.md",
+        " M docs/RESEARCH_REVIEW.md",
+        " M docs/SETUP.md",
+        " M experiments/attention.py",
+        " M experiments/common.py",
+        " M experiments/cube.py",
+        " M experiments/datasets.py",
+        " M experiments/decoder.py",
+        " M experiments/precision.py",
+        " M experiments/training.py",
+        " M pyproject.toml",
+        " M results/cube.json",
+        " M results/latest.json",
+        " M scripts/finalize_report.py",
+        " M scripts/run_benchmarks.py",
+        " M scripts/run_cube_experiments.py",
+        " M scripts/verify.py",
+        " M tests/test_attention_experiment.py",
+        " M tests/test_codecs.py",
+        " M tests/test_cube.py",
+        " M tests/test_cube_experiments.py",
+        " M tests/test_dashboard.py",
+        " M tests/test_decoder.py",
+        " M tests/test_nn.py",
+        " M tests/test_operators.py",
+        " M tests/test_serialization.py",
+        " M tests/test_tensor.py",
+        " M tests/test_training.py",
+        "?? .github/",
+        "?? artifacts/current-interim-tests.xml",
+        "?? artifacts/figures/review-data-smoke/",
+        "?? artifacts/figures/review-smoke/",
+        "?? artifacts/figures/train_scalar_fp32/",
+        "?? artifacts/integration-interim-tests.xml",
+        "?? artifacts/minimum-interim-tests.xml",
+        "?? artifacts/packages/chromatensor-0.2.0-py3-none-any.whl",
+        "?? artifacts/release-research/",
+        "?? artifacts/review-smoke/",
+        "?? artifacts/review/",
+        "?? artifacts/verification/",
+        "?? docs/CODE_REVIEW.md",
+        "?? docs/FILE_FORMATS.md",
+        "?? docs/REVIEW_CHECKLIST.md",
+        "?? experiments/checkpoint_probe.py",
+        "?? experiments/provenance.py",
+        "?? experiments/verification.py",
+        "?? requirements/",
+        "?? results/history/",
+        "?? results/release-research.json",
+        "?? results/repair-regressions.json",
+        "?? results/review-data-smoke.json",
+        "?? results/review-data-smoke.md",
+        "?? results/review-findings.json",
+        "?? results/review-smoke.json",
+        "?? results/review-smoke.md",
+        "?? results/review-summary.json",
+        "?? results/test-verification.json",
+        "?? results/train_scalar_fp32.json",
+        "?? results/train_scalar_fp32.md",
+        "?? scripts/build_release_evidence.py",
+        "?? scripts/review_reproductions.py",
+        "?? scripts/run_release_research.py",
+        "?? scripts/run_verification_tests.py",
+        "?? scripts/verify_dependencies.py",
+        "?? scripts/verify_release_install.py",
+        "?? tests/test_acceptance.py",
+        "?? tests/test_checkpoint_probe.py",
+        "?? tests/test_datasets.py",
+        "?? tests/test_file_limits.py",
+        "?? tests/test_release_matrix.py",
+        "?? tests/test_release_research.py"
+      ]
+    },
+    "dependencies": {
+      "python": "3.14.6",
+      "torch": "2.14.0+cu126",
+      "torchvision": "0.29.0+cu126",
+      "numpy": "2.5.2",
+      "matplotlib": "3.11.2",
+      "psutil": "7.2.2",
+      "pytest": "8.4.2"
+    },
+    "config_sha256": "6a26d3535d898666574baf13a316bb29ec5d5788d851ae39b94a1d4980f76850",
+    "artifacts": [
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/large-tensor/fixed24_packed.bin",
+        "sha256": "7476c487dbfbb47d5dfc190efd4796f6d03cac4dcf5f6d8b2afcb8bebb944873",
+        "bytes": 30000000
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/large-tensor/fixed24_packed.json",
+        "sha256": "a9cedd757a942f927e83778e9fb21d20a003edaa34141b02ac206bdb67d633e0",
+        "bytes": 131
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/large-tensor/rgb24.bin",
+        "sha256": "7476c487dbfbb47d5dfc190efd4796f6d03cac4dcf5f6d8b2afcb8bebb944873",
+        "bytes": 30000000
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/large-tensor/rgb24.json",
+        "sha256": "a9cedd757a942f927e83778e9fb21d20a003edaa34141b02ac206bdb67d633e0",
+        "bytes": 131
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/large-tensor/rgbd32.bin",
+        "sha256": "74451b0eb0ad9234f9d88975b88ebf0e01223c595b7df635a8bac7856e0711f1",
+        "bytes": 40000000
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/large-tensor/rgbd32.json",
+        "sha256": "4592ef6a14a69f8e0ade0bff0b0739ad44b3bb50865fa1504bd629e2fdecd594",
+        "bytes": 101
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-chroma8-s23-probe.npz",
+        "sha256": "33a6ba0c75ff8100fa0ef0fdcdf922e54c90fca5a790afb1def3c0c2a5f7b256",
+        "bytes": 10102
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-chroma8-s23.ctcheckpoint",
+        "sha256": "7b5641a738c81c886f2db6ec3bb5facee80212186036bb94834ed17970c4792d",
+        "bytes": 442899
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-chroma8-s41-probe.npz",
+        "sha256": "a055b7c0eff8cad1a2cb28d7c3ef02d3ba6b06bc7a94ddc2a1ad4b238cf66efb",
+        "bytes": 10562
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-chroma8-s41.ctcheckpoint",
+        "sha256": "acc46786464582695d25001b436a6e9b32414f37d4dbc73e5b10591214ea394d",
+        "bytes": 442847
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-chroma8-s59-probe.npz",
+        "sha256": "eb842805cf129f4b213f77fc75b0c6b1f025a3ad41c133b89801149b41a3d6f0",
+        "bytes": 10565
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-chroma8-s59.ctcheckpoint",
+        "sha256": "3e4737e9286330d8ade0384d72dad3671299781ddcface87f362d8dcdea97bb2",
+        "bytes": 442900
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-chroma8-s7-probe.npz",
+        "sha256": "21051f7e41c35855a4b2a531836cbf2775d22f1f7fa19fbff7e681f164a60557",
+        "bytes": 10109
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-chroma8-s7.ctcheckpoint",
+        "sha256": "34824512a3fc895babc0892bafb12b6fb7f89b992bd49e3e291cbb8f75fab769",
+        "bytes": 442733
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-fp32-s23-probe.npz",
+        "sha256": "8a2094956d0b19af37903a4aa88f45e5aaa8645a4a9a8259d5ee1f25fa313139",
+        "bytes": 10101
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-fp32-s23.ctcheckpoint",
+        "sha256": "9441152dfad44219a138a022a8028acf723a34e78da901b9a5e8129215dc193e",
+        "bytes": 442684
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-fp32-s41-probe.npz",
+        "sha256": "cd6a2f09f2488fcdfecc917aee0aaebacb41483cac9af67173db4a71c67bf86f",
+        "bytes": 10561
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-fp32-s41.ctcheckpoint",
+        "sha256": "694dc218ca19429cff9ddac94e39a7ed4f244224d21f1b98c69ea22a632199f4",
+        "bytes": 443037
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-fp32-s59-probe.npz",
+        "sha256": "4ab048ef7a474447723b51fe011a11a5568af7c4f558cb46c83d929bf7f84ad5",
+        "bytes": 10559
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-fp32-s59.ctcheckpoint",
+        "sha256": "26eb929553e030ae1567198d065a29ec273184b6658e55f9bf7018514d6799aa",
+        "bytes": 443113
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-fp32-s7-probe.npz",
+        "sha256": "bb518b6d80778db832cebed08c35ce45d322b253a2961aebe0618b0a675ea090",
+        "bytes": 10111
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-fp32-s7.ctcheckpoint",
+        "sha256": "c39f63dba4502248ec512b370505ccf2d7f7a2f9798e6439a77645b184818fd0",
+        "bytes": 442818
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-int8-s23-probe.npz",
+        "sha256": "33a6ba0c75ff8100fa0ef0fdcdf922e54c90fca5a790afb1def3c0c2a5f7b256",
+        "bytes": 10102
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-int8-s23.ctcheckpoint",
+        "sha256": "a163fc738640380394dcfdfb7b8d6a0a34b4241a6cdaff38a24f042f9e1aa6e1",
+        "bytes": 442899
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-int8-s41-probe.npz",
+        "sha256": "a055b7c0eff8cad1a2cb28d7c3ef02d3ba6b06bc7a94ddc2a1ad4b238cf66efb",
+        "bytes": 10562
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-int8-s41.ctcheckpoint",
+        "sha256": "dcee8f4bb552f249c9c97705783055061fca65a86e67f793ac423231b4eda532",
+        "bytes": 442847
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-int8-s59-probe.npz",
+        "sha256": "eb842805cf129f4b213f77fc75b0c6b1f025a3ad41c133b89801149b41a3d6f0",
+        "bytes": 10565
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-int8-s59.ctcheckpoint",
+        "sha256": "60c07554acacc0a9f4fc9460f17fdaf53f3d24f00d7a906c44cce8de08b43325",
+        "bytes": 442900
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-int8-s7-probe.npz",
+        "sha256": "21051f7e41c35855a4b2a531836cbf2775d22f1f7fa19fbff7e681f164a60557",
+        "bytes": 10109
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-int8-s7.ctcheckpoint",
+        "sha256": "25ca5e24797e603f75509c5999a4b5099472a618dbc8280c7443b856a078484b",
+        "bytes": 442733
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-s23-partition.npz",
+        "sha256": "03437326c2e184019072ea5e06e59374f0b8751b713c1fbe5ffb3fc1cc319a75",
+        "bytes": 170193
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-s41-partition.npz",
+        "sha256": "772f5e94350fb51e7254e423cca447c76897672505122185caf1e2cfb74a73e8",
+        "bytes": 170227
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-s59-partition.npz",
+        "sha256": "a89625ca9f257da67584a747db5d9b1683bf40ae003d675e942244e69962b2d1",
+        "bytes": 170229
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/mnist-s7-partition.npz",
+        "sha256": "e760dad8c723717825aab9eb2d2ad651466e05a6008f0092d9d271901f43d1dc",
+        "bytes": 170201
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-chroma8-s23-final-test.npz",
+        "sha256": "f4592e63bdf79b97f27c19361f5755bd89b03bf758664c8893fc31afa2edd40a",
+        "bytes": 399329
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-chroma8-s41-final-test.npz",
+        "sha256": "0648bf9c7bad4b4914395408bc876046dea2c1b1a60bd2b9f69f713c0aad56d3",
+        "bytes": 399894
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-chroma8-s59-final-test.npz",
+        "sha256": "8398424ce7b5deda8388a4457c73e7a1c87d738dfb88757dfb007c70946e6a0e",
+        "bytes": 400613
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-chroma8-s7-final-test.npz",
+        "sha256": "27399caa0991dc51f36baf21b20e642e1e3def83b3b6c1c4048f2978dacbef9b",
+        "bytes": 398709
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-fp32-s23-final-test.npz",
+        "sha256": "2bbf3aa774b6b6d4cbd5895032c9b225838e46405d447c75688248d42def16dd",
+        "bytes": 399346
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-fp32-s41-final-test.npz",
+        "sha256": "da220d8f7793813cfe886fdddb496fea82c916cfc6f1362bb6398baa7ae75d7c",
+        "bytes": 400478
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-fp32-s59-final-test.npz",
+        "sha256": "54f0f0634854440456b3e04e9deb7fc93ebddd38f14f19602bfffe4f9acf179d",
+        "bytes": 400306
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-fp32-s7-final-test.npz",
+        "sha256": "9450a5e5f3f44aa27b55c8606516bc72377820be652a431b18fa3d16095ec680",
+        "bytes": 399305
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-int8-s23-final-test.npz",
+        "sha256": "f4592e63bdf79b97f27c19361f5755bd89b03bf758664c8893fc31afa2edd40a",
+        "bytes": 399329
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-int8-s41-final-test.npz",
+        "sha256": "0648bf9c7bad4b4914395408bc876046dea2c1b1a60bd2b9f69f713c0aad56d3",
+        "bytes": 399894
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-int8-s59-final-test.npz",
+        "sha256": "8398424ce7b5deda8388a4457c73e7a1c87d738dfb88757dfb007c70946e6a0e",
+        "bytes": 400613
+      },
+      {
+        "path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/release-research-20261001T020220115349Z-b26618f9ea6c-mnist-int8-s7-final-test.npz",
+        "sha256": "27399caa0991dc51f36baf21b20e642e1e3def83b3b6c1c4048f2978dacbef9b",
+        "bytes": 398709
+      }
+    ]
+  },
+  "stage_clock": {
+    "api": "time.perf_counter_ns",
+    "implementation": "QueryPerformanceCounter()",
+    "monotonic": true,
+    "adjustable": false,
+    "resolution_seconds": 1e-07,
+    "unit": "nanoseconds",
+    "scope": "same process"
+  },
+  "non_claims": [
+    "This fixed MNIST MLP experiment does not establish general accuracy or speed gains.",
+    "Chroma8 QAT retains FP32 masters and kernels, plus RGB symbols and FP64 range metadata.",
+    "Earlier repository experiments used the official MNIST test split. This procedure withholds it until all new training checkpoints are fixed."
+  ],
+  "training_completed_at": "2026-10-01T02:08:22.201932+00:00",
+  "training_completed_monotonic_ns": 708337100370900,
+  "official_test_opened_at": "2026-10-01T02:08:22.212603+00:00",
+  "official_test_opened_monotonic_ns": 708337111044200,
+  "final_test": {
+    "source": "torchvision.datasets.MNIST",
+    "namespace": "official_test",
+    "source_url": "https://docs.pytorch.org/vision/stable/generated/torchvision.datasets.MNIST.html",
+    "source_examples": 10000,
+    "source_sha256": "a0863a96c44e5666edbb30c4071ee79ca0514c621e6349c5967fc78e7305c891",
+    "examples": 10000,
+    "sha256": "2f5bf57b01d680e3513af2576892349179120bbd4d08b4d747127609787ed6ed",
+    "global_id_offset": 60000,
+    "evaluation_only": true,
+    "withheld_from_this_run_training": true,
+    "prior_repository_use": true
+  },
+  "large_tensor": {
+    "samples": 10000000,
+    "seed": 7331,
+    "source": "independent CPU FP32 uniform values in [-1,1]",
+    "input_sha256": "0fbe273e45da70a4a333547e829c8ef75b00e9449ad7e9c977b1fa893e346577",
+    "device": "cpu",
+    "source_dtype": "torch.float32",
+    "rgb24_fixed24_codes_exact": true,
+    "rgb24_fixed24_decoded_exact": true,
+    "equal_payload_and_metadata_bytes": true,
+    "rgbd_fp32_bits_exact": true,
+    "rgbd_payload_bytes": 40000000,
+    "rgbd": {
+      "payload_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/large-tensor/rgbd32.bin",
+      "metadata_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/large-tensor/rgbd32.json",
+      "payload_bytes": 40000000,
+      "metadata_bytes": 101,
+      "sha256": "74451b0eb0ad9234f9d88975b88ebf0e01223c595b7df635a8bac7856e0711f1"
+    },
+    "representations": [
+      {
+        "representation": "rgb24",
+        "payload_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/large-tensor/rgb24.bin",
+        "metadata_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/large-tensor/rgb24.json",
+        "payload_bytes": 30000000,
+        "metadata_bytes": 131,
+        "total_bytes": 30000131,
+        "physical_payload_bits_per_value": 24.0,
+        "sha256": "7476c487dbfbb47d5dfc190efd4796f6d03cac4dcf5f6d8b2afcb8bebb944873",
+        "mae": 2.980352106067395e-08,
+        "mse": 1.184295790912532e-15,
+        "max_error": 5.96046483281043e-08,
+        "relative_mae": 2.080469035772075e-06
+      },
+      {
+        "representation": "fixed24_packed",
+        "payload_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/large-tensor/fixed24_packed.bin",
+        "metadata_path": "artifacts/release-research/artifacts-20261001T020220112042Z-8bf435cda435/large-tensor/fixed24_packed.json",
+        "payload_bytes": 30000000,
+        "metadata_bytes": 131,
+        "total_bytes": 30000131,
+        "physical_payload_bits_per_value": 24.0,
+        "sha256": "7476c487dbfbb47d5dfc190efd4796f6d03cac4dcf5f6d8b2afcb8bebb944873",
+        "mae": 2.980352106067395e-08,
+        "mse": 1.184295790912532e-15,
+        "max_error": 5.96046483281043e-08,
+        "relative_mae": 2.080469035772075e-06
+      }
+    ],
+    "memory": {
+      "peak_memory_bytes": 2824204288,
+      "rss_increase_bytes": 1276604416,
+      "peak_cuda_allocated_bytes": null,
+      "memory_method": "process RSS sampled at 10 ms; CUDA allocator peak if available"
+    },
+    "scope": "CPU representation and actual file-size test; no integer-kernel, neural-memory or speed claim"
+  },
+  "summary": {
+    "fp32": {
+      "final_test_accuracy_mean": 0.975175,
+      "seeds": 4
+    },
+    "int8": {
+      "final_test_accuracy_mean": 0.976075,
+      "seeds": 4
+    },
+    "chroma8": {
+      "final_test_accuracy_mean": 0.976075,
+      "seeds": 4
+    }
+  },
+  "completed_at": "2026-10-01T02:08:35.843201+00:00",
+  "public_sanitization": {
+    "historical_only": true,
+    "original_file_sha256": "340602d8c4bb0d03fd4fbabeed5fedc4ab5d1a34515bb5d2898cd16691857d68",
+    "changes": "Machine paths redacted; numbers, seeds, sample counts and execution precision preserved. Missing companion data and old source hashes cannot certify this release."
+  }
+}

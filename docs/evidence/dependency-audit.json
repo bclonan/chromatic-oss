@@ -1,0 +1,116 @@
+{
+  "tool": "pip-audit",
+  "version": "2.10.1",
+  "service": "OSV",
+  "date": "2026-10-01",
+  "scope": "all ten committed requirements files, exact declared packages without dependency resolution",
+  "status": "PASS",
+  "locks": [
+    {
+      "path": "requirements/linux311-cpu.lock",
+      "source_sha256": "354b5961c426ef7f16b3e6d13b3ff0de7d20541912542e5d2219535c83f90bc6",
+      "exit_code": 0,
+      "status": "PASS",
+      "packages": 29,
+      "findings": [],
+      "skipped": [],
+      "normalization": "CPU local-version suffix removed for upstream advisory matching; every other version unchanged"
+    },
+    {
+      "path": "requirements/linux312-cpu.lock",
+      "source_sha256": "68de177a549e9ef146c76533bc897f969dccbb9f372d519c15757d2b280f5cee",
+      "exit_code": 0,
+      "status": "PASS",
+      "packages": 29,
+      "findings": [],
+      "skipped": [],
+      "normalization": "CPU local-version suffix removed for upstream advisory matching; every other version unchanged"
+    },
+    {
+      "path": "requirements/linux313-cpu.lock",
+      "source_sha256": "68de177a549e9ef146c76533bc897f969dccbb9f372d519c15757d2b280f5cee",
+      "exit_code": 0,
+      "status": "PASS",
+      "packages": 29,
+      "findings": [],
+      "skipped": [],
+      "normalization": "CPU local-version suffix removed for upstream advisory matching; every other version unchanged"
+    },
+    {
+      "path": "requirements/linux314-cpu.lock",
+      "source_sha256": "68de177a549e9ef146c76533bc897f969dccbb9f372d519c15757d2b280f5cee",
+      "exit_code": 0,
+      "status": "PASS",
+      "packages": 29,
+      "findings": [],
+      "skipped": [],
+      "normalization": "CPU local-version suffix removed for upstream advisory matching; every other version unchanged"
+    },
+    {
+      "path": "requirements/minimum-cpu.lock",
+      "source_sha256": "297b5b4b73361d65d71163b6cbac1226836972890a3df79bfa81c4c67cbc6938",
+      "exit_code": 0,
+      "status": "PASS",
+      "packages": 29,
+      "findings": [],
+      "skipped": [],
+      "normalization": "CPU local-version suffix removed for upstream advisory matching; every other version unchanged"
+    },
+    {
+      "path": "requirements/minimum.txt",
+      "source_sha256": "74b871ec1dd7eea38ac71eba810bd25e0c0d565c08f21538fb83328048abab54",
+      "exit_code": 0,
+      "status": "PASS",
+      "packages": 7,
+      "findings": [],
+      "skipped": [],
+      "normalization": "CPU local-version suffix removed for upstream advisory matching; every other version unchanged"
+    },
+    {
+      "path": "requirements/python311-cpu.lock",
+      "source_sha256": "297b5b4b73361d65d71163b6cbac1226836972890a3df79bfa81c4c67cbc6938",
+      "exit_code": 0,
+      "status": "PASS",
+      "packages": 29,
+      "findings": [],
+      "skipped": [],
+      "normalization": "CPU local-version suffix removed for upstream advisory matching; every other version unchanged"
+    },
+    {
+      "path": "requirements/python312-cpu.lock",
+      "source_sha256": "6d08237ffcfeedc2908dc42f9a99fa0e79f042fe01e4692984ff38c6f99b1a88",
+      "exit_code": 0,
+      "status": "PASS",
+      "packages": 29,
+      "findings": [],
+      "skipped": [],
+      "normalization": "CPU local-version suffix removed for upstream advisory matching; every other version unchanged"
+    },
+    {
+      "path": "requirements/python313-cpu.lock",
+      "source_sha256": "6d08237ffcfeedc2908dc42f9a99fa0e79f042fe01e4692984ff38c6f99b1a88",
+      "exit_code": 0,
+      "status": "PASS",
+      "packages": 29,
+      "findings": [],
+      "skipped": [],
+      "normalization": "CPU local-version suffix removed for upstream advisory matching; every other version unchanged"
+    },
+    {
+      "path": "requirements/python314-cpu.lock",
+      "source_sha256": "6d08237ffcfeedc2908dc42f9a99fa0e79f042fe01e4692984ff38c6f99b1a88",
+      "exit_code": 0,
+      "status": "PASS",
+      "packages": 29,
+      "findings": [],
+      "skipped": [],
+      "normalization": "CPU local-version suffix removed for upstream advisory matching; every other version unchanged"
+    }
+  ],
+  "limitations": [
+    "No unlisted transitive dependency resolution is performed. Lockfiles declare complete environment pins; minimum.txt declares the direct supported minimum.",
+    "CPU local-version suffixes are normalized to upstream versions for this advisory comparison. Exact installed CPU versions were also separately queried through OSV.",
+    "No known advisories is not a guarantee against undisclosed vulnerabilities.",
+    "This does not audit operating system libraries, the Rust toolchain, or deployment infrastructure."
+  ]
+}

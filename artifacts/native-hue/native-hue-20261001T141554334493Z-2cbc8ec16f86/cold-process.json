@@ -1,0 +1,22 @@
+{
+  "shape": [
+    1000000
+  ],
+  "examples": 1000000,
+  "payload_bytes": 4000000,
+  "rgbd_sha256": "cb6202f4fcb387f62875611f6f10ba715170a5a655b89aef317d9cac0e0793b6",
+  "phase_sha256": "18ae1251af9ff399dc8fb50d18fac3469e0ab17e0406a0c5d2ac760f24f7183c",
+  "rotated_phase_sha256": "bc0cc423288340338ee62c9037e55974331f17dec6e73aabb15071a9bd28d92c",
+  "native_binary": {
+    "path": "chromatensor/_native/windows-x86_64/hue_tensor.dll",
+    "sha256": "dd6815bb773b4883edd276af9e871691712047fe0adb677ff83ad99767616f1a",
+    "bytes": 246272,
+    "abi_version": 1,
+    "phase_modulus": 391680,
+    "runtime": "Rust integer color-token operators"
+  },
+  "torch_imported": false,
+  "numpy_imported": false,
+  "input_scope": "saved HueTensor file and reference hashes only",
+  "isolated_python": true
+}

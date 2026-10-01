@@ -1,0 +1,355 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-01T03:24:08.333589+00:00",
+  "source_revision": "e60d4206144488fdb10b625f51a52499733039ec",
+  "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.14.0+cu126",
+  "cuda_available": true,
+  "device": "cpu",
+  "threads": 1,
+  "provenance": {
+    "schema_version": 1,
+    "captured_at": "2026-10-01T03:24:08.333629+00:00",
+    "source": {
+      "files": {
+        ".github/workflows/ci.yml": "ec05ebe634502ee23e48e7b3cc66cce3d3e098fabf6a311c50408d4ee0c4ce0d",
+        "AGENTS.md": "c56f62c3e55b66a963eb95a9d342ccf5857bac3744f636dcea70dbbaafcab9f6",
+        "chromatensor/__init__.py": "4b9319b3c4ee53ecddcbad98654028a70a5159da40c5ff9f3b7a500ca2863621",
+        "chromatensor/autograd/__init__.py": "29dbb3efe94820aa9b6d171c32fe220eb779f633c7c700309c7420a5e9f6f6ea",
+        "chromatensor/autograd/quantization.py": "6663194290f70b062f7ab2d89a8ecf69aa511c7d44338dae4eb383abbbbd5847",
+        "chromatensor/codecs/__init__.py": "645cf586fa3fd15deb43131d49dc44932caef323080766b90c5405ca14e60f6b",
+        "chromatensor/codecs/base.py": "51cf4214dcb731871ff218ff72d312569068ce13b4a0d70f0e2952651d68657b",
+        "chromatensor/codecs/hierarchical.py": "cef4692aecbc208564489bc165cc9b0c9ef1440257f735734326e792ecc1cec3",
+        "chromatensor/codecs/hsv.py": "5ce2eb66a2e80970f46602808b000a30d0cb4203611659029a5079792d97423d",
+        "chromatensor/codecs/learned.py": "1bcb2fdbfccc1f0423a7c4624476793875903c2d008fa696de1aa613e37a7281",
+        "chromatensor/codecs/neural_rgb.py": "156c782f66096f8960c863b8d743146f00cf05d219b419fcef7291762947b0da",
+        "chromatensor/codecs/rgb.py": "aa8ec8ed36333fe5f212441e9a288c8f1cc6254425c6de5278625ef89d3b9906",
+        "chromatensor/codecs/rgbd.py": "0de8229189a88d4ef2806cf295a8f3bc1f11efe308f4aa1b166e944f9b273617",
+        "chromatensor/cube.py": "743086b6121e60630681e4958a65f9bd2195e71ef04520ef43ad8fc2dbd24451",
+        "chromatensor/decoders.py": "70afdc08e3dd966dd023d1612574047b032399e0c1ec34feaeb5ecbfd6a0e2df",
+        "chromatensor/holographic.py": "379630fa90845a4a1ad12282edbd7fbad90403ee6f12cc70f25231530e4ff997",
+        "chromatensor/nn/__init__.py": "d0037299d4799f5434fe1c315e93fc43bed88c14b69f5d5ee52943c04bc162e6",
+        "chromatensor/nn/attention.py": "1384f870058192eb4b321bce66698dfce5b2383cf911a5417439af3954f8dd1f",
+        "chromatensor/nn/layers.py": "2570772713de51c263c5ffd653d61e0f535dcb3b1b9ffc8501ae6e7e9ccde194",
+        "chromatensor/nn/report.py": "c8b233fa005f77aaaca2817588a98faaf3c568bccdd676b4ccd6ccd781f454fa",
+        "chromatensor/operators/__init__.py": "a72042a18d3b62e5224a7cd034b26ac317d5299d791717bde9d8e0b49abed740",
+        "chromatensor/operators/core.py": "5db3a66e45c15f764845c71d92053f1d60f0d6bd7c6632b0d3fcabf6d47c35a7",
+        "chromatensor/serialization/__init__.py": "0052c5e4c372360c4fab24b9885a6fb1f5fb344d972e886acbe40c19c6764e2c",
+        "chromatensor/serialization/format.py": "6b2694152b7a2d1face0eb6db891ac6effea9a0d06287657b63be97e9936e8b1",
+        "chromatensor/tensor.py": "a7a76bb3b027bfd2a929fa3702485d78e38ec0025b0ad240e5353bff4f88d368",
+        "chromatensor/tokenizer/__init__.py": "88616a7d5a819eb2525ca71511e2c5d1553ad617173292bf1c66d5488f7c870b",
+        "chromatensor/visualization/__init__.py": "fd1b9dbc0ae4007762a7bf237ede380fc6e2a8693dc65704b45dade8322d18a7",
+        "chromatensor/visualization/plots.py": "6ec35b91cf7769bff87e86743f8e985f40b3d097153a57420392389abcd6a3ff",
+        "dashboard/__init__.py": "e795b4116ee4f719fdc3731d6de0bc49c19ae03bac6558916ac8a79407f724a9",
+        "dashboard/app.js": "4621079d7e45f51a5e680e8a4b917abf969e2712c92ec82d70a68aca07d8ef50",
+        "dashboard/cube.css": "5653d9c8a21e26321d6100b67f42429bbe97b4cab35b82151e76c3128b4d5ff5",
+        "dashboard/cube.js": "22dae4dcecbf2e72e4c9140596950b8436910797a82c4646b279f21ea3804355",
+        "dashboard/cube_api.py": "30a6099e2f2726c498f300d213e0ad55c8ed8f2bf68b49597cfe247fbe58f472",
+        "dashboard/index.html": "6f8ac1d22a78af2d9b64e795a96b5e4ad1e4d7edf67cd7e41871ba997abd0c0b",
+        "dashboard/server.py": "535c692308dcb411ddbe2dde637d8930daeb2480b3f6b1e82e9616dcfa4e8d65",
+        "dashboard/style.css": "80850bbe4417bcf3e6eea8b0417cf58f7da920671e7ff7e45fc29036f15e7bf3",
+        "experiments/__init__.py": "75a49e4b275144336821845efcd63262c51331b2572e05551fa8cb23bf0de8c6",
+        "experiments/ablations.py": "8af0ad62ac5a1488e582d2fabc68698bf7316ca04c131a411d8ed065fdb2d65d",
+        "experiments/attention.py": "479c5d16983848dc5ac8da78737533ced8f07751c87dc53156b4930dd3cee0a1",
+        "experiments/checkpoint_probe.py": "9e0028ecf023ac6b0835a8cb3ebdd0835b0450971f14230f433b3fc53a777863",
+        "experiments/common.py": "6842cdc94effcf926ef8f8d46f409ee91b05a507a8c671555de6f1b18a8b63ad",
+        "experiments/cube.py": "745371c258c9fd10e50d753aea457e9d5305950d2e7fa7befb9583e7725860fe",
+        "experiments/datasets.py": "d79df91b2ebad6bb51c02d0f96d69d2f0e674bfbecb8027441306910eb37e9f2",
+        "experiments/decoder.py": "152913a4d0e58412b95c7a6f0c1c6dca5a76fefc3c1f033beb6ff18cdd3c2515",
+        "experiments/instrumentation.py": "7b0f859324fc8d57ba82850aa0264132a8dd3b3acf8b6af0ca752a2c918d90e2",
+        "experiments/models.py": "6b8ac1333d55c5fdf49ae30475a1fcb12bea417b34c7a38a8af1d63015d0384b",
+        "experiments/precision.py": "97d5b673789297f808cce59fe80541e6d766f5ccb46497bf687c2047d01c0b48",
+        "experiments/provenance.py": "58e4b57b7ad58042ff28b518f6a5eaf75d53cd1acbb65bdc8b2acd88d739ae71",
+        "experiments/reporting.py": "0b4a0ac3f82a149dc3258b8c000b8530115b3ce4982bb650163b42e6d71027ec",
+        "experiments/training.py": "818c0bbb28e607b2b4eb7846b362c9061fcbe06d79c7fa3ab70f560a7e906f28",
+        "experiments/verification.py": "8da8945e776c9e51d43ada03f2da1a2c6af3d806d841f847c4b4f91cb9e59c68",
+        "pyproject.toml": "e3429218e7f51d18620e16c5d5694a366e0c8b215aa046a95b36814abfc3b07d",
+        "requirements/linux311-cpu.lock": "af7b6d78dd9771688ce19e926360b2dc61cb20949170cc98eb0deab0240d573e",
+        "requirements/linux312-cpu.lock": "75315cbd92fe8338d8ece4c1a8291b94941f60b97d88b54ae734299c523744c0",
+        "requirements/linux313-cpu.lock": "75315cbd92fe8338d8ece4c1a8291b94941f60b97d88b54ae734299c523744c0",
+        "requirements/linux314-cpu.lock": "75315cbd92fe8338d8ece4c1a8291b94941f60b97d88b54ae734299c523744c0",
+        "requirements/minimum-cpu.lock": "feb158fc00ff1e54b70fcb2cb4f228a75ed22636aec20acc6dab54b95a8e844a",
+        "requirements/minimum.txt": "776bd9fb96cbcb72c05dca4e67ad9835f3c2d33fe674dffe33b4910e27cb6394",
+        "requirements/python311-cpu.lock": "f4d169524ba857a37f41c3f0a56dc890332e9bbb6c9f16eb6fc55152cfb7dc8b",
+        "requirements/python312-cpu.lock": "8415e0dfb371882cfe839f10bc9207fe7cbf9dde836bd64d75f96c3e09e73ee5",
+        "requirements/python313-cpu.lock": "8415e0dfb371882cfe839f10bc9207fe7cbf9dde836bd64d75f96c3e09e73ee5",
+        "requirements/python314-cpu.lock": "8415e0dfb371882cfe839f10bc9207fe7cbf9dde836bd64d75f96c3e09e73ee5",
+        "scripts/build_release_evidence.py": "7b826a089293538db0d3cc37ca5283d1a899ad2d4f7eafb717361a94d4d69934",
+        "scripts/dashboard.py": "c1d4168a02b00adc5ac3ea049a11927418cbbee7b8e41b3d60bb321e3c3c3ed1",
+        "scripts/finalize_report.py": "7ab674d5d85b43fd322799234cbf3730384c5fe6ad5f35866e7fe96f07ef9d5a",
+        "scripts/review_reproductions.py": "9f945a5abdc667727acad1edd800157cd1968030863fd9006c567cf5336a550b",
+        "scripts/run_benchmarks.py": "3c666add71610352bebffe13b09689f3977901b443db13959b0c4e3478fbd236",
+        "scripts/run_cube_experiments.py": "d65dccf54be8aaf4a2af3dc2ae73068454edc9dc9bfa428dfcfdc49fdd90ec37",
+        "scripts/run_release_research.py": "15cdfce4ff02543fff12df1c931982a142c57cfd9f48935a0231fc6f1f779a5b",
+        "scripts/run_verification_tests.py": "26f29bc35585c2077711c33a6f8a972eeb6302866de99e17dae4054f8acf607d",
+        "scripts/train.py": "2307323725a6dad464250e8990a3d30f4616aa97bb1d31a564cabc7af98369e7",
+        "scripts/verify.py": "31ba257dc8e237a53178cb04f003a4baf0012fabbe6f8a5f277bfbeb7092ecfa",
+        "scripts/verify_dependencies.py": "0b3e73083a358428836fd7f2b5db132629ad34b3f657b08416f83e34df94d255",
+        "scripts/verify_release_install.py": "678be4f8af5da89241a3c70647b0146d5b13109cbab8229928672046cbc1bfc4",
+        "tests/conftest.py": "e1269c105af016b549e578bb980aad34e10b33424053ec32492707b70d8492b5",
+        "tests/test_ablations.py": "df32e8d1e261e92f5e45f92bb55fdea8410c48a3e3e16933f5cb817bbecffb10",
+        "tests/test_acceptance.py": "a9b0f4776b4f164ae58ebecc14a9e2f0075b84a5c4defb8823bf9bb08bcd4a8d",
+        "tests/test_attention_experiment.py": "8ffc19b593100388d8c8fa531f8fba8b781a2c7a2374f2da0d09b5bb79734b8f",
+        "tests/test_checkpoint_probe.py": "c0e5a2f0bc4e644e8f88fba8653f62c21a289b0864cecac90d7a6f0311784182",
+        "tests/test_codecs.py": "5b244cce5daf69e9a41e1b3f80a50cef45bef60ecba16482ff3c6a5b4b78c772",
+        "tests/test_cube.py": "ce56c5f43379a3ddcb0c5d84938ab26bdec665021fe2aac1a494d6dbc7b15320",
+        "tests/test_cube_api.py": "2a1827ad175871cd8e2e4b287513b6a1a3203c6255fadf98f87e58286dcbd184",
+        "tests/test_cube_experiments.py": "39309ef4d9342d1fa9aa43de1cd31bb15af8de3ab42e92c55de99286f42b11bb",
+        "tests/test_dashboard.py": "7ecea178c04eabbfbb9b5aa4aebaf0a1c379ec03cd3e048a45f471d0dd48b52b",
+        "tests/test_datasets.py": "aeb1c8fbe0a16a4f348bcbb28923e0bce3b958b42b953c57c70ca5eceeaa1331",
+        "tests/test_decoder.py": "c1e8a7b19cde5ee2b7da8f1d288c578f47198e4ce7e5c2adef432f1375cf1a92",
+        "tests/test_file_limits.py": "bf1ded7fb665bbabf7f8782f3770babeb2e3553ed8fa1a6a8b1826d36acbe1d5",
+        "tests/test_holographic.py": "b448ab2e0f04b18855b976f80bdf3fc382deb4747faa541c6de17b74f20a917f",
+        "tests/test_instrumentation.py": "acd4232b4c6db004494e8471b0aabe86d626fa731a7f3342cfbc572a83347bb3",
+        "tests/test_nn.py": "d3908175692e1e973cd7c113fa151a3a1bb701e8c322383e511748994dae770c",
+        "tests/test_operators.py": "990203f49d2e13bca02dd7f4455aa28e68baafe39aa63ab374b869246f7e45c3",
+        "tests/test_release_matrix.py": "54edcc832000ccda014dbfe0ab0a349cfef165a6a127a4a6aeeac41fa1a4a014",
+        "tests/test_release_research.py": "afa406fab27e92708eb1f5912a3e06ef942d3f27ef7b0ab540d190770c71108f",
+        "tests/test_result_io.py": "58e4a2b9d42b9b338729aeea75e7d029825252d654166549c838a891e3868bee",
+        "tests/test_serialization.py": "1a33cf704b47831070438c3d7d99ad5c268ccab3039ca73b43ed2a46cdc4ccd7",
+        "tests/test_tensor.py": "1f20a6bfc449516b950d6732618ef65e00fc9224c1cd7f78a0312bb717fe92b3",
+        "tests/test_training.py": "e159375ee9c0605212a1ab5043ed8497607ab8176ce81f588017ac426777c50b"
+      },
+      "sha256": "92ddfb4ad3d1a724f4373b2773e495b7abc086d0e09b3ab6ceb5acc44574146a"
+    },
+    "git": {
+      "available": true,
+      "commit": "e60d4206144488fdb10b625f51a52499733039ec",
+      "dirty": true,
+      "status": [
+        "M EXPERIMENT_MATRIX.md",
+        " M README.md",
+        " M RESEARCH_LOG.md",
+        " M RESULTS.md",
+        " M TODO.md",
+        " M artifacts/packages/chromatensor-0.2.0-py3-none-any.whl",
+        " M artifacts/review/final-source-sha256.txt",
+        " M artifacts/verification-tests.xml",
+        " M artifacts/verification/linux311-installed.json",
+        " M artifacts/verification/linux311-tests.xml",
+        " M artifacts/verification/linux312-installed.json",
+        " M artifacts/verification/linux312-tests.xml",
+        " M artifacts/verification/linux313-installed.json",
+        " M artifacts/verification/linux313-tests.xml",
+        " M artifacts/verification/linux314-installed.json",
+        " M artifacts/verification/linux314-tests.xml",
+        " M artifacts/verification/minimum-installed.json",
+        " M artifacts/verification/minimum-tests.xml",
+        " M artifacts/verification/python311-installed.json",
+        " M artifacts/verification/python311-tests.xml",
+        " M artifacts/verification/python312-installed.json",
+        " M artifacts/verification/python312-tests.xml",
+        " M artifacts/verification/python313-installed.json",
+        " M artifacts/verification/python313-tests.xml",
+        " M artifacts/verification/python314-installed.json",
+        " M artifacts/verification/python314-tests.xml",
+        " M docs/CUBE_RESULTS.md",
+        " M docs/MEASUREMENT.md",
+        " M docs/REPAIR_REPORT.md",
+        " M docs/RESEARCH_REVIEW.md",
+        " M docs/SETUP.md",
+        " M experiments/provenance.py",
+        " M results/cube.json",
+        " M results/dependency-verification.json",
+        " M results/latest.json",
+        " M results/release-research.json",
+        " M results/test-verification.json",
+        " M tests/test_acceptance.py",
+        "?? artifacts/release-research/artifacts-20261001T024731587512Z-339379996031/mnist-int8-s41-probe.npz",
+        "?? artifacts/release-research/artifacts-20261001T024731587512Z-339379996031/mnist-int8-s41.ctcheckpoint",
+        "?? artifacts/release-research/artifacts-20261001T030842299904Z-6b37d33e42b9/",
+        "?? artifacts/review/before-final-durable-source/",
+        "?? artifacts/review/matrix-failure/before-git-context-repair-tests.xml",
+        "?? artifacts/review/matrix-failure/before-git-portability-freeze-tests.xml",
+        "?? artifacts/review/matrix-failure/before-user-commit-tests.xml",
+        "?? artifacts/review/repair-report-whitespace.txt",
+        "?? artifacts/review/setup-doc-whitespace.txt",
+        "?? results/history/before-git-context-repair/",
+        "?? results/history/before-user-commit-e60d420/",
+        "?? results/release-verification.json"
+      ]
+    },
+    "dependencies": {
+      "python": "3.14.6",
+      "torch": "2.14.0+cu126",
+      "torchvision": "0.29.0+cu126",
+      "numpy": "2.5.2",
+      "matplotlib": "3.11.2",
+      "psutil": "7.2.2",
+      "pytest": "8.4.2"
+    },
+    "config_sha256": "2560bc7d4f551621f3c3e70551128a2eec5b090483991c512875dae22500a8f4",
+    "artifacts": []
+  },
+  "reproduction_script_sha256": "9f945a5abdc667727acad1edd800157cd1968030863fd9006c567cf5336a550b",
+  "findings": {
+    "causal": {
+      "reproduced": false,
+      "seed": 7,
+      "prefix_logits_max_delta": {
+        "fp32": 0.0,
+        "int8": 0.0,
+        "chroma8": 0.0,
+        "fixed24": 0.0,
+        "rgb24": 0.0
+      },
+      "attention_seed": 19,
+      "attention_prefix_max_delta": 0.0
+    },
+    "slicing": {
+      "reproduced": false,
+      "expected": [
+        [
+          0.0,
+          3.0
+        ]
+      ],
+      "actual": [
+        [
+          0.0,
+          3.0
+        ]
+      ]
+    },
+    "parameter_tie": {
+      "reproduced": false,
+      "original_tied": true,
+      "converted_tied": true,
+      "restored_tied": true,
+      "parameter_counts": [
+        1,
+        1,
+        1
+      ]
+    },
+    "attention_bypass": {
+      "reproduced": false,
+      "unsupported_conversion_rejected": true,
+      "error": "Generic conversion cannot quantize nn.MultiheadAttention because its forward reads projection weights directly. Use ChromaAttention.from_torch and adapt its forward arguments explicitly."
+    },
+    "config_precision": {
+      "reproduced": false,
+      "max_delta": 0.0,
+      "original_dtype": "torch.float64",
+      "restored_dtype": "torch.float64"
+    },
+    "scalar_domain": {
+      "reproduced": false,
+      "unsupported_domain_rejected": true,
+      "error": "Centroid domain endpoints must be distinct finite values in the centroid dtype"
+    },
+    "binary_hierarchy": {
+      "reproduced": false,
+      "decoded_by_level_count": {
+        "1": [
+          -1.0,
+          -1.0,
+          1.0
+        ]
+      },
+      "rejected_multistage": {
+        "2": "Multistage residual precision requires at least three vocabulary symbols",
+        "3": "Multistage residual precision requires at least three vocabulary symbols",
+        "4": "Multistage residual precision requires at least three vocabulary symbols",
+        "32": "Multistage residual precision requires at least three vocabulary symbols"
+      }
+    },
+    "grid_container": {
+      "reproduced": false,
+      "actual_code": [
+        [
+          200
+        ]
+      ]
+    },
+    "logarithmic_domain": {
+      "reproduced": false,
+      "degenerate_domain_rejected": true,
+      "bounds": [
+        1e+20,
+        1.0000000000000002e+20
+      ],
+      "error": "Logarithmic endpoints must have distinct FP64 logarithms"
+    },
+    "full_mnist": {
+      "reproduced": false,
+      "provenance": "cached official torchvision MNIST, download=False",
+      "seed": 7,
+      "rows": [
+        {
+          "split": "train",
+          "official_count": 60000,
+          "requested_count": 60000,
+          "selected_count": 60000
+        },
+        {
+          "split": "test",
+          "official_count": 10000,
+          "requested_count": 10000,
+          "selected_count": 10000
+        }
+      ]
+    },
+    "package": {
+      "reproduced": false,
+      "active_version": "0.2.0",
+      "wheels": {
+        "retired_0_1": {
+          "sha256": "6d87c386dda91b8c98aa2f5cb2fddb9e79280f09e808c03d520a675f5b70519c",
+          "missing_files": [
+            "chromatensor/cube.py",
+            "chromatensor/holographic.py",
+            "experiments/cube.py",
+            "dashboard/cube_api.py",
+            "dashboard/cube.js",
+            "dashboard/cube.css"
+          ],
+          "exports_cube": false
+        },
+        "active_release": {
+          "sha256": "a950d2dac9d4b4e8f0b316cde5b22ad9e21d9949ba68ed795f277b7ef47fd674",
+          "missing_files": [],
+          "exports_cube": true
+        }
+      }
+    },
+    "host": {
+      "reproduced": false,
+      "foreign_host_get_status": 421,
+      "foreign_origin_post_status": 421,
+      "encoded_codes": null,
+      "scope": "server-side header test; no browser exploitation test"
+    },
+    "cube_artifacts": {
+      "reproduced": false,
+      "same_path": false,
+      "first_checkpoint_preserved": true,
+      "checkpoint_hashes": [
+        "93c63199b13b730e68cdb9214972ebdca549c7c5a06e1d9484deb60f005af2a9",
+        "69741cbddf33e523961d3ed528d8909d0c6b19b463ee9c49075eafaeda7635d2"
+      ],
+      "validation_mse": [
+        0.01821455673100896,
+        0.0220661141653194
+      ],
+      "checkpoint_bytes": [
+        178503,
+        178352
+      ],
+      "scope": "temporary directory; original cube records and checkpoints untouched"
+    },
+    "acceptance": {
+      "reproduced": false,
+      "provided_tests": 1,
+      "provided_skipped": 1,
+      "exit_code": 1,
+      "reported_complete": false,
+      "scope": "temporary workspace with skipped test XML and missing required evidence; canonical acceptance untouched; dedicated negative tests isolate each gate"
+    }
+  },
+  "public_sanitization": {
+    "historical_only": true,
+    "original_file_sha256": "af46cdf163e735dc24cb52e3b6d7750b60e63e1be2004a53aa8a29a5bd6bbaa3",
+    "changes": "Machine paths redacted; numbers, seeds, sample counts and execution precision preserved. Missing companion data and old source hashes cannot certify this release."
+  }
+}

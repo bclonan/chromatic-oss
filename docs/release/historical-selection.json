@@ -1,0 +1,632 @@
+[
+  {
+    "original": "artifacts/figures/cifar_curves.png",
+    "release": "artifacts/figures/cifar_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "6bb241bda705df3e36e7903ad87208a18b35148af5f3b3c0721603128954d561"
+  },
+  {
+    "original": "artifacts/figures/cube-training.png",
+    "release": "artifacts/figures/cube-training.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "988d6333c4a33afea64e2e3e5b048773d5693d62c9d2930863dcee7f8c85f30f"
+  },
+  {
+    "original": "artifacts/figures/language_curves.png",
+    "release": "artifacts/figures/language_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "980459b08005632d5313c994d1b450f168f3fec1cb7d3d52d3a232a9d17d3208"
+  },
+  {
+    "original": "artifacts/figures/learned_palette.png",
+    "release": "artifacts/figures/learned_palette.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "a50744376a96e1b3ba3013801bb61818fca6b06494afe5e94517b011346a91fc"
+  },
+  {
+    "original": "artifacts/figures/learned_rgb_manifold.png",
+    "release": "artifacts/figures/learned_rgb_manifold.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "db957fece5c458110cd17c5849b10facfb5724f461f188cdd9a4ff148edcc28c"
+  },
+  {
+    "original": "artifacts/figures/mnist_curves.png",
+    "release": "artifacts/figures/mnist_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "799902d2e3d88f25bbad677e87ef68a1b602b484daca1c1d918ae42858cf3ada"
+  },
+  {
+    "original": "artifacts/figures/periodic_curves.png",
+    "release": "artifacts/figures/periodic_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "6eb2a55233fa37104dec0e2696650053b3afb3de71838c172c638f94ee2c4a2d"
+  },
+  {
+    "original": "artifacts/figures/review-data-smoke/cifar_curves.png",
+    "release": "artifacts/figures/review-data-smoke/cifar_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "c1222c9be78b015885f644c7ed9e4769e9324423f7fdc1091831fde6eb26bb11"
+  },
+  {
+    "original": "artifacts/figures/review-data-smoke/language_curves.png",
+    "release": "artifacts/figures/review-data-smoke/language_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "a10914d8073736f6f4dbe9e4fd78ced56b7460caef0a36b34b044d27da4b7076"
+  },
+  {
+    "original": "artifacts/figures/review-data-smoke/mnist_curves.png",
+    "release": "artifacts/figures/review-data-smoke/mnist_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "324d51924109b774a6d1505f9cd77116a46f3ac04620cb7ff4a90067d19b249e"
+  },
+  {
+    "original": "artifacts/figures/review-data-smoke/periodic_curves.png",
+    "release": "artifacts/figures/review-data-smoke/periodic_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "403313fd6b8879424845fd6c7a0f87c850cbd3953f257e20970e0c151ac87402"
+  },
+  {
+    "original": "artifacts/figures/review-data-smoke/scalar_curves.png",
+    "release": "artifacts/figures/review-data-smoke/scalar_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "58f7a6e194f443b5d94b3a368fda86e4f2437d667e95af7410932ae265cc60d1"
+  },
+  {
+    "original": "artifacts/figures/review-data-smoke/task_results.png",
+    "release": "artifacts/figures/review-data-smoke/task_results.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "1044f1ba3207a53695b203157666c6ade55551219fafd7293fb7752a7bb378dd"
+  },
+  {
+    "original": "artifacts/figures/review-smoke/cifar_curves.png",
+    "release": "artifacts/figures/review-smoke/cifar_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "95adb2a2048f8c42eff7c44f396897ca9239d68cf66de96e72a1fd9e663e2ce5"
+  },
+  {
+    "original": "artifacts/figures/review-smoke/language_curves.png",
+    "release": "artifacts/figures/review-smoke/language_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "366bbcacbbc6aa11dc6a3d0772f28f8a72f8099136a19666c971564b3347c669"
+  },
+  {
+    "original": "artifacts/figures/review-smoke/learned_palette.png",
+    "release": "artifacts/figures/review-smoke/learned_palette.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "2d88ea30d2c70c055fefa73697375801e34ae6f37800d991792725cef8904c4b"
+  },
+  {
+    "original": "artifacts/figures/review-smoke/mnist_curves.png",
+    "release": "artifacts/figures/review-smoke/mnist_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "6c598e355d3e4fd17bc010d928250badccb8c0f20bb9e6ddf1577288de549fb3"
+  },
+  {
+    "original": "artifacts/figures/review-smoke/periodic_curves.png",
+    "release": "artifacts/figures/review-smoke/periodic_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "96be1b950df6173e23fa428e02f6defabe91efb7880dd9e04bca52f602aff3c9"
+  },
+  {
+    "original": "artifacts/figures/review-smoke/scalar_curves.png",
+    "release": "artifacts/figures/review-smoke/scalar_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "3646d014f32da41f560f3ef513a1201095b510be300cc2d000e7050165311f1b"
+  },
+  {
+    "original": "artifacts/figures/review-smoke/task_results.png",
+    "release": "artifacts/figures/review-smoke/task_results.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "fbe4155279825e92e8208e89c56bbd54e86813253460e1024c272a81bae369eb"
+  },
+  {
+    "original": "artifacts/figures/scalar-fp32-s7_activations_layers.0.png",
+    "release": "artifacts/figures/scalar-fp32-s7_activations_layers.0.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "fea8d96798fba16fd5b310154835ea6e032b753ee4fd63f1c4aeaef3ac275726"
+  },
+  {
+    "original": "artifacts/figures/scalar-fp32-s7_activations_layers.2.png",
+    "release": "artifacts/figures/scalar-fp32-s7_activations_layers.2.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "67a00bb257efbbb0d5d2ff5d3ced122dcc6e5900d787156faa075c7aa1d792a5"
+  },
+  {
+    "original": "artifacts/figures/scalar-fp32-s7_gradients.png",
+    "release": "artifacts/figures/scalar-fp32-s7_gradients.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "0c20a4c2cd47be4b2aec4d040033870700da07e00571ef0925dd86859ca8cc4f"
+  },
+  {
+    "original": "artifacts/figures/scalar-fp32-s7_weights.png",
+    "release": "artifacts/figures/scalar-fp32-s7_weights.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "3063a4ff8f2c277668fc7f0591224354c19fc88539e3f71d895b6f7a5ccb08fb"
+  },
+  {
+    "original": "artifacts/figures/scalar_curves.png",
+    "release": "artifacts/figures/scalar_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "daaa5429de4957e7f67f2dec47d44bf9f13bdd6376e4fa2194f07b44ad9d3a17"
+  },
+  {
+    "original": "artifacts/figures/task_results.png",
+    "release": "artifacts/figures/task_results.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "ed79ed3cf08741a3b2762aa2fdefd5e54163dcf281eae245acf6a56d3355fcb9"
+  },
+  {
+    "original": "artifacts/figures/train_scalar_fp32/cifar_curves.png",
+    "release": "artifacts/figures/train_scalar_fp32/cifar_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "95adb2a2048f8c42eff7c44f396897ca9239d68cf66de96e72a1fd9e663e2ce5"
+  },
+  {
+    "original": "artifacts/figures/train_scalar_fp32/language_curves.png",
+    "release": "artifacts/figures/train_scalar_fp32/language_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "366bbcacbbc6aa11dc6a3d0772f28f8a72f8099136a19666c971564b3347c669"
+  },
+  {
+    "original": "artifacts/figures/train_scalar_fp32/mnist_curves.png",
+    "release": "artifacts/figures/train_scalar_fp32/mnist_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "6c598e355d3e4fd17bc010d928250badccb8c0f20bb9e6ddf1577288de549fb3"
+  },
+  {
+    "original": "artifacts/figures/train_scalar_fp32/periodic_curves.png",
+    "release": "artifacts/figures/train_scalar_fp32/periodic_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "403313fd6b8879424845fd6c7a0f87c850cbd3953f257e20970e0c151ac87402"
+  },
+  {
+    "original": "artifacts/figures/train_scalar_fp32/scalar_curves.png",
+    "release": "artifacts/figures/train_scalar_fp32/scalar_curves.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "a52eddc9a30a593a941b867fb7ebfffb7637837cd9f66401c99cf5c408b7513d"
+  },
+  {
+    "original": "artifacts/figures/train_scalar_fp32/task_results.png",
+    "release": "artifacts/figures/train_scalar_fp32/task_results.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "825e345050d6f5f413ac60a937ee06e7ccf2a7a6034cfebe32c8def2281e4fd8"
+  },
+  {
+    "original": "artifacts/native/native-color-tensor-diagram.png",
+    "release": "artifacts/native/native-color-tensor-diagram.png",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "0cc8703e74c1955dfbf702e02d3e9d8538e3a6d930251d4292d6536bd67941d9"
+  },
+  {
+    "original": "artifacts/native/native-color-tensor-diagram.svg",
+    "release": "artifacts/native/native-color-tensor-diagram.svg",
+    "decision": "include generated numerical illustration, pending final media review",
+    "original_sha256": "d8f2dbaf87b9aabee508ab0260169556446f422133b6bd54f0468add9068f8f7"
+  },
+  {
+    "original": "results/acceptance-preflight.json",
+    "release": "docs/history/results/acceptance-preflight.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "680d23bea8086caed66b19eb244ce7c33473c78c19b7bc2214afdb3db9a0739b"
+  },
+  {
+    "original": "results/acceptance.json",
+    "release": "docs/history/results/acceptance.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "ebbc22c7bb3c7058142c6b9dd62d1f1fd4bbee43cee455db2e79c3bd2a349f30"
+  },
+  {
+    "original": "results/attention.json",
+    "release": "docs/history/results/attention.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "1c796bf9c079529c1045a3101a675772f1a36487d920a47085825e5ec8f825ea"
+  },
+  {
+    "original": "results/cube-package-verification.json",
+    "release": "docs/history/results/cube-package-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "a5601093ee705456adfbc7c4163dff293643135e34decf4ea07fae7663582194"
+  },
+  {
+    "original": "results/cube.json",
+    "release": "docs/history/results/cube.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "f3f20ccdbd503c2e9769955dec392f2ec756d012460baee3c0ef190ece387c85"
+  },
+  {
+    "original": "results/dependency-verification.json",
+    "release": "docs/history/results/dependency-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "3afc52200a8f9697658dfff7c0cc6a124d398933720eb4107cc525bd9da4aff9"
+  },
+  {
+    "original": "results/history/acceptance-before-final-browser-envelope.json",
+    "release": "docs/history/results/history/acceptance-before-final-browser-envelope.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "0f4e9f4418189ac45099e2232f95c2d486a07fa87725e1274d8131e21f6dded2"
+  },
+  {
+    "original": "results/history/before-git-context-repair/test-verification.json",
+    "release": "docs/history/results/history/before-git-context-repair/test-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "3abc815f7b0de3cce1cbc8c393f9eb60f29d20458048d307ecb42e3b42ed3c8e"
+  },
+  {
+    "original": "results/history/before-matrix-repair-cube.json",
+    "release": "docs/history/results/history/before-matrix-repair-cube.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "d02e6933da73f797926763e95756acb85f305094c50e5f9105693498ff54bad8"
+  },
+  {
+    "original": "results/history/before-matrix-repair-latest.json",
+    "release": "docs/history/results/history/before-matrix-repair-latest.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "08a3df3bed086218f50404a002b761445eaaacb450aa494cace706f263ee3a69"
+  },
+  {
+    "original": "results/history/before-matrix-repair-release-research.json",
+    "release": "docs/history/results/history/before-matrix-repair-release-research.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "92f76d82099dcffa7af412375b452c4384f62420e9d7dbb83eaf64c1a64635a6"
+  },
+  {
+    "original": "results/history/before-metadata-repair/acceptance-preflight.json",
+    "release": "docs/history/results/history/before-metadata-repair/acceptance-preflight.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "680d23bea8086caed66b19eb244ce7c33473c78c19b7bc2214afdb3db9a0739b"
+  },
+  {
+    "original": "results/history/before-metadata-repair/cube.json",
+    "release": "docs/history/results/history/before-metadata-repair/cube.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "6eb17557297473dc7493ce74e27770ddc487635ab01f1a6d3156e02b5a614164"
+  },
+  {
+    "original": "results/history/before-metadata-repair/dependency-verification.json",
+    "release": "docs/history/results/history/before-metadata-repair/dependency-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "026b30d11c0278f55b6a8ce2ede997681ce2742e57155d876c2adda5f66684ec"
+  },
+  {
+    "original": "results/history/before-metadata-repair/latest.json",
+    "release": "docs/history/results/history/before-metadata-repair/latest.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "040e01863f2524dd4d300fab83722fcb81aaa07fd11018691d87b8c0c565cb83"
+  },
+  {
+    "original": "results/history/before-metadata-repair/release-research.json",
+    "release": "docs/history/results/history/before-metadata-repair/release-research.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "340602d8c4bb0d03fd4fbabeed5fedc4ab5d1a34515bb5d2898cd16691857d68"
+  },
+  {
+    "original": "results/history/before-metadata-repair/test-verification.json",
+    "release": "docs/history/results/history/before-metadata-repair/test-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "67ca1e0755a28540202f28e989ea4f9764b371f29aca84a79686cdb115950563"
+  },
+  {
+    "original": "results/history/before-native-hue/acceptance.json",
+    "release": "docs/history/results/history/before-native-hue/acceptance.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "540c39d4fe6aca9c352d1d952202d7016fa5705e344c6c50aed25b6b871eb50f"
+  },
+  {
+    "original": "results/history/before-native-hue/cube.json",
+    "release": "docs/history/results/history/before-native-hue/cube.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "f3f20ccdbd503c2e9769955dec392f2ec756d012460baee3c0ef190ece387c85"
+  },
+  {
+    "original": "results/history/before-native-hue/dependency-verification.json",
+    "release": "docs/history/results/history/before-native-hue/dependency-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "3afc52200a8f9697658dfff7c0cc6a124d398933720eb4107cc525bd9da4aff9"
+  },
+  {
+    "original": "results/history/before-native-hue/latest.json",
+    "release": "docs/history/results/history/before-native-hue/latest.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "ee1f742d7899842ed45866112d573dff4e0522a5101fdfbcbc11bf9b598ab9af"
+  },
+  {
+    "original": "results/history/before-native-hue/release-research.json",
+    "release": "docs/history/results/history/before-native-hue/release-research.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "536e6c4c054d49c77e659a9b8c0324aefc748a523e76afab45d84975090e1fab"
+  },
+  {
+    "original": "results/history/before-native-hue/release-verification.json",
+    "release": "docs/history/results/history/before-native-hue/release-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "69642eb937aa71c03d778698ea281f9c5c23c57ce726a94e57d57e00ea75b9eb"
+  },
+  {
+    "original": "results/history/before-native-hue/rgbd-token-verification.json",
+    "release": "docs/history/results/history/before-native-hue/rgbd-token-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "66ad8c3ca39732c2fd0d172b599a8c630e983dd645810b0567ff48dfbe29fc5c"
+  },
+  {
+    "original": "results/history/before-native-hue/test-verification.json",
+    "release": "docs/history/results/history/before-native-hue/test-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "40ff42e2e352469eb2d6404519fcbf716abf577e325504ca368d195caeafe5b0"
+  },
+  {
+    "original": "results/history/before-rgbd-token-repair/acceptance.json",
+    "release": "docs/history/results/history/before-rgbd-token-repair/acceptance.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "c63461084d2440ced999577dda51f12346d0fbbada60aefd858dc223df34ff64"
+  },
+  {
+    "original": "results/history/before-rgbd-token-repair/cube.json",
+    "release": "docs/history/results/history/before-rgbd-token-repair/cube.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "7798e68ee0de45f1bc0b1ad2ea2655da046b93e206f7d4edeef26159440776b6"
+  },
+  {
+    "original": "results/history/before-rgbd-token-repair/dependency-verification.json",
+    "release": "docs/history/results/history/before-rgbd-token-repair/dependency-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "a12ac801b7b610d9e133475f926617e6972959a2fd2c86ccd588b185adc5b616"
+  },
+  {
+    "original": "results/history/before-rgbd-token-repair/latest.json",
+    "release": "docs/history/results/history/before-rgbd-token-repair/latest.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "81408e0d9a8b007d4395ce158a1416fa1681ad54b3a53efb17a2ed69ef462a76"
+  },
+  {
+    "original": "results/history/before-rgbd-token-repair/release-research.json",
+    "release": "docs/history/results/history/before-rgbd-token-repair/release-research.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "49c9eedba3b80f85fb625246ea800aab52014aeeb498b804aa313349c66d4d2a"
+  },
+  {
+    "original": "results/history/before-rgbd-token-repair/release-verification.json",
+    "release": "docs/history/results/history/before-rgbd-token-repair/release-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "e17a5ae720bbc25051f840e6a49f16239630277cacd554b4c75383e9baf7a812"
+  },
+  {
+    "original": "results/history/before-rgbd-token-repair/repair-regressions.json",
+    "release": "docs/history/results/history/before-rgbd-token-repair/repair-regressions.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "af46cdf163e735dc24cb52e3b6d7750b60e63e1be2004a53aa8a29a5bd6bbaa3"
+  },
+  {
+    "original": "results/history/before-rgbd-token-repair/test-verification.json",
+    "release": "docs/history/results/history/before-rgbd-token-repair/test-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "cc348dfdd6e0241e162b0bbd2a095be73e82579b079862b6fb330b4a9af90cf1"
+  },
+  {
+    "original": "results/history/before-rgbd-token-repair/train_scalar_chroma8.json",
+    "release": "docs/history/results/history/before-rgbd-token-repair/train_scalar_chroma8.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "abe90612dcf488c86bb3ceadf7e84421d2c1ce5162829b05c6fca8748e428d87"
+  },
+  {
+    "original": "results/history/before-rgbd-utf8-repair/cube.json",
+    "release": "docs/history/results/history/before-rgbd-utf8-repair/cube.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "30165705eb3c12e5996b6f1d20a122ba51e7de5279f88757f0fd9232f2eb88d2"
+  },
+  {
+    "original": "results/history/before-rgbd-utf8-repair/latest.json",
+    "release": "docs/history/results/history/before-rgbd-utf8-repair/latest.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "9043264c47417a8668e393b86823142b19dedfcf2158ed3d2b8eec93ab5f70e5"
+  },
+  {
+    "original": "results/history/before-rgbd-utf8-repair/repair-regressions.json",
+    "release": "docs/history/results/history/before-rgbd-utf8-repair/repair-regressions.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "00b7554c45dfbdddeb250dc26d5e5518f242777cff6eb790529c05b763dedce7"
+  },
+  {
+    "original": "results/history/before-rgbd-utf8-repair/rgbd-token-verification.json",
+    "release": "docs/history/results/history/before-rgbd-utf8-repair/rgbd-token-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "709fb4574d8ec12e84c40cff890b713132afd909a69329b13a845a96ab921f62"
+  },
+  {
+    "original": "results/history/before-rgbd-utf8-repair/test-verification.json",
+    "release": "docs/history/results/history/before-rgbd-utf8-repair/test-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "cc3bffd2f9a42a7256567863862c745a11f09dc185b0ed356c562249e5b3cfca"
+  },
+  {
+    "original": "results/history/before-rgbd-utf8-repair/train_scalar_chroma8.json",
+    "release": "docs/history/results/history/before-rgbd-utf8-repair/train_scalar_chroma8.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "113e7c427900a4c88dcf2bd87a239dfa77c9d28482eb1fceb905be560683dce8"
+  },
+  {
+    "original": "results/history/before-user-commit-e60d420/cube.json",
+    "release": "docs/history/results/history/before-user-commit-e60d420/cube.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "c56f30fef34af1cd554bd9c93a3790501a07af515ff2861bad90f7154f9f80b5"
+  },
+  {
+    "original": "results/history/before-user-commit-e60d420/latest.json",
+    "release": "docs/history/results/history/before-user-commit-e60d420/latest.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "5b182a8612a11cb69dd92657dada7a7cef5a78bbad408df19304e8c46fa26e85"
+  },
+  {
+    "original": "results/history/before-user-commit-e60d420/release-research.json",
+    "release": "docs/history/results/history/before-user-commit-e60d420/release-research.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "258308e806fc9236efa887b091406d7a0d2d0f6a0c29cb76a2891fae45e22391"
+  },
+  {
+    "original": "results/history/before-user-commit-e60d420/test-verification.json",
+    "release": "docs/history/results/history/before-user-commit-e60d420/test-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "b3a7c6f9c688bf15d1b017335504caa4cf0784ed0d7461f860426ba6b22a98f0"
+  },
+  {
+    "original": "results/history/pre-repair-acceptance.json",
+    "release": "docs/history/results/history/pre-repair-acceptance.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "25ab55c62ccec7474a550ae58754d73fcebf269c5de46b26afa20dff5199a6c5"
+  },
+  {
+    "original": "results/history/pre-repair-cube.json",
+    "release": "docs/history/results/history/pre-repair-cube.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "1bc9a30e750a085691fb52b5da9a020c48c621f449612301437e92e980dcf724"
+  },
+  {
+    "original": "results/history/pre-repair-latest.json",
+    "release": "docs/history/results/history/pre-repair-latest.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "c0ebb4f7278681122c53f4accb88e5c2c5ee88c684c560f83ada4244139a9d1a"
+  },
+  {
+    "original": "results/latest.json",
+    "release": "docs/history/results/latest.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "ee1f742d7899842ed45866112d573dff4e0522a5101fdfbcbc11bf9b598ab9af"
+  },
+  {
+    "original": "results/native-hue-build-linux-x86_64.json",
+    "release": "docs/history/results/native-hue-build-linux-x86_64.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "c2700e47fb9e752ab55cc6180df7656a8792d83df7da36b75cede1dba024114f"
+  },
+  {
+    "original": "results/native-hue-build-windows-x86_64.json",
+    "release": "docs/history/results/native-hue-build-windows-x86_64.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "d6b8111004bb51fd3e474525a21113b3ba89a40367350444d8f35bb8349c0139"
+  },
+  {
+    "original": "results/native-hue-package-verification.json",
+    "release": "docs/history/results/native-hue-package-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "2214506424f7e6ea5eff5d8cda1e03e076d69cd7728be14652a5fc55b16ee586"
+  },
+  {
+    "original": "results/native-hue-verification.json",
+    "release": "docs/history/results/native-hue-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "355c9ea3d250a8001eec81df4caa88417c3df1366eefb745849d0e0bd77a793a"
+  },
+  {
+    "original": "results/neural_decoder.json",
+    "release": "docs/history/results/neural_decoder.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "03d1998486d751bdfe76a8c4d733b05dc2fd3081c01af28c512e9bb34837afda"
+  },
+  {
+    "original": "results/release-research.json",
+    "release": "docs/history/results/release-research.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "536e6c4c054d49c77e659a9b8c0324aefc748a523e76afab45d84975090e1fab"
+  },
+  {
+    "original": "results/release-verification.json",
+    "release": "docs/history/results/release-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "69642eb937aa71c03d778698ea281f9c5c23c57ce726a94e57d57e00ea75b9eb"
+  },
+  {
+    "original": "results/repair-regressions.json",
+    "release": "docs/history/results/repair-regressions.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "b57cfc3e4274df3013e2f0035fa3eccfa50fe4b8d8f66544e3303b675e11bf2b"
+  },
+  {
+    "original": "results/review-data-smoke.json",
+    "release": "docs/history/results/review-data-smoke.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "354c1d888804d2be679cc1574c1acd95dcac2e66f24d477fd0ff88b7bb6e9df4"
+  },
+  {
+    "original": "results/review-data-smoke.md",
+    "release": "docs/history/results/review-data-smoke.md",
+    "decision": "include sanitized historical record",
+    "original_sha256": "234d365a3fba6a81c3e030d3c5a18cd30e0a7d7afb0b8ecc0fbdae9086722169"
+  },
+  {
+    "original": "results/review-findings.json",
+    "release": "docs/history/results/review-findings.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "2d5812ceec052b6091dd033584d75db62e329585322aa4aa71edfc60bd88481f"
+  },
+  {
+    "original": "results/review-smoke.json",
+    "release": "docs/history/results/review-smoke.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "582e782e5f686d2dc52d5d08df4409b3261d0632ffce5cb02bf2a12476a4443c"
+  },
+  {
+    "original": "results/review-smoke.md",
+    "release": "docs/history/results/review-smoke.md",
+    "decision": "include sanitized historical record",
+    "original_sha256": "b7a93fbf8218ed09dab04bfca15400c56a140d2fe6a160fecdb067a1855a6d3a"
+  },
+  {
+    "original": "results/review-summary.json",
+    "release": "docs/history/results/review-summary.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "2e2686c4fd4a5f477730f70d1e2930cf3a1336a383a9b996cad8ef236c3f42c0"
+  },
+  {
+    "original": "results/rgbd-token-verification.json",
+    "release": "docs/history/results/rgbd-token-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "66ad8c3ca39732c2fd0d172b599a8c630e983dd645810b0567ff48dfbe29fc5c"
+  },
+  {
+    "original": "results/setup-verification.json",
+    "release": "docs/history/results/setup-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "0ddc638b0ad738aa226242a054a54d0395163ad0412ba5fc1048dcccdfe58995"
+  },
+  {
+    "original": "results/smoke.json",
+    "release": "docs/history/results/smoke.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "b45202628b5478dd56d68ba0ab564470a5f023a77c49c3183284ea4088ad41f4"
+  },
+  {
+    "original": "results/smoke.md",
+    "release": "docs/history/results/smoke.md",
+    "decision": "include sanitized historical record",
+    "original_sha256": "d77ac673b142ff83bdf32aecaac4104b6a146e689f655475104eef760070ff1c"
+  },
+  {
+    "original": "results/test-verification.json",
+    "release": "docs/history/results/test-verification.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "c56cb3955550e6126dcf2b98e26441308f825afa1a3912bb31a41fa113b39cec"
+  },
+  {
+    "original": "results/train_scalar_chroma8.json",
+    "release": "docs/history/results/train_scalar_chroma8.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "97c6d3347b7e69051509e0abb20d942834f54d46368a7668ff2ba1fa05745449"
+  },
+  {
+    "original": "results/train_scalar_chroma8.md",
+    "release": "docs/history/results/train_scalar_chroma8.md",
+    "decision": "include sanitized historical record",
+    "original_sha256": "0bbb97d57a6d133db036d89f40b746c9cbb0d39ce9f9deb6f6722b7b1a06d349"
+  },
+  {
+    "original": "results/train_scalar_fp32.json",
+    "release": "docs/history/results/train_scalar_fp32.json",
+    "decision": "include sanitized historical record",
+    "original_sha256": "0ec5502b70a69fe6e1287988d041279fd11db8549eb6ab8c90a314f4496430fa"
+  },
+  {
+    "original": "results/train_scalar_fp32.md",
+    "release": "docs/history/results/train_scalar_fp32.md",
+    "decision": "include sanitized historical record",
+    "original_sha256": "7a6bdb3d64e81c264632f5f307ed8e795d7156cabaceb7d239248253b0508095"
+  }
+]

@@ -1,0 +1,149 @@
+{
+  "verified_at": "2026-09-30T23:12:31.600631+00:00",
+  "run_id": "20260930T221411Z",
+  "tests": 302,
+  "test_failures": 0,
+  "gates": [
+    {
+      "gate": "Functioning tensor and PyTorch interoperability",
+      "verified": true,
+      "evidence": "finite FP32 exact RGBD interoperability plus tensor tests"
+    },
+    {
+      "gate": "rgb codec",
+      "verified": true,
+      "evidence": "codec automated tests and precision sweep"
+    },
+    {
+      "gate": "rgbd codec",
+      "verified": true,
+      "evidence": "codec automated tests and precision sweep"
+    },
+    {
+      "gate": "hsv codec",
+      "verified": true,
+      "evidence": "codec automated tests and precision sweep"
+    },
+    {
+      "gate": "hue codec",
+      "verified": true,
+      "evidence": "codec automated tests and precision sweep"
+    },
+    {
+      "gate": "hierarchical codec",
+      "verified": true,
+      "evidence": "codec automated tests and precision sweep"
+    },
+    {
+      "gate": "Learned codebooks, neural RGB, residual precision",
+      "verified": true,
+      "evidence": "six vocab sizes, learned RGBD, real neural RGB held-out record"
+    },
+    {
+      "gate": "Tokenizer, decoder, operators, gradients, conversion",
+      "verified": true,
+      "evidence": "302 automated tests with zero failures/errors"
+    },
+    {
+      "gate": "scalar experiment",
+      "verified": true,
+      "evidence": "20 measured model records"
+    },
+    {
+      "gate": "mnist experiment",
+      "verified": true,
+      "evidence": "22 measured model records"
+    },
+    {
+      "gate": "cifar experiment",
+      "verified": true,
+      "evidence": "22 measured model records"
+    },
+    {
+      "gate": "language experiment",
+      "verified": true,
+      "evidence": "16 measured model records"
+    },
+    {
+      "gate": "periodic experiment",
+      "verified": true,
+      "evidence": "8 measured model records"
+    },
+    {
+      "gate": "attention experiment",
+      "verified": true,
+      "evidence": "6 measured model records"
+    },
+    {
+      "gate": "decoder experiment",
+      "verified": true,
+      "evidence": "1 measured model records"
+    },
+    {
+      "gate": "Paired equal-precision baselines",
+      "verified": true,
+      "evidence": "identical dataset hashes and explicit INT8/fixed24/circular controls"
+    },
+    {
+      "gate": "Numerical distributions",
+      "verified": true,
+      "evidence": "one million values each across four distributions"
+    },
+    {
+      "gate": "Serialization and checkpoint integrity",
+      "verified": true,
+      "evidence": "round trips, checksums, malformed files and actual storage files"
+    },
+    {
+      "gate": "Runtime/parameter arithmetic instrumentation",
+      "verified": true,
+      "evidence": "trained checkpoint CPU profiles and explicit scoped byte/FLOP ledgers"
+    },
+    {
+      "gate": "Visualizations and dashboard",
+      "verified": true,
+      "evidence": "exported figures, ten-view browser checks, real tensor inspector"
+    },
+    {
+      "gate": "Multidimensional integer cube",
+      "verified": true,
+      "evidence": "three through six dimensions; 16 exact geometry records plus CPU/CUDA tests"
+    },
+    {
+      "gate": "Distributed field and numerical control",
+      "verified": true,
+      "evidence": "80 smooth/noise erasure cases; actual phase8/magnitude16 storage and identical numerical control"
+    },
+    {
+      "gate": "Trained cube reconstruction",
+      "verified": true,
+      "evidence": "six trained models; held-out periodic fields and noise controls; exact reloaded predictions"
+    },
+    {
+      "gate": "Cube package installation",
+      "verified": true,
+      "evidence": "separate wheel install, integer inverse, Fourier decode and bundled browser files; host dependencies reused"
+    },
+    {
+      "gate": "Cube browser interaction",
+      "verified": true,
+      "evidence": "actual Python state, inverse UI, 6D projection, slice controls, spectral erasure and measured results"
+    },
+    {
+      "gate": "Fresh source setup",
+      "verified": true,
+      "evidence": "fresh local clone, editable install, tests and smoke command"
+    },
+    {
+      "gate": "Research documentation",
+      "verified": true,
+      "evidence": "formal definitions, measured findings, contrary evidence and limits"
+    }
+  ],
+  "complete": true,
+  "public_sanitization": {
+    "historical_only": true,
+    "original_file_sha256": "25ab55c62ccec7474a550ae58754d73fcebf269c5de46b26afa20dff5199a6c5",
+    "changes": "Machine paths redacted; numbers, seeds, sample counts and execution precision preserved. Missing companion data and old source hashes cannot certify this release."
+  }
+}

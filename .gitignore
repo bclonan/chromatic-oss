@@ -1,0 +1,66 @@
+# Python caches and package metadata
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Local environments and test work directories
+/.venv*/
+/.release-env/
+/.setup-verification/
+/.setup-venv/
+/.pytest-work/
+/.pytest_dashboard_tmp/
+/.test-temp-neural/
+/.test-temp-attention/
+/.test-temp-neural-all/
+/.cube-package-check/
+
+# Downloaded datasets and generated build outputs
+/data/
+/build/
+/dist/
+/chromatensor/_native/
+/artifacts/native-build-host/
+/artifacts/native-build-linux/
+/artifacts/native/**/rust-target/
+/artifacts/native/**/*.obj
+/artifacts/packages/
+/artifacts/*.xml
+/artifacts/*.collection.json
+/artifacts/verification/
+/artifacts/rgbd-tokens/
+/artifacts/native/acceptance-cli/
+/artifacts/native-hue/
+/artifacts/*install*.json
+
+# Generated experiment data and temporary files
+/artifacts/checkpoints/
+/results/runs/
+/results/*.tmp
+/results/*.md
+/.cube-web-guidance.txt
+/results/cube-web-guidance.txt
+
+# Private runtime configuration and user data
+.env
+.env.*
+!.env.example
+.npmrc
+.pypirc
+.netrc
+*.key
+*.pem
+*.p12
+*.pfx
+*.sqlite
+*.sqlite3
+*.db
+/uploads/
+/private/
+/release-private/
+
+# Raw execution logs can contain personal paths and environment details
+*.log
+/artifacts/security/private/
+

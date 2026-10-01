@@ -1,0 +1,10 @@
+[extend]
+useDefault = true
+
+# Gitleaks's generic API-key rule treats these filenames as key names.
+# Every suppressed match must have the exact SHA-256 provenance value shape.
+# This does not allow arbitrary 64-character values or complete directories.
+[[allowlists]]
+description = "Reviewed SHA-256 provenance keys, not authentication credentials"
+regexTarget = "match"
+regexes = ['''^(?:cube_api|verify_rgbd_tokens|test_cube_api|test_rgbd_tokens)\.py": "[a-f0-9]{64}"$''']

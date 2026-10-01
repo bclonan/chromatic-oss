@@ -1,0 +1,19 @@
+[package]
+name = "hue_tensor"
+version = "0.1.0"
+edition = "2021"
+license = "AGPL-3.0-only"
+description = "Native RGBD hue tensors with exact finite cyclic arithmetic"
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[[bin]]
+name = "hue-tensor-cli"
+path = "src/bin/hue_tensor.rs"
+
+[profile.release]
+overflow-checks = true
+lto = true
+codegen-units = 1
+

@@ -1,0 +1,67 @@
+{
+  "source_sha256": "2be972ac122e0b2bb178064370420343bf91e402745bffeddf47816779ee3957",
+  "scope": "Undefined-name lint, Python compilation, JavaScript syntax, Rust format and strict Clippy, graph drift and local Markdown destinations",
+  "checks": [
+    {
+      "command": "uvx --from ruff==0.15.8 ruff check chromatensor dashboard experiments scripts tests --select F821",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": "All checks passed!\n"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m compileall -q chromatensor dashboard experiments scripts tests",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check docs/architecture/app.js",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check docs/architecture/source.js",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check dashboard/app.js",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check dashboard/cube.js",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "cargo fmt --check --manifest-path native/hue_tensor/Cargo.toml",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "cargo clippy --offline --manifest-path native/hue_tensor/Cargo.toml --all-targets -- -D warnings",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.12s\n"
+    },
+    {
+      "command": "python scripts/architecture.py --check",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": "Architecture checked: 26 components, 40 reviewed relationships, 138 inventoried files\r\n"
+    },
+    {
+      "command": "python scripts/release_audit.py --check-docs",
+      "status": "PASS",
+      "exit_code": 0,
+      "output": "{\r\n  \"status\": \"PASS\",\r\n  \"local_links_checked\": 186,\r\n  \"errors\": [],\r\n  \"limitations\": \"Checks local destination existence, not remote URL availability or Markdown anchor rendering.\"\r\n}\r\n"
+    }
+  ],
+  "timing_note": "Tool-call wait durations are not execution timings and are intentionally omitted."
+}

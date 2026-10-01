@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "source_sha256": "2be972ac122e0b2bb178064370420343bf91e402745bffeddf47816779ee3957",
+  "status": "PASS",
+  "tests": [
+    {
+      "environment": "candidate_cpu",
+      "collected": 842,
+      "passed": 823,
+      "skipped": 19,
+      "failed": 0,
+      "xml_sha256": "ba7a0a4074c16595457087e39a9c1f75baa8682aab0a51dc3b209afeb2504acd"
+    },
+    {
+      "environment": "host_cuda",
+      "collected": 842,
+      "passed": 842,
+      "skipped": 0,
+      "failed": 0,
+      "xml_sha256": "5d511707cb797212ffe917327fd1c0ad179394cabe4763e881c4aa34d1552b89"
+    },
+    {
+      "environment": "clean_checkout_cpu",
+      "collected": 842,
+      "passed": 823,
+      "skipped": 19,
+      "failed": 0,
+      "xml_sha256": "61a549cfc1eef82e6ea79a8312f1569867fcecbc43931bc2e00d98db5bed4505"
+    }
+  ],
+  "clean_checkout": {
+    "source_bytes_match": true,
+    "from_fresh_git_history": true,
+    "uses_original_source_or_environment": false,
+    "cpu_lock": "requirements/python312-cpu.lock",
+    "python": "3.12.13",
+    "native_build": "PASS",
+    "research_wheel_build": "PASS",
+    "isolated_native_install": "PASS",
+    "isolated_research_install": "PASS",
+    "dependency_check": "PASS",
+    "dashboard_startup_and_browser_encoding": "PASS",
+    "saved_model_replay": "NOT RUN"
+  },
+  "tools": {
+    "powershell": "7.6.5",
+    "git": "2.54.0.windows.1",
+    "uv": "0.11.21",
+    "rustc": "1.96.0",
+    "cargo": "1.96.0",
+    "node": "24.17.0",
+    "docker": "29.8.1",
+    "ruff": "0.15.8"
+  },
+  "limits": [
+    "The host CUDA diagnostic uses torch 2.14.0+cu126, torchvision 0.29.0+cu126 and pytest 8.4.2, outside the supported dependency floors. It supplements the clean locked CPU tests.",
+    "Raw test XML is omitted from publication because it contains host information. Hashes and portable source-bound receipts remain.",
+    "Fresh rebuilds were checked for behavior and privacy. Byte-for-byte reproducible compiler output is not claimed.",
+    "The clone tested executable source identical to the final candidate. Later changes only update guides, evidence and the public manifest."
+  ]
+}

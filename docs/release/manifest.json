@@ -1,0 +1,2110 @@
+{
+  "schema_version": 1,
+  "selection_policy": "scripts/release_audit.py select_files; reviewed tracked source plus explicitly selected evidence",
+  "self_exclusion": "The manifest excludes its own bytes to avoid a recursive hash. It is included in commits and archives.",
+  "excluded_categories": [
+    "original Git history and remotes",
+    "local environments and caches",
+    "downloaded datasets and data-derived probe arrays",
+    "unreviewed logs and test scratch files",
+    "historical executables, wheels and library binaries",
+    "private security reports"
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 89,
+      "sha256": "744451b82173135545e33477cbc36f08d5806d33530544c717f3822fd83bdbae",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 2091,
+      "sha256": "00a3036dce03362859492782399a371d2422e2069425b01501c07c3b4c65e3c8",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 1202,
+      "sha256": "4657069d598ba8860660e3069d7aadf882c662bcc14f193ebd8772bde3f1b0d8",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": ".gitleaks.toml",
+      "bytes": 475,
+      "sha256": "87f689026c444625d9970f67ac5971e375caef034693b59612c810ad0db2783c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2112,
+      "sha256": "7b1217c4bf25f9d8859a94e21cfcaf89aee3d78d618b35d6dbf0450aff4bd8e4",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "bytes": 12437,
+      "sha256": "0bec23ccbb3de32f8b6310d28151855a78abea123f42bb5635eb932be7a7452b",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/dashboard/architecture-explorer.jpg",
+      "bytes": 52310,
+      "sha256": "f7da05836e5a17b1d6fbd66dda0cf009e93ee72689830697a134798c66872aa3",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/dashboard/cube-current.jpg",
+      "bytes": 56070,
+      "sha256": "6634574a95bfef8107fd02370e857e4cb039843201f699d159c10a5b29e02e7f",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/dashboard/overview.jpg",
+      "bytes": 65619,
+      "sha256": "2110767527bdd84f1bead5010852c81ba717d01288abf67f65fd848e13b0f0b9",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/dashboard/release-cube.jpg",
+      "bytes": 83027,
+      "sha256": "d09f94fd7eb484547057887992e3ccaa0782970f9e3eb896b759689317ea21b8",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/dashboard/rgbd-current.jpg",
+      "bytes": 149490,
+      "sha256": "6d1a9bc82e4a724e1b031c3a570b01d11c1d0efe04962b4fe6fb371c3cd3ceae",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/dashboard/tensor-viewer.jpg",
+      "bytes": 88198,
+      "sha256": "bdcb556a3eace3b8723e244219ed20961d6d9178e452be0e9e5fd8532564be64",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/cifar_curves.png",
+      "bytes": 172545,
+      "sha256": "6bb241bda705df3e36e7903ad87208a18b35148af5f3b3c0721603128954d561",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/cube-training.png",
+      "bytes": 103002,
+      "sha256": "988d6333c4a33afea64e2e3e5b048773d5693d62c9d2930863dcee7f8c85f30f",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/language_curves.png",
+      "bytes": 90356,
+      "sha256": "980459b08005632d5313c994d1b450f168f3fec1cb7d3d52d3a232a9d17d3208",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/learned_palette.png",
+      "bytes": 74356,
+      "sha256": "a50744376a96e1b3ba3013801bb61818fca6b06494afe5e94517b011346a91fc",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/learned_rgb_manifold.png",
+      "bytes": 71946,
+      "sha256": "db957fece5c458110cd17c5849b10facfb5724f461f188cdd9a4ff148edcc28c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/mnist_curves.png",
+      "bytes": 81149,
+      "sha256": "799902d2e3d88f25bbad677e87ef68a1b602b484daca1c1d918ae42858cf3ada",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/periodic_curves.png",
+      "bytes": 67286,
+      "sha256": "6eb2a55233fa37104dec0e2696650053b3afb3de71838c172c638f94ee2c4a2d",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/review-data-smoke/cifar_curves.png",
+      "bytes": 68023,
+      "sha256": "c1222c9be78b015885f644c7ed9e4769e9324423f7fdc1091831fde6eb26bb11",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/review-data-smoke/language_curves.png",
+      "bytes": 56044,
+      "sha256": "a10914d8073736f6f4dbe9e4fd78ced56b7460caef0a36b34b044d27da4b7076",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/review-data-smoke/mnist_curves.png",
+      "bytes": 62258,
+      "sha256": "324d51924109b774a6d1505f9cd77116a46f3ac04620cb7ff4a90067d19b249e",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/review-data-smoke/periodic_curves.png",
+      "bytes": 28077,
+      "sha256": "403313fd6b8879424845fd6c7a0f87c850cbd3953f257e20970e0c151ac87402",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/review-data-smoke/scalar_curves.png",
+      "bytes": 27162,
+      "sha256": "58f7a6e194f443b5d94b3a368fda86e4f2437d667e95af7410932ae265cc60d1",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/review-data-smoke/task_results.png",
+      "bytes": 66860,
+      "sha256": "1044f1ba3207a53695b203157666c6ade55551219fafd7293fb7752a7bb378dd",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/review-smoke/cifar_curves.png",
+      "bytes": 27304,
+      "sha256": "95adb2a2048f8c42eff7c44f396897ca9239d68cf66de96e72a1fd9e663e2ce5",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/review-smoke/language_curves.png",
+      "bytes": 27560,
+      "sha256": "366bbcacbbc6aa11dc6a3d0772f28f8a72f8099136a19666c971564b3347c669",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/review-smoke/learned_palette.png",
+      "bytes": 74436,
+      "sha256": "2d88ea30d2c70c055fefa73697375801e34ae6f37800d991792725cef8904c4b",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/review-smoke/mnist_curves.png",
+      "bytes": 27110,
+      "sha256": "6c598e355d3e4fd17bc010d928250badccb8c0f20bb9e6ddf1577288de549fb3",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/review-smoke/periodic_curves.png",
+      "bytes": 68576,
+      "sha256": "96be1b950df6173e23fa428e02f6defabe91efb7880dd9e04bca52f602aff3c9",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/review-smoke/scalar_curves.png",
+      "bytes": 78015,
+      "sha256": "3646d014f32da41f560f3ef513a1201095b510be300cc2d000e7050165311f1b",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/review-smoke/task_results.png",
+      "bytes": 65088,
+      "sha256": "fbe4155279825e92e8208e89c56bbd54e86813253460e1024c272a81bae369eb",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/scalar-fp32-s7_activations_layers.0.png",
+      "bytes": 31585,
+      "sha256": "fea8d96798fba16fd5b310154835ea6e032b753ee4fd63f1c4aeaef3ac275726",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/scalar-fp32-s7_activations_layers.2.png",
+      "bytes": 31144,
+      "sha256": "67a00bb257efbbb0d5d2ff5d3ced122dcc6e5900d787156faa075c7aa1d792a5",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/scalar-fp32-s7_gradients.png",
+      "bytes": 27969,
+      "sha256": "0c20a4c2cd47be4b2aec4d040033870700da07e00571ef0925dd86859ca8cc4f",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/scalar-fp32-s7_weights.png",
+      "bytes": 27941,
+      "sha256": "3063a4ff8f2c277668fc7f0591224354c19fc88539e3f71d895b6f7a5ccb08fb",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/scalar_curves.png",
+      "bytes": 100602,
+      "sha256": "daaa5429de4957e7f67f2dec47d44bf9f13bdd6376e4fa2194f07b44ad9d3a17",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/task_results.png",
+      "bytes": 74476,
+      "sha256": "ed79ed3cf08741a3b2762aa2fdefd5e54163dcf281eae245acf6a56d3355fcb9",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/train_scalar_fp32/cifar_curves.png",
+      "bytes": 27304,
+      "sha256": "95adb2a2048f8c42eff7c44f396897ca9239d68cf66de96e72a1fd9e663e2ce5",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/train_scalar_fp32/language_curves.png",
+      "bytes": 27560,
+      "sha256": "366bbcacbbc6aa11dc6a3d0772f28f8a72f8099136a19666c971564b3347c669",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/train_scalar_fp32/mnist_curves.png",
+      "bytes": 27110,
+      "sha256": "6c598e355d3e4fd17bc010d928250badccb8c0f20bb9e6ddf1577288de549fb3",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/train_scalar_fp32/periodic_curves.png",
+      "bytes": 28077,
+      "sha256": "403313fd6b8879424845fd6c7a0f87c850cbd3953f257e20970e0c151ac87402",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/train_scalar_fp32/scalar_curves.png",
+      "bytes": 58493,
+      "sha256": "a52eddc9a30a593a941b867fb7ebfffb7637837cd9f66401c99cf5c408b7513d",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/figures/train_scalar_fp32/task_results.png",
+      "bytes": 62536,
+      "sha256": "825e345050d6f5f413ac60a937ee06e7ccf2a7a6034cfebe32c8def2281e4fd8",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native/native-color-tensor-diagram.png",
+      "bytes": 297776,
+      "sha256": "0cc8703e74c1955dfbf702e02d3e9d8538e3a6d930251d4292d6536bd67941d9",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native/native-color-tensor-diagram.svg",
+      "bytes": 26514,
+      "sha256": "d8f2dbaf87b9aabee508ab0260169556446f422133b6bd54f0468add9068f8f7",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native/package-checks/linux311.json",
+      "bytes": 1096,
+      "sha256": "36c3a8b475d80964efb1b156eebafbec156a077df80b078526f6cb9b185fe767",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native/package-checks/linux312.json",
+      "bytes": 1096,
+      "sha256": "bd4278b4959eb14be972a39a65a4043a4d6eeeec767a2fc6aeebe2dc25345704",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native/package-checks/linux313.json",
+      "bytes": 1096,
+      "sha256": "2e47a6610db6b84cd8b032bb6903afc3ce59254b0ade860d3b715aa5548a171a",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native/package-checks/linux314.json",
+      "bytes": 1095,
+      "sha256": "87081bac7eab8c597c6ea2b693d34d0c43940a67f0e523c56d03503e0d773cae",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native/package-checks/python311.json",
+      "bytes": 1125,
+      "sha256": "582e6aec73dd259fdeb912455e3253eb05c3b4077553d18ab51c6dcb4c5e96ed",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native/package-checks/python312.json",
+      "bytes": 1125,
+      "sha256": "1b37e11e0d110ce1100212dfe85e255f66ca6e5311585c728bda093753706d98",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native/package-checks/python313.json",
+      "bytes": 1125,
+      "sha256": "cd6e5051a5bc155f5a4ea3fd298b3c5eae322f0a0622c375f9a3ff97852c4e61",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native/package-checks/python314.json",
+      "bytes": 1124,
+      "sha256": "65d10c4d59a6bca0a63ae02a87ae01cf3069f083a891036262b3872d6ce8900c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native-hue/native-hue-20261001T135323696239Z-48e002d8a9cc/cold-process.json",
+      "bytes": 817,
+      "sha256": "d185327e84407227cc545720a69eeaa65460d5cc0e3078360afc7837e09f05e8",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native-hue/native-hue-20261001T135323696239Z-48e002d8a9cc/million-colors.huetensor",
+      "bytes": 4000064,
+      "sha256": "e24ea83fd5988a995bedabd9205de08f75c4807232a3eb470e9f223514e944ec",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native-hue/native-hue-20261001T135323696239Z-48e002d8a9cc/reference-phases.u32",
+      "bytes": 4000000,
+      "sha256": "18ae1251af9ff399dc8fb50d18fac3469e0ab17e0406a0c5d2ac760f24f7183c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native-hue/native-hue-20261001T135323696239Z-48e002d8a9cc/second-phases.u32",
+      "bytes": 4000000,
+      "sha256": "e2796b9879ab51d4275d4f5a23112fbe165ffd1310c3589b43c18d252b7e06fa",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native-hue/native-hue-20261001T135323696239Z-48e002d8a9cc/uint32-control.json",
+      "bytes": 102,
+      "sha256": "ddd6ded7d4c5ed4049a2f58add8cc548b9cac5fb4b2937e1019559676f464224",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native-hue/native-hue-20261001T140147352997Z-ebf8100ef957/cold-process.json",
+      "bytes": 817,
+      "sha256": "d185327e84407227cc545720a69eeaa65460d5cc0e3078360afc7837e09f05e8",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native-hue/native-hue-20261001T140147352997Z-ebf8100ef957/million-colors.huetensor",
+      "bytes": 4000064,
+      "sha256": "e24ea83fd5988a995bedabd9205de08f75c4807232a3eb470e9f223514e944ec",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native-hue/native-hue-20261001T140147352997Z-ebf8100ef957/reference-phases.u32",
+      "bytes": 4000000,
+      "sha256": "18ae1251af9ff399dc8fb50d18fac3469e0ab17e0406a0c5d2ac760f24f7183c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native-hue/native-hue-20261001T140147352997Z-ebf8100ef957/second-phases.u32",
+      "bytes": 4000000,
+      "sha256": "e2796b9879ab51d4275d4f5a23112fbe165ffd1310c3589b43c18d252b7e06fa",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native-hue/native-hue-20261001T140147352997Z-ebf8100ef957/uint32-control.json",
+      "bytes": 102,
+      "sha256": "ddd6ded7d4c5ed4049a2f58add8cc548b9cac5fb4b2937e1019559676f464224",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native-hue/native-hue-20261001T141554334493Z-2cbc8ec16f86/cold-process.json",
+      "bytes": 817,
+      "sha256": "d185327e84407227cc545720a69eeaa65460d5cc0e3078360afc7837e09f05e8",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native-hue/native-hue-20261001T141554334493Z-2cbc8ec16f86/million-colors.huetensor",
+      "bytes": 4000064,
+      "sha256": "e24ea83fd5988a995bedabd9205de08f75c4807232a3eb470e9f223514e944ec",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native-hue/native-hue-20261001T141554334493Z-2cbc8ec16f86/reference-phases.u32",
+      "bytes": 4000000,
+      "sha256": "18ae1251af9ff399dc8fb50d18fac3469e0ab17e0406a0c5d2ac760f24f7183c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native-hue/native-hue-20261001T141554334493Z-2cbc8ec16f86/second-phases.u32",
+      "bytes": 4000000,
+      "sha256": "e2796b9879ab51d4275d4f5a23112fbe165ffd1310c3589b43c18d252b7e06fa",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "artifacts/native-hue/native-hue-20261001T141554334493Z-2cbc8ec16f86/uint32-control.json",
+      "bytes": 102,
+      "sha256": "ddd6ded7d4c5ed4049a2f58add8cc548b9cac5fb4b2937e1019559676f464224",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "BENCHMARKS.md",
+      "bytes": 4180,
+      "sha256": "a494a61736f337938486fa314171145aa7f14599bc88eead0b2589efa7318b76",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/__init__.py",
+      "bytes": 1265,
+      "sha256": "5a0d9049c45cabb47f36f66a6800cd714d3b0ff8463f3a275f1eb9948be432c7",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/autograd/__init__.py",
+      "bytes": 321,
+      "sha256": "29dbb3efe94820aa9b6d171c32fe220eb779f633c7c700309c7420a5e9f6f6ea",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/autograd/quantization.py",
+      "bytes": 10572,
+      "sha256": "9524cd0af99950a2852a84cadbd29b8d374a089dce01f793cf903da9e72fe393",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/codecs/__init__.py",
+      "bytes": 2049,
+      "sha256": "fc436cb22a165f6dfa2cc25efc6c6348d304eea468545edf3ee31e355797080e",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/codecs/base.py",
+      "bytes": 3433,
+      "sha256": "51cf4214dcb731871ff218ff72d312569068ce13b4a0d70f0e2952651d68657b",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/codecs/hierarchical.py",
+      "bytes": 4756,
+      "sha256": "cef4692aecbc208564489bc165cc9b0c9ef1440257f735734326e792ecc1cec3",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/codecs/hsv.py",
+      "bytes": 4124,
+      "sha256": "5ce2eb66a2e80970f46602808b000a30d0cb4203611659029a5079792d97423d",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/codecs/learned.py",
+      "bytes": 12217,
+      "sha256": "1bcb2fdbfccc1f0423a7c4624476793875903c2d008fa696de1aa613e37a7281",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/codecs/neural_rgb.py",
+      "bytes": 10057,
+      "sha256": "156c782f66096f8960c863b8d743146f00cf05d219b419fcef7291762947b0da",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/codecs/rgb.py",
+      "bytes": 4175,
+      "sha256": "aa8ec8ed36333fe5f212441e9a288c8f1cc6254425c6de5278625ef89d3b9906",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/codecs/rgbd.py",
+      "bytes": 2035,
+      "sha256": "0de8229189a88d4ef2806cf295a8f3bc1f11efe308f4aa1b166e944f9b273617",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/cube.py",
+      "bytes": 15309,
+      "sha256": "743086b6121e60630681e4958a65f9bd2195e71ef04520ef43ad8fc2dbd24451",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/decoders.py",
+      "bytes": 4401,
+      "sha256": "70afdc08e3dd966dd023d1612574047b032399e0c1ec34feaeb5ecbfd6a0e2df",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/holographic.py",
+      "bytes": 17665,
+      "sha256": "379630fa90845a4a1ad12282edbd7fbad90403ee6f12cc70f25231530e4ff997",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/hue.py",
+      "bytes": 16046,
+      "sha256": "9781800dbbce9893283390ee3b409027f95d48a5fcef01e48864ea5cb3126c97",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/nn/__init__.py",
+      "bytes": 574,
+      "sha256": "d0037299d4799f5434fe1c315e93fc43bed88c14b69f5d5ee52943c04bc162e6",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/nn/attention.py",
+      "bytes": 11254,
+      "sha256": "1384f870058192eb4b321bce66698dfce5b2383cf911a5417439af3954f8dd1f",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/nn/layers.py",
+      "bytes": 17130,
+      "sha256": "2570772713de51c263c5ffd653d61e0f535dcb3b1b9ffc8501ae6e7e9ccde194",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/nn/report.py",
+      "bytes": 4752,
+      "sha256": "ca387c1d8048a3d08637740bfc2ef778f9fd243b08bede4d905cbcaff6e486ac",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/operators/__init__.py",
+      "bytes": 465,
+      "sha256": "a72042a18d3b62e5224a7cd034b26ac317d5299d791717bde9d8e0b49abed740",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/operators/core.py",
+      "bytes": 5337,
+      "sha256": "5db3a66e45c15f764845c71d92053f1d60f0d6bd7c6632b0d3fcabf6d47c35a7",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/serialization/__init__.py",
+      "bytes": 261,
+      "sha256": "0052c5e4c372360c4fab24b9885a6fb1f5fb344d972e886acbe40c19c6764e2c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/serialization/format.py",
+      "bytes": 18728,
+      "sha256": "6b2694152b7a2d1face0eb6db891ac6effea9a0d06287657b63be97e9936e8b1",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/tensor.py",
+      "bytes": 10489,
+      "sha256": "7daff1f6685c23d2713a2879f18480d1097d878af50c82487628486ac8f72ed8",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/tokenizer/__init__.py",
+      "bytes": 12975,
+      "sha256": "a3b4a1b7203fc8d4c52fe9a1b03c3d9eee3dcc78d7d82891f447f9fc98273e72",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/visualization/__init__.py",
+      "bytes": 255,
+      "sha256": "fd1b9dbc0ae4007762a7bf237ede380fc6e2a8693dc65704b45dade8322d18a7",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "chromatensor/visualization/plots.py",
+      "bytes": 3607,
+      "sha256": "6ec35b91cf7769bff87e86743f8e985f40b3d097153a57420392389abcd6a3ff",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 1454,
+      "sha256": "e97f5861f94cd78028afb205cd2d9fe1b675264797745cb7b03a40d6b2bf8a6f",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "COPYRIGHT",
+      "bytes": 287,
+      "sha256": "309ac506e59e8049bdecf68584f1f6e82b68c46226e5b111b48c152b47fd3956",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "dashboard/__init__.py",
+      "bytes": 62,
+      "sha256": "e795b4116ee4f719fdc3731d6de0bc49c19ae03bac6558916ac8a79407f724a9",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "dashboard/app.js",
+      "bytes": 50320,
+      "sha256": "59096088da2640564034b45108d19cd70477c3affa02954b30a03773fd7bb9a7",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "dashboard/cube.css",
+      "bytes": 6455,
+      "sha256": "5653d9c8a21e26321d6100b67f42429bbe97b4cab35b82151e76c3128b4d5ff5",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "dashboard/cube.js",
+      "bytes": 38120,
+      "sha256": "22dae4dcecbf2e72e4c9140596950b8436910797a82c4646b279f21ea3804355",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "dashboard/cube_api.py",
+      "bytes": 13077,
+      "sha256": "30a6099e2f2726c498f300d213e0ad55c8ed8f2bf68b49597cfe247fbe58f472",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "dashboard/index.html",
+      "bytes": 2031,
+      "sha256": "6f8ac1d22a78af2d9b64e795a96b5e4ad1e4d7edf67cd7e41871ba997abd0c0b",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "dashboard/server.py",
+      "bytes": 15296,
+      "sha256": "c9ee7664b55deb67b03c6ed051ff3f8eeeca4576befce7cdd103ee871ccf2f2d",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "dashboard/style.css",
+      "bytes": 14635,
+      "sha256": "80850bbe4417bcf3e6eea8b0417cf58f7da920671e7ff7e45fc29036f15e7bf3",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/API.md",
+      "bytes": 17879,
+      "sha256": "d6f4f9256466aea80c39b2208f3f13ec084863bf919f2b4fb37542a0aad282d1",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/architecture/app.js",
+      "bytes": 19022,
+      "sha256": "43a8cd8b99aa545aac0dbff7a5508032f433239baa51c35670afb5766491cb6c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/architecture/graph.js",
+      "bytes": 180677,
+      "sha256": "d5deab3b42446cb8230306e45c7ceaf1e5901787e9c45203f34814b94943331e",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/architecture/graph.json",
+      "bytes": 180644,
+      "sha256": "58917acad2100d623c27f61583bf7b5251a44937aaf620c90d9997cc6cf94743",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/architecture/index.html",
+      "bytes": 6946,
+      "sha256": "7c351119567303eb1987f1d58c6bfbdeac759141d4779d5b99bd392c64f4685c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/architecture/source.html",
+      "bytes": 897,
+      "sha256": "d61f0171a01d6ea48721d990dded82188a74abdc77ebeaaa0e79adf1ee39ff68",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/architecture/source.js",
+      "bytes": 1348,
+      "sha256": "1877111e6ca9321640feeea1aee7c94defb94f9c41965eb8de42c38b49925268",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/architecture/sources.js",
+      "bytes": 758487,
+      "sha256": "aaf3e66de9f8f2cea8069c4e03b3092444c6a902abf0617352a06da029eb8f39",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/architecture/style.css",
+      "bytes": 10359,
+      "sha256": "bdba96ce9107f7579f9c1886fe44b8fe5634e5bbf842d9e0b5cdc49da0e9ac26",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/CODE_REVIEW.md",
+      "bytes": 24630,
+      "sha256": "c8c81397330ed4fdc67a452fad50dc798d32fabdd55649bf295544af71f79109",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/CONFIGURATION.md",
+      "bytes": 3961,
+      "sha256": "20ee1e8cdba8227eda5fdcb6a35166881c735532f87a52161de35d9f199c16fa",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/CUBE.md",
+      "bytes": 4779,
+      "sha256": "f5137d39db139deca833aae340bf1ed9a75f3ad8601c96184988d9fd15e50802",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/CUBE_RESULTS.md",
+      "bytes": 4105,
+      "sha256": "6c628c6371face97ec51e8da8b0658231c92021063f4f34c2e35c6dab0ef0709",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/DASHBOARD.md",
+      "bytes": 12189,
+      "sha256": "e52f95cecdc45eef5790a9ed52e7c227929551e57059727ce79d7594026f9e47",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "bytes": 1779,
+      "sha256": "20f29bcb6196bfdd431f7423001894569ec395bfc1d79534d303540ab93707e5",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/DEVELOPER_GUIDE.md",
+      "bytes": 4644,
+      "sha256": "ed744fed4f2f34319cdcfc1fecb31607fde3a058518f8dfca8023f243a61db1f",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/evidence/clean-clone-dependency-audit.json",
+      "bytes": 4508,
+      "sha256": "bffea6147e0597d3462573033d2ca7256d3dfbd8adf34f03fb375c61f1c1210b",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/evidence/clean-clone-package-security.json",
+      "bytes": 3965,
+      "sha256": "9977c550d9b0f2f2d7cd54a14b1928fc4029132b4a6ce6ceda85f05ee9e6b49e",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/evidence/clean-installed-toolkit.json",
+      "bytes": 7261,
+      "sha256": "a637a80b524272d3b496782d6d6ab7e9e70d23e1b417df2605fec75da2ae36f8",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/evidence/clean-native-install.json",
+      "bytes": 1125,
+      "sha256": "317186fb32e09f98270d929783a96253c2f3c1e2731e5952967ee4d8e365411d",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/evidence/clean-test-verification.json",
+      "bytes": 17035,
+      "sha256": "dd716a49b3dbf0a4ff09124476845bbd7d117753b347ab3c458db7e393ef80b9",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/evidence/dependency-audit.json",
+      "bytes": 4722,
+      "sha256": "31d4b775dd436c0eff7414400733ac61fbee632dfd7d68692b20e62c3d21c799",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/evidence/dependency-licenses.json",
+      "bytes": 100330,
+      "sha256": "c2f9dc53659a62862296db4c166a0413c2d00ad00bac5cadb36acdc229415cde",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/evidence/documentation-examples.json",
+      "bytes": 25401,
+      "sha256": "c7308a0a291305f28a408a27b36dda47cd31184b748805876e83ef9df388f424",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/evidence/package-security.json",
+      "bytes": 6804,
+      "sha256": "8cc67f69b4f762f1193ec9842f4c2e59a7ba46f889b5ac587b40ffb8b8bb95bf",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/FILE_FORMATS.md",
+      "bytes": 10387,
+      "sha256": "0b977feb8e23e9a9876eaeb2ba0bce97025b19f5e3f02c299d4108bde3816826",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/acceptance-preflight.json",
+      "bytes": 19954,
+      "sha256": "43c3ac1f6cc3463d06b5b09f24aee4e73d5aa17e0619802f7e1571ff42335f8e",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/acceptance.json",
+      "bytes": 32335,
+      "sha256": "dee5620b2bd5e43b87b80fef977c5ab7f73c0bfdfdd0771552d3d89ec44f154f",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/attention.json",
+      "bytes": 357592,
+      "sha256": "9a7a0740c33106ae6c0d16557699997a61ca8c12fd2a7a0991c9857243892b03",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/cube-package-verification.json",
+      "bytes": 5553,
+      "sha256": "63482831aa8afc0a9fb6731e55764ef716988b4fa2b6b286ff69fbfebc9cbf72",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/cube.json",
+      "bytes": 196684,
+      "sha256": "b86c1b8b3f2d8b62461d9e25e0d065d1aec3863a478cc03d96e769e27c1446b2",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/dependency-verification.json",
+      "bytes": 31555,
+      "sha256": "304bb91ce4fccdb171ef6759a4c48f5f4d5c483b440b68cba940479028acbf6c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/acceptance-before-final-browser-envelope.json",
+      "bytes": 19142,
+      "sha256": "ceb942c2476b138489540aef2cd9ac6f299e9a3f08db4494eb0224b78a973b21",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-git-context-repair/test-verification.json",
+      "bytes": 12326,
+      "sha256": "b638b2f43ebd47768cd1c924d2a9515f00d45dfb0bf7c6b5449b7e5be796601e",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-matrix-repair-cube.json",
+      "bytes": 193509,
+      "sha256": "d79681443654840adf6f88a3d2bc9624803f99276c72ee4e6d3534d537e432a7",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-matrix-repair-latest.json",
+      "bytes": 22391963,
+      "sha256": "cc8f17cd4664249d849501871927bcf01e811be9dbba12fb1524fff7be8ce716",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-matrix-repair-release-research.json",
+      "bytes": 196119,
+      "sha256": "2532b42b295db5fc91b204fcd826e11bcbc731789a8fcaf2da60785350cfc9f6",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-metadata-repair/acceptance-preflight.json",
+      "bytes": 19954,
+      "sha256": "43c3ac1f6cc3463d06b5b09f24aee4e73d5aa17e0619802f7e1571ff42335f8e",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-metadata-repair/cube.json",
+      "bytes": 194338,
+      "sha256": "c09716f4699fa59c0b0e620be1d9594ce4c28550ebb9bef1cdc7c15a1861b0fa",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-metadata-repair/dependency-verification.json",
+      "bytes": 30124,
+      "sha256": "ee2c6fa3243e52ae064fe203e76bd833eb4b7a14600cc55c303fbd0e45169325",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-metadata-repair/latest.json",
+      "bytes": 22393045,
+      "sha256": "6824cbd4e98918df71706497bc5545132e8a75af18cc6abfe3600c97955ef8e5",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-metadata-repair/release-research.json",
+      "bytes": 197249,
+      "sha256": "12b81efc5aeec354ea886bf59553855e8c8855e62438f1b003d1df4e962f9a54",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-metadata-repair/test-verification.json",
+      "bytes": 16011,
+      "sha256": "b4c0127bf1e22be376054ab4d90da4a20d00c743df7b3700919cf1356b453762",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-native-hue/acceptance.json",
+      "bytes": 23047,
+      "sha256": "c38840bfd6e97600ba39b5c86ec6b646c79a681e925642c4682e5f6c4d21956c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-native-hue/cube.json",
+      "bytes": 196684,
+      "sha256": "b86c1b8b3f2d8b62461d9e25e0d065d1aec3863a478cc03d96e769e27c1446b2",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-native-hue/dependency-verification.json",
+      "bytes": 31555,
+      "sha256": "304bb91ce4fccdb171ef6759a4c48f5f4d5c483b440b68cba940479028acbf6c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-native-hue/latest.json",
+      "bytes": 22395320,
+      "sha256": "dc56247a967abe09d600c443f7d7b1042060652afc9a78e582412e6fa29c6ddf",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-native-hue/release-research.json",
+      "bytes": 199607,
+      "sha256": "84f4aa0630a9fff4754ae6631b866bc000c025b35cb3c256f137b483a4f839ea",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-native-hue/release-verification.json",
+      "bytes": 23854,
+      "sha256": "310b38d01b2b3f4ffd59c021ccf9e8631fe7bbb5a549c2ccf0bc126eb19a6b6d",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-native-hue/rgbd-token-verification.json",
+      "bytes": 29683,
+      "sha256": "fe528c82543209169c799cb0749becb4181517289ffd4b9d13630692cc4c7690",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-native-hue/test-verification.json",
+      "bytes": 17352,
+      "sha256": "0ffa232cbdeb40bb9a27377e21f022e62462d32281ca341b11a5b0f2e4720131",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-rgbd-token-repair/acceptance.json",
+      "bytes": 19510,
+      "sha256": "ed9998ad58ae394a5b101fcf7ebbafc99ed74b86ee6d9782392f20004ab40ccf",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-rgbd-token-repair/cube.json",
+      "bytes": 188660,
+      "sha256": "83175e97843c7b96955857c70b206ca1216610f90b5fe3f128c3f5fecfafb153",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-rgbd-token-repair/dependency-verification.json",
+      "bytes": 27635,
+      "sha256": "52250afc8e0183e6ec7a8d574316e859b5d3490f6b125288a3e524c37c8566ac",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-rgbd-token-repair/latest.json",
+      "bytes": 22386768,
+      "sha256": "8f1422e9794285ba03df9b1625953ef18a224c18442afa6deb303258ad36bccc",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-rgbd-token-repair/release-research.json",
+      "bytes": 191643,
+      "sha256": "89c065c2c9a261a329a9691bd96d4232953c0dcbd1a3e75b53db9134f88dcd88",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-rgbd-token-repair/release-verification.json",
+      "bytes": 19928,
+      "sha256": "f5fe923e9282838600a1dd1771c7d77209d2f94752b51459f2436f6e120bed09",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-rgbd-token-repair/repair-regressions.json",
+      "bytes": 19471,
+      "sha256": "8b43b89a329e6b8cb332f092dcb8fbd415c7db27b2f8355db9a3a02d82d6abdc",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-rgbd-token-repair/test-verification.json",
+      "bytes": 12871,
+      "sha256": "e79d3c81945be933601f65a5494659d7ccadb5afc9ddc40f3c4fc013c09ef66c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-rgbd-token-repair/train_scalar_chroma8.json",
+      "bytes": 176518,
+      "sha256": "48a022695a8f545f07a8e50e4d0b8afb41a71169f1d9b9159052090a7b2bbb63",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-rgbd-utf8-repair/cube.json",
+      "bytes": 195717,
+      "sha256": "3489fecc357f60e00bac97c8b06029b45609c6698d548393a5505e2c874f3bda",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-rgbd-utf8-repair/latest.json",
+      "bytes": 22394214,
+      "sha256": "f2900e093dd83bd3e5ac89556aa52b09d7e5d4ac2fc66df1ee3b33035b9be04c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-rgbd-utf8-repair/repair-regressions.json",
+      "bytes": 21892,
+      "sha256": "187badd40d316175584e817d093b3972e9200e74324399b439ec2b68b99d51da",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-rgbd-utf8-repair/rgbd-token-verification.json",
+      "bytes": 28419,
+      "sha256": "a83c317054c4b1c2ff1d57106a10fa5c33056f0fb385172f3b0e4feaeaa8c4f1",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-rgbd-utf8-repair/test-verification.json",
+      "bytes": 16720,
+      "sha256": "c0eada9cd075b2216f0b475164fcfa8be9953a940f233a1652552357d582203d",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-rgbd-utf8-repair/train_scalar_chroma8.json",
+      "bytes": 181009,
+      "sha256": "bdf64c88f6e8f2cccf13c2e5f22d2a00013d95bb2b78d897cbf5b408cc119517",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-user-commit-e60d420/cube.json",
+      "bytes": 194755,
+      "sha256": "b1ef9834a11af6beff5ba1eadf778bd6e87b5dc944c8c4a390947acc894afbf0",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-user-commit-e60d420/latest.json",
+      "bytes": 22393412,
+      "sha256": "0e1c2496979d11fbf3165e483830212bceea2a844a0ef86ea7cea4bb2e08f814",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-user-commit-e60d420/release-research.json",
+      "bytes": 106146,
+      "sha256": "228c84cdc5ce96d37ae8daaa3cad070310d153ed1b8c476cc4a54f2bc883d5d2",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/before-user-commit-e60d420/test-verification.json",
+      "bytes": 16217,
+      "sha256": "3d89af92182315bc6b7a0a7d440d387f0b27183ecb706b0a47061620dd3b732a",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/pre-repair-acceptance.json",
+      "bytes": 4830,
+      "sha256": "8dc6309a99e91ce364a2d718ab597e551b3f0310dd036431b871108dbadfb8f7",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/pre-repair-cube.json",
+      "bytes": 158473,
+      "sha256": "a1c7e95d1459e06a8e2b97d83fae162a0880cabf4e007259d753916d573dea47",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/history/pre-repair-latest.json",
+      "bytes": 22008446,
+      "sha256": "051c25ed6b73c10af1ee2095afaa919d5c4ec33daa50610c66752099d50cd20c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/latest.json",
+      "bytes": 22395320,
+      "sha256": "dc56247a967abe09d600c443f7d7b1042060652afc9a78e582412e6fa29c6ddf",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/native-hue-build-linux-x86_64.json",
+      "bytes": 24760,
+      "sha256": "b1385c04b5f15b4a9c03cb6e89f5b030cefcbe110c71eea6081e6a15d0cda21c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/native-hue-build-windows-x86_64.json",
+      "bytes": 24477,
+      "sha256": "9ad3d80f953835eeb283aa1f121b95bc362f8a0106b5455f3ed683f0702d54ed",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/native-hue-package-verification.json",
+      "bytes": 36034,
+      "sha256": "71c7cb51d91547f965147e8db17f2341efd252f5475c6003d98d695050b33dad",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/native-hue-verification.json",
+      "bytes": 29802,
+      "sha256": "bde069d0a52fec10fa0b86dc6777bc2dcbc942276f055eeacde020b50679d3ad",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/neural_decoder.json",
+      "bytes": 193249,
+      "sha256": "abb8bac526d94e002cece34058b73f7240f46b2331ab02aa830b75c49d286b67",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/release-research.json",
+      "bytes": 199607,
+      "sha256": "84f4aa0630a9fff4754ae6631b866bc000c025b35cb3c256f137b483a4f839ea",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/release-verification.json",
+      "bytes": 23854,
+      "sha256": "310b38d01b2b3f4ffd59c021ccf9e8631fe7bbb5a549c2ccf0bc126eb19a6b6d",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/repair-regressions.json",
+      "bytes": 22212,
+      "sha256": "e3684ab85414bf0e3968b576c415b8dc4f866c93132fe3ae570901b2f6bc12d8",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/review-data-smoke.json",
+      "bytes": 1659290,
+      "sha256": "750b884f222541140fbad4a19247ad931b5df2587dcbca7e2ac231040e619af5",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/review-data-smoke.md",
+      "bytes": 3971,
+      "sha256": "d889960fa843bd60945bb9f1eec5996a4cc4fc092666cd9f381de81dc6678178",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/review-findings.json",
+      "bytes": 12442,
+      "sha256": "f50bb4535af3c6fd692c468cf81d201a95496a581183ea121570c8d1fd48c282",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/review-smoke.json",
+      "bytes": 10076598,
+      "sha256": "b5490b38800c21d6de0a29d4c78078ec5c9482eda555ad9dc1d0b6009b2343d4",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/review-smoke.md",
+      "bytes": 13088,
+      "sha256": "c738ce04d42efc2c9a7ae50ef27f8112a01572a42bfc3ec3cc8fc19f7ed12848",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/review-summary.json",
+      "bytes": 4970,
+      "sha256": "b06c125d29742a0a10f18ff3f744b8604e0b3b4b3c051c431b4e8730401b3369",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/rgbd-token-verification.json",
+      "bytes": 29683,
+      "sha256": "fe528c82543209169c799cb0749becb4181517289ffd4b9d13630692cc4c7690",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/setup-verification.json",
+      "bytes": 1337,
+      "sha256": "acc10fabd51de90b97ba2dd4b5c25a9b5b055ea4dd5efd05c5482ebaf98716f1",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/smoke.json",
+      "bytes": 9256007,
+      "sha256": "c1dd4d80b60f983d3bfc2ce9e204690423f81b440edb5bdea4354568f350255f",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/smoke.md",
+      "bytes": 9826,
+      "sha256": "559bb8faed1307edd9e0c5ee8173effd4772641b5432436c9fa69d0e00d0874f",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/test-verification.json",
+      "bytes": 20675,
+      "sha256": "250c96623dd9a0c7f19c5ab9ca125638120ed1126367d58ee26c5c0c6029b542",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/train_scalar_chroma8.json",
+      "bytes": 181547,
+      "sha256": "e4a038a07c4511719f038ea6dbbe86ff848e9e3be1dc722f9315bce072c6840c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/train_scalar_chroma8.md",
+      "bytes": 2554,
+      "sha256": "1616b53466d5508da2eff3e04e42e26716b39e56b37a3e3704ffb6af21f340aa",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/train_scalar_fp32.json",
+      "bytes": 131345,
+      "sha256": "c985a6a956ee0b99dd8dc9c8b88f7ef130070109bbaa79080a1bf90c71caf12d",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/history/results/train_scalar_fp32.md",
+      "bytes": 2612,
+      "sha256": "9a8c57180969f95079d9cbab30ec8f0ef07743fc797d84f050191c40054a64ae",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/HOLOGRAPHIC.md",
+      "bytes": 8095,
+      "sha256": "30d7f36973613e2a79a04f13cd6fb7e9c92bcde6e1667666bbfb2d5c6d462d2c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/LICENSING.md",
+      "bytes": 1923,
+      "sha256": "0af4f9160d99ef7f47db642d80030a32283437c136c242ccdbba7c8c16f3693c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/MEASUREMENT.md",
+      "bytes": 7515,
+      "sha256": "cc4f439a758717dc0ebb9cdb118300bae0edde5dc523aaec9c4bef90063521a2",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/NATIVE_HUE.md",
+      "bytes": 20032,
+      "sha256": "f20eb9d3cc456c19e2e0ff7b8968a1560f7692c6560250133283556604206743",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/release/browser-verification.json",
+      "bytes": 54538,
+      "sha256": "9168a978b4b42c4751a34b974d22205e3cc7a74becbb4117c9bd4589ad978865",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/release/historical-selection.json",
+      "bytes": 32555,
+      "sha256": "569e28d09b8741474c655817dc9e3073b5cc95d65f8a0efd6cbc9a8d5f770c1d",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/release/static-verification.json",
+      "bytes": 2374,
+      "sha256": "bfed6513a3203726fba2279fdd912d2a2cc1f607723cf7d490567d57bd7bfe36",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/release/verification.json",
+      "bytes": 2180,
+      "sha256": "178976cb9438f07118f0d7374ce6cb95d60354db13b230346fedf9c3696c33b5",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/RELEASE_AUDIT.md",
+      "bytes": 9437,
+      "sha256": "51f407c29e4bd4e3980b2a6394f9af99f45abae507ca6d30c31dbd1987bedb90",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/RELEASE_GUIDE.md",
+      "bytes": 2890,
+      "sha256": "a0fa474e8329aeedaed598fc637fb023f95dc743d8398e594eef2e2bd6b36e51",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/REPAIR_REPORT.md",
+      "bytes": 21650,
+      "sha256": "0f97ba9f6f930e0fe0c7a324c1d5ea8e510a24af26599d75b601fc16a6e3503c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/REPOSITORY_MAP.md",
+      "bytes": 1938,
+      "sha256": "d41c868a2d67d85aca631400e128ab8411050d73cf764fcc2d9a135c42fdf529",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/RESEARCH_REVIEW.md",
+      "bytes": 10168,
+      "sha256": "c430941d80d3dc26c4655de4c01afd1d46e982f788b33fc1d4e634db644ff6c5",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/REVIEW_CHECKLIST.md",
+      "bytes": 13535,
+      "sha256": "aeae6283d22039fc8c15e7a2a9d0a8b7f21c60ef6d353be9362f3694a35409a5",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/RGBD_TOKENS.md",
+      "bytes": 9507,
+      "sha256": "3431156a2a54eb9e36c667d1c162ae4c5f5a7e56bb9f10276c0ea609a73b979c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/SECURITY_REVIEW.md",
+      "bytes": 12813,
+      "sha256": "fa7e348de409a22ca65d32b242f566f506a70ac691f911c9dc00ea11fe4a7fad",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/SETUP.md",
+      "bytes": 763,
+      "sha256": "a569fe5fbfdfc1560ef67ac7bc52cbdb9240388a3a35c29d9d7d4b5738b5c04b",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/TESTING.md",
+      "bytes": 4219,
+      "sha256": "17be967a4a9aceb3f25079d662e7c1177d2e722b255149a5d18f6945bebf3cc0",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "docs/USER_GUIDE.md",
+      "bytes": 4148,
+      "sha256": "d6e5b8c2143165ec358cfddc2f1656fdf3f671c0cd1d346fc8bac14cc5cddbe4",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "EXPERIMENT_MATRIX.md",
+      "bytes": 14353,
+      "sha256": "fdba5acb2cd71be0b17e39130ecdc5a5f3d17165eda7f541d8c58b71b729e8e3",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "experiments/__init__.py",
+      "bytes": 56,
+      "sha256": "75a49e4b275144336821845efcd63262c51331b2572e05551fa8cb23bf0de8c6",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "experiments/ablations.py",
+      "bytes": 3925,
+      "sha256": "8af0ad62ac5a1488e582d2fabc68698bf7316ca04c131a411d8ed065fdb2d65d",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "experiments/attention.py",
+      "bytes": 14558,
+      "sha256": "c7f73ab6df16cda03f9d64044c3f99c86d793b7d7ec02f8337728b2c4bc638c7",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "experiments/checkpoint_probe.py",
+      "bytes": 11768,
+      "sha256": "07b8db5e577b0d06ac746c42bf8bb903d201a54c37a11f9c8634541826a8ca48",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "experiments/common.py",
+      "bytes": 4964,
+      "sha256": "6842cdc94effcf926ef8f8d46f409ee91b05a507a8c671555de6f1b18a8b63ad",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "experiments/cube.py",
+      "bytes": 13628,
+      "sha256": "745371c258c9fd10e50d753aea457e9d5305950d2e7fa7befb9583e7725860fe",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "experiments/datasets.py",
+      "bytes": 5122,
+      "sha256": "d79df91b2ebad6bb51c02d0f96d69d2f0e674bfbecb8027441306910eb37e9f2",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "experiments/decoder.py",
+      "bytes": 10625,
+      "sha256": "152913a4d0e58412b95c7a6f0c1c6dca5a76fefc3c1f033beb6ff18cdd3c2515",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "experiments/instrumentation.py",
+      "bytes": 23646,
+      "sha256": "7b0f859324fc8d57ba82850aa0264132a8dd3b3acf8b6af0ca752a2c918d90e2",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "experiments/models.py",
+      "bytes": 3046,
+      "sha256": "6b8ac1333d55c5fdf49ae30475a1fcb12bea417b34c7a38a8af1d63015d0384b",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "experiments/precision.py",
+      "bytes": 11849,
+      "sha256": "97d5b673789297f808cce59fe80541e6d766f5ccb46497bf687c2047d01c0b48",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "experiments/provenance.py",
+      "bytes": 11458,
+      "sha256": "abe3a22747f65c04133ed253425b2fe1b9811ddf9f2a0fe804b72fd143d6eb5f",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "experiments/reporting.py",
+      "bytes": 8882,
+      "sha256": "0b4a0ac3f82a149dc3258b8c000b8530115b3ce4982bb650163b42e6d71027ec",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "experiments/training.py",
+      "bytes": 16364,
+      "sha256": "936c0791667a84e9b1aed08966c5ba090454ad87c5bf31a082ac2859553bb614",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "experiments/verification.py",
+      "bytes": 28779,
+      "sha256": "7ccc8e9bd22c7d98bb13c97fa52ca6f9dcdab99853c7d80a4a6411f898dff317",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "EXPERIMENTS.md",
+      "bytes": 4436,
+      "sha256": "7c140e5cfad4a7707f0ad1304eb7bb5558dbf73db3cbf11d2897089c86e4ad44",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 34523,
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "LIMITATIONS.md",
+      "bytes": 11863,
+      "sha256": "1c60f35fe04b1a890cf73fc721b40f337577e5ddda7a22f2da81fd055cd2cf4d",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/FORMAT.md",
+      "bytes": 3484,
+      "sha256": "7c985c1bc73952d1f83a93c5ba9355f585faa1880924124d000dfa5749305a43",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/hue_tensor/.gitignore",
+      "bytes": 9,
+      "sha256": "306fd52e74fca6746e12acc750f232de15e71da917756a1270d74c91f5eb7368",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/hue_tensor/Cargo.lock",
+      "bytes": 154,
+      "sha256": "1d70da3463b422e0470bdab478543cda8d58467f2fb2191fa780820c3a9e50a1",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/hue_tensor/Cargo.toml",
+      "bytes": 361,
+      "sha256": "96bb117ad65e5beb74365b0f84289ba1f2a64a018ad05c7faf2de990a3f3bb9c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/hue_tensor/include/hue_tensor.h",
+      "bytes": 2221,
+      "sha256": "81eaefa1bc501b8de9f96875a5a1723799db2532e8ba7b07bf7d6cd0c63a3f6c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/hue_tensor/src/bin/hue_tensor.rs",
+      "bytes": 13906,
+      "sha256": "46438f9dc38d96ab1703875a883c8993fccdf77430851bda22746a4c03d3650c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/hue_tensor/src/ffi.rs",
+      "bytes": 20203,
+      "sha256": "cd4e88e8cdd9be41c9196d3f8e22baf82c376398290ddf0c7f0b1ecf2144f920",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/hue_tensor/src/lib.rs",
+      "bytes": 22570,
+      "sha256": "ab8c42dbcd5750c20f16534c6adf97a3a11b501e898b0583a1fd897abc6c0ccb",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/hue_tensor/src/storage.rs",
+      "bytes": 23377,
+      "sha256": "204dcf09f6f17e6f64b806aa157f9b1af207a0b3cd0c3ec78d6661adca11c137",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/rust-notices/COPYRIGHT.html",
+      "bytes": 15404403,
+      "sha256": "139ebc62da648fa8dfea9d11ca6919ac417e8bfaffa08795341a414097a1fe24",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/rust-notices/licenses/Apache-2.0.txt",
+      "bytes": 10280,
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/rust-notices/licenses/BSD-2-Clause.txt",
+      "bytes": 1267,
+      "sha256": "f32fb3b417a194167cfad068223fc975ba96c5960513a10f66a3c28720aec1df",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/rust-notices/licenses/CC-BY-SA-4.0.txt",
+      "bytes": 20137,
+      "sha256": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/rust-notices/licenses/GCC-exception-3.1.txt",
+      "bytes": 3320,
+      "sha256": "a3966c9410ef94a1efbfa9ec04e9c1994026a70623fbf0885ce36737bfba3b54",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/rust-notices/licenses/GPL-2.0-only.txt",
+      "bytes": 17642,
+      "sha256": "54b212ba1f97f6948fa5486239ab505dd820b02e50cbfd296b4062c8609a70af",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/rust-notices/licenses/GPL-3.0-or-later.txt",
+      "bytes": 34795,
+      "sha256": "05315fce6c35f79b8a35454828995fa26336f235895ac64557abc028f4ffcea2",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/rust-notices/licenses/ISC.txt",
+      "bytes": 730,
+      "sha256": "0ff61769b238634e042ab759dddfd104a8e69d091e3600ae3410e401a6164381",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/rust-notices/licenses/LLVM-exception.txt",
+      "bytes": 919,
+      "sha256": "e34c58338bd89d43e709e226610d8f32b3e3c47f4ad9a99a8dc1d4ac7842488e",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/rust-notices/licenses/MIT.txt",
+      "bytes": 1078,
+      "sha256": "b85dcd3e453d05982552c52b5fc9e0bdd6d23c6f8e844b984a88af32570b0cc0",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/rust-notices/licenses/NCSA.txt",
+      "bytes": 1676,
+      "sha256": "39cb0234065c92b9e6cee3830cbb52b1aa289aa8fe9ba2e66730fec5cf05c630",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/rust-notices/licenses/OFL-1.1.txt",
+      "bytes": 4016,
+      "sha256": "8eea8287e5876b539670cadb82e99f9a7afddec6f6730811be1daf25d2e9bcfd",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/rust-notices/licenses/Unicode-3.0.txt",
+      "bytes": 1995,
+      "sha256": "f5062c9a188d81dfe66b56db4182dcf9e4b17c0d9b0d311a8e20b3a1b075c443",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/rust-notices/manifest.json",
+      "bytes": 2708,
+      "sha256": "8925e3c50c058f1ed823c350095878faf4db626835cf2615504dff4f90af5576",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "native/rust-notices/README.md",
+      "bytes": 1504,
+      "sha256": "8e5265971314eb6eb7bb6bc6bdba0a072c6455464fbb72093ec5df3f5094e5a7",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 788,
+      "sha256": "91eb7b747f849031fc2cd4515a73040364f1a9ac20d38c420cbcccadee2abc6c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5947,
+      "sha256": "9bee31bb4d8191a77633dada369d8b101368af57f867dd41a3d07f48aff27636",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "RELEASE_CHECKLIST.md",
+      "bytes": 8934,
+      "sha256": "62e211fe415cec500a8e562ece40c229fe80867f4164401a4d6db2789417baec",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "requirements/linux311-cpu.lock",
+      "bytes": 517,
+      "sha256": "354b5961c426ef7f16b3e6d13b3ff0de7d20541912542e5d2219535c83f90bc6",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "requirements/linux312-cpu.lock",
+      "bytes": 517,
+      "sha256": "68de177a549e9ef146c76533bc897f969dccbb9f372d519c15757d2b280f5cee",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "requirements/linux313-cpu.lock",
+      "bytes": 517,
+      "sha256": "68de177a549e9ef146c76533bc897f969dccbb9f372d519c15757d2b280f5cee",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "requirements/linux314-cpu.lock",
+      "bytes": 517,
+      "sha256": "68de177a549e9ef146c76533bc897f969dccbb9f372d519c15757d2b280f5cee",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "requirements/minimum-cpu.lock",
+      "bytes": 521,
+      "sha256": "297b5b4b73361d65d71163b6cbac1226836972890a3df79bfa81c4c67cbc6938",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "requirements/minimum.txt",
+      "bytes": 120,
+      "sha256": "74b871ec1dd7eea38ac71eba810bd25e0c0d565c08f21538fb83328048abab54",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "requirements/python311-cpu.lock",
+      "bytes": 521,
+      "sha256": "297b5b4b73361d65d71163b6cbac1226836972890a3df79bfa81c4c67cbc6938",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "requirements/python312-cpu.lock",
+      "bytes": 521,
+      "sha256": "6d08237ffcfeedc2908dc42f9a99fa0e79f042fe01e4692984ff38c6f99b1a88",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "requirements/python313-cpu.lock",
+      "bytes": 521,
+      "sha256": "6d08237ffcfeedc2908dc42f9a99fa0e79f042fe01e4692984ff38c6f99b1a88",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "requirements/python314-cpu.lock",
+      "bytes": 521,
+      "sha256": "6d08237ffcfeedc2908dc42f9a99fa0e79f042fe01e4692984ff38c6f99b1a88",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "RESEARCH_LOG.md",
+      "bytes": 52376,
+      "sha256": "ef6a7b02068bbdb038a841117f76fff2e78da414f4e0e6089b920dc1ccd2f62c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "results/acceptance.json",
+      "bytes": 29505,
+      "sha256": "76c2ed47616f5bf34d461f5b957c11507557509d3e98aba08065265963273961",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "results/cube.json",
+      "bytes": 98418,
+      "sha256": "a8a09d5d3b80caed713a8496ecc93b0e8ffe29d4c52892e0b7f6b6528e670546",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "results/dependency-toolkit-python312.json",
+      "bytes": 19058,
+      "sha256": "61b80cad0c231c4de2bc0f164ad04cedd51ba3e3a4e1fdac14c7a40ae113adaa",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "results/local-smoke.json",
+      "bytes": 10157419,
+      "sha256": "ad7fd6c9aee223a5f875bbb5d434393a1b28b2ede27f11e760b18a06e505754f",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "results/native-hue-build-linux-x86_64.json",
+      "bytes": 21992,
+      "sha256": "94fa085d8c4aca3cad56cda0bdc0dd19a246871a2f8e8772e59f62d72fdbb762",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "results/native-hue-build-windows-x86_64.json",
+      "bytes": 21823,
+      "sha256": "f0470d445e743fa8d379bf779df92403ecb0b1dea90c3c695909cd630213c786",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "results/native-hue-package-verification.json",
+      "bytes": 32652,
+      "sha256": "be235d01b37e436e4fef74829e55c3b284e0a9ecf282ba68a6f74e6c2d0e5a6c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "results/native-hue-verification.json",
+      "bytes": 26355,
+      "sha256": "63b71d9dd137e385cfefe074ff1f4f0582cc28d79631e49b30f68bf7b0077e5b",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "results/release-cpu-test-verification.json",
+      "bytes": 17447,
+      "sha256": "fd738a37b75524f0470820fbf9693c9547fee3173d93f0ac1702b89023c70e8a",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "results/test-verification.json",
+      "bytes": 17455,
+      "sha256": "8627ce965ae9b9aef10a1bb40921c39b0f584ab2c16865100d80a1ad30e55ef0",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "RESULTS.md",
+      "bytes": 21250,
+      "sha256": "ac5b3be9e6de32fdd8a5e8a91b01e18e8b41e702c31f7b90f50f778b401f3a46",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/architecture.py",
+      "bytes": 45342,
+      "sha256": "6095e872c408855ceaeac6db2e891e2f5b5e9068d10422a067809ef1edd2d1f7",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/build_native_hue.py",
+      "bytes": 10923,
+      "sha256": "354fd81cdef0aa748b7b3eea4adc8b630c3f0c939468c7f67b27ffe510ca9102",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/build_release_evidence.py",
+      "bytes": 3068,
+      "sha256": "7b826a089293538db0d3cc37ca5283d1a899ad2d4f7eafb717361a94d4d69934",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/dashboard.py",
+      "bytes": 240,
+      "sha256": "c1d4168a02b00adc5ac3ea049a11927418cbbee7b8e41b3d60bb321e3c3c3ed1",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/finalize_report.py",
+      "bytes": 4082,
+      "sha256": "7ab674d5d85b43fd322799234cbf3730384c5fe6ad5f35866e7fe96f07ef9d5a",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/release_audit.py",
+      "bytes": 7666,
+      "sha256": "fd6c56ebe01bca5800909d824b3c5767677cfc05ed677d2bf5fd8be121bb2d00",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/review_reproductions.py",
+      "bytes": 14404,
+      "sha256": "9f945a5abdc667727acad1edd800157cd1968030863fd9006c567cf5336a550b",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/run_benchmarks.py",
+      "bytes": 9548,
+      "sha256": "3c666add71610352bebffe13b09689f3977901b443db13959b0c4e3478fbd236",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/run_cube_experiments.py",
+      "bytes": 8636,
+      "sha256": "d65dccf54be8aaf4a2af3dc2ae73068454edc9dc9bfa428dfcfdc49fdd90ec37",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/run_native_hue_package_checks.py",
+      "bytes": 4535,
+      "sha256": "bd1ecf8da6fa03088ab99b254757157c2fb23482a55bc73e26fd5ae5490ff81d",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/run_release_research.py",
+      "bytes": 27745,
+      "sha256": "15cdfce4ff02543fff12df1c931982a142c57cfd9f48935a0231fc6f1f779a5b",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/run_verification_tests.py",
+      "bytes": 2529,
+      "sha256": "67cd64d256d8e08c1128f77d4f372f5b9cd23468450cd7efaaa84dc4ab669973",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/scan_release.py",
+      "bytes": 11822,
+      "sha256": "2e2634e7639d75d6a73d83ac0661c77007052fe323ce1e6b074da9b68ed7235d",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/train.py",
+      "bytes": 1098,
+      "sha256": "2307323725a6dad464250e8990a3d30f4616aa97bb1d31a564cabc7af98369e7",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/verify.py",
+      "bytes": 6935,
+      "sha256": "edb0c32960052ffa22d32d029aaf2fcac17ecf290e31efe34aa96c1a8d0cd30e",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/verify_dependencies.py",
+      "bytes": 13310,
+      "sha256": "eda170bb50d656b72c31f1cc7de2167df79ca60baeea117231335c8406bb60e4",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/verify_installed_hue.py",
+      "bytes": 3327,
+      "sha256": "6d7d035baae3941c816c9ee03a53ef67f4b9573fe504478b924db99449fd1876",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/verify_native_hue.py",
+      "bytes": 26336,
+      "sha256": "dabad2682a51660bb68a3fffa76243572a5960f4ed79c5b2b507c3a8eaf5a648",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/verify_native_hue_release.py",
+      "bytes": 17206,
+      "sha256": "6117f5fdcdcb1019e7c92b9f4b8d4183498ff355da43e2a2477418c903a50b4e",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/verify_release_install.py",
+      "bytes": 8176,
+      "sha256": "55a4e4fd93fe128cec1c7c99687a0ae976016857589ff92e770a7dd7dfed498c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "scripts/verify_rgbd_tokens.py",
+      "bytes": 23758,
+      "sha256": "cfe9d167c16561c266b8af993b57334e12bea219e554e63cb0fe54381a566a69",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 2693,
+      "sha256": "6d59f7af08da5b63c68dffe12c6f013b9787040dca2d37c5cc0b8ce951361fa4",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/conftest.py",
+      "bytes": 437,
+      "sha256": "e1269c105af016b549e578bb980aad34e10b33424053ec32492707b70d8492b5",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_ablations.py",
+      "bytes": 671,
+      "sha256": "df32e8d1e261e92f5e45f92bb55fdea8410c48a3e3e16933f5cb817bbecffb10",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_acceptance.py",
+      "bytes": 26818,
+      "sha256": "82cfb263ea980b2db6c1b9d78eb1ec4ef536c5dcd78ac57200aadb5869c5121b",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_architecture.py",
+      "bytes": 6935,
+      "sha256": "f4d62f5fd40e201f4b22f1f58db31a51f7a893c1e3519708034ea31f1fb11fc5",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_attention_experiment.py",
+      "bytes": 3075,
+      "sha256": "8ffc19b593100388d8c8fa531f8fba8b781a2c7a2374f2da0d09b5bb79734b8f",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_build_native_hue.py",
+      "bytes": 5338,
+      "sha256": "b9c3985e09e15ac3b11acfbd531bc0a3a32feef7e270d575cec3319e8bd25a74",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_checkpoint_probe.py",
+      "bytes": 9788,
+      "sha256": "1f595fb11f4b4df23efd1cdd18a70a638e703bff5af1e1f88da5a9e67cf63d45",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_codecs.py",
+      "bytes": 11682,
+      "sha256": "5b244cce5daf69e9a41e1b3f80a50cef45bef60ecba16482ff3c6a5b4b78c772",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_cube.py",
+      "bytes": 11701,
+      "sha256": "ce56c5f43379a3ddcb0c5d84938ab26bdec665021fe2aac1a494d6dbc7b15320",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_cube_api.py",
+      "bytes": 13259,
+      "sha256": "2a1827ad175871cd8e2e4b287513b6a1a3203c6255fadf98f87e58286dcbd184",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_cube_experiments.py",
+      "bytes": 9373,
+      "sha256": "39309ef4d9342d1fa9aa43de1cd31bb15af8de3ab42e92c55de99286f42b11bb",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_dashboard.py",
+      "bytes": 11522,
+      "sha256": "76608e25cb244b7c5f935859d5a7cf8752729bffa9962a3a6c22deb8572bf966",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_datasets.py",
+      "bytes": 1617,
+      "sha256": "aeb1c8fbe0a16a4f348bcbb28923e0bce3b958b42b953c57c70ca5eceeaa1331",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_decoder.py",
+      "bytes": 5027,
+      "sha256": "c1e8a7b19cde5ee2b7da8f1d288c578f47198e4ce7e5c2adef432f1375cf1a92",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_dependency_runner.py",
+      "bytes": 2944,
+      "sha256": "4b925e88fea594cb7528487f39c931d2d9ab57e5f170d770d65841265be4b1cc",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_file_limits.py",
+      "bytes": 17131,
+      "sha256": "bf1ded7fb665bbabf7f8782f3770babeb2e3553ed8fa1a6a8b1826d36acbe1d5",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_holographic.py",
+      "bytes": 13375,
+      "sha256": "b448ab2e0f04b18855b976f80bdf3fc382deb4747faa541c6de17b74f20a917f",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_hue_packaging.py",
+      "bytes": 2918,
+      "sha256": "89900b6cdbd5224a378dad5dc5e55fcd500377efaa956ef0914203e131c9d9d0",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_instrumentation.py",
+      "bytes": 6626,
+      "sha256": "acd4232b4c6db004494e8471b0aabe86d626fa731a7f3342cfbc572a83347bb3",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_native_hue.py",
+      "bytes": 20189,
+      "sha256": "58d60cc357bf4734cc83a7a91d39b161919643229bc465433eeef0748e1ed8dd",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_native_release.py",
+      "bytes": 5355,
+      "sha256": "a9361b1648082c4294124683974016a2d2602635c38baac6a8d56047f51797d9",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_nn.py",
+      "bytes": 19710,
+      "sha256": "d3908175692e1e973cd7c113fa151a3a1bb701e8c322383e511748994dae770c",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_operators.py",
+      "bytes": 3122,
+      "sha256": "990203f49d2e13bca02dd7f4455aa28e68baafe39aa63ab374b869246f7e45c3",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_public_release_manifest.py",
+      "bytes": 2507,
+      "sha256": "b35e498d29d0faa641975d195970363f8ad293b82d9526ec51d6ad45cf34a4e0",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_release_matrix.py",
+      "bytes": 1339,
+      "sha256": "54edcc832000ccda014dbfe0ab0a349cfef165a6a127a4a6aeeac41fa1a4a014",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_release_research.py",
+      "bytes": 10098,
+      "sha256": "afa406fab27e92708eb1f5912a3e06ef942d3f27ef7b0ab540d190770c71108f",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_release_scan.py",
+      "bytes": 4387,
+      "sha256": "501eb7611d32db3d84ac0e4433cc5fdfc19c0d295c565109d67b375b0e59e8e1",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_result_io.py",
+      "bytes": 629,
+      "sha256": "58e4a2b9d42b9b338729aeea75e7d029825252d654166549c838a891e3868bee",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_rgbd_nn.py",
+      "bytes": 11469,
+      "sha256": "a09d41ece470bed998f29acdf50931f91224b63401166d7746a81997211c0aa1",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_rgbd_tokens.py",
+      "bytes": 16639,
+      "sha256": "c219392c56391983f02da4ccb0e0e1053d8cd244af61af790b3d9183dee6b94f",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_serialization.py",
+      "bytes": 4507,
+      "sha256": "1a33cf704b47831070438c3d7d99ad5c268ccab3039ca73b43ed2a46cdc4ccd7",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_tensor.py",
+      "bytes": 6308,
+      "sha256": "cdaffb1041bf3d47643b9a5c3dfe60962ea7624862094f333be0484f68526d90",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "tests/test_training.py",
+      "bytes": 6498,
+      "sha256": "e159375ee9c0605212a1ab5043ed8497607ab8176ce81f588017ac426777c50b",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "THEORY.md",
+      "bytes": 12975,
+      "sha256": "a5172b9bf6f218e56531138a49863072ca5815b814990aa6830c63827b367999",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 5248,
+      "sha256": "25b9de97ee63eebcf9a161273b5f9ee40c80ce0d47c08fbe4c9d567d143106d7",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    },
+    {
+      "path": "TODO.md",
+      "bytes": 6001,
+      "sha256": "9b088da0fe43f9cbf36ef73cc39349707e951c1b4275182d21bb6d485358ec69",
+      "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
+    }
+  ],
+  "total_bytes": 271942002
+}

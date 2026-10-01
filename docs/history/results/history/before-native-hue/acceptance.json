@@ -1,0 +1,437 @@
+{
+  "schema_version": 2,
+  "verified_at": "2026-10-01T04:34:20.484525+00:00",
+  "config": {
+    "results": "results/latest.json",
+    "cube": "results/cube.json",
+    "tests": "artifacts/verification-tests.xml",
+    "test_evidence": "results/test-verification.json",
+    "release": "results/release-verification.json",
+    "browser": "artifacts/dashboard/cube-verification.json",
+    "research": "results/release-research.json",
+    "rgbd": "results/rgbd-token-verification.json"
+  },
+  "gates": [
+    {
+      "gate": "Executed required tests with current source identity",
+      "verified": true,
+      "evidence": {
+        "tests": 702,
+        "required_modules": [
+          "test_ablations",
+          "test_acceptance",
+          "test_attention_experiment",
+          "test_checkpoint_probe",
+          "test_codecs",
+          "test_cube",
+          "test_cube_api",
+          "test_cube_experiments",
+          "test_dashboard",
+          "test_datasets",
+          "test_decoder",
+          "test_file_limits",
+          "test_holographic",
+          "test_instrumentation",
+          "test_nn",
+          "test_operators",
+          "test_release_matrix",
+          "test_release_research",
+          "test_result_io",
+          "test_rgbd_nn",
+          "test_rgbd_tokens",
+          "test_serialization",
+          "test_tensor",
+          "test_training"
+        ],
+        "skipped": 0
+      }
+    },
+    {
+      "gate": "Canonical trained task, representation and seed coverage",
+      "verified": true,
+      "evidence": {
+        "training_tuples": 95
+      }
+    },
+    {
+      "gate": "Paired equal-bit controls agree with model records",
+      "verified": true,
+      "evidence": {
+        "comparisons": 13
+      }
+    },
+    {
+      "gate": "Precision distributions and operator control coverage",
+      "verified": true,
+      "evidence": {
+        "precision_conditions": 92,
+        "samples_per_distribution": 1000000
+      }
+    },
+    {
+      "gate": "Actual expected-model checkpoint and held-out probe replay",
+      "verified": true,
+      "evidence": {
+        "reloaded_models": 89
+      }
+    },
+    {
+      "gate": "Live checkpoint-backed profiler replay",
+      "verified": true,
+      "evidence": {
+        "live_profiles": 2
+      }
+    },
+    {
+      "gate": "Immutable cube checkpoints and reconstructed measurement replay",
+      "verified": true,
+      "evidence": {
+        "cube_models": 6,
+        "geometry_cases": 16,
+        "erasure_cases": 80
+      }
+    },
+    {
+      "gate": "Exact current-source release wheel, installed assets and dependencies",
+      "verified": true,
+      "evidence": {
+        "wheel_sha256": "5caf5a93fb4dc8949d67415bb94030da06ed2f1adf528c7e240038b391eb0b04",
+        "package_assets": 49
+      }
+    },
+    {
+      "gate": "Current-source browser interaction evidence",
+      "verified": true,
+      "evidence": {
+        "interaction_checks": [
+          "create",
+          "hidden_slice",
+          "recorded_results",
+          "six_dimensions",
+          "spectral_erasure",
+          "turn",
+          "undo"
+        ]
+      }
+    },
+    {
+      "gate": "Sustained training, untouched final test and large-tensor execution",
+      "verified": true,
+      "evidence": {
+        "trained_models": 12,
+        "seeds": [
+          7,
+          23,
+          41,
+          59
+        ],
+        "epochs": 20,
+        "final_test_examples": 10000,
+        "large_tensor_values": 10000000
+      }
+    },
+    {
+      "gate": "Actual RGBD token bytes, independent oracle and cold-process decoding",
+      "verified": true,
+      "evidence": {
+        "verified": true,
+        "run_id": "rgbd-tokens-20261001T041453876477Z-6e9c864ff2c9",
+        "samples": 1000000,
+        "token_shape": [
+          1000000,
+          4
+        ],
+        "token_dtype": "torch.uint8",
+        "bit_mismatches": 0,
+        "channels_used": [
+          "R",
+          "G",
+          "B",
+          "D"
+        ],
+        "payload_bytes": 4000000,
+        "file_bytes": 4000295,
+        "decoded_sha256": "f9ab25c822f7a3395ef68e8ff792027400577e1499979a3527e1ed5c0ba75ab2",
+        "cold_process_pid": 32344,
+        "source_sha256": "69eb8feebdc26d4e72bd1160ed7e5cf695d5035a65f62edebc1a061061ba1fba"
+      }
+    }
+  ],
+  "complete": true,
+  "provenance": {
+    "schema_version": 1,
+    "captured_at": "2026-10-01T04:34:20.484669+00:00",
+    "source": {
+      "files": {
+        ".github/workflows/ci.yml": "ec05ebe634502ee23e48e7b3cc66cce3d3e098fabf6a311c50408d4ee0c4ce0d",
+        "AGENTS.md": "c56f62c3e55b66a963eb95a9d342ccf5857bac3744f636dcea70dbbaafcab9f6",
+        "chromatensor/__init__.py": "e87a544bc449941ad7734da281171b259c607c43ca4ee631df4e7a7dcbf3ba88",
+        "chromatensor/autograd/__init__.py": "29dbb3efe94820aa9b6d171c32fe220eb779f633c7c700309c7420a5e9f6f6ea",
+        "chromatensor/autograd/quantization.py": "9524cd0af99950a2852a84cadbd29b8d374a089dce01f793cf903da9e72fe393",
+        "chromatensor/codecs/__init__.py": "fc436cb22a165f6dfa2cc25efc6c6348d304eea468545edf3ee31e355797080e",
+        "chromatensor/codecs/base.py": "51cf4214dcb731871ff218ff72d312569068ce13b4a0d70f0e2952651d68657b",
+        "chromatensor/codecs/hierarchical.py": "cef4692aecbc208564489bc165cc9b0c9ef1440257f735734326e792ecc1cec3",
+        "chromatensor/codecs/hsv.py": "5ce2eb66a2e80970f46602808b000a30d0cb4203611659029a5079792d97423d",
+        "chromatensor/codecs/learned.py": "1bcb2fdbfccc1f0423a7c4624476793875903c2d008fa696de1aa613e37a7281",
+        "chromatensor/codecs/neural_rgb.py": "156c782f66096f8960c863b8d743146f00cf05d219b419fcef7291762947b0da",
+        "chromatensor/codecs/rgb.py": "aa8ec8ed36333fe5f212441e9a288c8f1cc6254425c6de5278625ef89d3b9906",
+        "chromatensor/codecs/rgbd.py": "0de8229189a88d4ef2806cf295a8f3bc1f11efe308f4aa1b166e944f9b273617",
+        "chromatensor/cube.py": "743086b6121e60630681e4958a65f9bd2195e71ef04520ef43ad8fc2dbd24451",
+        "chromatensor/decoders.py": "70afdc08e3dd966dd023d1612574047b032399e0c1ec34feaeb5ecbfd6a0e2df",
+        "chromatensor/holographic.py": "379630fa90845a4a1ad12282edbd7fbad90403ee6f12cc70f25231530e4ff997",
+        "chromatensor/nn/__init__.py": "d0037299d4799f5434fe1c315e93fc43bed88c14b69f5d5ee52943c04bc162e6",
+        "chromatensor/nn/attention.py": "1384f870058192eb4b321bce66698dfce5b2383cf911a5417439af3954f8dd1f",
+        "chromatensor/nn/layers.py": "2570772713de51c263c5ffd653d61e0f535dcb3b1b9ffc8501ae6e7e9ccde194",
+        "chromatensor/nn/report.py": "ca387c1d8048a3d08637740bfc2ef778f9fd243b08bede4d905cbcaff6e486ac",
+        "chromatensor/operators/__init__.py": "a72042a18d3b62e5224a7cd034b26ac317d5299d791717bde9d8e0b49abed740",
+        "chromatensor/operators/core.py": "5db3a66e45c15f764845c71d92053f1d60f0d6bd7c6632b0d3fcabf6d47c35a7",
+        "chromatensor/serialization/__init__.py": "0052c5e4c372360c4fab24b9885a6fb1f5fb344d972e886acbe40c19c6764e2c",
+        "chromatensor/serialization/format.py": "6b2694152b7a2d1face0eb6db891ac6effea9a0d06287657b63be97e9936e8b1",
+        "chromatensor/tensor.py": "9cf59d8f5db06a928555f0e7bb248ce2cc1f0704d1615ecca8fe70c23fc5c54b",
+        "chromatensor/tokenizer/__init__.py": "a3b4a1b7203fc8d4c52fe9a1b03c3d9eee3dcc78d7d82891f447f9fc98273e72",
+        "chromatensor/visualization/__init__.py": "fd1b9dbc0ae4007762a7bf237ede380fc6e2a8693dc65704b45dade8322d18a7",
+        "chromatensor/visualization/plots.py": "6ec35b91cf7769bff87e86743f8e985f40b3d097153a57420392389abcd6a3ff",
+        "dashboard/__init__.py": "e795b4116ee4f719fdc3731d6de0bc49c19ae03bac6558916ac8a79407f724a9",
+        "dashboard/app.js": "59096088da2640564034b45108d19cd70477c3affa02954b30a03773fd7bb9a7",
+        "dashboard/cube.css": "5653d9c8a21e26321d6100b67f42429bbe97b4cab35b82151e76c3128b4d5ff5",
+        "dashboard/cube.js": "22dae4dcecbf2e72e4c9140596950b8436910797a82c4646b279f21ea3804355",
+        "dashboard/cube_api.py": "30a6099e2f2726c498f300d213e0ad55c8ed8f2bf68b49597cfe247fbe58f472",
+        "dashboard/index.html": "6f8ac1d22a78af2d9b64e795a96b5e4ad1e4d7edf67cd7e41871ba997abd0c0b",
+        "dashboard/server.py": "c9ee7664b55deb67b03c6ed051ff3f8eeeca4576befce7cdd103ee871ccf2f2d",
+        "dashboard/style.css": "80850bbe4417bcf3e6eea8b0417cf58f7da920671e7ff7e45fc29036f15e7bf3",
+        "experiments/__init__.py": "75a49e4b275144336821845efcd63262c51331b2572e05551fa8cb23bf0de8c6",
+        "experiments/ablations.py": "8af0ad62ac5a1488e582d2fabc68698bf7316ca04c131a411d8ed065fdb2d65d",
+        "experiments/attention.py": "479c5d16983848dc5ac8da78737533ced8f07751c87dc53156b4930dd3cee0a1",
+        "experiments/checkpoint_probe.py": "9e0028ecf023ac6b0835a8cb3ebdd0835b0450971f14230f433b3fc53a777863",
+        "experiments/common.py": "6842cdc94effcf926ef8f8d46f409ee91b05a507a8c671555de6f1b18a8b63ad",
+        "experiments/cube.py": "745371c258c9fd10e50d753aea457e9d5305950d2e7fa7befb9583e7725860fe",
+        "experiments/datasets.py": "d79df91b2ebad6bb51c02d0f96d69d2f0e674bfbecb8027441306910eb37e9f2",
+        "experiments/decoder.py": "152913a4d0e58412b95c7a6f0c1c6dca5a76fefc3c1f033beb6ff18cdd3c2515",
+        "experiments/instrumentation.py": "7b0f859324fc8d57ba82850aa0264132a8dd3b3acf8b6af0ca752a2c918d90e2",
+        "experiments/models.py": "6b8ac1333d55c5fdf49ae30475a1fcb12bea417b34c7a38a8af1d63015d0384b",
+        "experiments/precision.py": "97d5b673789297f808cce59fe80541e6d766f5ccb46497bf687c2047d01c0b48",
+        "experiments/provenance.py": "58e4b57b7ad58042ff28b518f6a5eaf75d53cd1acbb65bdc8b2acd88d739ae71",
+        "experiments/reporting.py": "0b4a0ac3f82a149dc3258b8c000b8530115b3ce4982bb650163b42e6d71027ec",
+        "experiments/training.py": "818c0bbb28e607b2b4eb7846b362c9061fcbe06d79c7fa3ab70f560a7e906f28",
+        "experiments/verification.py": "26f4ea1c0e2e6751a440485a1aa411c65292b05196e61fa1f8f6b2b886677484",
+        "pyproject.toml": "e3429218e7f51d18620e16c5d5694a366e0c8b215aa046a95b36814abfc3b07d",
+        "requirements/linux311-cpu.lock": "af7b6d78dd9771688ce19e926360b2dc61cb20949170cc98eb0deab0240d573e",
+        "requirements/linux312-cpu.lock": "75315cbd92fe8338d8ece4c1a8291b94941f60b97d88b54ae734299c523744c0",
+        "requirements/linux313-cpu.lock": "75315cbd92fe8338d8ece4c1a8291b94941f60b97d88b54ae734299c523744c0",
+        "requirements/linux314-cpu.lock": "75315cbd92fe8338d8ece4c1a8291b94941f60b97d88b54ae734299c523744c0",
+        "requirements/minimum-cpu.lock": "feb158fc00ff1e54b70fcb2cb4f228a75ed22636aec20acc6dab54b95a8e844a",
+        "requirements/minimum.txt": "776bd9fb96cbcb72c05dca4e67ad9835f3c2d33fe674dffe33b4910e27cb6394",
+        "requirements/python311-cpu.lock": "f4d169524ba857a37f41c3f0a56dc890332e9bbb6c9f16eb6fc55152cfb7dc8b",
+        "requirements/python312-cpu.lock": "8415e0dfb371882cfe839f10bc9207fe7cbf9dde836bd64d75f96c3e09e73ee5",
+        "requirements/python313-cpu.lock": "8415e0dfb371882cfe839f10bc9207fe7cbf9dde836bd64d75f96c3e09e73ee5",
+        "requirements/python314-cpu.lock": "8415e0dfb371882cfe839f10bc9207fe7cbf9dde836bd64d75f96c3e09e73ee5",
+        "scripts/build_release_evidence.py": "7b826a089293538db0d3cc37ca5283d1a899ad2d4f7eafb717361a94d4d69934",
+        "scripts/dashboard.py": "c1d4168a02b00adc5ac3ea049a11927418cbbee7b8e41b3d60bb321e3c3c3ed1",
+        "scripts/finalize_report.py": "7ab674d5d85b43fd322799234cbf3730384c5fe6ad5f35866e7fe96f07ef9d5a",
+        "scripts/review_reproductions.py": "9f945a5abdc667727acad1edd800157cd1968030863fd9006c567cf5336a550b",
+        "scripts/run_benchmarks.py": "3c666add71610352bebffe13b09689f3977901b443db13959b0c4e3478fbd236",
+        "scripts/run_cube_experiments.py": "d65dccf54be8aaf4a2af3dc2ae73068454edc9dc9bfa428dfcfdc49fdd90ec37",
+        "scripts/run_release_research.py": "15cdfce4ff02543fff12df1c931982a142c57cfd9f48935a0231fc6f1f779a5b",
+        "scripts/run_verification_tests.py": "26f29bc35585c2077711c33a6f8a972eeb6302866de99e17dae4054f8acf607d",
+        "scripts/train.py": "2307323725a6dad464250e8990a3d30f4616aa97bb1d31a564cabc7af98369e7",
+        "scripts/verify.py": "e2b8ce948cd9b89b9d4fb8689f3f56fa9d621f760004540690dcfaaef2568a82",
+        "scripts/verify_dependencies.py": "0b3e73083a358428836fd7f2b5db132629ad34b3f657b08416f83e34df94d255",
+        "scripts/verify_release_install.py": "abd56076b1a5ffd73c2cf6268f60b6759a501fbcc27c55060cc8529cdd758fab",
+        "scripts/verify_rgbd_tokens.py": "cfe9d167c16561c266b8af993b57334e12bea219e554e63cb0fe54381a566a69",
+        "tests/conftest.py": "e1269c105af016b549e578bb980aad34e10b33424053ec32492707b70d8492b5",
+        "tests/test_ablations.py": "df32e8d1e261e92f5e45f92bb55fdea8410c48a3e3e16933f5cb817bbecffb10",
+        "tests/test_acceptance.py": "e8c76cdc15fd4047fc2903f218e16ce1904e8fac4834282266b7312f71648d12",
+        "tests/test_attention_experiment.py": "8ffc19b593100388d8c8fa531f8fba8b781a2c7a2374f2da0d09b5bb79734b8f",
+        "tests/test_checkpoint_probe.py": "c0e5a2f0bc4e644e8f88fba8653f62c21a289b0864cecac90d7a6f0311784182",
+        "tests/test_codecs.py": "5b244cce5daf69e9a41e1b3f80a50cef45bef60ecba16482ff3c6a5b4b78c772",
+        "tests/test_cube.py": "ce56c5f43379a3ddcb0c5d84938ab26bdec665021fe2aac1a494d6dbc7b15320",
+        "tests/test_cube_api.py": "2a1827ad175871cd8e2e4b287513b6a1a3203c6255fadf98f87e58286dcbd184",
+        "tests/test_cube_experiments.py": "39309ef4d9342d1fa9aa43de1cd31bb15af8de3ab42e92c55de99286f42b11bb",
+        "tests/test_dashboard.py": "76608e25cb244b7c5f935859d5a7cf8752729bffa9962a3a6c22deb8572bf966",
+        "tests/test_datasets.py": "aeb1c8fbe0a16a4f348bcbb28923e0bce3b958b42b953c57c70ca5eceeaa1331",
+        "tests/test_decoder.py": "c1e8a7b19cde5ee2b7da8f1d288c578f47198e4ce7e5c2adef432f1375cf1a92",
+        "tests/test_file_limits.py": "bf1ded7fb665bbabf7f8782f3770babeb2e3553ed8fa1a6a8b1826d36acbe1d5",
+        "tests/test_holographic.py": "b448ab2e0f04b18855b976f80bdf3fc382deb4747faa541c6de17b74f20a917f",
+        "tests/test_instrumentation.py": "acd4232b4c6db004494e8471b0aabe86d626fa731a7f3342cfbc572a83347bb3",
+        "tests/test_nn.py": "d3908175692e1e973cd7c113fa151a3a1bb701e8c322383e511748994dae770c",
+        "tests/test_operators.py": "990203f49d2e13bca02dd7f4455aa28e68baafe39aa63ab374b869246f7e45c3",
+        "tests/test_release_matrix.py": "54edcc832000ccda014dbfe0ab0a349cfef165a6a127a4a6aeeac41fa1a4a014",
+        "tests/test_release_research.py": "afa406fab27e92708eb1f5912a3e06ef942d3f27ef7b0ab540d190770c71108f",
+        "tests/test_result_io.py": "58e4a2b9d42b9b338729aeea75e7d029825252d654166549c838a891e3868bee",
+        "tests/test_rgbd_nn.py": "a09d41ece470bed998f29acdf50931f91224b63401166d7746a81997211c0aa1",
+        "tests/test_rgbd_tokens.py": "c219392c56391983f02da4ccb0e0e1053d8cd244af61af790b3d9183dee6b94f",
+        "tests/test_serialization.py": "1a33cf704b47831070438c3d7d99ad5c268ccab3039ca73b43ed2a46cdc4ccd7",
+        "tests/test_tensor.py": "1f20a6bfc449516b950d6732618ef65e00fc9224c1cd7f78a0312bb717fe92b3",
+        "tests/test_training.py": "e159375ee9c0605212a1ab5043ed8497607ab8176ce81f588017ac426777c50b"
+      },
+      "sha256": "69eb8feebdc26d4e72bd1160ed7e5cf695d5035a65f62edebc1a061061ba1fba"
+    },
+    "git": {
+      "available": true,
+      "commit": "e60d4206144488fdb10b625f51a52499733039ec",
+      "dirty": true,
+      "status": [
+        "M ARCHITECTURE.md",
+        " M EXPERIMENT_MATRIX.md",
+        " M LIMITATIONS.md",
+        " M README.md",
+        " M RESEARCH_LOG.md",
+        " M RESULTS.md",
+        " M TODO.md",
+        " M artifacts/dashboard/cube-verification.json",
+        " M artifacts/packages/chromatensor-0.2.0-py3-none-any.whl",
+        " M artifacts/review/diff-check-warnings.txt",
+        " M artifacts/review/final-source-sha256.txt",
+        " M artifacts/verification-tests.xml",
+        " M artifacts/verification/linux311-installed.json",
+        " M artifacts/verification/linux311-tests.xml",
+        " M artifacts/verification/linux312-installed.json",
+        " M artifacts/verification/linux312-tests.xml",
+        " M artifacts/verification/linux313-installed.json",
+        " M artifacts/verification/linux313-tests.xml",
+        " M artifacts/verification/linux314-installed.json",
+        " M artifacts/verification/linux314-tests.xml",
+        " M artifacts/verification/minimum-installed.json",
+        " M artifacts/verification/minimum-tests.xml",
+        " M artifacts/verification/python311-installed.json",
+        " M artifacts/verification/python311-tests.xml",
+        " M artifacts/verification/python312-installed.json",
+        " M artifacts/verification/python312-tests.xml",
+        " M artifacts/verification/python313-installed.json",
+        " M artifacts/verification/python313-tests.xml",
+        " M artifacts/verification/python314-installed.json",
+        " M artifacts/verification/python314-tests.xml",
+        " M chromatensor/__init__.py",
+        " M chromatensor/autograd/quantization.py",
+        " M chromatensor/codecs/__init__.py",
+        " M chromatensor/nn/report.py",
+        " M chromatensor/tensor.py",
+        " M chromatensor/tokenizer/__init__.py",
+        " M dashboard/app.js",
+        " M dashboard/server.py",
+        " M docs/API.md",
+        " M docs/CUBE_RESULTS.md",
+        " M docs/DASHBOARD.md",
+        " M docs/FILE_FORMATS.md",
+        " M docs/MEASUREMENT.md",
+        " M docs/REPAIR_REPORT.md",
+        " M docs/RESEARCH_REVIEW.md",
+        " M docs/REVIEW_CHECKLIST.md",
+        " M docs/SETUP.md",
+        " M experiments/provenance.py",
+        " M experiments/verification.py",
+        " M results/acceptance.json",
+        " M results/cube.json",
+        " M results/dependency-verification.json",
+        " M results/latest.json",
+        " M results/release-research.json",
+        " M results/repair-regressions.json",
+        " M results/test-verification.json",
+        " M results/train_scalar_chroma8.json",
+        " M results/train_scalar_chroma8.md",
+        " M scripts/verify.py",
+        " M scripts/verify_release_install.py",
+        " M tests/test_acceptance.py",
+        " M tests/test_dashboard.py",
+        "?? artifacts/dashboard/cube-current.jpg",
+        "?? artifacts/dashboard/cube-observations.json",
+        "?? artifacts/dashboard/rgbd-current.jpg",
+        "?? artifacts/dashboard/rgbd-observations.json",
+        "?? artifacts/release-research/artifacts-20261001T024731587512Z-339379996031/mnist-int8-s41-probe.npz",
+        "?? artifacts/release-research/artifacts-20261001T024731587512Z-339379996031/mnist-int8-s41.ctcheckpoint",
+        "?? artifacts/release-research/artifacts-20261001T030842299904Z-6b37d33e42b9/",
+        "?? artifacts/release-research/artifacts-20261001T040845234096Z-1c011d799e29/",
+        "?? artifacts/release-research/artifacts-20261001T042315415286Z-89cbbe50140f/",
+        "?? artifacts/review/before-final-durable-source/",
+        "?? artifacts/review/before-rgbd-token-repair/",
+        "?? artifacts/review/before-rgbd-utf8-repair/",
+        "?? artifacts/review/final-acceptance-output.json",
+        "?? artifacts/review/matrix-failure/before-git-context-repair-tests.xml",
+        "?? artifacts/review/matrix-failure/before-git-portability-freeze-tests.xml",
+        "?? artifacts/review/matrix-failure/before-user-commit-tests.xml",
+        "?? artifacts/review/repair-report-whitespace.txt",
+        "?? artifacts/review/rgbd-cube.txt",
+        "?? artifacts/review/rgbd-final-acceptance.txt",
+        "?? artifacts/review/rgbd-focused-tests.txt",
+        "?? artifacts/review/rgbd-host-tests.txt",
+        "?? artifacts/review/rgbd-pilot.txt",
+        "?? artifacts/review/rgbd-release-matrix.txt",
+        "?? artifacts/review/rgbd-repair-regressions.txt",
+        "?? artifacts/review/rgbd-sustained.txt",
+        "?? artifacts/review/rgbd-token-proof.txt",
+        "?? artifacts/review/rgbd-train-wrapper.txt",
+        "?? artifacts/review/rgbd-web-guidance.md",
+        "?? artifacts/review/setup-doc-whitespace.txt",
+        "?? artifacts/rgbd-tokens/",
+        "?? docs/RGBD_TOKENS.md",
+        "?? results/history/acceptance-before-final-browser-envelope.json",
+        "?? results/history/before-git-context-repair/",
+        "?? results/history/before-rgbd-token-repair/",
+        "?? results/history/before-rgbd-utf8-repair/",
+        "?? results/history/before-user-commit-e60d420/",
+        "?? results/release-verification.json",
+        "?? results/rgbd-token-verification.json",
+        "?? scripts/verify_rgbd_tokens.py",
+        "?? tests/test_rgbd_nn.py",
+        "?? tests/test_rgbd_tokens.py"
+      ]
+    },
+    "dependencies": {
+      "python": "3.14.6",
+      "torch": "2.14.0+cu126",
+      "torchvision": "0.29.0+cu126",
+      "numpy": "2.5.2",
+      "matplotlib": "3.11.2",
+      "psutil": "7.2.2",
+      "pytest": "8.4.2"
+    },
+    "config_sha256": "75c539f47f0fb7e21131a008f9950c5d2802dad25ffc97402324ff1c38206f4c",
+    "artifacts": [
+      {
+        "path": "artifacts/dashboard/cube-verification.json",
+        "sha256": "96c3092844f374dadb35eaf9ab4f2ef932000555a7c1352b0cd7e46a3c989caa",
+        "bytes": 18725
+      },
+      {
+        "path": "artifacts/verification-tests.xml",
+        "sha256": "78811169873d7d1f915d74abe8cd1397c8cf581d2b1bc882192c6d1e765ceda1",
+        "bytes": 92698
+      },
+      {
+        "path": "results/cube.json",
+        "sha256": "f3f20ccdbd503c2e9769955dec392f2ec756d012460baee3c0ef190ece387c85",
+        "bytes": 196340
+      },
+      {
+        "path": "results/latest.json",
+        "sha256": "ee1f742d7899842ed45866112d573dff4e0522a5101fdfbcbc11bf9b598ab9af",
+        "bytes": 22394976
+      },
+      {
+        "path": "results/release-research.json",
+        "sha256": "536e6c4c054d49c77e659a9b8c0324aefc748a523e76afab45d84975090e1fab",
+        "bytes": 199263
+      },
+      {
+        "path": "results/release-verification.json",
+        "sha256": "69642eb937aa71c03d778698ea281f9c5c23c57ce726a94e57d57e00ea75b9eb",
+        "bytes": 23510
+      },
+      {
+        "path": "results/rgbd-token-verification.json",
+        "sha256": "66ad8c3ca39732c2fd0d172b599a8c630e983dd645810b0567ff48dfbe29fc5c",
+        "bytes": 29339
+      },
+      {
+        "path": "results/test-verification.json",
+        "sha256": "40ff42e2e352469eb2d6404519fcbf716abf577e325504ca368d195caeafe5b0",
+        "bytes": 17056
+      }
+    ]
+  },
+  "public_sanitization": {
+    "historical_only": true,
+    "original_file_sha256": "540c39d4fe6aca9c352d1d952202d7016fa5705e344c6c50aed25b6b871eb50f",
+    "changes": "Machine paths redacted; numbers, seeds, sample counts and execution precision preserved. Missing companion data and old source hashes cannot certify this release."
+  }
+}
