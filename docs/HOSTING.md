@@ -32,3 +32,11 @@ npx netlify deploy --site 7823a2ee-6732-4208-8bde-275ca4d8c4e6 --dir dist/docs -
 `netlify.toml` also defines the build command and output folder for a future Git-connected build. This release uses a direct CLI deployment. It does not establish automatic GitHub deployment.
 
 The GitHub repository is maintained separately. Publishing these selected files does not change its visibility or publish its original history. Redeploy a previously checked build to roll back website content.
+
+## Visual experiment page
+
+The main page includes a plain JavaScript and SVG network illustration, a native hue encoding illustration, links to all documentation and the maintainer's public social profiles. Numeric and color views run the same fixed-weight scalar network. The native hue illustration follows the Rust byte mapping but does not execute the Rust library in the browser. Neither illustration trains a model.
+
+Run `node scripts/check_home_animation.js` to check all 391,680 phase round trips, boundary bytes, invalid inputs and reference network outputs. The renderer reads `docs/site/home.html`, `home.css` and `home.js`. It honors reduced motion and provides pause and step controls. Mobile visitors can scroll the network diagram horizontally.
+
+Rendered documents and architecture pages include canonical URLs, Open Graph tags and X large-image card tags. The site publishes a sitemap, robots file, favicon and a 1200 by 630 PNG share card. To regenerate the card, install Pillow 12.3.0 and run `python scripts/build_social_card.py` with Arial or DejaVu Sans available locally. The website ships the PNG, not Pillow or font binaries. Social platforms may cache older previews; their rendered cards were not verified during this deployment.

@@ -2,6 +2,12 @@
 
 The local source release is ready to publish within the tested scope. [The checklist](RELEASE_CHECKLIST.md) and [audit](docs/RELEASE_AUDIT.md) record the completed gates; the handoff provides final commit/archive identities and scan receipts. Static documentation publication is tracked in [the hosting guide](docs/HOSTING.md). Full research-matrix/canonical replay, Linux C consumer and broader platforms remain unexecuted research work, with no current pass claim.
 
+## Visual explanation page
+
+- [x] Add a labeled experimental network animation and exact hue-byte illustration.
+- [x] Verify JavaScript mapping, network reference outputs and mobile controls.
+- [x] Add social links, share metadata, a PNG card and documentation navigation.
+
 ## Historical native checklist
 
 # Acceptance checklist

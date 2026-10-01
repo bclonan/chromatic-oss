@@ -248,3 +248,13 @@ The release-selection, privacy-scanner and architecture suites passed all 30 tes
 The first CLI draft upload returned Unprocessable Entity without a detailed cause. A fresh CLI retry succeeded at deploy 6abe7c56e9f6bb7d9d6aafbc. A read through the connector returned 404 for the earlier deployment identifier, and an optional CLI metadata query failed because Windows stripped JSON argument quotes. Neither result is evidence of a successful deploy. The later successful CLI receipt and browser checks establish draft hosting.
 
 See [hosting instructions](docs/HOSTING.md) for the production URL and reproducible build and deployment commands. The private GitHub repository retains its visibility and original history. Only its README links, description and homepage are updated for this publication. No new numerical, compression or speed claims accompany the website.
+
+## Visual explanation page, 2026-10-01
+
+Added a homepage that distinguishes an imagined color display of scalar neural weights from native RGBD ring arithmetic and historical PyTorch research. Added pause, step, input and phase controls, responsive layouts, public social/contact links, a share card and metadata. The display comparison preserves the same outputs. The phase demonstration follows the native mapping in JavaScript without claiming Rust execution in the browser.
+
+The JavaScript checker passed 391,680 phase round trips, ten byte boundary vectors, invalid inputs, three independently calculated network cases and two wrapping sums. The full Python suite passed 823 tests with 19 CUDA skips because no CUDA device was available. Native numerical source was unchanged.
+
+Browser checks confirmed equal outputs between numeric/color views, changed outputs after changing the first input, pause/step controls and 391,679 plus 1 wrapping to phase zero with RGBD [255, 0, 0, 0]. The 390-pixel layout kept the page within its viewport and allowed horizontal diagram scrolling. No browser warnings or errors appeared in the inspected preview. An old browser tab timed out during reconnect; a fresh preview tab restored verification. Fixed a text-encoding error introduced during a Python edit and removed a duplicate token swatch before publication.
+
+The social image is a drawn diagram. Metadata includes image dimensions, descriptive alt text and absolute canonical/image URLs. These checks do not prove that LinkedIn or X has refreshed its cached preview. Social posts are drafts only.

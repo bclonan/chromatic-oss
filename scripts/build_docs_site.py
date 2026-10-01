@@ -24,16 +24,50 @@ NAV = [("Start", "/README.html"), ("User guide", "/docs/USER_GUIDE.html"),
        ("Architecture explorer", "/docs/architecture/index.html"), ("All documents", "/catalog.html")]
 
 
-def page(title, content):
+def metadata(title, url, description=None):
+    description = description or "Explore an experimental RGBD tensor library, exact modular hue arithmetic, neural-network research, source code and evidence."
+    title = html.escape(title + " | Chromatic", quote=True)
+    description = html.escape(description, quote=True)
+    canonical = html.escape(BASE + url, quote=True)
+    return f'''<title>{title}</title>
+<meta name="description" content="{description}">
+<meta name="author" content="Brad Clonan">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#f8f7f2">
+<link rel="canonical" href="{canonical}">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chromatic">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{description}">
+<meta property="og:url" content="{canonical}">
+<meta property="og:image" content="{BASE}/assets/chromatic-social.png">
+<meta property="og:image:secure_url" content="{BASE}/assets/chromatic-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="What if weights looked like color? Chromatic, an experimental project by Brad Clonan. Numeric weights and color tokens linked through a network diagram.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{description}">
+<meta name="twitter:image" content="{BASE}/assets/chromatic-social.png">
+<meta name="twitter:image:alt" content="Chromatic experimental color tensors and a numeric-to-color network diagram.">'''
+
+
+def page(title, content, url="/", home=False):
     links = "".join(f'<a href="{url}">{label}</a>' for label, url in NAV)
+    head = metadata(title, url, "What if neural weights looked like color? Explore Brad Clonan's experimental color tensors, interactive visual explanation, native library and research evidence." if home else None)
+    extra = '<link rel="stylesheet" href="/assets/home.css"><script type="module" src="/assets/home.js"></script>' if home else ''
+    header_right = '<nav class="header-links" aria-label="Main"><a href="/catalog.html">Documentation</a><a href="/docs/architecture/index.html">Explorer ↗</a><a href="https://github.com/bclonan/chromatic">GitHub ↗</a></nav>' if home else '<span class="edition">Documentation / 0.1.0 native</span>'
+    sidebar = '' if home else f'<nav aria-label="Documentation">{links}<hr><a href="/downloads/chromatic-oss.zip">Download source ZIP</a><a href="/source/">Browse release files</a></nav>'
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{html.escape(title)} | Chromatic hue tensors</title>
-<meta name="description" content="Rust RGBD tensors with exact modular hue arithmetic. Guides, source code and research evidence.">
-<link rel="stylesheet" href="/site.css"></head><body>
+{head}
+<link rel="stylesheet" href="/site.css">{extra}</head><body class="{'home' if home else 'document'}">
 <a class="skip" href="#content">Skip to content</a>
-<header><a class="brand" href="/">CHROMATIC <span>hue tensors</span></a><span class="edition">Documentation / 0.1.0 native</span></header>
-<div class="layout"><nav aria-label="Documentation">{links}<hr><a href="/downloads/chromatic-oss.zip">Download source ZIP</a><a href="/source/">Browse release files</a></nav>
+<header><a class="brand" href="/">CHROMATIC <span>color as information</span></a>{header_right}</header>
+<div class="layout">{sidebar}
 <main id="content" tabindex="-1">{content}</main></div>
 <footer>Copyright 2026 Brad Clonan. <a href="/source/LICENSE">AGPL-3.0-only</a> · <a href="/THIRD_PARTY_NOTICES.html">Third-party notices</a> · <a href="/docs/HOSTING.html">Hosting and rebuild instructions</a></footer>
 </body></html>'''
@@ -71,6 +105,11 @@ def main():
                 target.write_text(source.read_text(encoding="utf-8").replace('../../ARCHITECTURE.md', '/ARCHITECTURE.html'), encoding="utf-8")
             elif source.name == "source.js":
                 target.write_text(source.read_text(encoding="utf-8").replace('"../../"', '"/source/"').replace("'../../'", "'/source/'"), encoding="utf-8")
+            if source.suffix == ".html":
+                copied = target.read_text(encoding="utf-8")
+                heading = "Architecture explorer" if source.name == "index.html" else "Architecture source reference"
+                copied = re.sub(r"<title>.*?</title>", metadata(heading, "/" + name), copied, count=1)
+                target.write_text(copied, encoding="utf-8")
         if source.suffix != ".md":
             continue
         text = source.read_text(encoding="utf-8")
@@ -101,7 +140,7 @@ def main():
         output_name = name[:-3] + ".html"
         target = OUT / output_name
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(page(title, raw + rendered), encoding="utf-8")
+        target.write_text(page(title, raw + rendered, "/" + output_name), encoding="utf-8")
         documents.append((title, output_name, name))
 
     for directory in sorted((OUT / "source").rglob("*"), reverse=True):
@@ -110,25 +149,20 @@ def main():
     listing(OUT / "source")
     catalog = '<h1>All documents</h1><p>Guides, research reports, release records and third-party notices. Historical reports retain their original scope and source identities.</p><ul class="catalog">'
     catalog += "".join(f'<li><a href="/{url}">{html.escape(title)}</a><small>{name}</small></li>' for title, url, name in documents)
-    (OUT / "catalog.html").write_text(page("All documents", catalog + "</ul>"), encoding="utf-8")
-    home = '''<p class="eyebrow">Rust library / Python / C / CLI</p><h1>Color tokens.<br>Exact hue arithmetic.</h1>
-<p class="lead">A tensor library that stores four-byte RGBD tokens and computes in the finite ring Z/391680Z.</p>
-<div class="actions"><a href="/docs/USER_GUIDE.html">Start using the library</a><a href="/docs/architecture/index.html">Explore the architecture</a></div>
-<div class="facts"><div><strong>4 bytes</strong><span>per tensor element</span></div><div><strong>391,680</strong><span>discrete phase positions</span></div><div><strong>CPU</strong><span>native integer operations</span></div></div>
-<h2>What it does</h2><p>Encode canonical colors, add and multiply hue phases, contract matrices, reshape tensors and save bounded, checksummed files. Python and C call the same Rust implementation. The native wheel has no third-party runtime dependencies.</p>
-<pre><code>from chromatic_hue import HueEncoder
-
-with HueEncoder.encode_phases([[1, 2], [3, 4]]) as a:
-    with a @ a as result:
-        print(result.phases())  # (7, 10, 15, 22)</code></pre>
-<h2>Read the evidence</h2><p>Each element occupies 32 physical bits. Recorded native operators were slower than equal-storage NumPy controls. No compression, learning or hardware-speed advantage has been demonstrated.</p>
-<p>The legacy PyTorch experiments use floating-point training and execution. Historical receipts describe their original source. They do not certify later changes.</p>
-<div class="actions"><a href="/docs/RELEASE_AUDIT.html">Release audit</a><a href="/LIMITATIONS.html">Limitations</a><a href="/catalog.html">All documents</a></div>
-<h2>Run it locally</h2><p>The native library, CLI and research dashboard run on your machine. This website hosts documentation, the architecture explorer and reviewed release files. It does not run the Python dashboard or numerical experiments.</p>
-<p><a href="/downloads/chromatic-oss.zip">Download the approved source release</a>, then follow the <a href="/docs/DEVELOPER_GUIDE.html">setup instructions</a>. The ZIP includes the license, copyright and third-party notices.</p>'''
-    (OUT / "index.html").write_text(page("Color tokens. Exact hue arithmetic.", home), encoding="utf-8")
+    (OUT / "catalog.html").write_text(page("All documents", catalog + "</ul>", "/catalog.html"), encoding="utf-8")
+    home = (ROOT / "docs/site/home.html").read_text(encoding="utf-8")
+    (OUT / "index.html").write_text(page("What if weights looked like color?", home, home=True), encoding="utf-8")
+    (OUT / "assets").mkdir()
+    for name in ("home.css", "home.js", "chromatic-social.png", "favicon.svg"):
+        if "docs/site/" + name not in selected:
+            raise ValueError("Website asset is not in the release manifest: " + name)
+        shutil.copyfile(ROOT / "docs/site" / name, OUT / "assets" / name)
+    urls = ["/", "/catalog.html", "/docs/architecture/index.html"] + ["/" + url for _, url, _ in documents]
+    sitemap = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join("<url><loc>" + html.escape(BASE + url) + "</loc></url>" for url in urls) + "</urlset>"
+    (OUT / "sitemap.xml").write_text(sitemap, encoding="utf-8")
+    (OUT / "robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: " + BASE + "/sitemap.xml\n", encoding="utf-8")
     shutil.copyfile(ROOT / "docs/site/site.css", OUT / "site.css")
-    (OUT / "404.html").write_text(page("Page not found", '<h1>Page not found</h1><p><a href="/catalog.html">Browse all documents</a>.</p>'), encoding="utf-8")
+    (OUT / "404.html").write_text(page("Page not found", '<h1>Page not found</h1><p><a href="/catalog.html">Browse all documents</a>.</p>', "/404.html"), encoding="utf-8")
     (OUT / "downloads").mkdir()
     with tempfile.TemporaryDirectory(prefix="chromatic-docs-") as temp:
         archive = Path(temp) / "chromatic-oss.zip"
@@ -143,7 +177,7 @@ def listing(directory):
     for item in sorted(directory.iterdir()):
         url = "/" + item.relative_to(OUT).as_posix() + ("/" if item.is_dir() else "")
         items.append(f'<li><a href="{html.escape(url)}">{html.escape(item.name)}</a></li>')
-    (directory / "index.html").write_text(page("Release files", '<h1>Release files</h1><ul>' + "".join(items) + "</ul>"), encoding="utf-8")
+    (directory / "index.html").write_text(page("Release files", '<h1>Release files</h1><ul>' + "".join(items) + "</ul>", "/" + directory.relative_to(OUT).as_posix() + "/"), encoding="utf-8")
 
 
 def check_links():

@@ -4474,7 +4474,7 @@ window.CHROMATIC_ARCHITECTURE = {
     },
     {
       "path": "scripts/build_docs_site.py",
-      "sha256": "cfb7f9e93b1436b6498e2f65dbd6d03b23043405d0621a0445a75df7cbfddfbb",
+      "sha256": "0f59aa8b8d3605eb1edcd3a31c24dd74af398a5d8807f954a54255418a91932f",
       "imports": [
         {
           "module": "__future__",
@@ -4641,6 +4641,33 @@ window.CHROMATIC_ARCHITECTURE = {
           "line": 14
         }
       ]
+    },
+    {
+      "path": "scripts/build_social_card.py",
+      "sha256": "e3abe6be14d48d6ce63d08d7a38887a0a715a0ab6ab507fb7f8087b121b9dff9",
+      "imports": [
+        {
+          "module": "pathlib",
+          "line": 2
+        },
+        {
+          "module": "colorsys",
+          "line": 3
+        },
+        {
+          "module": "math",
+          "line": 4
+        },
+        {
+          "module": "PIL",
+          "line": 6
+        }
+      ]
+    },
+    {
+      "path": "scripts/check_home_animation.js",
+      "sha256": "b3f6acf7347eb342c1c90c11a4670e0e3f830a0be4d63308c11439feb2f89966",
+      "imports": []
     },
     {
       "path": "scripts/dashboard.py",
@@ -6961,7 +6988,7 @@ window.CHROMATIC_ARCHITECTURE = {
       ]
     }
   ],
-  "source_identity": "3ffaa2efab4b46d7d984f103dc5af81bd57f68eeaddc735173b753c728572764",
+  "source_identity": "0efda1d137faf6ec27e70d703edfe539c4e0c5a8c9bda4b342c9b28ffe79d32e",
   "evidence_note": "Source links resolve to generated snapshots of actual local files. Hash and symbol checks detect drift. Tests listed here identify relevant verification code, not a claim that those tests passed in this run. Semantic edges are reviewed assertions, separate from lexical import discovery. Absent integrations describe this reviewed source, not future plans.",
   "semantic_review": {
     "method": "Manually curated source behavior and ownership contracts, with exact source anchors. Validation protects the reviewed registry from stale or altered graph data; it does not automatically prove program behavior.",

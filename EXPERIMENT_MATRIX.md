@@ -114,3 +114,7 @@ The final legacy smoke produced 17 model records, 92 precision rows using 4,096 
 ## Static documentation checks, 2026-10-01
 
 The documentation build renders 47 Markdown documents from the public release selection. Thirty release-selection, privacy-scanner and architecture tests passed. The architecture check validated 26 components, 40 relationships and 140 inventoried files. All 202 source-document links resolved locally. The hosted draft loaded the user guide and architecture explorer; searching RGBD token reduced the map to one component. These are documentation and hosting checks, not new numerical experiment results.
+
+## Browser illustration checks, 2026-10-01
+
+The homepage is a JavaScript teaching example. It does not train a model or execute the native library. Its hue mapping passed all 391,680 phase round trips and ten literal byte boundary checks. Three fixed network reference cases passed. Browser controls preserved outputs between numeric/color display modes and showed the exact zero-phase wrap. The Python suite passed 823 tests with 19 CUDA skips. These checks establish the illustration's behavior; they add no learning or performance finding.

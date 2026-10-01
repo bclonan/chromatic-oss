@@ -45,3 +45,5 @@ Vector quantization, straight-through gradients, and Fourier transforms are esta
 ## Documentation build dependency
 
 Python-Markdown 3.10.2 converts the selected Markdown documents to HTML. It is a build dependency under the BSD-3-Clause license and is not bundled in the website or source ZIP. Its distribution retains its upstream license and metadata.
+
+Pillow 12.3.0 supports the optional share-card generation script. It is not bundled with the website or source release. Pillow retains its HPND license. The card uses locally installed Arial or DejaVu Sans; font files are not redistributed.

@@ -1,0 +1,71 @@
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="status-dot"></span> An experimental project by Brad Clonan</p>
+    <h1 id="hero-title">What if weights<br>looked like <span class="color-word">color?</span></h1>
+    <p class="lead">I'm exploring how color can represent information, and what it takes to compute with those representations.</p>
+    <p class="hero-note">Chromatic brings together a native RGBD tensor library and experiments with numerical codecs, neural networks and multidimensional color cubes.</p>
+    <div class="actions"><a href="#visual-lab">Try the visual explanation <span aria-hidden="true">↘</span></a><a href="/docs/architecture/index.html">Open the explorer <span aria-hidden="true">↗</span></a></div>
+    <p class="small">Research in progress. No demonstrated learning, compression or speed advantage.</p>
+  </div>
+  <figure class="hero-diagram" aria-label="A color wheel represents the native tensor's 391,680 discrete phase positions. One RGBD token occupies four bytes.">
+    <div class="orbit-label">A different way to inspect a value</div>
+    <div class="hue-orbit"><div class="orbit-core"><span>RGBD</span><strong>4 bytes</strong><small>one native token</small></div></div>
+    <div class="orbit-marker"><span class="swatch"></span><code>[255, 0, 0, 19]</code><span>phase 19</span></div>
+    <figcaption>1,530 RGB steps × 256 fine positions<br><strong>391,680 possible phases</strong></figcaption>
+  </figure>
+</section>
+
+<div class="page-index"><span>Follow the experiment</span><a href="#visual-lab">01 / Weights</a><a href="#native-lab">02 / Color arithmetic</a><a href="#research">03 / Research</a><a href="#resources">04 / Library &amp; docs</a></div>
+
+<section id="visual-lab" class="chapter" aria-labelledby="weights-title">
+  <div class="chapter-heading"><p class="eyebrow">01 / The idea</p><h2 id="weights-title">Same network. A different way to see it.</h2><p>A conventional network multiplies inputs by weights, adds the results and applies an activation. Switch views to imagine those weights as color. The values and output stay the same.</p></div>
+  <div class="network-panel">
+    <div class="lab-toolbar"><div class="mode-controls" role="group" aria-label="Weight display"><button id="mode-numeric" aria-pressed="true">Numeric weights</button><button id="mode-color" aria-pressed="false">Color view</button></div><span class="lab-label">Illustrative network / fixed weights</span></div>
+    <div class="network-scroll" tabindex="0" role="region" aria-label="Network diagram, scroll horizontally on small screens"><svg id="network-visual" viewBox="0 0 920 380" role="img" aria-label="An illustrative network with three inputs, four hidden units and two outputs. Switch between numbers and color, or adjust the input below."><title>Numeric weights and color representations</title><text x="60" y="180">Enable JavaScript to explore the animated network.</text></svg></div>
+    <div class="lab-controls"><div class="play-controls"><button id="play-toggle">Pause animation</button><button id="step-animation">Step through</button></div><label for="signal-input">First input <output id="signal-value" for="signal-input">0.60</output><input id="signal-input" type="range" min="0" max="100" value="60"></label></div>
+    <p id="frame-caption" class="frame-caption">Follow the input through the weighted connections.</p>
+    <div id="weight-readout" class="weight-readout"></div>
+  </div>
+  <div class="comparison-notes"><div><h3>What I'm imagining</h3><p>Weights you can inspect as a field of color. A visual language for seeing a network's state and following what changes as information moves through it.</p></div><div><h3>What this animation does</h3><p>A small JavaScript forward pass with fixed example weights. Color represents the same scalar values. This is a teaching sketch, not a trained model or a native chromatic neural network.</p></div></div>
+  <p class="note">Color alone adds no information. This display mapping is illustrative, not the project's scalar codec or its native RGBD encoding. The PyTorch experiments still use floating-point parameters, gradients and kernels.</p>
+</section>
+
+<section id="native-lab" class="chapter" aria-labelledby="native-title">
+  <div class="chapter-heading"><p class="eyebrow">02 / What exists in code</p><h2 id="native-title">Four bytes. A finite color wheel.</h2><p>The native Rust library stores actual canonical RGBD bytes. R, G and B locate a saturated color. D selects a finer position within that step. Operations use integer phases modulo 391,680.</p></div>
+  <div class="native-panel">
+    <div class="token-controls"><label for="hue-a">Phase A <output id="hue-a-value" for="hue-a">65,280</output><input id="hue-a" type="range" min="0" max="391679" value="65280"></label><label for="hue-b">Phase B <output id="hue-b-value" for="hue-b">130,560</output><input id="hue-b" type="range" min="0" max="391679" value="130560"></label></div>
+    <svg id="hue-wheel" viewBox="0 0 300 300" role="img" aria-label="A and B add around the native hue circle"></svg>
+    <div class="token-equation"><div id="token-a" class="token-box"></div><span class="operator" aria-label="plus">+</span><div id="token-b" class="token-box"></div><span class="operator" aria-label="equals">=</span><div id="token-result" class="token-box"></div></div>
+    <output id="hue-result" class="hue-result" aria-live="polite">65,280 + 130,560 = 195,840 modulo 391,680</output>
+    <p class="small">Drag a phase to change the stored bytes. A sum past 391,679 wraps around the wheel. This JavaScript illustration follows the native encoding rules. It does not execute Rust in your browser.</p>
+  </div>
+  <div class="mechanism"><div><span class="step-number">01</span><h3>Encode</h3><p>A phase becomes a canonical RGB color and a D byte. Every element occupies 32 physical bits.</p></div><div><span class="step-number">02</span><h3>Compute</h3><p>Add or multiply phase indices in Z/391680Z, then encode the result. Matrix contraction uses the same ring operations.</p></div><div><span class="step-number">03</span><h3>Inspect &amp; save</h3><p>Read the bytes, reshape a tensor or save a bounded file with a SHA-256 checksum. Python, C and the CLI call the Rust engine.</p></div></div>
+  <p class="note">This is modular hue arithmetic. It does not reproduce general real-number arithmetic or physical paint and light mixing. Native autograd, GPU operators and neural training are not implemented.</p>
+</section>
+
+<section id="research" class="chapter" aria-labelledby="research-title">
+  <div class="chapter-heading"><p class="eyebrow">03 / The questions I'm testing</p><h2 id="research-title">An experiment with receipts.</h2><p>There are several ideas here. Each needs its own comparison and its own evidence.</p></div>
+  <div class="research-grid">
+    <article><span class="research-tag">Native library</span><h3>Can tensors store literal color tokens?</h3><p>Yes. Rust owns the RGBD bytes and performs exact modular hue operations. The recorded operators were slower than equal-storage NumPy controls.</p><a href="/docs/NATIVE_HUE.html">Read the native API <span aria-hidden="true">↗</span></a></article>
+    <article><span class="research-tag">Numerical research</span><h3>Does color labeling improve learning?</h3><p>The recorded equal-bit controls showed no task accuracy advantage from color labels alone. These experiments use floating-point PyTorch training.</p><a href="/RESULTS.html">See the measured results <span aria-hidden="true">↗</span></a></article>
+    <article><span class="research-tag">Cube experiments</span><h3>What happens when information is distributed?</h3><p>Color cubes and a software Fourier representation explore geometry, storage and reconstruction. The FFT remains floating point. Arbitrary missing-data recovery is not established.</p><a href="/docs/CUBE_RESULTS.html">Explore the cube results <span aria-hidden="true">↗</span></a></article>
+  </div>
+  <p class="note">Historical results describe their recorded datasets, seeds, sample counts and source versions. They do not certify later code changes. <a href="/LIMITATIONS.html">Read the limitations</a> and <a href="/docs/RELEASE_AUDIT.html">current release audit</a>.</p>
+</section>
+
+<section id="resources" class="chapter resources" aria-labelledby="resources-title">
+  <div class="chapter-heading"><p class="eyebrow">04 / Try it and read the code</p><h2 id="resources-title">The library behind the picture.</h2><p>The native wheel has no third-party runtime dependencies. Build it for the documented x86-64 Windows or Linux targets. The library, CLI and research dashboard run locally.</p></div>
+  <div class="code-and-links"><div><p class="code-label">Python / native hue tensor</p><pre><code>from chromatic_hue import HueEncoder
+
+with HueEncoder.encode_phases([[1, 2], [3, 4]]) as a:
+    with a @ a as result:
+        print(result.phases())
+        # (7, 10, 15, 22)
+        print(result.storage_nbytes)
+        # 16 bytes</code></pre><p class="small">The same four-byte storage per element. No hidden floating tensor in the native implementation.</p></div>
+  <div class="resource-list"><a href="/docs/USER_GUIDE.html"><strong>Start using the library</strong><span>Install, encode, compute and save ↗</span></a><a href="/docs/architecture/index.html"><strong>Architecture explorer</strong><span>Follow components and source references ↗</span></a><a href="/ARCHITECTURE.html"><strong>Architecture guide</strong><span>Ownership, data flow and boundaries ↗</span></a><a href="/docs/DEVELOPER_GUIDE.html"><strong>Developer guide</strong><span>Build the native and research packages ↗</span></a><a href="/catalog.html"><strong>All documents</strong><span>APIs, experiments, testing and release records ↗</span></a></div></div>
+  <div class="resource-bottom"><a href="/downloads/chromatic-oss.zip">Download reviewed source ZIP</a><a href="/docs/TESTING.html">Testing</a><a href="/docs/CONFIGURATION.html">Configuration</a><a href="/docs/RELEASE_GUIDE.html">Release guide</a><a href="/source/">Browse release files</a><a href="https://github.com/bclonan/chromatic">GitHub repository</a></div>
+  <p class="small">The ZIP includes LICENSE, COPYRIGHT and third-party notices. The website is static; it does not run the Python dashboard. The GitHub repository currently requires access. The reviewed source ZIP is public.</p>
+</section>
+
+<section class="author-block" aria-labelledby="author-title"><div><p class="eyebrow">Built by Brad Clonan</p><h2 id="author-title">Still experimenting.</h2><p>I'm curious about what this representation can do, where it breaks, and whether it offers anything beyond a different way to look at the same numbers. The negative results belong here too.</p></div><div class="social-links"><a href="https://www.linkedin.com/in/bclonan/">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/bclonan">GitHub <span aria-hidden="true">↗</span></a><a href="mailto:clonanxyz@gmail.com">clonanxyz@gmail.com <span aria-hidden="true">↗</span></a></div></section>
