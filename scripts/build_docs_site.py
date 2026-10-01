@@ -72,7 +72,7 @@ def page(title, content, url="/", home=False):
                       "uploadDate": "2026-10-01", "duration": "PT1M28.767S"}
         head += '<script type="application/ld+json">' + json.dumps(video_data).replace("<", "\\u003c") + '</script>'
     extra = '<link rel="stylesheet" href="/assets/home.css"><script type="module" src="/assets/home.js"></script>' if home else ''
-    header_right = '<nav class="header-links" aria-label="Main"><a href="/catalog.html">Documentation</a><a href="/docs/architecture/index.html">Explorer ↗</a><a href="https://github.com/bclonan/chromatic">GitHub ↗</a></nav>' if home else '<span class="edition">Documentation / 0.1.0 native</span>'
+    header_right = '<nav class="header-links" aria-label="Main"><a href="/catalog.html">Documentation</a><a href="/docs/architecture/index.html">Explorer ↗</a><a href="https://github.com/bclonan/chromatic-oss">GitHub ↗</a></nav>' if home else '<span class="edition">Documentation / 0.1.0 native</span>'
     sidebar = '' if home else f'<nav aria-label="Documentation">{links}<hr><a href="/downloads/chromatic-oss.zip">Download source ZIP</a><a href="/source/">Browse release files</a></nav>'
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">

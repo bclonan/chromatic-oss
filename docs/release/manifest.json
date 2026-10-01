@@ -668,13 +668,13 @@
     {
       "path": "docs/architecture/graph.js",
       "bytes": 182647,
-      "sha256": "8b9ef71db61732b564dc71ccf7034644022c5bc42106e4e75c0b38dfe27c81d7",
+      "sha256": "4f37902234d252bace78e01b2b4409d5bfe2d91897e8858673d6c782566c7c1e",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
       "path": "docs/architecture/graph.json",
       "bytes": 182614,
-      "sha256": "78f89d956eb6c264bcad908eac3b72f4b4e3164d999a0891ab7a775d67aaeb4a",
+      "sha256": "c52a1258beb256ed0bb80b77971786b4078704e5f6c673c1dc3d931d698ed4d1",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1243,8 +1243,8 @@
     },
     {
       "path": "docs/HOSTING.md",
-      "bytes": 4739,
-      "sha256": "c0b45228125ea0c4e814293290838d1a091a1298361906661de6917e0586d8f5",
+      "bytes": 4790,
+      "sha256": "ffac7efc1ff2e1de0082495448e5cc594e6e0134530f0330b79df98918751922",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1297,8 +1297,8 @@
     },
     {
       "path": "docs/RELEASE_GUIDE.md",
-      "bytes": 3002,
-      "sha256": "0998e8f762e52b01b63a1d0fb01f63269d11c8cf5df0589e812dce3d9f7422b5",
+      "bytes": 2977,
+      "sha256": "1b78ffc46696f59ccc5746dc64c0edccf72e51cfbd63facb00fc7f9906c6b63a",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1363,8 +1363,8 @@
     },
     {
       "path": "docs/site/home.html",
-      "bytes": 13683,
-      "sha256": "93d292cbc657819e9fa32d5fb7122d2944c66855c45dbe2b16327c9ab8938579",
+      "bytes": 13650,
+      "sha256": "1ff1ed03438fbede1976e91745e31a491db3d36bacc8673cc122281615d655e2",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1675,8 +1675,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6254,
-      "sha256": "c1d396d311958a0d632ea63ee2f8feba2c01021c8eac237d37fa4c0955ee3be3",
+      "bytes": 6319,
+      "sha256": "a5c237cfa420477e69c11f9557618e769dd554edeb7f42ebe39d3ad19d4de2f2",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1753,8 +1753,8 @@
     },
     {
       "path": "RESEARCH_LOG.md",
-      "bytes": 56827,
-      "sha256": "d7f70782d956585c440939e8511fb8aa2395f9882896286e88d44016b0593fcc",
+      "bytes": 57263,
+      "sha256": "cc17d6f448f4c65472b1fc13af4f2e679bf97b760d8a6d2304a944d5a84106d9",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -1831,8 +1831,8 @@
     },
     {
       "path": "scripts/build_docs_site.py",
-      "bytes": 13168,
-      "sha256": "826d169fa12f3076095ac35283fc0096f75a0cf8567190ad91ef24dcd96e69d8",
+      "bytes": 13172,
+      "sha256": "911e15d00dc3bf849a129b64cb12911281f4def70ed8b1a4267e2929374ffa60",
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     },
     {
@@ -2190,5 +2190,5 @@
       "reason": "selected implementation, documentation, verified measurement or reviewed illustration"
     }
   ],
-  "total_bytes": 292428837
+  "total_bytes": 292429335
 }

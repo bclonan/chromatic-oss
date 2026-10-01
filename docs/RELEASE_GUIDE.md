@@ -37,16 +37,14 @@ The manifest excludes Git metadata, environments, data caches and unselected art
 
 ## Publication instructions
 
-The approved identity is Brad Clonan with a GitHub noreply email. Only repository-local Git settings are used. No original history or remote is imported. After the maintainer creates an empty remote and authorizes publication, substitute its actual URL:
+The public repository is [bclonan/chromatic-oss](https://github.com/bclonan/chromatic-oss). Clone it to work with the reviewed release. The original private research history is separate.
 
 ```powershell
-Set-Location ../chromatic-oss
-git status --short
-git remote add origin https://github.com/OWNER/REPOSITORY.git
-git push -u origin main
+git clone https://github.com/bclonan/chromatic-oss.git
+Set-Location chromatic-oss
 ```
 
-`OWNER/REPOSITORY` is a placeholder. These commands have not been executed. Commercial exceptions require a separate agreement, and no pricing or sales backend exists.
+The approved maintainer identity is Brad Clonan with a GitHub noreply email. Use repository-local Git settings and the release selection checks before publishing changes. Commercial exceptions require a separate agreement, and no pricing or sales backend exists.
 
 ## Recovery
 

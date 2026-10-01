@@ -31,7 +31,7 @@ npx netlify deploy --site 7823a2ee-6732-4208-8bde-275ca4d8c4e6 --dir dist/docs -
 
 `netlify.toml` also defines the build command and output folder for a future Git-connected build. This release uses a direct CLI deployment. It does not establish automatic GitHub deployment.
 
-The GitHub repository is maintained separately. Publishing these selected files does not change its visibility or publish its original history. Redeploy a previously checked build to roll back website content.
+The public GitHub repository is [bclonan/chromatic-oss](https://github.com/bclonan/chromatic-oss). It contains the reviewed release history. The original private research repository is separate. Redeploy a previously checked build to roll back website content.
 
 ## Visual experiment page
 

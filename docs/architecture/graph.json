@@ -4474,7 +4474,7 @@
     },
     {
       "path": "scripts/build_docs_site.py",
-      "sha256": "826d169fa12f3076095ac35283fc0096f75a0cf8567190ad91ef24dcd96e69d8",
+      "sha256": "911e15d00dc3bf849a129b64cb12911281f4def70ed8b1a4267e2929374ffa60",
       "imports": [
         {
           "module": "__future__",
@@ -6988,7 +6988,7 @@
       ]
     }
   ],
-  "source_identity": "05dcaf06434a64041176ff32ebfb0fda1cf9a5bdcce77974b52e72f6f8e8a2ec",
+  "source_identity": "760e25da5d324dba6af03fb78f2571f2c7405aa13a586943009c71f5b998493f",
   "evidence_note": "Source links resolve to generated snapshots of actual local files. Hash and symbol checks detect drift. Tests listed here identify relevant verification code, not a claim that those tests passed in this run. Semantic edges are reviewed assertions, separate from lexical import discovery. Absent integrations describe this reviewed source, not future plans.",
   "semantic_review": {
     "method": "Manually curated source behavior and ownership contracts, with exact source anchors. Validation protects the reviewed registry from stale or altered graph data; it does not automatically prove program behavior.",

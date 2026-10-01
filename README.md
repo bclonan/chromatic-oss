@@ -1,6 +1,6 @@
 # Chromatic hue tensors
 
-[Documentation website](https://chromatic-hue.netlify.app) · [User guide](https://chromatic-hue.netlify.app/docs/USER_GUIDE.html) · [Architecture explorer](https://chromatic-hue.netlify.app/docs/architecture/index.html) · [Download source](https://chromatic-hue.netlify.app/downloads/chromatic-oss.zip)
+[Documentation website](https://chromatic-hue.netlify.app) · [User guide](https://chromatic-hue.netlify.app/docs/USER_GUIDE.html) · [Architecture explorer](https://chromatic-hue.netlify.app/docs/architecture/index.html) · [GitHub repository](https://github.com/bclonan/chromatic-oss) · [Download source](https://chromatic-hue.netlify.app/downloads/chromatic-oss.zip)
 
 This repository provides a Rust tensor whose elements are actual four-byte RGBD color tokens. Python, C, Rust and a standalone CLI can encode colors, compute exact hue operations, change shapes and save bounded, checksummed files. It is useful for researchers and developers studying discrete color arithmetic and inspectable tensor storage.
 

@@ -268,3 +268,7 @@ Prepared a 720 by 1280 H.264 MP4 with its playback index at the start and a post
 Local transcription encountered a PyAV API mismatch. Decoding audio with ffmpeg repaired that path, but the resulting speech snippets had low confidence. No captions were published from that output. No media was uploaded for transcription. The webpage provides a written visual description and preserves the original audio.
 
 All 31 release-selection, privacy-scanner and architecture tests passed. The new selection test checks that only the named video and optional caption path can enter the release. Build, privacy and hosted playback checks remain release steps described in the hosting guide.
+
+## Public repository link correction, 2026-10-01
+
+The maintainer supplied the public repository URL, `https://github.com/bclonan/chromatic-oss`. An unauthenticated GitHub API read confirmed public access. Updated the homepage links, README and release guide, and removed the obsolete access-required note. The earlier entry about the private research repository describes that earlier publication. No numerical implementation changed.
